@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="user_criteria">
+    <user_criteria action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <company/>
+        <department/>
+        <group/>
+        <location/>
+        <match_all>true</match_all>
+        <name>Fin Crime Users</name>
+        <role>e9e5bc6d3b9fea90cb98111864e45aa6,a1e5bc6d3b9fea90cb98111864e45ac6,ade5bc6d3b9fea90cb98111864e45aca</role>
+        <script><![CDATA[/** Scripted User Criteria is not cached, and evaluated everytime, so performance is dependent on the script.
+* Populate `answer` with true/false or evaluate to true/false
+* The script is evaluated in the scope the user criteria is defined
+* Don't use `current` in the script or populate the variable
+* Don't use `gs.getUser()` or  `gs.getUserID()`, 
+* instead use `user_id` which contains the user sys_id against whom the evaluation is happening.
+*/
+nswer = gs.getProperty("glide.ui.polaris.experience") == 'true';]]></script>
+        <short_description/>
+        <sys_class_name>user_criteria</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-08-13 07:42:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e3ff5b863b13e210f13f5fea26e45a87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fin Crime Users</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>user_criteria_e3ff5b863b13e210f13f5fea26e45a87</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-08-13 07:42:53</sys_updated_on>
+        <user/>
+    </user_criteria>
+    <sys_translated_text action="delete_multiple" query="documentkey=e3ff5b863b13e210f13f5fea26e45a87"/>
+</record_update>
