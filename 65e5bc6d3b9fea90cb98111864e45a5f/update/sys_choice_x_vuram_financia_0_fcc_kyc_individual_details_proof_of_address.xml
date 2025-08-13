@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="proof_of_address" table="x_vuram_financia_0_fcc_kyc_individual_details" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>proof_of_address</element>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>anitha.p</sys_created_by>
+            <sys_created_on>2025-08-11 07:45:03</sys_created_on>
+            <sys_id>5add4da13bd32e90cb98111864e45a60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>proof_of_address</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_choice_x_vuram_financia_0_fcc_kyc_individual_details_proof_of_address</sys_update_name>
+            <sys_updated_by>anitha.p</sys_updated_by>
+            <sys_updated_on>2025-08-11 07:45:03</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>proof_of_address</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Utility bill issued in the last 3 months</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>anitha.p</sys_created_by>
+            <sys_created_on>2025-08-11 07:45:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>16dd4da13bd32e90cb98111864e45a60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>anitha.p</sys_updated_by>
+            <sys_updated_on>2025-08-11 07:45:03</sys_updated_on>
+            <value>utility_bill_issued_in_the_last_3_months</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>proof_of_address</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mobile bill issued in the last 3 months</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>anitha.p</sys_created_by>
+            <sys_created_on>2025-08-11 07:45:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5edd4da13bd32e90cb98111864e45a61</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>anitha.p</sys_updated_by>
+            <sys_updated_on>2025-08-11 07:45:03</sys_updated_on>
+            <value>mobile_bill_issued_in_the_last_3_months</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>proof_of_address</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bank statement last 3 months</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>anitha.p</sys_created_by>
+            <sys_created_on>2025-08-11 07:45:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>96dd4da13bd32e90cb98111864e45a94</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>anitha.p</sys_updated_by>
+            <sys_updated_on>2025-08-11 07:45:03</sys_updated_on>
+            <value>bank_statement_last_3_months</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>proof_of_address</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Government issues IDs which has customer name and address</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>anitha.p</sys_created_by>
+            <sys_created_on>2025-08-11 07:45:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d2dd4da13bd32e90cb98111864e45a95</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>anitha.p</sys_updated_by>
+            <sys_updated_on>2025-08-11 07:45:03</sys_updated_on>
+            <value>government_issues_ids_which_has_customer_name_and_address</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

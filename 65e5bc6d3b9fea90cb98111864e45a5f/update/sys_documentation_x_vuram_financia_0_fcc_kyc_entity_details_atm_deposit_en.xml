@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="atm_deposit" label="ATM Deposit" language="en" table="x_vuram_financia_0_fcc_kyc_entity_details">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>atm_deposit</element>
+            <help/>
+            <hint/>
+            <label>ATM Deposit</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_entity_details</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>jaiganesh.vetriselvan</sys_created_by>
+            <sys_created_on>2025-08-11 07:44:21</sys_created_on>
+            <sys_id>c4bdc1a13bd32e90cb98111864e45ad9</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>ATM Deposit</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_documentation_x_vuram_financia_0_fcc_kyc_entity_details_atm_deposit_en</sys_update_name>
+            <sys_updated_by>jaiganesh.vetriselvan</sys_updated_by>
+            <sys_updated_on>2025-08-11 07:44:31</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

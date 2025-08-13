@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="dob" label="DOB" language="en" table="x_vuram_financia_0_fcc_kyc_ownerships">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>dob</element>
+            <help/>
+            <hint/>
+            <label>DOB</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_ownerships</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>anitha.p</sys_created_by>
+            <sys_created_on>2025-08-11 08:02:21</sys_created_on>
+            <sys_id>27c11d6d3bd32e90cb98111864e45afb</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>DOB</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_documentation_x_vuram_financia_0_fcc_kyc_ownerships_dob_en</sys_update_name>
+            <sys_updated_by>anitha.p</sys_updated_by>
+            <sys_updated_on>2025-08-11 08:02:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

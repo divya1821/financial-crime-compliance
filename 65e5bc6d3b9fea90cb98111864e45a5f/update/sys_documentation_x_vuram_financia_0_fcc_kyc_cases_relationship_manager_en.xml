@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="relationship_manager" label="Relationship Manager" language="en" table="x_vuram_financia_0_fcc_kyc_cases">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>relationship_manager</element>
+            <help/>
+            <hint/>
+            <label>Relationship Manager</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_cases</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-11 06:35:15</sys_created_on>
+            <sys_id>bbdd70653b536214f13f5fea26e45a41</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Relationship Manager</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_documentation_x_vuram_financia_0_fcc_kyc_cases_relationship_manager_en</sys_update_name>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-11 06:35:21</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
