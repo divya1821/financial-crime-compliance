@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item">
+    <sys_ux_form_action_layout_item action="INSERT_OR_UPDATE">
+        <action/>
+        <active>true</active>
+        <animate_icon>false</animate_icon>
+        <color>primary</color>
+        <description/>
+        <icon/>
+        <item_type>group</item_type>
+        <label>Maker Actions</label>
+        <layout_group display_value="FCC Case Maker Response">64b6fa733b536210cb98111864e45a5d</layout_group>
+        <name>Maker Actions</name>
+        <order>0</order>
+        <overflow>false</overflow>
+        <sys_class_name>sys_ux_form_action_layout_item</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-18 15:27:38</sys_created_on>
+        <sys_id>9b7abefb3b536210cb98111864e45a41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Maker Actions</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_form_action_layout_item_9b7abefb3b536210cb98111864e45a41</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-08-18 15:27:38</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+    </sys_ux_form_action_layout_item>
+</record_update>

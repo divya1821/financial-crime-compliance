@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>entity.physical_city</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-17 13:09:03</sys_created_on>
+        <sys_id>1961912b3b13a214cb98111864e45ad7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>entity.physical_city</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ui_policy_action_1961912b3b13a214cb98111864e45ad7</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-08-17 13:09:03</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+        <ui_policy display_value="Physical address ready only if same as legal address">7dbc05eb3bdf6214cb98111864e45af7</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

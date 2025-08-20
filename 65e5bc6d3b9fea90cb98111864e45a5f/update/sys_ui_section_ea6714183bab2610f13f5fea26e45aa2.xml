@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Employment Information" section_id="ea6714183bab2610f13f5fea26e45aa2" sys_domain="global" table="x_vuram_financia_0_fcc_kyc_tasks" version="3" view="Individual_View">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.employment_status</element>
+            <position>0</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a70</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.employer</element>
+            <position>1</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>f28854d83bab2610f13f5fea26e45a71</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.occupation</element>
+            <position>2</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a71</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.employment_industry</element>
+            <position>3</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>f28854d83bab2610f13f5fea26e45a72</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.source_of_initial_deposit</element>
+            <position>4</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a72</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.state_purpose_of_opening_account</element>
+            <position>5</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>f28854d83bab2610f13f5fea26e45a73</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.describe_the_source_of_annual_revenue</element>
+            <position>6</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a73</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>f28854d83bab2610f13f5fea26e45a74</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.estimated_annual_transaction_volume</element>
+            <position>8</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a74</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.cash_deposit</element>
+            <position>9</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>f28854d83bab2610f13f5fea26e45a75</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.cash_withdrawal</element>
+            <position>10</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a75</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.atm_deposit</element>
+            <position>11</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>f28854d83bab2610f13f5fea26e45a76</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.atm_withdrawal</element>
+            <position>12</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a76</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.ach_deposit</element>
+            <position>13</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>f28854d83bab2610f13f5fea26e45a77</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kyc_case.individual.ach_withdrawal</element>
+            <position>14</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:55:27</sys_created_on>
+            <sys_id>fa8854d83bab2610f13f5fea26e45a77</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employment Information" display_value="Employment Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="f086c4983be72610f13f5fea26e45a28">ea6714183bab2610f13f5fea26e45aa2</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:55:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Employment Information</caption>
+            <header>false</header>
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:50:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ea6714183bab2610f13f5fea26e45aa2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vuram_financia_0_fcc_kyc_tasks</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_ui_section_ea6714183bab2610f13f5fea26e45aa2</sys_update_name>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:50:31</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Individual View" name="Individual_View">f086c4983be72610f13f5fea26e45a28</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

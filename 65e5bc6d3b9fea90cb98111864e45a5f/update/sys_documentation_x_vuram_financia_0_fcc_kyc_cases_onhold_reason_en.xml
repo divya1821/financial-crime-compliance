@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="onhold_reason" label="On Hold Reason" language="en" table="x_vuram_financia_0_fcc_kyc_cases">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>onhold_reason</element>
+            <help/>
+            <hint/>
+            <label>On Hold Reason</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_cases</name>
+            <plural>On Hold Reasons</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-08-18 09:52:01</sys_created_on>
+            <sys_id>660ead373b172210f13f5fea26e45a4a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>On Hold Reason</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_documentation_x_vuram_financia_0_fcc_kyc_cases_onhold_reason_en</sys_update_name>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-08-18 09:52:01</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+    "5865e308432021105571609dc7b8f23b": {
+        "actionConfigId": "1850723f3bdf2210cb98111864e45a63",
+        "allRecordsSelected": false,
+        "columnFilteringPopoverDisplay": "",
+        "columnLimit": 0,
+        "columnPreferenceKey": "",
+        "columns": "",
+        "currentPage": 0,
+        "enableCellFiltering": true,
+        "enableColumnFiltering": true,
+        "enableColumnGrouping": true,
+        "enableColumnSorting": true,
+        "enableDeclarativeActions": true,
+        "enableDotWalk": true,
+        "enableInfiniteScroll": false,
+        "enableLiveList": false,
+        "enableQuickEdit": true,
+        "enableQuickFormNavigation": true,
+        "enableReferenceLinks": true,
+        "enforceViewRulesForQuickForm": true,
+        "fetchHighlightedValues": true,
+        "filter": "",
+        "fixedFilter": "",
+        "groupBy": "",
+        "listControllerId": "zj1EzQDgBUim43KoFJ2N3Iy9W",
+        "listId": null,
+        "listMenuConfigurationId": null,
+        "listType": "default",
+        "onlyEnableSelectionWhenRequiredByActions": true,
+        "pageSysId": "08319ef53bd7ee90cb98111864e45a33",
+        "parentRecordSysId": null,
+        "parentTable": null,
+        "relatedListName": null,
+        "showListOpenedByLinkSection": null,
+        "table": "task",
+        "view": ""
+    },
+    "table": "task",
+    "sysId": "d780c1163ba61210cb98111864e45a39",
+    "query": "",
+    "views": "",
+    "activityLogs": "",
+    "extraParams": "",
+    "screen": "",
+    "fields": "",
+    "userPrefs": "",
+    "selectedTabIndex": ""
+}</macroponent_config>
+        <screen display_value="Customer Onboarding Cases copy">f176eac03bebe210cb98111864e45a35</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-08-19 08:37:03</sys_created_on>
+        <sys_id>7976eac03bebe210cb98111864e45a39</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_7976eac03bebe210cb98111864e45a39</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-08-19 11:41:10</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>

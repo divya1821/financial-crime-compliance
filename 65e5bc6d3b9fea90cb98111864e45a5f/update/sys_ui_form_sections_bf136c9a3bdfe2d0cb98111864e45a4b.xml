@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="bf136c9a3bdfe2d0cb98111864e45a4b" sys_domain="global" table="x_vuram_financia_0_fcc_kyc_cases" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 12:33:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c8236c9a3bdfe2d0cb98111864e45a8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="7d2dc49a3bdbe2d0cb98111864e45a5f">bf136c9a3bdfe2d0cb98111864e45a4b</sys_ui_form>
+            <sys_ui_section caption="KYC Case" display_value="KYC Case" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="7d2dc49a3bdbe2d0cb98111864e45a5f">b12dc49a3bdbe2d0cb98111864e45a65</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 12:33:50</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_vuram_financia_0_fcc_kyc_cases</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 12:33:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bf136c9a3bdfe2d0cb98111864e45a4b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vuram_financia_0_fcc_kyc_cases</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_bf136c9a3bdfe2d0cb98111864e45a4b</sys_update_name>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 12:33:50</sys_updated_on>
+            <sys_user/>
+            <view display_value="individual" name="individual">7d2dc49a3bdbe2d0cb98111864e45a5f</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

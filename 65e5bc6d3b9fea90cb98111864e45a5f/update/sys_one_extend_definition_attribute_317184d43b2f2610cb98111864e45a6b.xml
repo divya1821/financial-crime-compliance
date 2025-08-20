@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_definition_attribute">
+    <sys_one_extend_definition_attribute action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <apply_filter>false</apply_filter>
+        <attribute_label/>
+        <capability display_value="Prompt Testing">297148d03b2f2610cb98111864e45ac9</capability>
+        <choice_list/>
+        <contains_large_input>false</contains_large_input>
+        <data_type>string</data_type>
+        <default_value/>
+        <definition/>
+        <description>Response Text</description>
+        <group/>
+        <hidden>false</hidden>
+        <info/>
+        <label>response</label>
+        <mandatory>false</mandatory>
+        <name>response</name>
+        <order/>
+        <schema/>
+        <sys_class_name>sys_one_extend_definition_attribute</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-19 15:14:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>317184d43b2f2610cb98111864e45a6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>response</sys_name>
+        <sys_package display_value="SDLC Module" source="x_vuram_sdlc_mod_0">c60795613b49e610f13f5fea26e45a47</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_one_extend_definition_attribute_317184d43b2f2610cb98111864e45a6b</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-08-19 15:14:38</sys_updated_on>
+        <translate>false</translate>
+        <truncate>false</truncate>
+        <type>output</type>
+        <user_query>false</user_query>
+    </sys_one_extend_definition_attribute>
+    <sys_translated_text action="delete_multiple" query="documentkey=317184d43b2f2610cb98111864e45a6b"/>
+</record_update>

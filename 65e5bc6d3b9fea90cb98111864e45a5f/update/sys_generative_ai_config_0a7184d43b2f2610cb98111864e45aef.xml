@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_configurations>{}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>4a7184d43b2f2610cb98111864e45ae3</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic</model>
+        <name>Structure JSON</name>
+        <parent/>
+        <prompt>This is the input JSON: {{input_json}}.
+
+From the given JSON input, focus only on the value under the "content" key.
+
+Parse the content text and extract all identifiable data as clean key-value pairs.
+
+If there is tabular data (like line items), extract it as an array of objects under a field like "items".
+
+Use the field names found in the content as keys. Do not wrap the output in an additional object like "invoice" or "invoices".
+
+If Non-disclosure clause and exception clause are present, return the value as a string and not in an array.
+
+Format the output as a clean, flat JSON object. Each data point should be a top-level key, and line items (if any) should go under the "items" key only.</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>15134</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>draft</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-19 15:14:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a7184d43b2f2610cb98111864e45aef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4a7184d43b2f2610cb98111864e45ae3</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_0a7184d43b2f2610cb98111864e45aef</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-08-19 15:14:39</sys_updated_on>
+        <temperature>0.2</temperature>
+        <version>1</version>
+    </sys_generative_ai_config>
+</record_update>

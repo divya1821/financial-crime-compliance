@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_mapping">
+    <sys_declarative_action_payload_mapping action="INSERT_OR_UPDATE">
+        <action_payload_definition display_value="FccCaseReturnChecker">534c00d43b2b2610f13f5fea26e45ab2</action_payload_definition>
+        <label>FccCaseReturnChecker Form</label>
+        <model display_value="Form">360935e9534723003eddddeeff7b127d</model>
+        <payload_map>CaseSysId=^EQ</payload_map>
+        <required_translations/>
+        <sys_class_name>sys_declarative_action_payload_mapping</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-19 16:03:38</sys_created_on>
+        <sys_id>b3ac80d83b2b2610f13f5fea26e45a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FccCaseReturnChecker Form</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_declarative_action_payload_mapping_b3ac80d83b2b2610f13f5fea26e45a03</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-08-19 16:03:38</sys_updated_on>
+    </sys_declarative_action_payload_mapping>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_filter">
+    <sys_filter action="INSERT_OR_UPDATE">
+        <filter table="x_vuram_financia_0_fcc_kyc_cases">active=true^case_type=kyc_case^state=300^assigned_toDYNAMIC90d1921e5f510100a9ad2572f2b477fe<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="KYC Case" endquery="false" field="case_type" goto="false" newquery="false" operator="=" or="false" value="kyc_case"/>
+            <item display_value="Approval Pending" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="300"/>
+            <item endquery="false" field="assigned_to" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+        </filter>
+        <group/>
+        <last_used/>
+        <mobile>false</mobile>
+        <roles/>
+        <sys_class_name>sys_filter</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-08-19 06:54:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>341f82c83b67e210cb98111864e45af3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>approval pending cases</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_filter_341f82c83b67e210cb98111864e45af3</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-08-19 06:54:51</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+        <title>approval pending cases</title>
+        <user/>
+    </sys_filter>
+    <sys_translated_text action="delete_multiple" query="documentkey=341f82c83b67e210cb98111864e45af3"/>
+</record_update>

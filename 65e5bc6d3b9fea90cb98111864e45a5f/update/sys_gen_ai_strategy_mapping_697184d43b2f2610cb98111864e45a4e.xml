@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_strategy_mapping">
+    <sys_gen_ai_strategy_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <feature display_value="Prompt Testing">e17148d03b2f2610cb98111864e45ace</feature>
+        <strategy>CAPABILITY_EXECUTION</strategy>
+        <sys_class_name>sys_gen_ai_strategy_mapping</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-19 15:14:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>697184d43b2f2610cb98111864e45a4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CAPABILITY_EXECUTION</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SDLC Module" source="x_vuram_sdlc_mod_0">c60795613b49e610f13f5fea26e45a47</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_gen_ai_strategy_mapping_697184d43b2f2610cb98111864e45a4e</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-08-19 15:14:37</sys_updated_on>
+    </sys_gen_ai_strategy_mapping>
+</record_update>

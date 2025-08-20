@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_di_key_group">
+    <sys_di_key_group action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_details/>
+        <description/>
+        <display_name>Category</display_name>
+        <is_list>true</is_list>
+        <mandatory>false</mandatory>
+        <parent_key_group/>
+        <parent_mapping_to_field>global</parent_mapping_to_field>
+        <prediction_method/>
+        <stp_threshold/>
+        <sys_class_name>sys_di_key_group</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-18 06:01:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2349f4f73b9ba250f13f5fea26e45a67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Category</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_di_key_group_2349f4f73b9ba250f13f5fea26e45a67</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-08-18 06:01:38</sys_updated_on>
+        <target_table/>
+        <task_definition display_value="">da093cb73b9ba250f13f5fea26e45a95</task_definition>
+        <type>table</type>
+    </sys_di_key_group>
+</record_update>

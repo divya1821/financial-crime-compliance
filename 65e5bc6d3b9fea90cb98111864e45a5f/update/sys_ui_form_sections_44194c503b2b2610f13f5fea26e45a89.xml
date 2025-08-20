@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="44194c503b2b2610f13f5fea26e45a89" sys_domain="global" table="x_vuram_financia_0_fcc_kyc_tasks" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 15:47:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>94194c503b2b2610f13f5fea26e45a8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="FCC KYC Task" display_value="FCC KYC Task" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">c8194c503b2b2610f13f5fea26e45a20</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 15:47:50</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 15:47:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>14194c503b2b2610f13f5fea26e45a8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Entity Details" display_value="Entity Details" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">2196c8983be72610f13f5fea26e45a83</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 15:47:50</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a5409c143b6b2610f13f5fea26e45a96</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Country Information" display_value="Country Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">ad409c143b6b2610f13f5fea26e45a7f</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:19</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f5409c143b6b2610f13f5fea26e45a9a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Legal Address" display_value="Legal Address" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">e1409c143b6b2610f13f5fea26e45a81</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3d409c143b6b2610f13f5fea26e45a9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Physical Address" display_value="Physical Address" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">e1409c143b6b2610f13f5fea26e45a82</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b9409c143b6b2610f13f5fea26e45ac8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">e1409c143b6b2610f13f5fea26e45a83</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>6</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f5409c143b6b2610f13f5fea26e45acd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Business Information" display_value="Business Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">e1409c143b6b2610f13f5fea26e45a84</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>7</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>39409c143b6b2610f13f5fea26e45ad2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Relationship Information" display_value="Relationship Information" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">e1409c143b6b2610f13f5fea26e45a85</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>8</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7d409c143b6b2610f13f5fea26e45ad7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Ownership Structure" display_value="Ownership Structure" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">e1409c143b6b2610f13f5fea26e45a86</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>9</position>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 16:19:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b5409c143b6b2610f13f5fea26e45add</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">44194c503b2b2610f13f5fea26e45a89</sys_ui_form>
+            <sys_ui_section caption="Document" display_value="Document" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="dd96c8983be72610f13f5fea26e45a27">e1409c143b6b2610f13f5fea26e45a87</sys_ui_section>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 16:19:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-08-19 15:47:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>44194c503b2b2610f13f5fea26e45a89</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vuram_financia_0_fcc_kyc_tasks</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_44194c503b2b2610f13f5fea26e45a89</sys_update_name>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-08-19 15:47:49</sys_updated_on>
+            <sys_user/>
+            <view display_value="Entity View" name="Entity_View">dd96c8983be72610f13f5fea26e45a27</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

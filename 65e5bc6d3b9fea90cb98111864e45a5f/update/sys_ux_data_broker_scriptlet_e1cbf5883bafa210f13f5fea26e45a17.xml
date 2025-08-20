@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_scriptlet">
+    <sys_ux_data_broker_scriptlet action="INSERT_OR_UPDATE">
+        <api_name>x_vuram_financia_0.Create two records</api_name>
+        <batch_exclude>false</batch_exclude>
+        <description> create records in two custom tables when the "Create Case" button is clicked</description>
+        <mutates_server_data>false</mutates_server_data>
+        <name>Create two records</name>
+        <output_schema/>
+        <private>false</private>
+        <props/>
+        <required_translations>[ ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[
+var CreateCaseHandler = Class.create();
+CreateCaseHandler.prototype = {
+    initialize: function() {},
+
+    /**
+     * @param {Object} input - Input object from UI Builder
+     * @returns {Object} result - Response object
+     */
+    createRecords: function(input) {
+        var result = {};
+
+        try {
+            // Create record in first custom table
+            var rec1 = new GlideRecord('x_your_scope_custom_table_1');
+            rec1.initialize();
+            rec1.email = input.email_id; // Example field
+            rec1.insert();
+
+            // Create record in second custom table
+            // var rec2 = new GlideRecord('x_your_scope_custom_table_2');
+            // rec2.initialize();
+            // rec2.related_case = rec1SysId; // Linking to first record
+            // rec2.status = input.status; // Example field
+            // rec2.insert();
+
+            result.success = true;
+            result.message = "Records created successfully.";
+        } catch (e) {
+            result.success = false;
+            result.message = "Error: " + e.message;
+        }
+
+        return result;
+    },
+
+    type: 'CreateCaseHandler'
+};
+]]></script>
+        <sys_class_name>sys_ux_data_broker_scriptlet</sys_class_name>
+        <sys_created_by>jaiganesh.vetriselvan</sys_created_by>
+        <sys_created_on>2025-08-19 06:00:44</sys_created_on>
+        <sys_id>e1cbf5883bafa210f13f5fea26e45a17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create two records</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_data_broker_scriptlet_e1cbf5883bafa210f13f5fea26e45a17</sys_update_name>
+        <sys_updated_by>jaiganesh.vetriselvan</sys_updated_by>
+        <sys_updated_on>2025-08-19 06:00:44</sys_updated_on>
+    </sys_ux_data_broker_scriptlet>
+    <sys_translated_text action="delete_multiple" query="documentkey=e1cbf5883bafa210f13f5fea26e45a17"/>
+</record_update>

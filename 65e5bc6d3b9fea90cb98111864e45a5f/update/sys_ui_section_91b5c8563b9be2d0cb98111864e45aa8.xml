@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Financial Information" section_id="91b5c8563b9be2d0cb98111864e45aa8" sys_domain="global" table="x_vuram_financia_0_fcc_kyc_cases" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.total_assets</element>
+            <position>0</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>20a980123bdbe2d0cb98111864e45a57</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.local_currency</element>
+            <position>1</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a57</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.amount_in_usd</element>
+            <position>2</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.describe_the_source_of_annual_revenu0</element>
+            <position>3</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.cash_deposit</element>
+            <position>4</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.atm_withdrawal</element>
+            <position>5</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.ach_withdrawal</element>
+            <position>6</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a5a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.cheque_withdrawal</element>
+            <position>7</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a5a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>8</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.as_of_date</element>
+            <position>9</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.amount_in_local_currency</element>
+            <position>10</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a5c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.annual_revenue</element>
+            <position>11</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a5c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.estimated_annual_transaction_volume</element>
+            <position>12</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.cash_withdrawal</element>
+            <position>13</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.ach_deposit</element>
+            <position>14</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a5e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.cheque_deposit</element>
+            <position>15</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>6ca980123bdbe2d0cb98111864e45a5e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>entity.upload_audited_financial_statement</element>
+            <position>16</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
+            <sys_id>64a980123bdbe2d0cb98111864e45a5f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Financial Information</caption>
+            <header>false</header>
+            <name>x_vuram_financia_0_fcc_kyc_cases</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-13 10:25:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>91b5c8563b9be2d0cb98111864e45aa8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vuram_financia_0_fcc_kyc_cases</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_ui_section_91b5c8563b9be2d0cb98111864e45aa8</sys_update_name>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-13 10:25:18</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

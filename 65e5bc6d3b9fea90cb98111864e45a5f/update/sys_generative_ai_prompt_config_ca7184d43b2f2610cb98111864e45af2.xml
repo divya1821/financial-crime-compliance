@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
+    <sys_generative_ai_prompt_config action="INSERT_OR_UPDATE">
+        <ai_config display_value="OneExtend Capability Definition: Prompt Testing_JSON Structuring_Classification_Summarization_Resumes (Now LLM Generic - Now LLM Generic)">0a7184d43b2f2610cb98111864e45aef</ai_config>
+        <definition display_value="Prompt Testing_JSON Structuring_Classification_Summarization_Resumes (Now LLM Generic - Now LLM Generic)">4a7184d43b2f2610cb98111864e45ae3</definition>
+        <filter_properties>{}</filter_properties>
+        <filter_type>default</filter_type>
+        <is_default>false</is_default>
+        <order>0</order>
+        <sys_class_name>sys_generative_ai_prompt_config</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-07-31 07:40:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ca7184d43b2f2610cb98111864e45af2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>0a7184d43b2f2610cb98111864e45aef</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_prompt_config_ca7184d43b2f2610cb98111864e45af2</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-08-19 15:14:40</sys_updated_on>
+    </sys_generative_ai_prompt_config>
+</record_update>

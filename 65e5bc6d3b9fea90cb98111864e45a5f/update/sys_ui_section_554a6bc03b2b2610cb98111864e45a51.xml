@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Contact Details" section_id="554a6bc03b2b2610cb98111864e45a51" sys_domain="global" table="x_vuram_financia_0_fcc_kyc_individual_details" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>email</element>
+            <position>0</position>
+            <sys_created_by>varunapriyan.k</sys_created_by>
+            <sys_created_on>2025-08-19 13:33:19</sys_created_on>
+            <sys_id>694aabc03b2b2610cb98111864e45a0e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Contact Details" display_value="Contact Details" name="x_vuram_financia_0_fcc_kyc_individual_details" sys_domain="global" view="Default view">554a6bc03b2b2610cb98111864e45a51</sys_ui_section>
+            <sys_updated_by>varunapriyan.k</sys_updated_by>
+            <sys_updated_on>2025-08-19 13:33:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>home_contact</element>
+            <position>1</position>
+            <sys_created_by>varunapriyan.k</sys_created_by>
+            <sys_created_on>2025-08-19 13:33:19</sys_created_on>
+            <sys_id>614aabc03b2b2610cb98111864e45a0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Contact Details" display_value="Contact Details" name="x_vuram_financia_0_fcc_kyc_individual_details" sys_domain="global" view="Default view">554a6bc03b2b2610cb98111864e45a51</sys_ui_section>
+            <sys_updated_by>varunapriyan.k</sys_updated_by>
+            <sys_updated_on>2025-08-19 13:33:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>varunapriyan.k</sys_created_by>
+            <sys_created_on>2025-08-19 13:33:19</sys_created_on>
+            <sys_id>694aabc03b2b2610cb98111864e45a0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Contact Details" display_value="Contact Details" name="x_vuram_financia_0_fcc_kyc_individual_details" sys_domain="global" view="Default view">554a6bc03b2b2610cb98111864e45a51</sys_ui_section>
+            <sys_updated_by>varunapriyan.k</sys_updated_by>
+            <sys_updated_on>2025-08-19 13:33:19</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mobile</element>
+            <position>3</position>
+            <sys_created_by>varunapriyan.k</sys_created_by>
+            <sys_created_on>2025-08-19 13:33:19</sys_created_on>
+            <sys_id>614aabc03b2b2610cb98111864e45a10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Contact Details" display_value="Contact Details" name="x_vuram_financia_0_fcc_kyc_individual_details" sys_domain="global" view="Default view">554a6bc03b2b2610cb98111864e45a51</sys_ui_section>
+            <sys_updated_by>varunapriyan.k</sys_updated_by>
+            <sys_updated_on>2025-08-19 13:33:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mobile_contact</element>
+            <position>4</position>
+            <sys_created_by>varunapriyan.k</sys_created_by>
+            <sys_created_on>2025-08-19 13:33:19</sys_created_on>
+            <sys_id>694aabc03b2b2610cb98111864e45a10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Contact Details" display_value="Contact Details" name="x_vuram_financia_0_fcc_kyc_individual_details" sys_domain="global" view="Default view">554a6bc03b2b2610cb98111864e45a51</sys_ui_section>
+            <sys_updated_by>varunapriyan.k</sys_updated_by>
+            <sys_updated_on>2025-08-19 13:33:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Contact Details</caption>
+            <header>false</header>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>varunapriyan.k</sys_created_by>
+            <sys_created_on>2025-08-19 13:33:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>554a6bc03b2b2610cb98111864e45a51</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vuram_financia_0_fcc_kyc_individual_details</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_ui_section_554a6bc03b2b2610cb98111864e45a51</sys_update_name>
+            <sys_updated_by>varunapriyan.k</sys_updated_by>
+            <sys_updated_on>2025-08-19 13:33:17</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="ml_capability_definition_workflow">
+    <ml_capability_definition_workflow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <capability display_value="Workflow">d12a03f173212010c0bbb63854f6a7b9</capability>
+        <current_solution_version/>
+        <dataset_language>en</dataset_language>
+        <description>DocClassifier Prediction workflow</description>
+        <fields/>
+        <filter/>
+        <pretrained>false</pretrained>
+        <request_source>api</request_source>
+        <solution_label>doc_classifier_prediction_workflow_da093cb73b9ba250f13f5fea26e45a95</solution_label>
+        <solution_name>ml_x_vuram_x_vuram_financia_0_global_doc_classifier_prediction_workflow_da093cb73b9ba250f13f5fea26e45a95</solution_name>
+        <solution_parameters/>
+        <solution_properties>{"description":"DocClassifier Prediction workflow","label":"doc_classifier_prediction_workflow_da093cb73b9ba250f13f5fea26e45a95","predictPipeline":{},"schedulingInfo":{"useCase":"doc_classifier_prediction_workflow","overrideCapability":{"name":"docclassifier_predictor","version":"27.1"}},"tags":"doc_classifier,workflow,prediction","trainingPipeline":{"pipelineOutput":{"info":{"data_messages":"::doc_classifier_glide_data.data_messages"},"models":{"results":"::doc_classifier_ensemble_prediction.ensemble_output_path","data_messages_path":"::doc_classifier_glide_data.data_messages_path"}},"steps":[{"name":"doc_classifier_attachment_downloader","component":"doc_classifier_attachment_downloader","input":{"data":"::pipelineInput.datasets.prediction_input","doc_classifier_data_api_version":"27.1"}},{"name":"doc_classifier_glide_data","component":"doc_classifier_glide_data","input":{"is_train":false,"dataset":"::pipelineInput.datasets.prediction_input","keys":"::pipelineInput.datasets.keys","downloaded_attachments_index":"::doc_classifier_attachment_downloader.downloaded_attachments_index","doc_classifier_data_api_version":"27.1"}},{"name":"doc_classifier_vision_prediction","component":"doc_classifier_vision_prediction","input":{"input_data":"::doc_classifier_glide_data.input_data","trained_models":"::pipelineInput.solutions.doc_classifier_trained_models","doc_classifier_prediction_api_version":"27.1"}},{"name":"doc_classifier_text_prediction","component":"doc_classifier_text_prediction","input":{"input_data":"::doc_classifier_glide_data.input_data","trained_models":"::pipelineInput.solutions.doc_classifier_trained_models","doc_classifier_prediction_api_version":"27.1"}},{"name":"doc_classifier_ensemble_prediction","component":"doc_classifier_ensemble_prediction","input":{"vision_component_results":"::doc_classifier_vision_prediction.vision_output_path","text_component_results":"::doc_classifier_text_prediction.text_output_path","doc_classifier_prediction_api_version":"27.1"}}],"pipelineInput":{"config":{},"datasets":{"keys":{"tableName":"sys_di_key","fieldNames":["name"],"encodedQuery":"active\u003dtrue^task_definition\u003dda093cb73b9ba250f13f5fea26e45a95","name":"keys","fetchDisplayValue":false},"prediction_input":{"tableName":"sys_di_prediction_input","fieldNames":["data","task"],"encodedQuery":"ready_for_processing\u003dtrue^is_processed\u003dfalse^task_definition\u003dda093cb73b9ba250f13f5fea26e45a95","name":"prediction_input","fetchDisplayValue":false}}}},"workflowConfiguration":{"trainingFrequency":"run_once"},"workflowLanguageVersion":"1.0.0"}</solution_properties>
+        <stopwords>a6282a25533333008c5bddeeff7b12c3</stopwords>
+        <sys_class_name>ml_capability_definition_workflow</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-18 06:01:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f49f4f73b9ba250f13f5fea26e45a75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DocClassifier Prediction workflow</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>ml_capability_definition_workflow_6f49f4f73b9ba250f13f5fea26e45a75</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-08-18 06:01:38</sys_updated_on>
+        <table/>
+        <tags>doc_classifier,workflow,prediction</tags>
+        <training_frequency>run_once</training_frequency>
+        <triggered_source>API</triggered_source>
+        <word_vector_corpus/>
+    </ml_capability_definition_workflow>
+</record_update>
