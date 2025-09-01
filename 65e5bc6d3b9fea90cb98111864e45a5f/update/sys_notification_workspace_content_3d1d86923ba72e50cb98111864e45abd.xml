@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_workspace_content">
+    <sys_notification_workspace_content action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <is_default>false</is_default>
+        <name>Maker Assignment Notification</name>
+        <notification display_value="Maker Preodic Review Notification">213b4e5a3b672e50cb98111864e45ab5</notification>
+        <route display_value="Agent Workspace">cb1af195872023002941b53046cb0b4e</route>
+        <sys_class_name>sys_notification_workspace_content</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-26 06:33:11</sys_created_on>
+        <sys_id>3d1d86923ba72e50cb98111864e45abd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Maker Assignment Notification</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_notification_workspace_content_3d1d86923ba72e50cb98111864e45abd</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-08-27 13:15:58</sys_updated_on>
+    </sys_notification_workspace_content>
+</record_update>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.confirmation-container {&#13;
+  max-width: 700px;&#13;
+  margin: 40px auto;&#13;
+  font-family: Arial, sans-serif;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+.status-message {&#13;
+  background-color: #e6f4ea;&#13;
+  color: #2e7d32;&#13;
+  border-radius: 8px;&#13;
+  padding: 20px;&#13;
+  margin-bottom: 30px;&#13;
+  display: inline-block;&#13;
+  text-align: left;&#13;
+}&#13;
+&#13;
+.status-icon {&#13;
+  font-size: 24px;&#13;
+  font-weight: bold;&#13;
+  display: inline-block;&#13;
+  margin-right: 10px;&#13;
+  color: #2e7d32;&#13;
+}&#13;
+&#13;
+.steps-container {&#13;
+  display: flex;&#13;
+  justify-content: space-between;&#13;
+  align-items: center;&#13;
+  margin-bottom: 30px;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.step {&#13;
+  text-align: center;&#13;
+  flex: 1;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.step:not(:last-child)::after {&#13;
+  content: '';&#13;
+  position: absolute;&#13;
+  top: 15px;&#13;
+  right: -50%;&#13;
+  width: 100%;&#13;
+  height: 4px;&#13;
+  background-color: #4caf50;&#13;
+  z-index: -1;&#13;
+}&#13;
+&#13;
+.step.pending:not(:last-child)::after {&#13;
+  background-color: #cfd8dc;&#13;
+}&#13;
+&#13;
+.circle {&#13;
+  width: 30px;&#13;
+  height: 30px;&#13;
+  border-radius: 50%;&#13;
+  background-color: #4caf50;&#13;
+  color: white;&#13;
+  line-height: 30px;&#13;
+  margin: 0 auto 10px auto;&#13;
+}&#13;
+&#13;
+.step.pending .circle {&#13;
+  background-color: white;&#13;
+  border: 2px solid #cfd8dc;&#13;
+  color: transparent;&#13;
+}&#13;
+&#13;
+.label {&#13;
+  font-weight: bold;&#13;
+  margin-bottom: 5px;&#13;
+}&#13;
+&#13;
+.date {&#13;
+  font-size: 12px;&#13;
+  color: #555;&#13;
+}&#13;
+&#13;
+.actions {&#13;
+  margin-top: 20px;&#13;
+}&#13;
+&#13;
+.btn-primary {&#13;
+  padding: 10px 20px;&#13;
+  background-color: #1976d2;&#13;
+  color: white;&#13;
+  border: none;&#13;
+  border-radius: 5px;&#13;
+  cursor: pointer;&#13;
+}&#13;
+&#13;
+.btn-primary:hover {&#13;
+  background-color: #1565c0;&#13;
+}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>FCC KYC Onboarding Confirmation Page</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-20 12:56:51</sys_created_on>
+        <sys_id>624bec203b6be610f13f5fea26e45ac3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FCC KYC Onboarding Confirmation Page</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sp_widget_624bec203b6be610f13f5fea26e45ac3</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-08-20 14:49:13</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Tracking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="confirmation-container">
+    <div class="status-message">
+      <div class="status-icon">&#10003;</div>
+      <h2>Under Processing</h2>
+      <p>Your document is under processing. We will ensure it is completed at the earliest.</p>
+    </div>
+
+    <div class="steps-container">
+      <div class="step completed">
+        <div class="circle">&#10003;</div>
+        <div class="label">Details Submitted</div>
+        <div class="date">05-Aug-2025</div>
+      </div>
+      <div class="step completed">
+        <div class="circle">&#10003;</div>
+        <div class="label">Verified</div>
+        <div class="date">06-Aug-2025</div>
+      </div>
+      <div class="step completed">
+        <div class="circle">&#10003;</div>
+        <div class="label">Processing</div>
+        <!-- Dynamic date here -->
+        <div class="date" data-step-date></div>
+      </div>
+      <div class="step pending">
+        <div class="circle"></div>
+        <div class="label">Processed</div>
+        <div class="date">-</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-primary">File Revised Document</button>
+    </div>
+  </div>
+
+  <script>
+    // Format date as DD-MMM-YYYY
+    function formatDate(date) {
+      const options = { day: '2-digit', month: 'short', year: 'numeric' };
+      return new Date(date).toLocaleDateString('en-GB', options).replace(/ /g, '-');
+    }
+
+    // Fill current date in all elements with [data-step-date]
+    document.querySelectorAll('[data-step-date]').forEach(el => {
+      el.textContent = formatDate(new Date());
+    });
+  </script>
+</body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>

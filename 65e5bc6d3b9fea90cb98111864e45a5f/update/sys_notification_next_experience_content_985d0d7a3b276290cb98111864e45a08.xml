@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_next_experience_content">
+    <sys_notification_next_experience_content action="INSERT_OR_UPDATE">
+        <action_name/>
+        <action_payload/>
+        <active>true</active>
+        <is_default>false</is_default>
+        <message><![CDATA[Customer Name: ${entity.legal_name} ${individual.forename_in_full}
+
+Case Type: ${case_type}]]></message>
+        <message_heading><![CDATA[Action Required: Missing Information ${number}]]></message_heading>
+        <name>RM notification for Sendback</name>
+        <notification display_value="RM notification for Sendback">091bc97a3b276290cb98111864e45a34</notification>
+        <route display_value="Next Experience Route">bccd1214533201107cd3ddeeff7b1289</route>
+        <sys_class_name>sys_notification_next_experience_content</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-27 15:13:28</sys_created_on>
+        <sys_id>985d0d7a3b276290cb98111864e45a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RM notification for Sendback</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_notification_next_experience_content_985d0d7a3b276290cb98111864e45a08</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-08-27 15:13:28</sys_updated_on>
+        <use_action>false</use_action>
+    </sys_notification_next_experience_content>
+</record_update>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="type" table="x_vuram_financia_0_fcc_kyc_tasks" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-18 12:11:10</sys_created_on>
+            <sys_id>a4ed42333b9b2210cb98111864e45acc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>type</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_choice_x_vuram_financia_0_fcc_kyc_tasks_type</sys_update_name>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-18 12:11:10</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Data Validation</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-18 12:11:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>60ed42333b9b2210cb98111864e45acc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-18 12:11:10</sys_updated_on>
+            <value>data_validation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Risk Evaluation</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-18 12:11:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eced42333b9b2210cb98111864e45afc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-18 12:11:10</sys_updated_on>
+            <value>risk_evaluation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Adverse News Screening</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-08-18 12:11:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b8ed82333b9b2210cb98111864e45a20</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-08-18 12:11:11</sys_updated_on>
+            <value>adverse_news_screening</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Periodic Case Review</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-08-28 12:17:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>533f250b3b6b6290f13f5fea26e45a09</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-08-28 12:18:36</sys_updated_on>
+            <value>periodic_case_review</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

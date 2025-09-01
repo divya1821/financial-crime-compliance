@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>list_of_columns</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-08-21 11:19:22</sys_created_on>
+        <sys_id>d08e95303ba7ea10cb98111864e45af9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Cases</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ui_view_d08e95303ba7ea10cb98111864e45af9</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-08-21 11:19:22</sys_updated_on>
+        <title>My Cases</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

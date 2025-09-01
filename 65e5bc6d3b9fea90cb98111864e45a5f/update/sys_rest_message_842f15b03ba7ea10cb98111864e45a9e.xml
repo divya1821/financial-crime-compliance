@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <name>FCC KYC Sessions</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://stationapi.veriff.com</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>anitha.p</sys_created_by>
+        <sys_created_on>2025-08-21 11:24:55</sys_created_on>
+        <sys_id>842f15b03ba7ea10cb98111864e45a9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FCC KYC Sessions</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_rest_message_842f15b03ba7ea10cb98111864e45a9e</sys_update_name>
+        <sys_updated_by>anitha.p</sys_updated_by>
+        <sys_updated_on>2025-08-21 11:24:55</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_client_template">
+    <sys_email_client_template action="INSERT_OR_UPDATE">
+        <blind_copied/>
+        <body/>
+        <body_html><![CDATA[<p>Dear ${individual.forename_in_full}${entity.legal_name},</p>
+<p>We are currently reviewing your account as part of our periodic compliance process. To complete this review, we require the following documents:</p>
+<ul style="list-style-position: inside;">
+<li><strong>Utility bill:</strong> Must be dated within the last 3 months and show your name and address</li>
+<li><strong>Passport:</strong> Must be currently valid with clear photo and signature page</li>
+<li><strong>National Identity Card:</strong> Must be currently valid with clear photo and details</li>
+<li><strong>Bank Statement:</strong> Must cover the last 3 months and show your name and account details</li>
+</ul>
+<p>Please provide these documents at your earliest convenience. You can reply to this email with the documents attached or contact your relationship manager directly.</p>
+<p>Thank you for your cooperation.</p>
+<p>Best regards,<br>${current_user.name}<br>Relationship Manager</p>]]></body_html>
+        <condition/>
+        <content_type>text/html</content_type>
+        <copied/>
+        <email_client_from_address/>
+        <from/>
+        <from_generation_type/>
+        <include_attachments>false</include_attachments>
+        <name>Document Request  - Periodic KYC Review</name>
+        <order>90</order>
+        <recipients/>
+        <reply_to/>
+        <script_from><![CDATA[(function (fromAddressQuery, targetRecord) {
+		/**
+		 * fromAddressQuery: A GlideRecord on the table "sys_email_client_from_address". Add conditions to filter the
+		 * 		the email addresses displayed in the Email Client. 
+		 * targetRecord: A GlideRecord representing the record in which the Email Client was opened from
+		 */
+
+})(fromAddressQuery, targetRecord);]]></script_from>
+        <subject>Urgent - Please upload your documents for periodic compliance review</subject>
+        <sys_class_name>sys_email_client_template</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-08-28 03:58:26</sys_created_on>
+        <sys_id>931bfbf23ba72290f13f5fea26e45ac0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Document Request  - Periodic KYC Review</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_email_client_template_931bfbf23ba72290f13f5fea26e45ac0</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-08-29 03:16:29</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+    </sys_email_client_template>
+</record_update>

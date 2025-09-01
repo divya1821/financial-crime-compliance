@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_next_experience_content">
+    <sys_notification_next_experience_content action="INSERT_OR_UPDATE">
+        <action_name/>
+        <action_payload/>
+        <active>true</active>
+        <is_default>false</is_default>
+        <message><![CDATA[Case Type: ${case_type}  
+
+Relationship Manager Name: ${relationship_manager.name} 
+
+Customer Type: ${customer_type}
+
+Risk Score: ${risk_score} 
+
+Risk Level: ${risk_level}]]></message>
+        <message_heading><![CDATA[ ${number} is assigned to you]]></message_heading>
+        <name>Periodic Maker Notification</name>
+        <notification display_value="Maker Preodic Review Notification">213b4e5a3b672e50cb98111864e45ab5</notification>
+        <route display_value="Next Experience Route">bccd1214533201107cd3ddeeff7b1289</route>
+        <sys_class_name>sys_notification_next_experience_content</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-27 13:15:24</sys_created_on>
+        <sys_id>818d2cf63bef2290cb98111864e45a64</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Periodic Maker Notification</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_notification_next_experience_content_818d2cf63bef2290cb98111864e45a64</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-08-27 13:41:33</sys_updated_on>
+        <use_action>false</use_action>
+    </sys_notification_next_experience_content>
+</record_update>

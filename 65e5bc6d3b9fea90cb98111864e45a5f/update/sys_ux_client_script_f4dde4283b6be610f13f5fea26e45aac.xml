@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default - RM">d5bf902c3ba7e610f13f5fea26e45a0a</macroponent>
+        <name>ListMenu Toggle</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({api, event, helpers, imports}) {
+    const listPreference = api.state.listMenuOpenPreference;
+    const open = event.payload.listMenuOpen;
+
+    api.setState('listMenuOpen', open);
+    api.setState('listDisplayPanes', open? 'both': 'right');
+ 
+    api.data.setListPreference.execute({
+        'name': listPreference,
+        'value': open
+    });    
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-08-20 13:23:56</sys_created_on>
+        <sys_id>f4dde4283b6be610f13f5fea26e45aac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ListMenu Toggle</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_client_script_f4dde4283b6be610f13f5fea26e45aac</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-08-20 13:23:56</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>
