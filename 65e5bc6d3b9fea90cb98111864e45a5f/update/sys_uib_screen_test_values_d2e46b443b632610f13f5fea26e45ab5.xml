@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+    "table": "x_vuram_financia_0_fcc_kyc_tasks",
+    "sysId": "3e328bde3bef2e50cb98111864e45a33",
+    "query": "",
+    "extraParams": "",
+    "views": "",
+    "selectedTab": "",
+    "029f04e053610110ac9bddeeff7b1294": {
+        "activityLogs": null,
+        "detailsContext": null,
+        "fields": null,
+        "forcedViewName": "Individual_View",
+        "inputExtraParams": null,
+        "inputQuery": null,
+        "inputSysId": "10c8e7b13b1b22d0cb98111864e45a64",
+        "inputTable": "x_vuram_financia_0_fcc_kyc_tasks",
+        "isMappedToAppShell": true,
+        "screen": null,
+        "shouldSuppressGlobalEvents": true,
+        "userPrefs": null,
+        "view": "Workspace-Financial-Crime-Compliance-0"
+    }
+}</macroponent_config>
+        <screen display_value="Default">1ae46b443b632610f13f5fea26e45a65</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-19 13:09:52</sys_created_on>
+        <sys_id>d2e46b443b632610f13f5fea26e45ab5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_d2e46b443b632610f13f5fea26e45ab5</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-09-01 10:58:31</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>100</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-02 03:23:01</sys_created_on>
+        <sys_id>34c4edec3bf7a610cb98111864e45ab9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vuram_financia_0_fcc_kyc_individual_details</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_db_view_table_34c4edec3bf7a610cb98111864e45ab9</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-02 03:23:01</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_individual_details</table>
+        <variable_prefix>kyc-individual</variable_prefix>
+        <view display_value="x_vuram_financia_0_my_cases">50a121283bf7a610cb98111864e45ad1</view>
+        <where_clause/>
+    </sys_db_view_table>
+</record_update>

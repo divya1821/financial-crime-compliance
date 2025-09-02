@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_client_template">
+    <sys_email_client_template action="INSERT_OR_UPDATE">
+        <blind_copied/>
+        <body/>
+        <body_html><![CDATA[<table style="width: 100%; font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+<tbody>
+<tr>
+<td>
+<table style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><!-- Header -->
+<tbody>
+<tr style="background-color: #003366;">
+<td style="padding: 20px; text-align: center;"><img style="max-width: 150px;" src="https://swaroopa.in/" alt=""></td>
+</tr>
+<!-- Body -->
+<tr>
+<td style="padding: 20px;">
+<p style="font-size: 16px; color: #333333;">Dear <strong>${individual.forename_in_full} ${entity.legal_name}</strong>,</p>
+<p style="font-size: 15px; color: #555555;">Thank you for initiating your onboarding process with us. As part of our compliance and verification procedures, we have reviewed your submitted information and noticed that a few details or documents are currently missing.</p>
+<p style="font-size: 15px; color: #555555;">To proceed further, we kindly request you to provide the missing information or upload the required documents through our secure portal.</p>
+<p style="font-size: 15px; color: #555555;">You can update your details by clicking the link below:</p>
+<p style="margin: 20px 0;"><a style="display: inline-block; padding: 10px 20px; background-color: #0078d4; color: #ffffff; text-decoration: none; border-radius: 4px;" href="https://ven07632.service-now.com/fcc_kyc" target="_blank" rel="noopener">Update Your Information</a></p>
+<p style="font-size: 15px; color: #555555;">If you have any questions or need assistance, feel free to reach out to your relationship manager or reply to this email.</p>
+<p style="font-size: 15px; color: #333333;">Best regards,<br><strong>${current_user.name}</strong><br>Onboarding Team</p>
+</td>
+</tr>
+<!-- Footer -->
+<tr style="background-color: #f0f0f0;">
+<td style="padding: 15px; text-align: center; font-size: 13px; color: #888888;">&copy; ${current_year} ServiceNow KYC. All rights reserved.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>]]></body_html>
+        <condition table="x_vuram_financia_0_fcc_kyc_cases">state=150^ORstate=250^EQ<item display_value="Work In Progress" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="150"/>
+            <item display_value="On Hold" endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="250"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <copied/>
+        <email_client_from_address/>
+        <from/>
+        <from_generation_type/>
+        <include_attachments>false</include_attachments>
+        <name>Onboarding-maker sends email to customer</name>
+        <order>90</order>
+        <recipients/>
+        <reply_to/>
+        <script_from><![CDATA[(function (fromAddressQuery, targetRecord) {
+		/**
+		 * fromAddressQuery: A GlideRecord on the table "sys_email_client_from_address". Add conditions to filter the
+		 * 		the email addresses displayed in the Email Client. 
+		 * targetRecord: A GlideRecord representing the record in which the Email Client was opened from
+		 */
+
+})(fromAddressQuery, targetRecord);]]></script_from>
+        <subject>Missing information</subject>
+        <sys_class_name>sys_email_client_template</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-02 04:52:15</sys_created_on>
+        <sys_id>9077bda03bfba610cb98111864e45ab2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Onboarding-maker sends email to customer</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_email_client_template_9077bda03bfba610cb98111864e45ab2</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-02 04:52:15</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+    </sys_email_client_template>
+</record_update>
