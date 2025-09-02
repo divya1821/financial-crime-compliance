@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function() {
+  var c = this;
+
+  c.$onInit = function() {
+    const checkbox = document.getElementById('only-account-holder');
+    const secondarySection = document.getElementById('secondary-section');
+
+    function toggleSecondary() {
+      if (checkbox.checked) {
+        secondarySection.style.display = 'none';  // Hide secondary
+      } else {
+        secondarySection.style.display = 'block'; // Show secondary
+      }
+    }
+
+    // Run once on load (default checked, so secondary hidden)
+    toggleSecondary();
+
+    // Add listener
+    checkbox.addEventListener('change', toggleSecondary);
+
+    // Application method toggle
+    const methodSelect = document.getElementById('application-method');
+    if (methodSelect) {
+      methodSelect.addEventListener('change', function() {
+        const uploadRow = document.getElementById('application-upload-row');
+        if (this.value === 'online') {
+          uploadRow.style.display = 'flex';
+        } else {
+          uploadRow.style.display = 'none';
+        }
+      });
+    }
+  };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>body {&#13;
+  font-family: Arial, sans-serif;&#13;
+  margin: 0;&#13;
+  padding: 0;&#13;
+}&#13;
+&#13;
+/* Breadcrumb Header */&#13;
+.breadcrumb-header {&#13;
+  display: flex;&#13;
+  justify-content: space-between;&#13;
+  align-items: center;&#13;
+  padding: 15px 20px;&#13;
+  border-bottom: 1px solid #ccc;&#13;
+  background-color: #fff; /* white background */&#13;
+}&#13;
+&#13;
+.breadcrumb {&#13;
+  font-size: 14px;&#13;
+  color: #333;&#13;
+  font-weight: bold;&#13;
+}&#13;
+&#13;
+.step-info {&#13;
+  text-align: right;&#13;
+  font-size: 14px;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+/* Section Title */&#13;
+.section-title {&#13;
+  text-align: center;&#13;
+  font-size: 20px;&#13;
+  font-weight: bold;&#13;
+  margin: 20px 0;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+/* Document Layout */&#13;
+.document-upload-layout {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  gap: 25px;&#13;
+  padding: 20px;&#13;
+  background-color: #fff;&#13;
+}&#13;
+&#13;
+.upload-row {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 20px;&#13;
+  margin-bottom: 25px;&#13;
+}&#13;
+&#13;
+.upload-row label {&#13;
+  font-weight: bold;&#13;
+  font-size: 16px;&#13;
+  color: #333;&#13;
+  min-width: 150px;&#13;
+}&#13;
+&#13;
+.input-group {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 20px;&#13;
+  flex: 1;&#13;
+}&#13;
+&#13;
+.uniform-select {&#13;
+  width: 250px;  /* uniform dropdown width */&#13;
+  padding: 6px;&#13;
+  font-size: 14px;&#13;
+  border: 1px solid #ccc;&#13;
+  border-radius: 4px;&#13;
+}&#13;
+&#13;
+/* Buttons */&#13;
+.button-container {&#13;
+  display: flex;&#13;
+  justify-content: flex-end;&#13;
+  gap: 15px;&#13;
+  padding: 20px;&#13;
+  background-color: #fff;&#13;
+}&#13;
+&#13;
+.button-container button {&#13;
+  padding: 10px 20px;&#13;
+  font-size: 14px;&#13;
+  font-weight: bold;&#13;
+  color: white;&#13;
+  background-color: #2563eb;&#13;
+  border: none;&#13;
+  border-radius: 4px;&#13;
+  cursor: pointer;&#13;
+}&#13;
+&#13;
+.button-container button:hover {&#13;
+  background-color: #1e3a8a;&#13;
+}&#13;
+&#13;
+h3 {&#13;
+  color: #1e3a8a;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+/* Checkbox Question */&#13;
+.question-container {&#13;
+  text-align: left;&#13;
+  padding: 20px;&#13;
+  background-color: #f8f9fa;&#13;
+  border-top: 1px solid #ccc;&#13;
+}&#13;
+&#13;
+.question-container label {&#13;
+  font-size: 15px;&#13;
+  font-weight: bold;&#13;
+  cursor: pointer;&#13;
+}&#13;
+&#13;
+.question-container input[type="checkbox"] {&#13;
+  margin-right: 8px;&#13;
+}&#13;
+&#13;
+.only-holder-question {&#13;
+  padding: 10px 20px;&#13;
+  font-size: 14px;&#13;
+  font-weight: bold;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+.required {&#13;
+  color: red;&#13;
+  font-weight: bold;&#13;
+  margin-left: 3px;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcc_kyc_individual_document_upload</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>FCC KYC Individual Document Upload</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-11 13:03:38</sys_created_on>
+        <sys_id>6d86d2ed3bdf6214f13f5fea26e45acd</sys_id>
+        <sys_mod_count>96</sys_mod_count>
+        <sys_name>FCC KYC Individual Document Upload</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sp_widget_6d86d2ed3bdf6214f13f5fea26e45acd</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-02 07:04:56</sys_updated_on>
+        <template><![CDATA[<header class="breadcrumb-header">
+  <div class="breadcrumb">
+    <a href="/fcc_kyc">Home</a> &gt; 
+    <a href="/fcc_kyc?id=fcc_kyc_individual_upload_document">Document Upload</a>
+  </div>
+  <div class="step-info">
+    Step 1 of 8<br>Current: Document Upload
+  </div>
+</header>
+
+<div class="section-title">
+        Document Upload
+    </div>
+
+<!-- Primary Section -->
+<div id="primary-section">
+  <h3>Primary Account Holder</h3>
+  <div class="document-upload-layout">
+    <div class="upload-row">
+      <label for="identity">Proof of Identity <span class="required">*</span></label>
+      <div class="input-group">
+        <select id="identity-type" class="uniform-select">
+          <option>Current signed passport</option>
+          <option>Current photocard Driving License</option>
+          <option>National Identity Card</option>
+          <option>Electoral Identity Card</option>
+        </select>
+        <input type="file" id="identity" name="identity" multiple hidden onchange="showFiles(this, 'identity-files')">
+        <span id="identity-files">No files selected</span>
+      </div>
+    </div>
+
+    <div class="upload-row">
+      <label for="address">Proof of Address <span class="required">*</span></label>
+      <div class="input-group">
+        <select id="address-type" class="uniform-select">
+          <option>Utility Bill (last 3 months)</option>
+          <option>Mobile Bill (last 3 months)</option>
+          <option>Bank Statement (last 3 months)</option>
+          <option>Government Issued ID with Name and Address</option>
+        </select>
+        <input type="file" id="address" name="address" multiple hidden onchange="showFiles(this, 'address-files')">
+        <span id="address-files">No files selected</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Application Form (Common for both account types) -->
+<div class="document-upload-layout">
+    <h3>Application Form</h3>
+    <div class="upload-row">
+        <label for="application-method">Submission Method</label>
+        <div class="input-group">
+            <select id="application-method" class="uniform-select">
+                <option value="">Select submission method</option>
+                <option value="online">Online Submission</option>
+                <option value="offline">Offline Submission</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="upload-row" id="application-upload-row" style="display:none;">
+        <label for="application">Upload Application</label>
+        <div class="input-group">
+            <input type="file" id="application" name="application" hidden onchange="showFiles(this, 'application-files')">
+            <span id="application-files">No file selected</span>
+        </div>
+    </div>
+</div>
+
+<!-- Checkbox comes right after Primary section -->
+<div class="only-holder-question">
+  <label>
+    <input type="checkbox" id="only-account-holder" checked>
+    I am the only account holder
+  </label>
+</div>
+
+<!-- Secondary Section -->
+<div id="secondary-section">
+  <h3>Secondary Account Holder</h3>
+  <div class="document-upload-layout">
+    <div class="upload-row">
+      <label for="secondary-identity">Proof of Identity</label>
+      <div class="input-group">
+        <select id="secondary-identity-type" class="uniform-select">
+          <option>Current signed passport</option>
+          <option>Current photocard Driving License</option>
+          <option>National Identity Card</option>
+          <option>Electoral Identity Card</option>
+        </select>
+        <input type="file" id="secondary-identity" name="secondary-identity" multiple hidden onchange="showFiles(this, 'secondary-identity-files')">
+        <span id="secondary-identity-files">No files selected</span>
+      </div>
+    </div>
+
+    <div class="upload-row">
+      <label for="secondary-address">Proof of Address</label>
+      <div class="input-group">
+        <select id="secondary-address-type" class="uniform-select">
+          <option>Utility Bill (last 3 months)</option>
+          <option>Mobile Bill (last 3 months)</option>
+          <option>Bank Statement (last 3 months)</option>
+          <option>Government Issued ID with Name and Address</option>
+        </select>
+        <input type="file" id="secondary-address" name="secondary-address" multiple hidden onchange="showFiles(this, 'secondary-address-files')">
+        <span id="secondary-address-files">No files selected</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Buttons -->
+<div class="button-container">
+    <button onclick="">Save Changes</button>
+    <button onclick="validateForm()">Proceed</button>
+</div>
+
+<script>
+function showFiles(input, spanId) {
+    const span = document.getElementById(spanId);
+    if (input.files.length > 0) {
+        const names = Array.from(input.files).map(f => f.name).join(", ");
+        span.textContent = names;
+    } else {
+        span.textContent = "No files selected";
+    }
+}
+
+function validateForm() {
+    // Primary fields
+    let identityType = document.getElementById("identity-type").value;
+    let identityFiles = document.getElementById("identity").files;
+    let addressType = document.getElementById("address-type").value;
+    let addressFiles = document.getElementById("address").files;
+    let appMethod = document.getElementById("application-method").value;
+    let appFiles = document.getElementById("application").files;
+    let onlyHolder = document.getElementById("only-account-holder").checked;
+
+    // Secondary fields
+    let secondaryIdentityType = document.getElementById("secondary-identity-type").value;
+    let secondaryIdentityFiles = document.getElementById("secondary-identity").files;
+    let secondaryAddressType = document.getElementById("secondary-address-type").value;
+    let secondaryAddressFiles = document.getElementById("secondary-address").files;
+
+    // Primary checks
+    if (!identityType || identityFiles.length === 0) {
+        alert("Please provide proof of identity (type and at least one file) for primary account holder.");
+        return;
+    }
+    if (!addressType || addressFiles.length === 0) {
+        alert("Please provide proof of address (type and at least one file) for primary account holder.");
+        return;
+    }
+    if (!appMethod) {
+        alert("Please select a submission method.");
+        return;
+    }
+  
+    // Secondary checks if checkbox is unchecked
+    if (!onlyHolder) {
+        if (!secondaryIdentityType || secondaryIdentityFiles.length === 0) {
+            alert("Please provide proof of identity (type and at least one file) for secondary account holder.");
+            return;
+        }
+        if (!secondaryAddressType || secondaryAddressFiles.length === 0) {
+            alert("Please provide proof of address (type and at least one file) for secondary account holder.");
+            return;
+        }
+    }
+
+    // If everything is valid
+    window.location.href = "/fcc_kyc?id=fcc_kyc_individual_video_kyc";
+}
+</script>
+]]></template>
+    </sp_widget>
+</record_update>

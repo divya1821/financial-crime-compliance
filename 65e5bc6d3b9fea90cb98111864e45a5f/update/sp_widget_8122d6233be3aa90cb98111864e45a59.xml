@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Header Section */&#13;
+.custom-header {&#13;
+  width: 100%;&#13;
+  background: linear-gradient(to right, #1e3a8a, #2563eb); /* blue gradient */&#13;
+  color: white;&#13;
+  padding: 40px;&#13;
+  overflow: hidden;&#13;
+  border-bottom-left-radius: 40px;  /* curved edges */&#13;
+  border-bottom-right-radius: 40px;&#13;
+  border-top-left-radius: 40px;  /* curved edges */&#13;
+  border-top-right-radius: 40px;&#13;
+}&#13;
+&#13;
+.header-content {&#13;
+  max-width: 1200px;&#13;
+  margin: 0 auto;&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  justify-content: space-between;&#13;
+}&#13;
+&#13;
+.header-text h1 {&#13;
+  font-size: 2.5em;&#13;
+  margin: 0;&#13;
+}&#13;
+&#13;
+.header-text p {&#13;
+  font-size: 1.2em;&#13;
+  margin-top: 8px;&#13;
+  color: #ddd;&#13;
+}&#13;
+&#13;
+.header-graphic {&#13;
+  display: flex;&#13;
+  align-items: flex-end;&#13;
+  gap: 12px;&#13;
+}&#13;
+&#13;
+.shape {&#13;
+  background-color: #888;&#13;
+  border-radius: 4px;&#13;
+  position: relative;&#13;
+  animation: float 3s ease-in-out infinite;&#13;
+}&#13;
+&#13;
+.shape1 {&#13;
+  width: 40px;&#13;
+  height: 60px;&#13;
+  background-color: #9ca3af;&#13;
+  animation-delay: 0s;&#13;
+}&#13;
+.shape2 {&#13;
+  width: 50px;&#13;
+  height: 80px;&#13;
+  background-color: #6b7280;&#13;
+  animation-delay: 0.5s;&#13;
+}&#13;
+.shape3 {&#13;
+  width: 30px;&#13;
+  height: 50px;&#13;
+  background-color: #9ca3af;&#13;
+  animation-delay: 1s;&#13;
+}&#13;
+&#13;
+/* Decorative Circles */&#13;
+.shape1::before,&#13;
+.shape2::before,&#13;
+.shape3::before {&#13;
+  content: "";&#13;
+  position: absolute;&#13;
+  width: 8px;&#13;
+  height: 8px;&#13;
+  border-radius: 50%;&#13;
+  top: -12px;&#13;
+  left: 50%;&#13;
+  transform: translateX(-50%);&#13;
+  animation: pulse 2s infinite ease-in-out;&#13;
+}&#13;
+.shape1::before { background-color: #38bdf8; } /* light blue */&#13;
+.shape2::before { background-color: #93c5fd; } /* softer blue */&#13;
+.shape3::before { background-color: #60a5fa; } /* medium blue */&#13;
+&#13;
+/* Floating Animation */&#13;
+@keyframes float {&#13;
+  0%, 100% { transform: translateY(0); }&#13;
+  50% { transform: translateY(-8px); }&#13;
+}&#13;
+@keyframes pulse {&#13;
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }&#13;
+  50% { transform: translateX(-50%) scale(1.4); opacity: 0.7; }&#13;
+}&#13;
+&#13;
+/* Cards Section */&#13;
+.cards-section {&#13;
+  display: flex;&#13;
+  justify-content: center;&#13;
+  gap: 20px;&#13;
+  padding: 30px 20px;&#13;
+  background-color: #f8f9fa;&#13;
+}&#13;
+&#13;
+.card {&#13;
+  background: white;&#13;
+  border-radius: 12px;&#13;
+  padding: 20px;&#13;
+  width: 280px;&#13;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);&#13;
+  text-align: center;&#13;
+  transition: transform 0.2s ease;&#13;
+}&#13;
+&#13;
+.card:hover {&#13;
+  transform: translateY(-5px);&#13;
+}&#13;
+&#13;
+.card-icon {&#13;
+  font-size: 40px;&#13;
+  margin-bottom: 15px;&#13;
+}&#13;
+&#13;
+.card h3 {&#13;
+  margin: 10px 0;&#13;
+  font-size: 1.2em;&#13;
+}&#13;
+&#13;
+.card p {&#13;
+  font-size: 0.95em;&#13;
+  color: #555;&#13;
+  margin-bottom: 20px;&#13;
+}&#13;
+&#13;
+.card-btn {&#13;
+  display: inline-block;&#13;
+  padding: 8px 16px;&#13;
+  border-radius: 6px;&#13;
+  background-color: #f3f4f6;&#13;
+  border: 1px solid #ccc;&#13;
+  color: black;&#13;
+  text-decoration: none;&#13;
+  font-weight: bold;&#13;
+  transition: background 0.3s ease;&#13;
+}&#13;
+&#13;
+.card-btn:hover {&#13;
+  background-color: #e0e0e0;&#13;
+}&#13;
+&#13;
+.disabled {&#13;
+  opacity: 0.5;&#13;
+}&#13;
+&#13;
+.disabled-btn {&#13;
+  display: inline-block;&#13;
+  padding: 8px 16px;&#13;
+  border-radius: 6px;&#13;
+  background-color: #f3f4f6;&#13;
+  border: 1px solid #ccc;&#13;
+  color: #666;&#13;
+  font-weight: bold;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcc_kyc_landing_page</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>FCC KYC Landing Page</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  var userEmail = gs.getUser().getEmail();
+  gs.info("User Email: " + userEmail, "x_vuram_financia_0");
+
+  // -------------------
+  // INDIVIDUAL LOOKUP
+  // -------------------
+  var grInd = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
+  grInd.addQuery('email', userEmail);
+  grInd.query();
+
+  if (grInd.next()) {
+    var indSysId = grInd.getUniqueValue();
+    var forename = grInd.getValue('forename_in_full');
+    gs.info("Individual record found. Sys ID: " + indSysId + " | Forename: " + forename, "x_vuram_financia_0");
+    data.individual = true;
+
+    // Lookup case by individual reference
+    var grCase = new GlideRecord('x_vuram_financia_0_fcc_kyc_cases');
+    grCase.addQuery('individual', indSysId);
+    grCase.orderByDesc('sys_created_on'); // get latest case if multiple
+    grCase.query();
+
+    if (grCase.next()) {
+      var custType = grCase.getValue('customer_type');
+      gs.info("Case record found. Forename: " + forename + " | Customer Type: " + custType, "x_vuram_financia_0");
+
+      if (custType == "customer" || custType == "individual") {
+        data.show_customer = true;
+        data.show_entity = false;
+        gs.info("Set data.show_customer = true and data.show_entity = false", "x_vuram_financia_0");
+      } else if (custType == "entity") {
+        data.show_customer = false;
+        data.show_entity = true;
+        gs.info("Set data.show_customer = false and data.show_entity = true", "x_vuram_financia_0");
+      }
+    } else {
+      gs.info("No case found for individual Sys ID: " + indSysId, "x_vuram_financia_0");
+    }
+  } else {
+    gs.info("No Individual record found for email: " + userEmail, "x_vuram_financia_0");
+    data.individual = false;
+  }
+
+  // -------------------
+  // ENTITY LOOKUP
+  // -------------------
+  var grEnt = new GlideRecord('x_vuram_financia_0_fcc_kyc_entity_details');
+  grEnt.addQuery('email_id', userEmail);
+  grEnt.query();
+
+  if (grEnt.next()) {
+    var entSysId = grEnt.getUniqueValue();
+    var legalName = grEnt.getValue('legal_name');
+    gs.info("Entity record found. Sys ID: " + entSysId + " | Legal Name: " + legalName, "x_vuram_financia_0");
+    data.entity = true;
+
+    // Lookup case by entity reference
+    var grCaseEnt = new GlideRecord('x_vuram_financia_0_fcc_kyc_cases');
+    grCaseEnt.addQuery('entity', entSysId); // Correct reference for entity
+    grCaseEnt.orderByDesc('sys_created_on'); // latest case
+    grCaseEnt.query();
+
+    if (grCaseEnt.next()) {
+      var custTypeEnt = grCaseEnt.getValue('customer_type');
+      gs.info("Case record found for entity. Legal Name: " + legalName + " | Customer Type: " + custTypeEnt, "x_vuram_financia_0");
+
+      if (custTypeEnt == "entity") {
+        data.show_customer = false;
+        data.show_entity = true;
+        gs.info("Set data.show_customer = false and data.show_entity = true", "x_vuram_financia_0");
+      } else if (custTypeEnt == "customer" || custTypeEnt == "individual") {
+        data.show_customer = true;
+        data.show_entity = false;
+        gs.info("Set data.show_customer = true and data.show_entity = false", "x_vuram_financia_0");
+      }
+    } else {
+      gs.info("No case found for entity Sys ID: " + entSysId, "x_vuram_financia_0");
+    }
+  } else {
+    gs.info("No Entity record found for email: " + userEmail, "x_vuram_financia_0");
+    data.entity = false;
+  }
+
+  // Log final values of flags for debugging
+  gs.info("FINAL → show_customer=" + data.show_customer + ", show_entity=" + data.show_entity, "x_vuram_financia_0");
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-08-30 04:08:26</sys_created_on>
+        <sys_id>8122d6233be3aa90cb98111864e45a59</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>FCC KYC Landing Page</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sp_widget_8122d6233be3aa90cb98111864e45a59</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-02 07:03:39</sys_updated_on>
+        <template><![CDATA[<div class="container">
+
+
+
+  <!-- Customer Widget HTML -->
+  <div ng-if="data.show_customer">
+    <div class="custom-header">
+      <div class="header-content">
+        <div class="header-text">
+          <h1>Bank Of XYZ</h1>
+          <p>We're always here to help.</p>
+        </div>
+        <div class="header-graphic">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-section">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-icon">]]>📄<![CDATA[</div>
+        <h3>Individual Customer KYC</h3>
+        <p>Complete your Know Your Customer verification process.</p>
+        <a href="/fcc_kyc?id=fcc_kyc_individual_upload_document"  
+           class="card-btn">Update Details</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-icon">]]>📅<![CDATA[</div>
+        <h3>Ongoing KYC</h3>
+        <p>Update your KYC for an existing customer</p>
+        <div class="disabled-btn">Update Details</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entity Widget HTML -->
+  <div ng-if="data.show_entity">
+    <div class="custom-header">
+      <div class="header-content">
+        <div class="header-text">
+          <h1>Bank Of XYZ</h1>
+          <p>We're always here to help.</p>
+        </div>
+        <div class="header-graphic">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-section">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-icon">]]>📄<![CDATA[</div>
+        <h3>Entity KYC</h3>
+        <p>Complete your Know Your Customer verification process.</p>
+        <a href="/fcc_kyc?id=fcc_kyc_entity_upload_document"  
+           class="card-btn">Update Details</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-icon">]]>📅<![CDATA[</div>
+        <h3>Ongoing KYC</h3>
+        <p>Update your KYC for an existing Entity</p>
+        <div class="disabled-btn">Update Details</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Widget Instance Loading -->
+  <div ng-if="data.show_customer">
+    <sp-widget widget="widgetInstances['fcc_kyc_customer_welcome_page']"></sp-widget>
+  </div>
+
+  <div ng-if="data.show_entity">
+    <sp-widget widget="widgetInstances['fcc_kyc_entity_landing_page']"></sp-widget>
+  </div>
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>
