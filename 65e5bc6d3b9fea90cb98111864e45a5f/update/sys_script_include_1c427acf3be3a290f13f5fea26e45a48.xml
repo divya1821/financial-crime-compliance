@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_vuram_financia_0.UKCompanyHouseConnector</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>UKCompanyHouseConnector</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var UKCompanyHouseConnector = Class.create();
+UKCompanyHouseConnector.prototype = {
+    initialize: function() {},
+    updateEntity: function(current_rec) {
+        var company_detail_payload = (this._getCompanyDetails(current_rec.registration_number));
+		var company_details=JSON.parse(company_detail_payload.responsebody);
+        if (company_detail_payload.httpresponse == '200') {
+            var officer_details = (this._getOfficerDetails(current_rec.registration_number));
+            if (officer_details.httpresponse == '200') {
+                var control_sysids = this._createController(officer_details.responsepayload, current_rec);
+            }
+            var significant_details =(this._getSignificantControlDetails(current_rec.registration_number));
+            if (significant_details.httpresponse == '200') {
+                var significant_sysids = this._createIndividual(significant_details.responsepayload, current_rec);
+                var significant_non_sysids = this._createNonIndividual(significant_details.responsepayload, current_rec);
+            }
+            var gr_entity = new GlideRecord('x_vuram_financia_0_fcc_kyc_entity_details');
+            gr_entity.get(current_rec.sys_id);
+            gr_entity.legal_name = this._get(company_details, 'company_name', '');
+            gr_entity.doing_business_as_name = this._get(company_details, 'company_name', '');
+            gr_entity.domicile_country = "United Kingdom";
+            gr_entity.sic = company_details.sic_codes+"";
+            gr_entity.country_of_domicile ="United Kingdom";
+            gr_entity.legal_street_address = this._get(company_details, 'registered_office_address.address_line_1', '')+this._get(company_details, 'registered_office_address.address_line_2', '')+this._get(company_details, 'registered_office_address.locality', '');
+            gr_entity.legal_city = this._get(company_details, 'registered_office_address.region', '');
+            gr_entity.legal_country = this._get(company_details, 'registered_office_address.country', '');
+            gr_entity.legal_postal_code = this._get(company_details, 'registered_office_address.postal_code', '');
+            gr_entity.individual_10_ownership = significant_sysids + "";
+            gr_entity.non_individual_10_ownership = significant_non_sysids + "";
+            gr_entity.controllers = control_sysids + "";
+            gr_entity.update();
+        }
+
+
+    },
+    _createController: function(officer_obj, current_rec) { //Function to create controllers of a company
+        var officer_sysid = [];
+        //var off_obb = officer_obj;
+         var off_obb=JSON.parse(officer_obj);
+        for (var x = 0; x < off_obb.items.length; x++) {
+            if ( !(off_obb.items[x].resigned_on)) {
+				var name_splits=this._parseNameNoTitle(off_obb.items[x].name);
+                var gr_owner = new GlideRecord('x_vuram_financia_0_fcc_kyc_ownerships');
+                gr_owner.initialize();
+                gr_owner.first_name = this._get(name_splits, 'forename', '');
+				gr_owner.middle_name = this._get(name_splits, 'middle_name', '');
+                gr_owner.last_name = this._get(name_splits, 'surname', '');
+                gr_owner.address_line = this._get(off_obb.items[x], 'address.address_line_1', '') + " " + this._get(off_obb.items[x], 'address.address_line_2', '')+" "+this._get(off_obb.items[x], 'address.locality', '');
+                gr_owner.city = this._get(off_obb.items[x], 'address.region', '');
+                gr_owner.country_of_residence = this._get(off_obb.items[x], 'country_of_residence', '');
+                gr_owner.country_of_nationality = this._get(off_obb.items[x], 'nationality', '');
+				gr_owner.registration_number = this._get(off_obb.items[x], 'person_number', '');
+                gr_owner.dob=this._get(off_obb.items[x],'date_of_birth.month','')+"-"+this._get(off_obb.items[x],'date_of_birth.year','');
+                gr_owner.fcc_kyc_case = current_rec.fcc_kyc_case.sys_id;
+				gr_owner.type='controller';
+                gr_owner.insert();
+                officer_sysid.push(gr_owner.sys_id);
+            }
+        }
+        return officer_sysid + "";
+
+    },
+    _createIndividual: function(individual_obj, current_rec) { // function to create individual  
+        var individual_sysid = [];
+        //var off_obb = individual_obj;
+         var off_obb=JSON.parse(individual_obj);
+        for (var x = 0; x < off_obb.items.length; x++) {
+            if (off_obb.items[x].kind == "individual-person-with-significant-control") {
+                var gr_owner = new GlideRecord('x_vuram_financia_0_fcc_kyc_ownerships');
+                gr_owner.initialize();
+                gr_owner.first_name = this._get(off_obb.items[x], 'name_elements.forename', '');
+                gr_owner.middle_name = this._get(off_obb.items[x], 'name_elements.middle_name', '');
+                gr_owner.last_name = this._get(off_obb.items[x], 'name_elements.surname', '');
+                gr_owner.address_line = this._get(off_obb.items[x], 'address.address_line_1', '') +" "+this._get(off_obb.items[x], 'address.address_line_2', '')+" "+this._get(off_obb.items[x], 'address.locality', '');
+                gr_owner.city = this._get(off_obb.items[x], 'address.region', '');
+                gr_owner.country_of_residence = this._get(off_obb.items[x], 'country_of_residence', '');
+                gr_owner.country_of_nationality = this._get(off_obb.items[x], 'nationality', '');
+                gr_owner.dob=this._get(off_obb.items[x],'date_of_birth.month','')+"-"+this._get(off_obb.items[x],'date_of_birth.year','');
+                gr_owner.fcc_kyc_case = current_rec.fcc_kyc_case.sys_id;
+				gr_owner.type='individual';
+                gr_owner.insert();
+                individual_sysid.push(gr_owner.sys_id);
+            }
+        }
+        return individual_sysid + "";
+
+    },
+    _createNonIndividual: function(individual_obj, current_rec) { //function to create non-individual
+        var individual_sysid = [];
+       // var off_obb = individual_obj;
+         var off_obb=JSON.parse(individual_obj);
+        for (var x = 0; x < off_obb.items.length; x++) {
+            if (off_obb.items[x].kind == "corporate-entity-person-with-significant-control") {
+                var gr_owner = new GlideRecord('x_vuram_financia_0_fcc_kyc_ownerships');
+                gr_owner.initialize();
+                gr_owner.full_legal_name = this._get(off_obb.items[x], 'name', '');
+                gr_owner.postal_code = this._get(off_obb.items[x], 'address.postal_code', '');
+                gr_owner.address_line = this._get(off_obb.items[x], 'address.address_line_1', '') +" "+this._get(off_obb.items[x], 'address.address_line_2', '')+" "+this._get(off_obb.items[x], 'address.locality', '');
+                gr_owner.city = this._get(off_obb.items[x], 'address.region', '');
+                gr_owner.country_of_incorporation = this._get(off_obb.items[x], 'identification.country_registered', '');
+                gr_owner.registration_number = this._get(off_obb.items[x], 'identification.registration_number');
+                gr_owner.fcc_kyc_case = current_rec.fcc_kyc_case.sys_id;
+				gr_owner.type='entity';
+                gr_owner.insert();
+                individual_sysid.push(gr_owner.sys_id);
+            }
+        }
+        return individual_sysid + "";
+
+    },
+    testFunc: function(test_obj) {
+        return this._createNonIndividual(test_obj) + "," + this._createIndividual(test_obj);
+
+
+    },
+    _getCompanyDetails: function(company_number) { //local function for api call via action to get company details
+        var inputs = {};
+        inputs['company_number'] = company_number;
+        var outputs = sn_fd.FlowAPI.executeActionQuick('x_vuram_uk_compa_0.fetch_company_details', inputs);
+        return outputs;
+
+    },
+    _getOfficerDetails: function(company_number) { //local function for api call via action to get controller details
+        var inputs = {};
+        inputs['company_number'] = company_number;
+        var outputs = sn_fd.FlowAPI.executeActionQuick('x_vuram_uk_compa_0.fetch_officer_details', inputs);
+        return outputs;
+
+    },
+    _getSignificantControlDetails: function(company_number) { //local function for api call via action to get individual and non-individual details
+        var inputs = {};
+        inputs['company_number'] = company_number;
+        var outputs = sn_fd.FlowAPI.executeActionQuick('x_vuram_uk_compa_0.fetch_persons_with_significant_control', inputs);
+        return outputs;
+
+    },
+    _get: function(obj, path, def) //This function will be used to replace key value with empty if its not available
+    {
+        if (!obj) return def;
+        var parts = path.split('.');
+        var cur = obj;
+        for (var i = 0; i < parts.length; i++) {
+            if (cur && typeof cur === 'object' && (parts[i] in cur)) cur = cur[parts[i]];
+            else return def;
+        }
+        return (cur === undefined || cur === null) ? def : cur;
+    },
+	_parseNameNoTitle: function (fullName) {
+    var out = { surname: '', forename: '', middle_name: '' };
+    if (!fullName) return out;
+
+    
+    var s = ('' + fullName)
+        .replace(/\s*,\s*/g, ',')   
+        .replace(/\s+/g, ' ')       
+        .trim();
+
+    var parts = s.split(','); 
+
+    if (parts.length >= 2) {
+        out.surname = (parts[0] || '').trim();
+        var given = (parts[1] || '').trim(); 
+        if (given) {
+            var g = given.split(' ');
+            if (g.length > 0) {
+                out.forename = g[0];
+                if (g.length > 1) out.middle_name = g.slice(1).join(' ');
+            }
+        }
+        return out;
+    }
+
+    var toks = s.split(' ');
+    if (toks.length === 1) {
+        out.surname = toks[0];
+    } else {
+        out.forename = toks[0];
+        out.surname = toks[toks.length - 1];
+        if (toks.length > 2) out.middle_name = toks.slice(1, toks.length - 1).join(' ');
+    }
+    return out;
+},
+
+    type: 'UKCompanyHouseConnector'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-28 17:11:06</sys_created_on>
+        <sys_id>1c427acf3be3a290f13f5fea26e45a48</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>UKCompanyHouseConnector</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_script_include_1c427acf3be3a290f13f5fea26e45a48</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-09-03 16:47:32</sys_updated_on>
+    </sys_script_include>
+</record_update>

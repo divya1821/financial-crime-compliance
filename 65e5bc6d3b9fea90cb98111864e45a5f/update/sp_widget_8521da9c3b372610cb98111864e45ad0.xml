@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $interval, $timeout, $window) {
+    $scope.qrUrl = '';
+    $scope.recordSysId = '';
+    $scope.loading = false;
+
+    // Start Flow: Only create record & get QR
+    $scope.triggerFlow = function() {
+        $scope.loading = true;
+
+        $scope.server.get({ action: 'createRecord' }).then(function(response) {
+            $scope.recordSysId = response.data.sys_id;
+
+            $timeout(function() {
+                var stopPolling = $interval(function() {
+                    $scope.server.get({ 
+                        action: 'getRecord', 
+                        sys_id: $scope.recordSysId 
+                    }).then(function(res) {
+                        if (res.data.url) {
+                            $scope.qrUrl = res.data.url;
+                            $scope.loading = false;
+
+                            document.getElementById("qrcode").innerHTML = "";
+                            new QRCode(document.getElementById("qrcode"), {
+                                text: $scope.qrUrl,
+                                width: 200,
+                                height: 200
+                            });
+
+                            $interval.cancel(stopPolling);
+                        }
+                    });
+                }, 3000);
+            }, 4000);
+        });
+    };
+
+    // Navigation
+    $scope.goPrevious = function() {
+        $window.location.href = "/fcc_kyc?id=fcc_kyc_update_dashboard"; 
+    };
+
+    // Proceed: Update status then navigate
+    $scope.goProceed = function() {
+        if ($scope.recordSysId) {
+            $scope.server.get({ 
+                action: 'markStarted',
+                sys_id: $scope.recordSysId
+            }).then(function() {
+                $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details"; 
+            });
+        } else {
+            $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details"; 
+        }
+    };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>body {&#13;
+  font-family: Arial, sans-serif;&#13;
+  margin: 0;&#13;
+  padding: 0;&#13;
+}&#13;
+&#13;
+/* Breadcrumb Header */&#13;
+.breadcrumb-header {&#13;
+  display: flex;&#13;
+  justify-content: space-between;&#13;
+  align-items: center;&#13;
+  padding: 15px 20px;&#13;
+  border-bottom: 1px solid #ccc;&#13;
+  background-color: #fff; /* white background */&#13;
+}&#13;
+&#13;
+.breadcrumb {&#13;
+  font-size: 14px;&#13;
+  color: #333;&#13;
+  font-weight: bold;&#13;
+}&#13;
+&#13;
+.step-info {&#13;
+  text-align: right;&#13;
+  font-size: 14px;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+/* Section Title */&#13;
+.section-title {&#13;
+  text-align: center;&#13;
+  font-size: 20px;&#13;
+  font-weight: bold;&#13;
+  margin: 20px 0;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+/* Document Layout */&#13;
+.document-upload-layout {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  gap: 25px;&#13;
+  padding: 20px;&#13;
+  background-color: #fff;&#13;
+}&#13;
+&#13;
+.upload-row {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 20px;&#13;
+  margin-bottom: 25px;&#13;
+}&#13;
+&#13;
+.upload-row label {&#13;
+  font-weight: bold;&#13;
+  font-size: 16px;&#13;
+  color: #333;&#13;
+  min-width: 150px;&#13;
+}&#13;
+&#13;
+.input-group {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 20px;&#13;
+  flex: 1;&#13;
+}&#13;
+&#13;
+.uniform-select {&#13;
+  width: 250px;  /* uniform dropdown width */&#13;
+  padding: 6px;&#13;
+  font-size: 14px;&#13;
+  border: 1px solid #ccc;&#13;
+  border-radius: 4px;&#13;
+}&#13;
+&#13;
+/* Buttons */&#13;
+.button-container {&#13;
+  display: flex;&#13;
+  justify-content: flex-end;&#13;
+  gap: 15px;&#13;
+  padding: 20px;&#13;
+  background-color: #fff;&#13;
+}&#13;
+&#13;
+.button-container button {&#13;
+  padding: 10px 20px;&#13;
+  font-size: 14px;&#13;
+  font-weight: bold;&#13;
+  color: white;&#13;
+  background-color: #2563eb;&#13;
+  border: none;&#13;
+  border-radius: 4px;&#13;
+  cursor: pointer;&#13;
+}&#13;
+&#13;
+.button-container button:hover {&#13;
+  background-color: #1e3a8a;&#13;
+}&#13;
+&#13;
+&#13;
+&#13;
+/* Checkbox Question */&#13;
+.question-container {&#13;
+  text-align: left;&#13;
+  padding: 20px;&#13;
+  background-color: #f8f9fa;&#13;
+  border-top: 1px solid #ccc;&#13;
+}&#13;
+&#13;
+.question-container label {&#13;
+  font-size: 15px;&#13;
+  font-weight: bold;&#13;
+  cursor: pointer;&#13;
+}&#13;
+&#13;
+.question-container input[type="checkbox"] {&#13;
+  margin-right: 8px;&#13;
+}&#13;
+&#13;
+.only-holder-question {&#13;
+  padding: 10px 20px;&#13;
+  font-size: 14px;&#13;
+  font-weight: bold;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+.required {&#13;
+  color: red;&#13;
+  font-weight: bold;&#13;
+  margin-left: 3px;&#13;
+}&#13;
+&#13;
+body, .kyc-container {&#13;
+    font-family: 'Segoe UI', sans-serif;&#13;
+    max-width: 700px;&#13;
+    margin: auto;&#13;
+    padding: 30px;&#13;
+  }&#13;
+&#13;
+  .kyc-title {&#13;
+    text-align: center;&#13;
+    color: #2c3e50;&#13;
+    font-size: 32px;      /* larger main heading */&#13;
+    font-weight: bold;&#13;
+    margin-bottom: 20px;&#13;
+  }&#13;
+&#13;
+  .kyc-subtitle {&#13;
+    color: #34495e;&#13;
+    font-size: 22px;      /* bigger sub-headings */&#13;
+    margin-bottom: 15px;&#13;
+  }&#13;
+&#13;
+  .kyc-list {&#13;
+    line-height: 1.8;&#13;
+    color: #555;&#13;
+    font-size: 18px;      /* larger list text */&#13;
+  }&#13;
+&#13;
+  .kyc-text {&#13;
+    margin-top: 10px;&#13;
+    color: #555;&#13;
+    font-size: 18px;      /* spinner text */&#13;
+  }&#13;
+&#13;
+  .kyc-instructions {&#13;
+    background-color: #f4f6f7;&#13;
+    border-radius: 10px;&#13;
+    padding: 20px;&#13;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);&#13;
+  }&#13;
+&#13;
+  .kyc-center {&#13;
+    margin-top: 30px;&#13;
+    display: flex;&#13;
+    flex-direction: column;&#13;
+    align-items: center;&#13;
+    justify-content: center;&#13;
+  }&#13;
+&#13;
+  .kyc-qrcode {&#13;
+    margin-top: 15px;&#13;
+    padding: 15px;&#13;
+    background: white;&#13;
+    border: 1px solid #ccc;&#13;
+    border-radius: 10px;&#13;
+    display: inline-block;&#13;
+  }&#13;
+&#13;
+  .kyc-buttons {&#13;
+    margin-top: 40px;&#13;
+    display: flex;&#13;
+    justify-content: flex-end;&#13;
+    gap: 12px;&#13;
+  }&#13;
+&#13;
+  .kyc-button {&#13;
+    font-size: 16px;      /* bigger button text */&#13;
+    padding: 10px 20px;   /* more button padding */&#13;
+  }&#13;
+&#13;
+  .breadcrumb-header {&#13;
+    font-size: 16px;&#13;
+    margin-bottom: 20px;&#13;
+  }&#13;
+&#13;
+  .step-info {&#13;
+    font-size: 18px;&#13;
+    font-weight: 500;&#13;
+    margin-top: 5px;&#13;
+  }</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>fcc_kyc_individual_video_kyc</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>FCC KYC Individual Video KYC</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    data.message = '';
+    data.url = '';
+    data.sys_id = '';
+
+    var table = 'x_vuram_financia_0_fcc_kyc_individual_details';
+    var userEmail = gs.getUser().getEmail();
+
+    // Create record (NO status update here)
+    if (input && input.action === 'createRecord') {
+        var grInd = new GlideRecord(table);
+        grInd.addQuery('email', userEmail);
+        grInd.query();
+
+        if (grInd.next()) {
+            // just return sys_id
+            data.sys_id = grInd.sys_id.toString();
+        }
+    }
+
+    // Get QR record
+    if (input && input.action === 'getRecord') {
+        var gr2 = new GlideRecord(table);
+        if (gr2.get(input.sys_id)) {
+            data.url = gr2.getValue('video_kyc_link');
+        }
+    }
+
+    // Update status when proceeding
+    if (input && input.action === 'markStarted') {
+        var gr3 = new GlideRecord(table);
+        if (gr3.get(input.sys_id)) {
+            gr3.video_kyc_status = "started";
+            gr3.update();
+            data.message = 'Record updated as started';
+        }
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 11:59:22</sys_created_on>
+        <sys_id>8521da9c3b372610cb98111864e45ad0</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>FCC KYC Individual Video KYC</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sp_widget_8521da9c3b372610cb98111864e45ad0</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-03 11:32:36</sys_updated_on>
+        <template><![CDATA[<header class="breadcrumb-header">
+  <div class="breadcrumb">
+    <a href="/fcc_kyc">Home</a> &gt; 
+    <a href="/fcc_kyc?id=fcc_kyc_individual_video_kyc">Video KYC</a>
+  </div>
+  <div class="step-info">
+    Step 2 of 8<br>Current: Video KYC
+  </div>
+</header>
+
+<div class="kyc-container">
+  <h1 class="kyc-title">Video KYC</h1>
+  
+  <!-- Instructions -->
+  <div class="kyc-instructions">
+    <h3 class="kyc-subtitle">Step-by-step Instructions Panel</h3>
+    <ul class="kyc-list">
+      <li>Prepare your original ID proof (same as uploaded earlier).</li>
+      <li>Ensure proper lighting and internet connection.</li>
+      <li>Allow camera and microphone access.</li>
+      <li>Keep your face clearly visible throughout the session.</li>
+    </ul>
+  </div>
+  
+  <!-- Start Flow Button (hidden after click) -->
+  <div ng-if="!loading && !qrUrl" class="kyc-center">
+    <button class="btn btn-primary kyc-button" ng-click="triggerFlow()">Start Flow</button>
+  </div>
+
+  <!-- Loading Spinner (centered) -->
+  <div ng-if="loading" class="kyc-center">
+    <div class="spinner-border text-primary" role="status" style="width: 3.5rem; height: 3.5rem;"></div>
+    <p class="kyc-text">Please wait...</p>
+  </div>
+
+  <!-- QR Code Section (centered) -->
+  <div ng-if="qrUrl && !loading" class="kyc-center" style="margin-top: 30px;">
+    <h4 class="kyc-subtitle">Scan QR Code</h4>
+    <div id="qrcode" class="kyc-qrcode"></div>
+  </div>
+</div>
+
+<!-- Bottom Buttons (aligned right) -->
+<div class="kyc-buttons">
+  <button class="btn btn-primary kyc-button" ng-click="goPrevious()">Previous</button>
+  <button class="btn btn-primary kyc-button">Save Changes</button>
+  <button class="btn btn-primary kyc-button" ng-click="goProceed()" ng-disabled="!qrUrl">Proceed</button>
+</div>
+
+<!-- Load Bootstrap spinner + QRCode.js -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+]]></template>
+    </sp_widget>
+</record_update>
