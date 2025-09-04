@@ -1,0 +1,2041 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope) {
+    var c = this;
+
+    // Step configuration
+    c.steps = [
+        "Customer Details",
+        "Contact Information",
+        "Citizenship Information",
+        "Employee Information",
+        "Bank Information",
+        "Preview"
+    ];
+    c.required = false;
+
+		//c.data.type = true;
+    c.today = new Date();
+
+    c.pronounList = [{
+        "label": "Mr",
+        "id": "-1",
+        "value": "mr"
+    }, {
+        "label": "Ms",
+        "id": "-1",
+        "value": "ms"
+    }, {
+        "label": "Mrs",
+        "id": "-1",
+        "value": "mrs"
+    }, {
+        "label": "Miss",
+        "id": "-1",
+        "value": "miss"
+    }];
+
+    c.nationalities = [
+        "Afghan", "Albanian", "Algerian", "American", "Andorran",
+        "Angolan", "Argentine", "Armenian", "Australian", "Austrian",
+        "Bangladeshi", "Belgian", "Brazilian", "British", "Bulgarian",
+        // ... full list of nationalities here
+    ];
+
+
+    
+   
+	// Dropdown values
+    c.employmentStatuses = [{
+        "label": "Self business",
+        "id": "-1",
+        "value": "self_business"
+    }, {
+        "label": "Salaried",
+        "id": "-1",
+        "value": "salaried"
+    }, {
+        "label": "Retired",
+        "id": "-1",
+        "value": "retired"
+    }, {
+        "label": "Student",
+        "id": "-1",
+        "value": "student"
+    }];
+
+    c.regex = {
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+        phone: /^\+?[0-9\s-]{7,15}$/, // generic phone format
+        mobile: /^\+?[0-9]{1,3}\s?[0-9]{6,12}$/ // with country code
+    };
+    // Form state
+    c.currentStep = 1;
+    c.sameAsPermanent = false;
+
+     // form data with placeholders
+    c.formData = {
+        // pronoun: "Mr",
+        forenameFull: "Jack Smith",
+        dob: "1990-01-15",
+        addressLine: "123 Example Street",
+        postcode: "AB12 3CD",
+        city: "London",
+        //nationality: "UK",
+        countryResidence: "UK",
+        email: c.data.email,
+        homeContact: "02079460000",
+        mobile: "07123456789",
+        mobileContact: "07123456789",
+        usCitizen: false,
+        taxId: "UK123456789",
+        nonUkResident: false,
+        nonUkTaxId: "",
+        // employmentStatus: "Employed",
+        occupation: "Software Engineer",
+        sourceInitialDeposit: "Salary Savings",
+        sourceAnnualRevenue: "Employment Income",
+        employer: "Tech Solutions Ltd",
+        employmentIndustry: "Information Technology",
+        purposeOfAccount: "Personal Savings",
+        annualTxnVolume: 25000,
+        cashDeposit: 2000,
+        chequeDeposit: 1000,
+        atmDeposit: 500,
+        achWithdrawal: 3000,
+        cashWithdrawal: 1000,
+        chequeWithdrawal: 500,
+        atmWithdrawal: 1200,
+        achDeposit: 5000
+    };
+    /* c.formData = {
+         pronoun: "",
+         forenameFull: form.forenameFull,
+         dob: "",
+         addressLine: "",
+         postcode: "",
+         city: "",
+         nationality: form.nationality,
+         countryResidence: "",
+         email: form.email,
+         homeContact: "",
+         mobile: "",
+         mobileContact: "",
+         usCitizen: false,
+         taxId: "",
+         nonUkResident: false,
+         nonUkTaxId: "",
+         employmentStatus: "",
+         occupation: "",
+         sourceInitialDeposit: "",
+         sourceAnnualRevenue: "",
+         employer: "",
+         employmentIndustry: "",
+         purposeOfAccount: "",
+         annualTxnVolume: "",
+         cashDeposit: "",
+         chequeDeposit: "",
+         atmDeposit: "",
+         achWithdrawal: "",
+         cashWithdrawal: "",
+         chequeWithdrawal: "",
+         atmWithdrawal: "",
+         achDeposit: ""
+     };*/
+
+
+    // Utility for multi-select chip dropdown
+    c.toggleListedCountry = function(country) {
+        let idx = c.formData.listedCountriesSelected.indexOf(country);
+        if (idx > -1) {
+            c.formData.listedCountriesSelected.splice(idx, 1); // remove
+        } else {
+            c.formData.listedCountriesSelected.push(country); // add
+        }
+    };
+
+    // Navigation functions
+    c.nextStep = function() {
+        
+       // if (c.validateCurrentStep()) {
+            if (c.currentStep < c.steps.length) {
+                c.currentStep++;
+            }
+       //}
+    };
+
+    c.prevStep = function() {
+        if (c.currentStep > 1) {
+            c.currentStep--;
+        }
+    };
+
+    c.goToStep = function(stepNumber) {
+        if (stepNumber <= c.currentStep + 1 && stepNumber >= 1) {
+            c.currentStep = stepNumber;
+        }
+    };
+
+    // Utility functions
+    c.sendOtp = function() {
+        if (!c.formData.mobileNumber) {
+            alert("Please enter mobile number first.");
+            return;
+        }
+        alert("OTP sent successfully to " + c.formData.mobileNumber);
+    };
+
+    c.copyAddress = function() {
+        if (c.sameAsLegal) {
+            c.formData.physicalStreet = c.formData.legalStreet;
+        } else {
+            c.formData.physicalStreet = "";
+        }
+    };
+
+    c.addSignature = function() {
+        alert("Digital signature functionality would be integrated with e-signature service");
+    };
+
+    c.saveProgress = function() {
+        localStorage.setItem('bankingFormData', JSON.stringify(c.formData));
+        alert("Progress saved successfully!");
+    };
+
+    c.validateCurrentStep = function() {
+        // Basic validation logic
+        switch (c.currentStep) {
+            case 1:
+                return c.formData.pronoun && c.formData.forenameFull && c.formData.dob && c.formData.addressLine && c.formData.postcode && c.formData.city && c.formData.nationality && c.formData.countryResidence;
+            case 2:
+                return c.formData.mobile && c.formData.mobileContact && c.formData.email && c.formData.homeContact;
+            case 3:
+                return c.formData.usCitizen && c.formData.taxId && c.formData.nonUkResident && c.formData.nonUkTaxId;
+            case 4:
+                return c.formData.employmentStatus && c.formData.occupation && c.formData.sourceInitialDeposit && c.formData.sourceAnnualRevenue && c.formData.employer && c.formData.employmentIndustry && c.formData.purposeOfAccount && c.formData.annualTxnVolume;
+            case 5:
+                return c.formData.cashDeposit && c.formData.chequeDeposit && c.formData.atmDeposit && c.formData.achWithdrawal && c.formData.achDeposit && c.formData.cashWithdrawal && c.formData.chequeWithdrawal && c.formData.atmWithdrawal;
+                // case 6:
+                //   return c.formData.declaration1 && c.formData.declaration2 && c.formData.declaration3;
+            default:
+                return true;
+        }
+    };
+
+    c.validateField = function(type, value) {
+        switch (type) {
+            case 'email':
+                c.errors.email = !c.regex.email.test(value || "");
+                break;
+            case 'phone':
+                // For both homeContact and mobileContact
+                if (value === c.formData.homeContact) {
+                    c.errors.homeContact = value && !c.regex.phone.test(value);
+                }
+                if (value === c.formData.mobileContact) {
+                    c.errors.mobileContact = value && !c.regex.phone.test(value);
+                }
+                break;
+            case 'mobile':
+                c.errors.mobile = !c.regex.mobile.test(value || "");
+                break;
+        }
+    };
+
+    c.canSubmit = function() {
+        return true;
+			//c.formData.declaration1 && c.formData.declaration2 && c.formData.declaration3 && c.formData.declaration4;
+    };
+
+    c.submitForm = function() {
+        if (!c.canSubmit()) {
+            alert("Please complete all required declarations.");
+            return;
+        }
+
+        c.server.get({
+            action: 'submit',
+            record: JSON.stringify(c.formData)
+        }).then(function(response) {
+            if (response.data.status_of_submit) {
+                alert("]]>🎉<![CDATA[ Application submitted successfully! You will receive a confirmation email shortly with your application reference number.");
+                window.location.href = "/fcc_kyc";
+            } else {
+                alert("Not Updated");
+            }
+
+        });
+        // Reset form or redirect
+        // c.currentStep = 1;
+        // c.formData = {};
+    };
+
+    // Load saved data on initialization
+    var savedData = localStorage.getItem('bankingFormData');
+    if (savedData) {
+        try {
+            var parsedData = JSON.parse(savedData);
+            angular.extend(c.formData, parsedData);
+        } catch (e) {
+            console.log("Error loading saved data:", e);
+        }
+    }
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>$transition-time: 0.1s;
+
+/* Global Widget Styles */
+        .banking-form-widget {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Step Tracker Styles */
+        .step-tracker {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+
+        .step-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            transition: all $transition-time ease;
+        }
+
+        .step-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: #e9ecef;
+            z-index: 1;
+        }
+
+        .step-item.completed:not(:last-child)::after {
+            background: #28a745;
+        }
+
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+            transition: all $transition-time ease;
+        }
+
+        .step-item.active .step-circle {
+            background: #007bff;
+            color: white;
+            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+        }
+
+        .step-item.completed .step-circle {
+            background: #28a745;
+            color: white;
+        }
+
+        .step-item.inactive .step-circle {
+            background: #e9ecef;
+            color: #6c757d;
+        }
+
+        .step-label {
+            font-size: 12px;
+            text-align: center;
+            color: #6c757d;
+            font-weight: 500;
+            max-width: 80px;
+        }
+
+        .step-item.active .step-label {
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .step-item.completed .step-label {
+            color: #28a745;
+        }
+
+        /* Form Content Styles */
+        .form-content {
+            //background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            min-height: 500px;
+        }
+
+        .form-title {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 600;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .form-section {
+            margin-bottom: 25px;
+        }
+
+        .form-section h5 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Form Controls */
+        .form-group label {
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 14px;
+            transition: all $transition-time ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .required-asterisk {
+            color: #dc3545;
+            margin-left: 3px;
+        }	
+				.form-group select.form-control {
+  height: 34px;             /* balanced height */
+  line-height: 36px;        /* centers text vertically */
+  padding: 0 10px;          /* removes uneven top/bottom padding */
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.form-group select.form-control option {
+  line-height: normal;      /* options remain readable */
+  padding: 6px 10px;        /* clean spacing */
+  font-size: 14px;
+}
+
+				/* Make select button smaller */
+.btn-sm {
+  font-size: 1.3rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Selected Countries Styling */
+.selected-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.country-chip {
+  background: #007bff;
+  color: #fff;
+  font-size: 1.3rem; /* bigger text */
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+}
+
+.country-chip:hover {
+  background: #0056b3;
+}
+
+.remove-chip {
+  margin-left: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffdddd;
+}
+
+.remove-chip:hover {
+  color: #ff4d4d;
+}
+/* For text, email, number, and other input placeholders */
+.form-control::placeholder {
+  color: #999;
+  vertical-align: center;
+  opacity: 1;              /* ensure visible in all browsers */
+}
+
+
+/* Hide number input spinners (all browsers) */
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.no-spinner {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+
+        /* File Upload Styles */
+        .file-upload-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-upload-label {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border: 2px dashed #007bff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all $transition-time ease;
+            background: #f8f9ff;
+        }
+
+        .file-upload-label:hover {
+            background: #e3f2fd;
+            border-color: #0056b3;
+        }
+
+        .file-upload-label i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+				
+				
+
+        /* Navigation Buttons */
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all $transition-time ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #1e7e34;
+        }
+
+        .btn-outline-primary {
+            background: transparent;
+            color: #007bff;
+            border: 2px solid #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Declarations Section */
+        .declarations-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .checkbox-group {
+            margin: 20px 0;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 12px;
+            margin-top: 3px;
+            transform: scale(1.2);
+        }
+
+        .signature-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .signature-row {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .signature-box {
+            border: 3px dashed #007bff;
+            flex: 1;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            background: #f8f9ff;
+            transition: all $transition-time ease;
+        }
+
+        .signature-box:hover {
+            border-color: #0056b3;
+            background: #e3f2fd;
+        }
+
+        .signature-box button {
+            margin-top: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .signature-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .disclaimer-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #ff9800;
+        }
+
+        /* Input Group Styling */
+        .input-group-append .btn {
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .banking-form-widget {
+                padding: 15px;
+            }
+            
+            .step-tracker {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .step-item {
+                flex-basis: calc(50% - 5px);
+                margin-bottom: 15px;
+            }
+            
+            .step-item:not(:last-child)::after {
+                display: none;
+            }
+            
+            .form-content {
+                padding: 20px;
+            }
+            
+            .signature-row {
+                flex-direction: column;
+            }
+        }
+
+        /* Animation for step transitions */
+        .step-content {
+            animation: fadeInUp $transition-time ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Progress indicator */
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress {
+            height: 6px;
+            border-radius: 3px;
+            background: #e9ecef;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #007bff, #28a745);
+            border-radius: 3px;
+            transition: width $transition-time ease;
+        }
+
+.preview-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.preview-section h5 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #1d3557;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.preview-section .row {
+  margin-bottom: 16px;
+}
+
+.preview-section .col-md-6 {
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>fcc_kyc_individual_form_copy</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>FCC KYC individual form Copy</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp) {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    //console.log('Hi');
+    data.type = $sp.getParameter('type');
+    var table = 'x_vuram_financia_0_fcc_kyc_individual_details';
+    var sys_id = 'c62d25783b2faa10f13f5fea26e45afb';
+    var userEmail = gs.getUser().getEmail();
+		data.email = userEmail;
+    var enq = "email=" + userEmail;
+    /* var grIndiviualLoad = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
+    grIndiviualLoad.addEncodedQuery(enq);
+    grIndiviualLoad.query();
+    while (grIndiviualLoad.next()) {
+			console.log("Query");
+			sys_id = grIndiviualLoad.getValue('sys_id');
+        data.formData = {
+            forenameFull: grIndiviualLoad.getValue('forename_in_full'),
+            nationality: grIndiviualLoad.getValue('country_of_nationality'),
+            email: grIndiviualLoad.getValue('email'),
+            //postcode: grIndiviualLoad.getValue('')
+        };
+    }*/
+
+    //var r = $sp.getRecord(table, sys_id, true);
+    //console.log("Record - " + JSON.stringify(r.getRecordClassName()));
+
+    /*console.log(JSON.stringify(data.formData));
+  var form = $sp.getForm(table, sys_id);
+	data.getForm = form;
+	console.log(JSON.stringify(form, null, 2));
+	console.log("Choice For Proof of Address" + JSON.stringify(form._fields.employment_status.choices));
+	
+	//Fetching ronoun List Choices
+	data.pronounList = form._fields.surname.choices;
+	data.pronounList = data.pronounList.filter(function(p) {
+    return p.value !== "";
+  });
+	//Fetching Proof Of Address List Choices
+	data.proofOfAddressList = form._fields.proof_of_address.choices;
+	data.proofOfAddressList = data.proofOfAddressList.filter(function(p) {
+    return p.value !== "";
+  });
+	
+	data.employmentStatuses = form._fields.employment_status.choices;
+	data.employmentStatuses = data.employmentStatuses.filter(function(p) {
+    return p.value !== "";
+  });*/
+
+
+    if (input && input.action == 'submit') {
+        var record = JSON.parse(input.record);
+				
+        userEmail = gs.getUser().getEmail();
+        enq = "email=" + userEmail;
+				console.log("Inside - " + enq);
+        var grInd = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
+        grInd.addQuery(enq);
+        grInd.query();
+
+        if (grInd.next()) {
+						console.log("Inside");
+            grInd.tax_identification_number = record.taxId;
+            grInd.surname = record.pronoun;
+            grInd.state_purpose_of_opening_account = record.purposeOfAccount;
+            grInd.source_of_initial_deposit = record.sourceInitialDeposit;
+            grInd.proof_of_identity = record.proof_of_identity;
+            grInd.proof_of_address = record.proof_of_address;
+            grInd.product_services = record.product_services;
+            grInd.postcode = record.postcode;
+            grInd.occupation = record.occupation;
+            grInd.non_uk_tax_identification_number = record.nonUkTaxId;
+            grInd.mobile_contact = record.mobileContact;
+            grInd.mobile = record.mobile;
+            grInd.home_contact = record.homeContact;
+            grInd.forename_in_full = record.forenameFull;
+            grInd.estimated_annual_transaction_volume = record.annualTxnVolume;
+            grInd.employment_status = record.employmentStatus;
+            grInd.employment_industry = record.employmentIndustry;
+            grInd.employer = record.employer;
+            grInd.email = record.email;
+            grInd.dob = record.dob;
+            grInd.describe_the_source_of_annual_revenue = record.sourceAnnualRevenue;
+            grInd.country_of_residence = record.employmentStatus;
+            grInd.country_of_nationality = record.nationality;
+            grInd.city = record.city;
+            grInd.cheque_withdrawal = record.chequeWithdrawal;
+            grInd.cheque_deposit = record.chequeDeposit;
+            grInd.cash_withdrawal = record.cashWithdrawal;
+            grInd.cash_deposit = record.cashDeposit;
+            grInd.atm_withdrawal = record.atmWithdrawal;
+            grInd.atm_deposit = record.atmDeposit;
+            grInd.are_you_a_us_citizen = record.usCitizen;
+            grInd.are_you_a_resident_of_a_country_other_than_uk = record.nonUkResident;
+            grInd.address_line = record.addressLine;
+            grInd.ach_withdrawal = record.achWithdrawal;
+            grInd.ach_deposit = record.atmDeposit;
+
+
+            if (grInd.update()) {
+                data.status_of_submit = true;
+								data.individual_sys_id = grInd.sys_id;
+								var grCase = new GlideRecord("x_vuram_financia_0_fcc_kyc_cases");
+								grCase.addQuery('individual', grInd.sys_id);
+								grCase.query();
+							
+								if(grCase.next()){
+									grCase.state = 150;
+									grCase.assigned_to='380f8c683be3e610f13f5fea26e45a3b';
+									if(grCase.update()){
+										data.case_updated = true;
+										data.case_sys_id = grCase.sys_id;
+									} else {
+										data.case_updated = false;
+									}
+								}
+
+            } else {
+                data.status_of_submit = false;
+            }
+            gs.info('Updated record with sys_id: ' + grInd.sys_id);
+        } else {
+            gs.info("No Individual Found");
+        }
+    }
+
+
+
+})($sp);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-04 09:06:04</sys_created_on>
+        <sys_id>cb86c9553bf7ae10cb98111864e45a8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FCC KYC individual form Copy</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sp_widget_cb86c9553bf7ae10cb98111864e45a8d</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-04 09:06:04</sys_updated_on>
+        <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
+        <!-- Step Tracker -->
+        <div class="step-tracker">
+            <div class="step-item" 
+                 ng-repeat="step in c.steps track by $index"
+                 ng-class="{
+                   'active': c.currentStep === ($index+1), 
+                   'completed': c.currentStep > ($index+1),
+                   'inactive': c.currentStep < ($index+1)
+                 }"
+                 ng-click="c.goToStep($index+1)">
+                <div class="step-circle">
+                    <span ng-if="c.currentStep > ($index+1)">
+                        <i class="fa fa-check"></i>
+                    </span>
+                    <span ng-if="c.currentStep <= ($index+1)">{{$index+1}}</span>
+                </div>
+                <div class="step-label">{{step}}</div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress">
+                <div class="progress-bar" style="width: {{(c.currentStep/c.steps.length)*100}}%"></div>
+            </div>
+        </div>
+
+        <!-- Form Content -->
+        <div class="form-content">
+            
+          	
+<!-- Step 1: Customer Details -->
+<div ng-show="c.currentStep === 1" class="step-content">
+  <!--Primary-->
+  <div>  
+  <h4 class="form-title"><i class="fa fa-user mr-2"></i> Primary Customer Details</h4>
+
+  <div class="form-section">
+    <div class="row">
+      <!-- Surname/Pronoun -->
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Surname/Pronoun <span class="required-asterisk">*</span></label>
+          <select class="form-control" ng-model="c.formData.pronoun"
+                 ng-options="p.value as p.label for p in c.pronounList">
+            <option value="">-- Select --</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Forename in Full -->
+      <div class="col-md-5">
+        <div class="form-group">
+          <label>Forename in Full <span class="required-asterisk">*</span></label>
+          <input type="text" class="form-control" ng-model="c.formData.forenameFull"
+                 placeholder="Enter full name" maxlength="100" >
+        </div>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Date of Birth <span class="required-asterisk">*</span></label>
+          <input type="date" class="form-control" ng-model="c.formData.dob"
+                 max="{{c.today | date:'yyyy-MM-dd'}}" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Address Line -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Address Line</label>
+          <input type="text" class="form-control" ng-model="c.formData.addressLine"
+                 placeholder="Enter address line" maxlength="200">
+        </div>
+      </div>
+
+      <!-- Postcode -->
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Postcode</label>
+          <input type="number" class="form-control" ng-model="c.formData.postcode"
+                 placeholder="Enter postcode">
+        </div>
+      </div>
+
+      <!-- City -->
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-control" ng-model="c.formData.city"
+                 placeholder="Enter city">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Country of Nationality -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Country of Nationality</label>
+          <select class="form-control" ng-model="c.formData.nationality"
+                  ng-options="country for country in c.nationalities">
+            <option value="">-- Select Nationality --</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Country of Residence -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Country of Residence</label>
+          <input type="text" class="form-control" ng-model="c.formData.countryResidence"
+                 placeholder="Enter country of residence">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--Joint-->
+  <div ng-show="c.data.type">
+	<h4 class="form-title"><i class="fa fa-user mr-2"></i> Joint Account Customer Details</h4>
+
+  <div class="form-section">
+    <div class="row">
+      <!-- Surname/Pronoun -->
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Surname/Pronoun <span class="required-asterisk">*</span></label>
+          <select class="form-control" ng-model="c.jointForm.pronoun"
+                  ng-options="p for p in c.pronounList">
+            <option value="">-- Select --</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Forename in Full -->
+      <div class="col-md-5">
+        <div class="form-group">
+          <label>Forename in Full <span class="required-asterisk">*</span></label>
+          <input type="text" class="form-control" ng-model="c.jointForm.forenameFull"
+                 placeholder="Enter full name" maxlength="100" >
+        </div>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Date of Birth <span class="required-asterisk">*</span></label>
+          <input type="date" class="form-control" ng-model="c.jointForm.dob"
+                 max="{{c.today | date:'yyyy-MM-dd'}}" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Address Line -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Address Line</label>
+          <input type="text" class="form-control" ng-model="c.jointForm.addressLine"
+                 placeholder="Enter address line" maxlength="200">
+        </div>
+      </div>
+
+      <!-- Postcode -->
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Postcode</label>
+          <input type="number" class="form-control" ng-model="c.jointForm.postcode"
+                 placeholder="Enter postcode">
+        </div>
+      </div>
+
+      <!-- City -->
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-control" ng-model="c.jointForm.city"
+                 placeholder="Enter city">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Country of Nationality -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Country of Nationality</label>
+          <select class="form-control" ng-model="c.jointForm.nationality"
+                  ng-options="country for country in c.nationalities">
+            <option value="">-- Select Nationality --</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Country of Residence -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Country of Residence</label>
+          <input type="text" class="form-control" ng-model="c.jointForm.countryResidence"
+                 placeholder="Enter country of residence">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- Navigation -->
+   <div class="form-navigation">
+        <div></div>
+        <button ng-show="c.validateCurrentStep(c.currentStep)" class="btn btn-primary" ng-click="c.nextStep()">
+            Next <i class="fa fa-arrow-right ml-2"></i>
+        </button>
+    </div>
+</div>
+
+
+<!-- Step 2: Contact Details -->
+<div ng-show="c.currentStep === 2" class="step-content">
+  <!--Primary-->
+  <div>
+    <h4 class="form-title"><i class="fa fa-phone mr-2"></i> Contact Details</h4>
+  <div class="form-section">
+    <div class="row">
+      <!-- Email -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Email <span class="required-asterisk">*</span></label>
+          <input type="email" class="form-control"
+                 ng-model="c.formData.email"
+                 placeholder="example@domain.com"
+                 required>
+        </div>
+      </div>
+
+      <!-- Home Contact -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Home Contact</label>
+          <input type="tel" class="form-control"
+                 ng-model="c.formData.homeContact"
+                 placeholder="+1 555 1234567"
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
+          <small class="text-muted">Include country code, e.g., +1 555 1234567</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Mobile (with code + number in same field) -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Mobile <span class="required-asterisk">*</span></label>
+          <input type="tel" class="form-control"
+                 ng-model="c.formData.mobile"
+                 placeholder="+91 9876543210"
+                 ng-pattern="/^\+?[0-9]{1,3}\s?[0-9]{6,12}$/"
+                 required>
+          <small class="text-muted">Format: +CountryCode Number</small>
+        </div>
+      </div>
+
+      <!-- Mobile Contact -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Mobile Contact</label>
+          <input type="tel" class="form-control"
+                 ng-model="c.formData.mobileContact"
+                 placeholder="+44 7700 900123"
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  <!--Joint-->
+  <div ng-show="c.data.type">
+    <h4 class="form-title"><i class="fa fa-phone mr-2"></i> Joint Account Contact Details</h4>
+  <div class="form-section">
+    <div class="row">
+      <!-- Email -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Email <span class="required-asterisk">*</span></label>
+          <input type="email" class="form-control"
+                 ng-model="c.jointForm.email"
+                 placeholder="example@domain.com"
+                 required>
+        </div>
+      </div>
+
+      <!-- Home Contact -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Home Contact</label>
+          <input type="tel" class="form-control"
+                 ng-model="c.jointForm.homeContact"
+                 placeholder="+1 555 1234567"
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
+          <small class="text-muted">Include country code, e.g., +1 555 1234567</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Mobile (with code + number in same field) -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Mobile <span class="required-asterisk">*</span></label>
+          <input type="tel" class="form-control"
+                 ng-model="c.jointForm.mobile"
+                 placeholder="+91 9876543210"
+                 ng-pattern="/^\+?[0-9]{1,3}\s?[0-9]{6,12}$/"
+                 required>
+          <small class="text-muted">Format: +CountryCode Number</small>
+        </div>
+      </div>
+
+      <!-- Mobile Contact -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Mobile Contact</label>
+          <input type="tel" class="form-control"
+                 ng-model="c.jointForm.mobileContact"
+                 placeholder="+44 7700 900123"
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+
+  <!-- Navigation -->
+  <div class="form-navigation">
+    <button class="btn btn-secondary" ng-click="c.prevStep()">
+      <i class="fa fa-arrow-left mr-2"></i> Back
+    </button>
+    <button ng-show="c.validateCurrentStep(c.currentStep)" class="btn btn-primary" ng-click="c.nextStep()">
+      Next <i class="fa fa-arrow-right ml-2"></i>
+    </button>
+  </div>
+</div>
+
+
+          
+<!-- Step 3: Tax & Residency Information -->
+<div ng-show="c.currentStep === 3" class="step-content">
+  <!--Primary-->
+  <div>
+    <h4 class="form-title"><i class="fa fa-id-card mr-2"></i> Tax & Residency Information</h4>
+
+  <div class="row">
+    <!-- US Citizen -->
+    <div class="col-md-6">
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input"
+               id="usCitizen"
+               ng-model="c.formData.usCitizen">
+        <label class="form-check-label" for="usCitizen">Are you a US citizen?</label>
+      </div>
+    </div>
+
+    <!-- Tax Identification Number -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Tax Identification Number</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.taxId"
+               placeholder="Enter your Tax Identification Number">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Resident of other than UK -->
+    <div class="col-md-6">
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input"
+               id="nonUkResident"
+               ng-model="c.formData.nonUkResident">
+        <label class="form-check-label" for="nonUkResident">
+          Are you a resident of a country other than UK?
+        </label>
+      </div>
+    </div>
+
+    <!-- Non-UK Tax Identification Number -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Non-UK Tax Identification Number</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.nonUkTaxId"
+               placeholder="Enter Non-UK Tax ID">
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  <!--Joint-->
+  <div ng-show="c.data.type">
+    <h4 class="form-title"><i class="fa fa-id-card mr-2"></i> Joint Account Tax & Residency Information</h4>
+
+  <div class="row">
+    <!-- US Citizen -->
+    <div class="col-md-6">
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input"
+               id="usCitizen"
+               ng-model="c.jointForm.usCitizen">
+        <label class="form-check-label" for="usCitizen">Are you a US citizen?</label>
+      </div>
+    </div>
+
+    <!-- Tax Identification Number -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Tax Identification Number</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.taxId"
+               placeholder="Enter your Tax Identification Number">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Resident of other than UK -->
+    <div class="col-md-6">
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input"
+               id="nonUkResident"
+               ng-model="c.jointForm.nonUkResident">
+        <label class="form-check-label" for="nonUkResident">
+          Are you a resident of a country other than UK?
+        </label>
+      </div>
+    </div>
+
+    <!-- Non-UK Tax Identification Number -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Non-UK Tax Identification Number</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.nonUkTaxId"
+               placeholder="Enter Non-UK Tax ID">
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+
+  <!-- Navigation -->
+  <div class="form-navigation">
+    <button class="btn btn-secondary" ng-click="c.prevStep()">
+      <i class="fa fa-arrow-left mr-2"></i> Back
+    </button>
+    <button ng-show="c.validateCurrentStep(c.currentStep)" class="btn btn-primary" ng-click="c.nextStep()">
+      Next <i class="fa fa-arrow-right ml-2"></i>
+    </button>
+  </div>
+</div>
+
+
+<!-- Step 4: Employment & Source of Funds Information -->
+<div ng-show="c.currentStep === 4" class="step-content">
+  
+  <!--Primary-->
+  <div>
+     <h4 class="form-title">
+    <i class="fa fa-briefcase mr-2"></i> Employment & Source of Funds
+  </h4>
+
+  <div class="row">
+    <!-- Employment Status -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employment Status</label>
+        <select class="form-control" ng-model="c.formData.employmentStatus"
+                ng-options="s.value as s.label for s in c.employmentStatuses">
+          <option value="">-- Select --</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Occupation -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Occupation</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.occupation"
+               placeholder="Enter your occupation">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Source of Initial Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Source of Initial Deposit</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.sourceInitialDeposit"
+               placeholder="Enter source of initial deposit">
+      </div>
+    </div>
+
+    <!-- Describe Source of Annual Revenue -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Describe the Source of Annual Revenue</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.sourceAnnualRevenue"
+               placeholder="Describe annual revenue source">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Employer -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employer</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.employer"
+               placeholder="Enter employer name">
+      </div>
+    </div>
+
+    <!-- Employment Industry -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employment Industry</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.employmentIndustry"
+               placeholder="Enter industry name">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- State Purpose of Opening Account -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>State Purpose of Opening Account</label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.purposeOfAccount"
+               placeholder="Enter purpose of opening account">
+      </div>
+    </div>
+
+    <!-- Estimated Annual Transaction Volume -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Estimated Annual Transaction Volume</label>
+        <input type="number" class="form-control"
+               ng-model="c.formData.annualTxnVolume"
+               placeholder="Enter estimated annual volume">
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  <!--Joint-->
+  <div ng-show="c.data.type">
+     <h4 class="form-title">
+    <i class="fa fa-briefcase mr-2"></i> Joint Account Employment & Source of Funds
+  </h4>
+
+  <div class="row">
+    <!-- Employment Status -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employment Status</label>
+        <select class="form-control" ng-model="c.jointForm.employmentStatus"
+                ng-options="status for status in c.employmentStatuses">
+          <option value="">-- Select --</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Occupation -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Occupation</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.occupation"
+               placeholder="Enter your occupation">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Source of Initial Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Source of Initial Deposit</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.sourceInitialDeposit"
+               placeholder="Enter source of initial deposit">
+      </div>
+    </div>
+
+    <!-- Describe Source of Annual Revenue -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Describe the Source of Annual Revenue</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.sourceAnnualRevenue"
+               placeholder="Describe annual revenue source">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Employer -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employer</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.employer"
+               placeholder="Enter employer name">
+      </div>
+    </div>
+
+    <!-- Employment Industry -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employment Industry</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.employmentIndustry"
+               placeholder="Enter industry name">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- State Purpose of Opening Account -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>State Purpose of Opening Account</label>
+        <input type="text" class="form-control"
+               ng-model="c.jointForm.purposeOfAccount"
+               placeholder="Enter purpose of opening account">
+      </div>
+    </div>
+
+    <!-- Estimated Annual Transaction Volume -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Estimated Annual Transaction Volume</label>
+        <input type="number" class="form-control"
+               ng-model="c.jointForm.annualTxnVolume"
+               placeholder="Enter estimated annual volume">
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+ 
+
+  <!-- Navigation -->
+  <div class="form-navigation">
+    <button class="btn btn-secondary" ng-click="c.prevStep()">
+      <i class="fa fa-arrow-left mr-2"></i> Back
+    </button>
+    <button ng-show="c.validateCurrentStep(c.currentStep)" class="btn btn-primary" ng-click="c.nextStep()">
+      Next <i class="fa fa-arrow-right ml-2"></i>
+    </button>
+  </div>
+</div>
+
+
+<!-- Step 5: Transaction Channels -->
+<div ng-show="c.currentStep === 5" class="step-content">
+  
+  <!--Primary-->
+  <div>
+    <h4 class="form-title">
+    <i class="fa fa-credit-card mr-2"></i> Transaction Channels
+  </h4>
+
+  <div class="row">
+    <!-- Cash Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cash Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.cashDeposit"
+               placeholder="Enter cash deposit amount">
+      </div>
+    </div>
+
+    <!-- Cheque Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cheque Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.chequeDeposit"
+               placeholder="Enter cheque deposit amount">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- ATM Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ATM Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.atmDeposit"
+               placeholder="Enter ATM deposit amount">
+      </div>
+    </div>
+
+    <!-- ACH Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ACH Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.achWithdrawal"
+               placeholder="Enter ACH withdrawal amount">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Cash Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cash Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.cashWithdrawal"
+               placeholder="Enter cash withdrawal amount">
+      </div>
+    </div>
+
+    <!-- Cheque Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cheque Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.chequeWithdrawal"
+               placeholder="Enter cheque withdrawal amount">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- ATM Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ATM Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.atmWithdrawal"
+               placeholder="Enter ATM withdrawal amount">
+      </div>
+    </div>
+
+    <!-- ACH Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ACH Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.formData.achDeposit"
+               placeholder="Enter ACH deposit amount">
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--Joint-->
+  <div ng-show="c.data.type">
+    <h4 class="form-title">
+    <i class="fa fa-credit-card mr-2"></i> Joint Account Transaction Channels
+  </h4>
+
+  <div class="row">
+    <!-- Cash Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cash Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.cashDeposit"
+               placeholder="Enter cash deposit amount">
+      </div>
+    </div>
+
+    <!-- Cheque Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cheque Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.chequeDeposit"
+               placeholder="Enter cheque deposit amount">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- ATM Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ATM Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.atmDeposit"
+               placeholder="Enter ATM deposit amount">
+      </div>
+    </div>
+
+    <!-- ACH Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ACH Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.achWithdrawal"
+               placeholder="Enter ACH withdrawal amount">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Cash Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cash Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.cashWithdrawal"
+               placeholder="Enter cash withdrawal amount">
+      </div>
+    </div>
+
+    <!-- Cheque Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Cheque Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.chequeWithdrawal"
+               placeholder="Enter cheque withdrawal amount">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- ATM Withdrawal -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ATM Withdrawal</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.atmWithdrawal"
+               placeholder="Enter ATM withdrawal amount">
+      </div>
+    </div>
+
+    <!-- ACH Deposit -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>ACH Deposit</label>
+        <input type="number" class="form-control no-spinner"
+               ng-model="c.jointForm.achDeposit"
+               placeholder="Enter ACH deposit amount">
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  
+
+  <!-- Navigation -->
+  <div class="form-navigation">
+    <button class="btn btn-secondary" ng-click="c.prevStep()">
+      <i class="fa fa-arrow-left mr-2"></i> Back
+    </button>
+    <button ng-show="c.validateCurrentStep(c.currentStep)" class="btn btn-primary" ng-click="c.nextStep()">
+      Next <i class="fa fa-arrow-right ml-2"></i>
+    </button>
+  </div>
+</div>
+
+
+          
+<!-- Step Final: Preview & Verify -->
+<div ng-show="c.currentStep === 6" class="step-content">
+  <!--Primary-->
+  <div>
+    <h4 class="form-title">
+    <i class="fa fa-eye mr-2"></i> Preview & Verify
+  </h4>
+
+  <p class="text-muted">Please review all the details below before submitting the form.</p>
+
+  <!-- Section 1: Customer Details -->
+  <div class="preview-section">
+    <h5>Customer Details</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Surname/Pronoun:</strong> {{c.formData.surnamePronoun}}</div>
+      <div class="col-md-6"><strong>Forename:</strong> {{c.formData.forenameFull}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>DOB:</strong> {{c.formData.dob | date:'dd-MMM-yyyy'}}</div>
+      <div class="col-md-6"><strong>Address Line:</strong> {{c.formData.addressLine}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Postcode:</strong> {{c.formData.postcode}}</div>
+      <div class="col-md-6"><strong>City:</strong> {{c.formData.city}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Nationality:</strong> {{c.formData.nationality}}</div>
+      <div class="col-md-6"><strong>Country of Residence:</strong> {{c.formData.countryResidence}}</div>
+    </div>
+  </div>
+
+  <!-- Section 2: Contact Details -->
+  <div class="preview-section">
+    <h5>Contact Details</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Email:</strong> {{c.formData.email}}</div>
+      <div class="col-md-6"><strong>Home Contact:</strong> {{c.formData.homeContact}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Mobile:</strong> {{c.formData.mobile}}</div>
+      <div class="col-md-6"><strong>Mobile Contact:</strong> {{c.formData.mobileContact}}</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Tax Information -->
+  <div class="preview-section">
+    <h5>Tax Information</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>US Citizen:</strong> {{c.formData.isUsCitizen ? 'Yes' : 'No'}}</div>
+      <div class="col-md-6"><strong>Tax ID:</strong> {{c.formData.taxId}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Non-UK Resident:</strong> {{c.formData.isNonUkResident ? 'Yes' : 'No'}}</div>
+      <div class="col-md-6" ng-if="c.formData.nonUkTaxId"><strong>Non-UK Tax ID:</strong> {{c.formData.nonUkTaxId}}</div>
+    </div>
+  </div>
+
+  <!-- Section 4: Employment Information -->
+  <div class="preview-section">
+    <h5>Employment Information</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Status:</strong> {{c.formData.employmentStatus}}</div>
+      <div class="col-md-6"><strong>Occupation:</strong> {{c.formData.occupation}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Employer:</strong> {{c.formData.employer}}</div>
+      <div class="col-md-6"><strong>Industry:</strong> {{c.formData.employmentIndustry}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Purpose of Account:</strong> {{c.formData.accountPurpose}}</div>
+      <div class="col-md-6"><strong>Source of Initial Deposit:</strong> {{c.formData.sourceInitialDeposit}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Annual Revenue Source:</strong> {{c.formData.annualRevenueSource}}</div>
+      <div class="col-md-6"><strong>Estimated Txn Volume:</strong> {{c.formData.estimatedTxnVolume}}</div>
+    </div>
+  </div>
+
+  <!-- Section 5: Transaction Channels -->
+  <div class="preview-section">
+    <h5>Transaction Channels</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Cash Deposit:</strong> {{c.formData.cashDeposit}}</div>
+      <div class="col-md-6"><strong>Cheque Deposit:</strong> {{c.formData.chequeDeposit}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>ATM Deposit:</strong> {{c.formData.atmDeposit}}</div>
+      <div class="col-md-6"><strong>ACH Deposit:</strong> {{c.formData.achDeposit}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Cash Withdrawal:</strong> {{c.formData.cashWithdrawal}}</div>
+      <div class="col-md-6"><strong>Cheque Withdrawal:</strong> {{c.formData.chequeWithdrawal}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>ATM Withdrawal:</strong> {{c.formData.atmWithdrawal}}</div>
+      <div class="col-md-6"><strong>ACH Withdrawal:</strong> {{c.formData.achWithdrawal}}</div>
+    </div>
+  </div>
+  </div>
+  
+  
+  <!--Joint-->
+  <div ng-show="c.data.type">
+    <h4 class="form-title">
+    <i class="fa fa-eye mr-2"></i> Joint Account Preview & Verify
+  </h4>
+
+  <p class="text-muted">Please review all the details below before submitting the form.</p>
+
+  <!-- Section 1: Customer Details -->
+  <div class="preview-section">
+    <h5>Customer Details</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Surname/Pronoun:</strong> {{c.jointForm.surnamePronoun}}</div>
+      <div class="col-md-6"><strong>Forename:</strong> {{c.jointForm.forename}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>DOB:</strong> {{c.jointForm.dob | date:'dd-MMM-yyyy'}}</div>
+      <div class="col-md-6"><strong>Address Line:</strong> {{c.jointForm.addressLine}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Postcode:</strong> {{c.jointForm.postcode}}</div>
+      <div class="col-md-6"><strong>City:</strong> {{c.jointForm.city}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Nationality:</strong> {{c.jointForm.nationality}}</div>
+      <div class="col-md-6"><strong>Country of Residence:</strong> {{c.jointForm.countryResidence}}</div>
+    </div>
+  </div>
+
+  <!-- Section 2: Contact Details -->
+  <div class="preview-section">
+    <h5>Contact Details</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Email:</strong> {{c.jointForm.email}}</div>
+      <div class="col-md-6"><strong>Home Contact:</strong> {{c.jointForm.homeContact}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Mobile:</strong> {{c.jointForm.mobile}}</div>
+      <div class="col-md-6"><strong>Mobile Contact:</strong> {{c.jointForm.mobileContact}}</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Tax Information -->
+  <div class="preview-section">
+    <h5>Tax Information</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>US Citizen:</strong> {{c.jointForm.isUsCitizen ? 'Yes' : 'No'}}</div>
+      <div class="col-md-6"><strong>Tax ID:</strong> {{c.jointForm.taxId}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Non-UK Resident:</strong> {{c.jointForm.isNonUkResident ? 'Yes' : 'No'}}</div>
+      <div class="col-md-6" ng-if="c.formData.nonUkTaxId"><strong>Non-UK Tax ID:</strong> {{c.jointForm.nonUkTaxId}}</div>
+    </div>
+  </div>
+
+  <!-- Section 4: Employment Information -->
+  <div class="preview-section">
+    <h5>Employment Information</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Status:</strong> {{c.jointForm.employmentStatus}}</div>
+      <div class="col-md-6"><strong>Occupation:</strong> {{c.jointForm.occupation}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Employer:</strong> {{c.jointForm.employer}}</div>
+      <div class="col-md-6"><strong>Industry:</strong> {{c.jointForm.employmentIndustry}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Purpose of Account:</strong> {{c.jointForm.accountPurpose}}</div>
+      <div class="col-md-6"><strong>Source of Initial Deposit:</strong> {{c.jointForm.sourceInitialDeposit}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Annual Revenue Source:</strong> {{c.jointForm.annualRevenueSource}}</div>
+      <div class="col-md-6"><strong>Estimated Txn Volume:</strong> {{c.jointForm.estimatedTxnVolume}}</div>
+    </div>
+  </div>
+
+  <!-- Section 5: Transaction Channels -->
+  <div class="preview-section">
+    <h5>Transaction Channels</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Cash Deposit:</strong> {{c.jointForm.cashDeposit}}</div>
+      <div class="col-md-6"><strong>Cheque Deposit:</strong> {{c.jointForm.chequeDeposit}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>ATM Deposit:</strong> {{c.jointForm.atmDeposit}}</div>
+      <div class="col-md-6"><strong>ACH Deposit:</strong> {{c.jointForm.achDeposit}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>Cash Withdrawal:</strong> {{c.jointForm.cashWithdrawal}}</div>
+      <div class="col-md-6"><strong>Cheque Withdrawal:</strong> {{c.jointForm.chequeWithdrawal}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><strong>ATM Withdrawal:</strong> {{c.jointForm.atmWithdrawal}}</div>
+      <div class="col-md-6"><strong>ACH Withdrawal:</strong> {{c.jointForm.achWithdrawal}}</div>
+    </div>
+  </div>
+  </div>
+  
+  
+
+  <!-- Navigation -->
+  <div class="form-navigation mt-4">
+    <button class="btn btn-secondary" ng-click="c.prevStep()">
+      <i class="fa fa-arrow-left mr-2"></i> Back
+    </button>
+    <button class="btn btn-success" ng-click="c.submitForm()">
+      <i class="fa fa-check mr-2"></i> Submit
+    </button>
+  </div>
+</div>
+
+
+
+        </div>
+    </div>
+   ]]></template>
+    </sp_widget>
+</record_update>
