@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_capability">
+    <sys_one_extend_capability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>FCC KYC Identity Proofs</description>
+        <external>true</external>
+        <metadata>{"isGuidedStep":false}</metadata>
+        <name>FCC KYC Identity Proofs</name>
+        <short_description/>
+        <sys_class_name>sys_one_extend_capability</sys_class_name>
+        <sys_created_by>raj.selvam</sys_created_by>
+        <sys_created_on>2025-09-04 09:25:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>25fa89553b3bae10cb98111864e45a49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FCC KYC Identity Proofs</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_one_extend_capability_25fa89553b3bae10cb98111864e45a49</sys_update_name>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-09-04 09:25:22</sys_updated_on>
+        <type>skill</type>
+    </sys_one_extend_capability>
+    <sys_translated_text action="delete_multiple" query="documentkey=25fa89553b3bae10cb98111864e45a49"/>
+</record_update>
