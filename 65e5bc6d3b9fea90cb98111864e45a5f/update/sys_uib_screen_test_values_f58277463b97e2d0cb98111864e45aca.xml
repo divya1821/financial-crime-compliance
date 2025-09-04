@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+    "table": "x_vuram_financia_0_fcc_kyc_cases",
+    "sysId": "e94a54453bf3ea10cb98111864e45a74",
+    "query": "",
+    "extraParams": "",
+    "views": "default",
+    "selectedTab": "",
+    "029f04e053610110ac9bddeeff7b1294": {
+        "activityLogs": null,
+        "detailsContext": null,
+        "fields": null,
+        "forcedViewName": "individual",
+        "inputExtraParams": null,
+        "inputQuery": null,
+        "inputSysId": "61cd9ccd3bf3ea10cb98111864e45ac3",
+        "inputTable": "x_vuram_financia_0_fcc_kyc_cases",
+        "isMappedToAppShell": true,
+        "screen": null,
+        "shouldSuppressGlobalEvents": true,
+        "userPrefs": null,
+        "view": "Workspace-Financial-Crime-Compliance-0"
+    },
+    "5865e308432021105571609dc7b8f23b": {
+        "actionConfigId": "1850723f3bdf2210cb98111864e45a63",
+        "allRecordsSelected": false,
+        "columnFilteringPopoverDisplay": "",
+        "columnLimit": 8,
+        "columnPreferenceKey": "",
+        "columns": "number,case_type,state,customer_type,relationship_manager,sys_created_on",
+        "currentPage": 0,
+        "enableCellFiltering": false,
+        "enableColumnFiltering": false,
+        "enableColumnGrouping": false,
+        "enableColumnSorting": true,
+        "enableDeclarativeActions": false,
+        "enableDotWalk": true,
+        "enableInfiniteScroll": false,
+        "enableLiveList": false,
+        "enableQuickEdit": false,
+        "enableQuickFormNavigation": true,
+        "enableReferenceLinks": true,
+        "enforceViewRulesForQuickForm": true,
+        "fetchHighlightedValues": true,
+        "filter": "ORDERBYDESCsys_created_on",
+        "fixedFilter": "assigned_toDYNAMIC90d1921e5f510100a9ad2572f2b477fe",
+        "groupBy": "",
+        "listControllerId": "3wmUMvKXA0oP9uEICIdJ3LBw",
+        "listId": null,
+        "listTitle": "My Cases",
+        "listType": "default",
+        "nestBy": "",
+        "onlyEnableSelectionWhenRequiredByActions": true,
+        "pageSysId": "711032693b17a214f13f5fea26e45ae5",
+        "rowLimit": 5,
+        "showListOpenedByLinkSection": null,
+        "table": "x_vuram_financia_0_fcc_kyc_cases",
+        "view": ""
+    }
+}</macroponent_config>
+        <screen display_value="Case details">358277463b97e2d0cb98111864e45ac5</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-08-13 09:01:31</sys_created_on>
+        <sys_id>f58277463b97e2d0cb98111864e45aca</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_f58277463b97e2d0cb98111864e45aca</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-04 11:52:41</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>
