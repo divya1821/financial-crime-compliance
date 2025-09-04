@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description/>
+        <event_name>x_vuram_financia_0.kyc.awaiting.customer</event_name>
+        <fired_by/>
+        <priority>100</priority>
+        <queue/>
+        <suffix>kyc.awaiting.customer.reminder</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-09-04 04:54:53</sys_created_on>
+        <sys_id>02ec04153b3f6e10cb98111864e45afd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vuram_financia_0.kyc.awaiting.customer</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sysevent_register_02ec04153b3f6e10cb98111864e45afd</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-09-04 04:54:53</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+    </sysevent_register>
+</record_update>
