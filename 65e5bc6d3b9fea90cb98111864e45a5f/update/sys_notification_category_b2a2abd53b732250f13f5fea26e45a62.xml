@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_category">
+    <sys_notification_category action="INSERT_OR_UPDATE">
+        <name>KYC Alerts</name>
+        <short_description>This is for KYC Alert</short_description>
+        <sys_class_name>sys_notification_category</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-04 20:28:31</sys_created_on>
+        <sys_id>b2a2abd53b732250f13f5fea26e45a62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KYC Alerts</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_notification_category_b2a2abd53b732250f13f5fea26e45a62</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-04 20:28:31</sys_updated_on>
+    </sys_notification_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=b2a2abd53b732250f13f5fea26e45a62"/>
+</record_update>

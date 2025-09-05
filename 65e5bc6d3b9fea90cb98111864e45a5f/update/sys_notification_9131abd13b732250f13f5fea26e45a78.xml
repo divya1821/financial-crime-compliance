@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_notification">
+    <sys_notification action="INSERT_OR_UPDATE">
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <advanced_event_condition>false</advanced_event_condition>
+        <category display_value="KYC Alerts" name="KYC Alerts">b2a2abd53b732250f13f5fea26e45a62</category>
+        <condition/>
+        <description/>
+        <event display_value="x_vuram_financia_0.bell.kyc.review.due.s">026d53993b332250f13f5fea26e45ae6</event>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_1_table>sys_user</event_parm_1_table>
+        <event_parm_2>false</event_parm_2>
+        <event_parm_2_table>sys_user</event_parm_2_table>
+        <include_originator>true</include_originator>
+        <mandatory>false</mandatory>
+        <name>KYC Review – Bell Alert</name>
+        <notification_classifier/>
+        <order>100</order>
+        <recipient_fields/>
+        <recipient_users>47b050ac3be3e610f13f5fea26e45a35,380f8c683be3e610f13f5fea26e45a3b</recipient_users>
+        <script><![CDATA[(function runRecipientScript(/*String*/ parm1, /*String*/ parm2) {
+      /*
+      //Create instance of AdvancedNotificationRecipients to add recipients
+      var nr = new sn_notification.AdvancedNotificationRecipients();
+      var sysIds = [];
+      var gr = new GlideRecord('sys_user');
+      gr.addQuery('first_name','IN',parm1);
+      gr.query();
+      while (gr.next()) {
+        sysIds.push(gr.getValue('sys_id'));
+      }
+      nr.addRecipientInfo('sys_user',sysIds);
+      return nr;*/
+      })(parm1,parm2);]]></script>
+        <sys_class_name>sys_notification</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-04 20:29:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9131abd13b732250f13f5fea26e45a78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KYC Review – Bell Alert</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_notification_9131abd13b732250f13f5fea26e45a78</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-04 20:29:34</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+        <triggered_by>event</triggered_by>
+    </sys_notification>
+</record_update>
