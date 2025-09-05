@@ -30,15 +30,15 @@ return gs.hasRole('FCC KYC Checker') || gs.hasRole('FCC KYC Relationship Manager
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9e14313b3b572210f13f5fea26e45ab0</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>For Checker and RM form should be read only except work notes section</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_policy_9e14313b3b572210f13f5fea26e45ab0</sys_update_name>
-        <sys_updated_by>sravanthi.gandreti@snc</sys_updated_by>
-        <sys_updated_on>2025-09-05 06:39:19</sys_updated_on>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-09-05 06:51:13</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
         <ui_type>0</ui_type>
         <view/>
