@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_client_template">
+    <sys_email_client_template action="INSERT_OR_UPDATE">
+        <blind_copied/>
+        <body/>
+        <body_html><![CDATA[<p>Dear ${relationship_manager.first_name} ${relationship_manager.last_name},</p>
+<p>As part of the ongoing KYC review for , we have identified discrepancies in the submitted documentation that require immediate attention.</p>
+<p>Due Date for Submission:<br><strong>${due_date}</strong></p>
+<p>We kindly request you to liaise with the customer and ensure the corrected documents are submitted within the specified timeline. This will help us proceed with the compliance review without delay.</p>
+<p>Thank you for your support.</p>
+<p>Best regards,<br>${current_user.name}<br>KYC Maker</p>]]></body_html>
+        <condition/>
+        <content_type>text/html</content_type>
+        <copied/>
+        <email_client_from_address/>
+        <from/>
+        <from_generation_type/>
+        <include_attachments>false</include_attachments>
+        <name>Makers Request to RM for Documents</name>
+        <order>90</order>
+        <recipients>relationship_manager</recipients>
+        <reply_to/>
+        <script_from><![CDATA[(function (fromAddressQuery, targetRecord) {
+		/**
+		 * fromAddressQuery: A GlideRecord on the table "sys_email_client_from_address". Add conditions to filter the
+		 * 		the email addresses displayed in the Email Client. 
+		 * targetRecord: A GlideRecord representing the record in which the Email Client was opened from
+		 */
+
+})(fromAddressQuery, targetRecord);]]></script_from>
+        <subject>Request for Corrected Documents – Periodic KYC Review Discrepancy</subject>
+        <sys_class_name>sys_email_client_template</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-08-29 03:55:35</sys_created_on>
+        <sys_id>5d0db8973b6ba690cb98111864e45a6e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Makers Request to RM for Documents</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_email_client_template_5d0db8973b6ba690cb98111864e45a6e</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-09-06 13:41:08</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+    </sys_email_client_template>
+</record_update>
