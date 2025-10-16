@@ -16,7 +16,7 @@
         <flow_priority/>
         <ih_action>true</ih_action>
         <internal_name>create_session</internal_name>
-        <label_cache>[{"name":"{{action.sys_id}}","label":"action➛sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.unique_number}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6066acfe-42c5-47f3-9827-056aeb80053a"}},{"name":"{{action.record_sys_id}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].sn_auth_token}}","label":"step➛Create Session➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].response_body}}","label":"step➛Create Session➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].__step_status__}}","label":"Update Recordstep➛➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].session_id}}","label":"Update Recordstep➛➛session_id","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"74ba590e-2afc-4b3b-8164-77376f13db61"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].url}}","label":"step➛Update Record➛url","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"bc69d770-0b3c-4583-9afd-9711269f0482"}}]</label_cache>
+        <label_cache>[{"name":"{{action.sys_id}}","label":"action➛sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.unique_number}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6066acfe-42c5-47f3-9827-056aeb80053a"}},{"name":"{{action.record_sys_id}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].sn_auth_token}}","label":"step➛Create Session➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].response_body}}","label":"step➛Create Session➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].__step_status__}}","label":"Update Recordstep➛➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].session_id}}","label":"Update Recordstep➛➛session_id","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"74ba590e-2afc-4b3b-8164-77376f13db61"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].url}}","label":"step➛Update Record➛url","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"bc69d770-0b3c-4583-9afd-9711269f0482"}},{"name":"{{step[f3ccf708-90f6-46c6-9c66-87477ca0e893].credential_value}}","label":"step➛Get Connection Info step➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master_snapshot>73c916d43bb72610cb98111864e45a97</master_snapshot>
         <master_snapshot_digest/>
         <name>Create Session</name>
@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f09956943bb72610cb98111864e45add</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>57</sys_mod_count>
         <sys_name>Create Session</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f09956943bb72610cb98111864e45add</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:04:00</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:32</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -81,10 +81,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:34:57</sys_created_on>
         <sys_id>bd9996943bb72610cb98111864e45af3</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 08:07:09</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDd99996940fb726107184becca918c3d7":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDd99996940fb726107184becca918c3d7.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"8d9c6add-6261-4be3-bc0a-3426fb8e14d2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDd99996940fb726107184becca918c3d7\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2025-10-16 17:35:28</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDd99996940fb726107184becca918c3d7":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDd99996940fb726107184becca918c3d7.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"8d9c6add-6261-4be3-bc0a-3426fb8e14d2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDd99996940fb726107184becca918c3d7\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">a59996943bb72610cb98111864e45ad9</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=f09956943bb72610cb98111864e45add"/>
@@ -148,7 +148,7 @@
         <table>var__m_sys_hub_action_output_f09956943bb72610cb98111864e45add</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_instance action="delete_multiple" query="action=f09956943bb72610cb98111864e45add^sys_idNOT IN019996943bb72610cb98111864e45a9c,119996943bb72610cb98111864e45ac1"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=f09956943bb72610cb98111864e45add^sys_idNOT IN019996943bb72610cb98111864e45a9c,119996943bb72610cb98111864e45ac1,4ecc5dff3bff2a90f13f5fea26e45a3f"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Create Session">f09956943bb72610cb98111864e45add</action>
         <cid>c6e1d80c-b849-43c6-be20-a8abae9e596c</cid>
@@ -157,18 +157,19 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
+        <inputs/>
         <label>Create Session</label>
-        <order>1</order>
+        <order>2</order>
         <outputs/>
         <section/>
         <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:34:54</sys_created_on>
         <sys_id>019996943bb72610cb98111864e45a9c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 10:29:13</sys_updated_on>
+        <sys_updated_on>2025-09-12 05:08:03</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=019996943bb72610cb98111864e45a9c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -319,10 +320,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:34:55</sys_created_on>
         <sys_id>d99996943bb72610cb98111864e45aba</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 10:29:13</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"X-AUTH-CLIENT","value":"044b2751-0d48-40ab-94cc-a17f87b315dc"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"}]}</value>
+        <sys_updated_on>2025-09-12 05:08:03</sys_updated_on>
+        <value>{}</value>
         <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -340,7 +341,151 @@
         <variable display_value="Honor Duplicate Query Params">58715a1c53f22010d3a8ddeeff7b1248</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_019996943bb72610cb98111864e45a9c^id=019996943bb72610cb98111864e45a9c"/>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129^id=019996943bb72610cb98111864e45a9c"/>
+    <sys_element_mapping action="delete_multiple" query="id=019996943bb72610cb98111864e45a9c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>1d9996943bb72610cb98111864e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>599996943bb72610cb98111864e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>959996943bb72610cb98111864e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>5d9996943bb72610cb98111864e45ab7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_timeout</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>919996943bb72610cb98111864e45ab9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>d19996943bb72610cb98111864e45ab8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-12 05:08:03</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{"type":"ADV_NV","value":[{"name":"X-AUTH-CLIENT","value":"{{step[f3ccf708-90f6-46c6-9c66-87477ca0e893].credential_value}}","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_headers</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>5d9996943bb72610cb98111864e45ab6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_query_params</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>d59996943bb72610cb98111864e45ab7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_method</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>999996943bb72610cb98111864e45ab7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>dd9996943bb72610cb98111864e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resource_path</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>119996943bb72610cb98111864e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>retry_policy</field>
+        <id>019996943bb72610cb98111864e45a9c</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:34:55</sys_created_on>
+        <sys_id>159996943bb72610cb98111864e45ab7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:34:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
     <sys_translated_text action="delete_multiple" query="documentkey=019996943bb72610cb98111864e45a9c"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=019996943bb72610cb98111864e45a9c"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=019996943bb72610cb98111864e45a9c^sys_idNOT IN0d9996943bb72610cb98111864e45aa6"/>
@@ -461,17 +606,17 @@
         <icon/>
         <inputs/>
         <label>Update Record</label>
-        <order>2</order>
+        <order>3</order>
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:34:55</sys_created_on>
         <sys_id>119996943bb72610cb98111864e45ac1</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:01:16</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:28</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=119996943bb72610cb98111864e45ac1"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -496,9 +641,9 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:34:56</sys_created_on>
         <sys_id>d19996943bb72610cb98111864e45ad4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:01:16</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:28</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var session_details = JSON.parse(inputs.parameter);&#13;
     outputs.output_details = session_details;&#13;
@@ -506,7 +651,8 @@
     outputs.url = session_details.verification.url;&#13;
     var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_entity_details');&#13;
     if (gr.get(inputs.sys_parm)) { &#13;
-        gr.video_kyc_link = session_details.verification.url;  &#13;
+        gr.video_kyc_link = session_details.verification.url; &#13;
+        gr.session_id = session_details.verification.id; &#13;
         gr.update();&#13;
     } else {&#13;
         gs.error('No record found with sys_id: ' + inputs.sys_parm);&#13;
@@ -947,6 +1093,47 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Create Session">f09956943bb72610cb98111864e45add</action>
+        <cid>f3ccf708-90f6-46c6-9c66-87477ca0e893</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Get Connection Info step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Get Connection Info">95eeb235e7011010493520c343f6a983</step_type>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-12 05:08:02</sys_created_on>
+        <sys_id>4ecc5dff3bff2a90f13f5fea26e45a3f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-12 05:08:02</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4ecc5dff3bff2a90f13f5fea26e45a3f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4ecc5dff3bff2a90f13f5fea26e45a3f</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-12 05:08:02</sys_created_on>
+        <sys_id>16cc5dff3bff2a90f13f5fea26e45a4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-12 05:08:02</sys_updated_on>
+        <value>873a29b03b2bea10cb98111864e45ad7</value>
+        <variable display_value="Connection Alias">7f64d24be7011010493520c343f6a999</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_95eeb235e7011010493520c343f6a983^id=4ecc5dff3bff2a90f13f5fea26e45a3f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=4ecc5dff3bff2a90f13f5fea26e45a3f"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=4ecc5dff3bff2a90f13f5fea26e45a3f"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=4ecc5dff3bff2a90f13f5fea26e45a3f"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4ecc5dff3bff2a90f13f5fea26e45a3f"/>
     <sys_hub_action_input action="delete_multiple" query="model=f09956943bb72610cb98111864e45add^sys_idNOT INfc9956943bb72610cb98111864e45ae2"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -1132,7 +1319,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ad9996943bb72610cb98111864e45ad7</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1140,7 +1327,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:03:52</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:28</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -1382,14 +1569,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:34:57</sys_created_on>
         <sys_id>a99996943bb72610cb98111864e45ae2</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>59</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:03:53</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:28</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1647,17 +1834,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Create Session">f09956943bb72610cb98111864e45add</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"34d956d43bb72610cb98111864e45ace","name":"plan","plan_signature":null}}</plan>
-        <snapshot>4fb014813bf3ea10f13f5fea26e45a9a</snapshot>
+        <snapshot>fddcd1333b336a90f13f5fea26e45a74</snapshot>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:35:59</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>34d956d43bb72610cb98111864e45ace</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 10:32:31</sys_updated_on>
+        <sys_updated_on>2025-09-12 05:08:18</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1674,7 +1861,7 @@
         <description/>
         <flow_priority/>
         <internal_name>create_session</internal_name>
-        <label_cache>[{"name":"{{action.sys_id}}","label":"action➛sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.unique_number}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6066acfe-42c5-47f3-9827-056aeb80053a"}},{"name":"{{action.record_sys_id}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].sn_auth_token}}","label":"step➛Create Session➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].response_body}}","label":"step➛Create Session➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].__step_status__}}","label":"Update Recordstep➛➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].session_id}}","label":"Update Recordstep➛➛session_id","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"74ba590e-2afc-4b3b-8164-77376f13db61"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].url}}","label":"step➛Update Record➛url","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"bc69d770-0b3c-4583-9afd-9711269f0482"}}]</label_cache>
+        <label_cache>[{"name":"{{action.sys_id}}","label":"action➛sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.unique_number}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6066acfe-42c5-47f3-9827-056aeb80053a"}},{"name":"{{action.record_sys_id}}","label":"action➛record_sys_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].sn_auth_token}}","label":"step➛Create Session➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[c6e1d80c-b849-43c6-be20-a8abae9e596c].response_body}}","label":"step➛Create Session➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].__step_status__}}","label":"Update Recordstep➛➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].session_id}}","label":"Update Recordstep➛➛session_id","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"74ba590e-2afc-4b3b-8164-77376f13db61"}},{"name":"{{step[e8390461-8c44-4683-95dc-6eec3fb9e72b].url}}","label":"step➛Update Record➛url","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"bc69d770-0b3c-4583-9afd-9711269f0482"}},{"name":"{{step[f3ccf708-90f6-46c6-9c66-87477ca0e893].credential_value}}","label":"step➛Get Connection Info step➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master>true</master>
         <name>Create Session</name>
         <natlang/>
@@ -1687,7 +1874,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>73c916d43bb72610cb98111864e45a97</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1695,7 +1882,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 07:21:58</sys_updated_on>
+        <sys_updated_on>2025-09-12 05:08:15</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1709,10 +1896,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:35:57</sys_created_on>
         <sys_id>10d956d43bb72610cb98111864e45a4c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 08:07:16</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2025-10-16 17:35:32</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">d8d956d43bb72610cb98111864e45a33</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1818,7 +2005,7 @@
         <table>var__m_sys_hub_action_output_73c916d43bb72610cb98111864e45a97</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_instance action="delete_multiple" query="action=73c916d43bb72610cb98111864e45a97^sys_idNOT IN3fc916d43bb72610cb98111864e45ab0,40d916d43bb72610cb98111864e45aec"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=73c916d43bb72610cb98111864e45a97^sys_idNOT IN3fc916d43bb72610cb98111864e45ab0,40d916d43bb72610cb98111864e45aec,99dcd1333b336a90f13f5fea26e45a07"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Create Session">73c916d43bb72610cb98111864e45a97</action>
         <cid>c6e1d80c-b849-43c6-be20-a8abae9e596c</cid>
@@ -1827,18 +2014,19 @@
         <extended_outputs/>
         <icon/>
         <inputs/>
+        <inputs/>
         <label>Create Session</label>
-        <order>1</order>
+        <order>2</order>
         <outputs/>
         <section/>
         <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:35:55</sys_created_on>
         <sys_id>3fc916d43bb72610cb98111864e45ab0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 10:32:28</sys_updated_on>
+        <sys_updated_on>2025-09-12 05:08:16</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3fc916d43bb72610cb98111864e45ab0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1849,10 +2037,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:35:56</sys_created_on>
         <sys_id>00d916d43bb72610cb98111864e45ae6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-03 10:32:28</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"X-AUTH-CLIENT","value":"044b2751-0d48-40ab-94cc-a17f87b315dc"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"}]}</value>
+        <sys_updated_on>2025-09-12 05:08:16</sys_updated_on>
+        <value>{}</value>
         <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2010,7 +2198,151 @@
         <variable display_value="Connection Timeout">7a59009bc7522010820469467ec260c0</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_3fc916d43bb72610cb98111864e45ab0^id=3fc916d43bb72610cb98111864e45ab0"/>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129^id=3fc916d43bb72610cb98111864e45ab0"/>
+    <sys_element_mapping action="delete_multiple" query="id=3fc916d43bb72610cb98111864e45ab0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>84d916d43bb72610cb98111864e45ae4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>c0d916d43bb72610cb98111864e45ae4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>00d916d43bb72610cb98111864e45ae4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>c4d916d43bb72610cb98111864e45ae3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_timeout</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>0cd916d43bb72610cb98111864e45ae4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>4cd916d43bb72610cb98111864e45ae3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-12 05:08:16</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{"type":"ADV_NV","value":[{"name":"X-AUTH-CLIENT","value":"{{step[f3ccf708-90f6-46c6-9c66-87477ca0e893].credential_value}}","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_headers</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>c8d916d43bb72610cb98111864e45ae2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_query_params</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>40d916d43bb72610cb98111864e45ae3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_method</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>04d916d43bb72610cb98111864e45ae3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>48d916d43bb72610cb98111864e45ae4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resource_path</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>88d916d43bb72610cb98111864e45ae3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>retry_policy</field>
+        <id>3fc916d43bb72610cb98111864e45ab0</id>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-01 12:35:56</sys_created_on>
+        <sys_id>8cd916d43bb72610cb98111864e45ae2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 12:35:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
     <sys_translated_text action="delete_multiple" query="documentkey=3fc916d43bb72610cb98111864e45ab0"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=3fc916d43bb72610cb98111864e45ab0"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=3fc916d43bb72610cb98111864e45ab0^sys_idNOT IN7fc916d43bb72610cb98111864e45ad3"/>
@@ -2131,17 +2463,17 @@
         <icon/>
         <inputs/>
         <label>Update Record</label>
-        <order>2</order>
+        <order>3</order>
         <outputs/>
         <section/>
         <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:35:56</sys_created_on>
         <sys_id>40d916d43bb72610cb98111864e45aec</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:03:59</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:32</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=40d916d43bb72610cb98111864e45aec"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2152,9 +2484,9 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:35:57</sys_created_on>
         <sys_id>88d956d43bb72610cb98111864e45a23</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:03:59</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:32</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var session_details = JSON.parse(inputs.parameter);&#13;
     outputs.output_details = session_details;&#13;
@@ -2162,7 +2494,8 @@
     outputs.url = session_details.verification.url;&#13;
     var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_entity_details');&#13;
     if (gr.get(inputs.sys_parm)) { &#13;
-        gr.video_kyc_link = session_details.verification.url;  &#13;
+        gr.video_kyc_link = session_details.verification.url; &#13;
+        gr.session_id = session_details.verification.id; &#13;
         gr.update();&#13;
     } else {&#13;
         gs.error('No record found with sys_id: ' + inputs.sys_parm);&#13;
@@ -2617,6 +2950,47 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Create Session">73c916d43bb72610cb98111864e45a97</action>
+        <cid>f3ccf708-90f6-46c6-9c66-87477ca0e893</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Get Connection Info step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Get Connection Info">95eeb235e7011010493520c343f6a983</step_type>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-12 05:08:15</sys_created_on>
+        <sys_id>99dcd1333b336a90f13f5fea26e45a07</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-12 05:08:15</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=99dcd1333b336a90f13f5fea26e45a07"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>99dcd1333b336a90f13f5fea26e45a07</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-12 05:08:15</sys_created_on>
+        <sys_id>1ddcd1333b336a90f13f5fea26e45a0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-12 05:08:15</sys_updated_on>
+        <value>873a29b03b2bea10cb98111864e45ad7</value>
+        <variable display_value="Connection Alias">7f64d24be7011010493520c343f6a999</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_95eeb235e7011010493520c343f6a983^id=99dcd1333b336a90f13f5fea26e45a07"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=99dcd1333b336a90f13f5fea26e45a07"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=99dcd1333b336a90f13f5fea26e45a07"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=99dcd1333b336a90f13f5fea26e45a07"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=99dcd1333b336a90f13f5fea26e45a07"/>
     <sys_hub_action_input action="delete_multiple" query="model=73c916d43bb72610cb98111864e45a97^sys_idNOT IN77c916d43bb72610cb98111864e45a9a"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -3042,14 +3416,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 12:35:57</sys_created_on>
         <sys_id>d4d956d43bb72610cb98111864e45a3c</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:04:00</sys_updated_on>
+        <sys_updated_on>2025-10-16 17:35:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3306,6 +3680,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>f09956943bb72610cb98111864e45add</sys_id>
         <latest_snapshot>73c916d43bb72610cb98111864e45a97</latest_snapshot>
-        <compiler_build>glide-yokohama-12-18-2024__patch5-06-11-2025_06-25-2025_1836.zip</compiler_build>
+        <compiler_build>glide-yokohama-12-18-2024__patch7-hotfix2-09-18-2025_09-21-2025_1435.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>
