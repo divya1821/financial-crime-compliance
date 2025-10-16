@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=518074000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>It will run to check if the expiry date of the document is today or 30 days before the expiry date to create a case and send notifications</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>system_flags_expired_documents_and_notifies_all_personas</internal_name>
+        <label_cache>[{"name":"b80074bf-a531-41e6-a153-9edcaee9e464.record.assigned_to.email","label":"3 - Create Record➛FCC KYC Case Record➛Assigned to➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"7ed13f48-0435-4013-962a-d5b2379b8ffb":["ah_to"]}},{"name":"78c4d986-4218-42b3-b34a-ac4398978d89.item.address_line","label":"2 - For Each➛FCC KYC Individual Details Record➛Address Line","reference":"","reference_display":"Address Line","type":"string","base_type":"string","parent_table_name":"x_vuram_financia_0_fcc_kyc_individual_details","column_name":"address_line","usedInstances":{}},{"name":"78c4d986-4218-42b3-b34a-ac4398978d89.item.poi_doc_expiry_date","label":"2 - For Each➛FCC KYC Individual Details Record➛POI Doc Expiry Date","reference":"","reference_display":"POI Doc Expiry Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_vuram_financia_0_fcc_kyc_individual_details","column_name":"poi_doc_expiry_date","usedInstances":{"04a7ffd7-ee13-458f-87e3-b5ef273fb822":["condition"],"79c9b8b9-8979-440d-bfa6-ca97f064ee59":["condition"]}},{"name":"01098b4e-1088-4a77-a75c-c58774479865.Records","label":"1 - Look Up Records➛FCC KYC Individual Details Records","reference":"x_vuram_financia_0_fcc_kyc_individual_details","reference_display":"FCC KYC Individual Details","type":"records","base_type":"records","usedInstances":{"d62c5f11-e307-4471-99d0-afb25ae3e601":["condition"],"5c7b740e-e99e-4211-88ec-8418450e4aec":["condition"],"78c4d986-4218-42b3-b34a-ac4398978d89":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01098b4e-1088-4a77-a75c-c58774479865.__action_status__.code","label":"1 - Look Up Records➛Action Status➛Code","reference":"","reference_display":"Code","type":"integer","base_type":"integer","usedInstances":{},"attributes":{}},{"name":"b80074bf-a531-41e6-a153-9edcaee9e464.record","label":"3 - Create Record➛FCC KYC Case Record","reference":"x_vuram_financia_0_fcc_kyc_cases","reference_display":"FCC KYC Case","type":"reference","base_type":"reference","usedInstances":{"80a7392b-d4c0-4f8e-8ec9-2233fbc301d6":["record"],"7ed13f48-0435-4013-962a-d5b2379b8ffb":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01098b4e-1088-4a77-a75c-c58774479865.Table","label":"1 - Look Up Records➛FCC KYC Individual Details Table","reference":"x_vuram_financia_0_fcc_kyc_individual_details","reference_display":"FCC KYC Individual Details","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>6a265ec23b04b214f13f5fea26e45abf</master_snapshot>
+        <master_snapshot_digest/>
+        <name>System Flags Expired Documents and Notifies All Personas</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>7a269ec23b04b214f13f5fea26e45a19</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 07:58:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>43c3f7193b4cbad0f13f5fea26e45a2f</sys_id>
+        <sys_mod_count>75</sys_mod_count>
+        <sys_name>System Flags Expired Documents and Notifies All Personas</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_hub_flow_43c3f7193b4cbad0f13f5fea26e45a2f</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-10-16 10:53:19</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period/>
+        <run_start>2025-09-19 09:05:05</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7a269ec23b04b214f13f5fea26e45a19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:05:05</sys_updated_on>
+        <time>1970-01-01 20:00:00</time>
+        <timer_type>11</timer_type>
+        <trigger_definition/>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:7a269ec23b04b214f13f5fea26e45a19^sys_idNOT INfe269ec23b04b214f13f5fea26e45a19"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:7a269ec23b04b214f13f5fea26e45a19</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="Abhipsa Jally">d01cf4403b431210f13f5fea26e45a3e</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2025-09-19 09:05:05</run_start>
+        <run_time>1970-01-01 20:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('7a269ec23b04b214f13f5fea26e45a19');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:05</sys_created_on>
+        <sys_id>fe269ec23b04b214f13f5fea26e45a19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:05:05</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">7a269ec23b04b214f13f5fea26e45a19</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=43c3f7193b4cbad0f13f5fea26e45a2f^sys_idNOT IN0fc3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>43c3f7193b4cbad0f13f5fea26e45a2f</id>
+        <name>System Flags Expired Documents and Notifies All Personas</name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 07:58:43</sys_created_on>
+        <sys_id>0fc3f7193b4cbad0f13f5fea26e45a2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-17 07:58:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0fc3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=43c3f7193b4cbad0f13f5fea26e45a2f^sys_idNOT INb118f7953b8cbad0f13f5fea26e45a40"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">43c3f7193b4cbad0f13f5fea26e45a2f</flow>
+        <generation_source/>
+        <name>Daily</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 08:17:28</sys_created_on>
+        <sys_id>b118f7953b8cbad0f13f5fea26e45a40</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-17 08:22:09</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21SXU/cMBD8K8jP18i5owXyVqk6qQ8tUjnxglC0sTd3ltYfdZyDgPjvrBNzAlrLLzvrnZ0Z+e5ZEHRIohE7Y1GshHEJowPaTQEZ3ZPR2KalZ8FpSD5OoklxxJXoo7c7tIEg8eMeaGDQR41RNLWUK3EEGvFmGn5q5mIGBzazFr65y2V9dSG/yJrvWb1upOTLXXUwpCM60dzdr0SAyLMpMz9/aplMvgF9jlpJtVnzkXJ9eV533zZdvdYbQPzKhJ+cftSS/uP3vRN8TOg06pPNf8KICPra0XR6ceAsF9sWHgfzhIUqYo8sXuHSPJWtNgNHOS2wOnij8Dok492CJOiozChPo3W/Fwdca+xhpHRbAmVkHJgPQ9acVRRJ/c3BP/x5W7g1bjZYmuQV0KmClKLpxoRDThwJLRO1FkIwbt+G6I9mHmYttppjq3ryD7x0MHtXgcrCK44Iqi3jP2b4FqLJLn4xDQ+/zO7bv2Peu/goitvFND8ooWwNUvlEg4ompO+84Pj2617uXwEk9bifygIAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=43c3f7193b4cbad0f13f5fea26e45a2f^sys_idNOT INb118f7953b8cbad0f13f5fea26e45a42,bd18f7953b8cbad0f13f5fea26e45a43,e7bd7fd53bccbad0f13f5fea26e45a89"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">43c3f7193b4cbad0f13f5fea26e45a2f</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 08:17:28</sys_created_on>
+        <sys_id>b118f7953b8cbad0f13f5fea26e45a42</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 19:00:08</sys_updated_on>
+        <ui_id>01098b4e-1088-4a77-a75c-c58774479865</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXbW/bNhD+K4Q+bZmhyHGSZumXBc6yBmsT1DY6FHVHUBRls6VJlaQcO4H/+46kJBu2E8SAA6TYB8Pg8Xj33MtzpL48RDyLzqOz/DhJSPvk7E2SdDpJcnraoaSdpp1TmibpcRq1IkkmDDQtSQWD5ZSI0q1neFpqMsE5l0RSTnCCc0rx9znFXGZ8yrOSCJwxS7gwcC7jphBk/qk6ftXtor8/d9F1o4suG1065iLTTEbnX762ooKAH2aZjs4f1raeG4MgKROgOqiCWIvJzotmif1ekL1fPYZuwobSmYOStCI2s0xmDDDkRBjWiiZEZsQqPW8kmpHsVoqlYMylBYuRU54Zfg9+zxKnlzOIirKw1yxxlbYgzi+JJX2rS2pLXanSseKUmZCPjOWkFLa7KgsKt4XlSoYjIexwWolyIm9COqLGQF0lkJQGQLDCBeqQV2Hk/bG669Uor6DiLifVplCUiGZFrNU8La3D8xAxwSZgCE9IUXA5woVWUH53GLBM4pGARZwLdQdODR/JmFAHPIa8kvgK5Jde/Ilo7qL4AGbgMADiAjoEhxIaVWqfyimmojR+QxNpgq1o0YrM3HQFMWYZOaQc/ygd7pCHKmIckuaOUM0LewEmpqwKbtF6Fo1OkmXLUQUN71CYFS4ViuNMUcxmBddzDLGy25uBysj8j29kSoLn85GJUzbiUkLebnO//cuvawoAutnaJN2L+dknYX22asJ2V9O1LYUVdTdk77cZqKjb3ht1IY6fibzg/PVxd3c2hhRsp2Qt9K23rD2snlSODg+G8uDggkLmDXJYDy88eOTAo9JAvMiOGcoz7CUq/caojVHfG0ATmDJIM6isRAR5XsfIWbx1LYdkOUnhjxuk8twwi9I5+q2NuER/aq00egfdJ5yLPgsp82CmcB36m0f5+htU9RMqCwBWaIDqzgyjeBghkgPhanjuOJuRSSHYOaDRyIyVtpB+ioYlkC6rFWOo72jEdExLDe1gY6/o6ufjAq9vna0qssaKF7pfj/0oOQBBf7ni9xgFiiFoKwXc+lgyPYekGEALuUY1IH82Ir4QAY3ry383PPcHF71B/5/rwTvoPzuMnNPDoRzCAF80k5e+eXKWnCzHhnHmA2VWRu/mkNx5nD0DQj3OQjek88dQVdMs50xk2x4iV25j7SFy9P98iLzKWQaAMhyqxyUQ2r8qAeieh1zT/cnTN+nva33m22vZ+14Gl/omBwiyCt3vzIRnwKmZ0AffaBDwbIFYX+u+Zdav9FpYEaCzNwJ0jvZDgIcmzCaRW3Jef0i4atb6906frOu7objyfFlsI9hOPtu7+jxabBK4sxODV5st7Fw+0nN7/uJ4hJGtlxwBYzha+cOBv/iOZyNml95rrUzZOyK+b9uvOg7XhfLhvcDXy/GTtD1tLykKTMFwoUPxVj9f2vAK3pwh7VYQ7zZCnoGlTscHMkO9BsxWhNUYAaazka/N6hy5bqRVkx/v8bvg1d6kdbG2crCu2U/x0b8/Inz9DykZ8YkPEwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b118f7953b8cbad0f13f5fea26e45a42"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">43c3f7193b4cbad0f13f5fea26e45a2f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>78c4d986-4218-42b3-b34a-ac4398978d89</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 08:17:28</sys_created_on>
+        <sys_id>bd18f7953b8cbad0f13f5fea26e45a43</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 19:00:08</sys_updated_on>
+        <ui_id>b80074bf-a531-41e6-a153-9edcaee9e464</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYFnwaAs23B8Kxz40iYpmjZAEccERa5iItSjJOXYNfLvXYqSY+SBJkAvAXrk7uxqZrhcXe+JkmRGJgnQ8UkyEWmSpkNKh9NRkk3SLBnKlAOMSExKXgAiHc80sPYQkw3XjQ9u2aYxvGC5KnkpFGeU5UKwu51ggluwCJXK1prvrrqKxXweff45j+aYxqxYKy0NlGR2fROTmmMzcGDIbP8k9Va2mmegEfrd032FvdvVL8a+HNdG5yFRGen50JjA1kEpAYnkXFuIScFLyV1ldmTmTIMBA1xelHp3QKxV6bAh8ditVb/xs1PqcTmgMgEhdziyzqwQzk+545fYWbjGdFCxrpRAX1tPJOS80W5+HAuAi9qpqgwlrcyuutJNUZ4HS8ihQX83GGkskoDa6/TMOxn55bq6/9azXKiytaRL6kpwfThx54zKGuf57AloKLARK3hdq/KW1abaqLYYuRSDW42HQa6re/yoVbflgAtPfIC28sEC46dt+Iob5VWcYRssfoiJ3dm55tY+akET2a/GMwnKOg0s2OBLhFG1+4Qf2EBH9yHun4EEevLqYCXZ4yC1k2+PnoCfc+anZ9lQmkrkV4NDHodHsLLryjgvsCWA8gLya4+MPCoSODwOZJRXJpKViGBbK7NbWYfRUJCM6Qolox8gmatCcL/sX9iSzJbkjN+BiX5YMEsSLwPJNpFOaT4Vk2maQQqThOZJmo9z4MMJjMY8zVp4OyotHP1lTd/FH5R8Y5uHlWisqwowR67gxCi8eH89zzbCfwPfa+A7l+bfZ7tfmgsFWtoXhr3fmFCgUQ5YGP4nW7NLRlddstucyb/anCNKP9LuDMI+/Oo8+ku+skRv/gAg1NmPTQgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=bd18f7953b8cbad0f13f5fea26e45a43"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">43c3f7193b4cbad0f13f5fea26e45a2f</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>78c4d986-4218-42b3-b34a-ac4398978d89</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 08:42:09</sys_created_on>
+        <sys_id>e7bd7fd53bccbad0f13f5fea26e45a89</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 19:00:08</sys_updated_on>
+        <ui_id>80a7392b-d4c0-4f8e-8ec9-2233fbc301d6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WVbW/TMBDHv0qV102V56Z7hzpNQsCQtoGEEIrO9nm1cB5InLJS7btzTtKntQwGDImXPvt8d/+7n/1x7SjhnDmRSIWYSd+Tvu97vhf7gZ9iioxPkykGqTN2CsiRTtbIy1rQegm6tYb1mqWeN42YdCEOfTfyMXHBj0N3hoID4gyjJJr0fvf35ClUU2lYvR8uIAtfKC1qLJyzj5/GTgU1xTJYO2frB1u/mqwGhpqOXm2yfZi9WVV2LUre5liYTG2MrwfP82Fn9PKcdsjJpuOPHbwzWAikPCToBsdODoUAU9arraVGEG8LvTMsVGH6QnO4a9Q3ihwG9pxEqowPImyX2SBQb5bnYODa1C03bb3Vq1Qcm14TgRJabeb7tv7A28qosuhdDDC98S51mxeXvSLO9oK9frQNJYGVLdRmTsGpCnm9KL9ebZK8UEUnyVCiLjno7QqMqRVrjU1n7bTq5pTavfm03qixO5hDVaniNqvqcqm6eJR9PrnVtJhIXX6lNBt1W0yA21In1AmYXJD9vDO/h1rZut/QNeRsY74r1JcWX9o5Er43DWced6cBTWvkcXBZKpgLLJBxFCVpwnznfuw0q2auoWl2ilGrsi+tLbjXb1Aq68TulM66gbPOvFaVeUHpLXHQ5348UJf6jw1yGOzmdu/OHXl32bIlUjKpCii4gszLJOfZ5xXPODSk/RFqF/P56NWH+WhO20/G7hey3WB30w3b6ewH8o5sr/d9R5f9xsBd8ETu+oE9gV3q/UfYDWX9OXcHWh9id6D2P6GOM8Ykw5nrM87daIqpmwYwdTH2eCiDkP4S+RvU/Yy16PHp3fvhitIoqTh0TdzR5iUeRGkiQhZ5EgTdE8pYIgQJRjHE7Ji2dxUJgyOzwBHeVapGMdq8gM3TP72f57+h7/KwgNNlDRjuYDik8GrPPkAYPg5hz9zv/H3UaVzaRmIOSmf9UP2AzAe1/WVKf5TJAbogJXKDgt5d1IKmL+t8nuUjldcINV9c2Ei2hz2nh5gfNJZgpxhHmO+38/kovzmeqQZNNsiS2QsyWdY52InoKnz4OEQzH6dhkLqzJKDHAcPYZSIMXZ8eC0RAGYjn+ZI/fQd1w+wXCgsAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e7bd7fd53bccbad0f13f5fea26e45a89"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=43c3f7193b4cbad0f13f5fea26e45a2f^sys_idNOT IN2d7c02293b883ed0f13f5fea26e45a0d"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ed7c02293b883ed0f13f5fea26e45a0c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">43c3f7193b4cbad0f13f5fea26e45a2f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 19:05:42</sys_created_on>
+        <sys_id>2d7c02293b883ed0f13f5fea26e45a0d</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 07:53:17</sys_updated_on>
+        <ui_id>78c4d986-4218-42b3-b34a-ac4398978d89</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51SwW7bMAz9F50Tw3ac2MmtwFCgh61AV/QyFAYt0YkwWdIkOaln+N9HxU429LiTzUfyvUeRIzN9sH3wr+bBe3nU7PDjfcWkjhj9j0xDh+zAZMDOsxU7g+pjPI5plu6rpsB1llbVuoCyXEO55Wu+rcqyKMp9tdsmL8iNE36aqFVIbxUMb//PwE9SCYeLSQuOvAV07DB+SoXBYq2gQUVCCwP1S0FhthftnpT5Jt9t8jTNqyJrdpsmy8UGUOyo7tb5tAz96Q0iO4Xuzkuf6CJPVww/AmqBJNSC8rhiHWgBwbiBHYLrCXAI4lmr4V5xkjoQHYu1H17+Ju4sTWNhizQRxzl5D+vlIWeYn4zk+GyDNHpGAjRq6eFG9Z3+NtuPK8AWehVuKyCk98SHNnqOLhZL7feTubzcBB+lvs63JJXhoO4RhOBk0wf0cQ2osCOiugNrpT7W1pmzvDaTly45KgqSVpkLicZzS4BH4wk9ESSPhH+5wm/gZJziK9FQ83Sdvv7VR915jsVxPQ9NBZ47acMD0Z1xMTe9x3udmfx8GAK59CT4GrGn25XHxEBLlvxf6GLcz2j1Lzb9AXZU6NIvAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_43c3f7193b4cbad0f13f5fea26e45a2f"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>It will run to check if the expiry date of the document is today or 30 days before the expiry date to create a case and send notifications</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>system_flags_expired_documents_and_notifies_all_personas</internal_name>
+        <label_cache>[{"name":"b80074bf-a531-41e6-a153-9edcaee9e464.record.assigned_to.email","label":"3 - Create Record➛FCC KYC Case Record➛Assigned to➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"7ed13f48-0435-4013-962a-d5b2379b8ffb":["ah_to"]}},{"name":"78c4d986-4218-42b3-b34a-ac4398978d89.item.address_line","label":"2 - For Each➛FCC KYC Individual Details Record➛Address Line","reference":"","reference_display":"Address Line","type":"string","base_type":"string","parent_table_name":"x_vuram_financia_0_fcc_kyc_individual_details","column_name":"address_line","usedInstances":{}},{"name":"78c4d986-4218-42b3-b34a-ac4398978d89.item.poi_doc_expiry_date","label":"2 - For Each➛FCC KYC Individual Details Record➛POI Doc Expiry Date","reference":"","reference_display":"POI Doc Expiry Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_vuram_financia_0_fcc_kyc_individual_details","column_name":"poi_doc_expiry_date","usedInstances":{"04a7ffd7-ee13-458f-87e3-b5ef273fb822":["condition"],"79c9b8b9-8979-440d-bfa6-ca97f064ee59":["condition"]}},{"name":"01098b4e-1088-4a77-a75c-c58774479865.Records","label":"1 - Look Up Records➛FCC KYC Individual Details Records","reference":"x_vuram_financia_0_fcc_kyc_individual_details","reference_display":"FCC KYC Individual Details","type":"records","base_type":"records","usedInstances":{"d62c5f11-e307-4471-99d0-afb25ae3e601":["condition"],"5c7b740e-e99e-4211-88ec-8418450e4aec":["condition"],"78c4d986-4218-42b3-b34a-ac4398978d89":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01098b4e-1088-4a77-a75c-c58774479865.__action_status__.code","label":"1 - Look Up Records➛Action Status➛Code","reference":"","reference_display":"Code","type":"integer","base_type":"integer","usedInstances":{},"attributes":{}},{"name":"b80074bf-a531-41e6-a153-9edcaee9e464.record","label":"3 - Create Record➛FCC KYC Case Record","reference":"x_vuram_financia_0_fcc_kyc_cases","reference_display":"FCC KYC Case","type":"reference","base_type":"reference","usedInstances":{"80a7392b-d4c0-4f8e-8ec9-2233fbc301d6":["record"],"7ed13f48-0435-4013-962a-d5b2379b8ffb":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01098b4e-1088-4a77-a75c-c58774479865.Table","label":"1 - Look Up Records➛FCC KYC Individual Details Table","reference":"x_vuram_financia_0_fcc_kyc_individual_details","reference_display":"FCC KYC Individual Details","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>System Flags Expired Documents and Notifies All Personas</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="System Flags Expired Documents and Notifies All Personas">43c3f7193b4cbad0f13f5fea26e45a2f</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6a265ec23b04b214f13f5fea26e45abf</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 07:53:19</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6a265ec23b04b214f13f5fea26e45abf^sys_idNOT IN2e265ec23b04b214f13f5fea26e45ac0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6a265ec23b04b214f13f5fea26e45abf</id>
+        <name>System Flags Expired Documents and Notifies All Personas</name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:04</sys_created_on>
+        <sys_id>2e265ec23b04b214f13f5fea26e45ac0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:05:04</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2e265ec23b04b214f13f5fea26e45ac0"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=6a265ec23b04b214f13f5fea26e45abf^sys_idNOT INbe265ec23b04b214f13f5fea26e45ada"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">6a265ec23b04b214f13f5fea26e45abf</flow>
+        <generation_source/>
+        <name>Daily</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:04</sys_created_on>
+        <sys_id>be265ec23b04b214f13f5fea26e45ada</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:05:04</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21SXU/cMBD8K8jP18i5owXyVqk6qQ8tUjnxglC0sTd3ltYfdZyDgPjvrBNzAlrLLzvrnZ0Z+e5ZEHRIohE7Y1GshHEJowPaTQEZ3ZPR2KalZ8FpSD5OoklxxJXoo7c7tIEg8eMeaGDQR41RNLWUK3EEGvFmGn5q5mIGBzazFr65y2V9dSG/yJrvWb1upOTLXXUwpCM60dzdr0SAyLMpMz9/aplMvgF9jlpJtVnzkXJ9eV533zZdvdYbQPzKhJ+cftSS/uP3vRN8TOg06pPNf8KICPra0XR6ceAsF9sWHgfzhIUqYo8sXuHSPJWtNgNHOS2wOnij8Dok492CJOiozChPo3W/Fwdca+xhpHRbAmVkHJgPQ9acVRRJ/c3BP/x5W7g1bjZYmuQV0KmClKLpxoRDThwJLRO1FkIwbt+G6I9mHmYttppjq3ryD7x0MHtXgcrCK44Iqi3jP2b4FqLJLn4xDQ+/zO7bv2Peu/goitvFND8ooWwNUvlEg4ompO+84Pj2617uXwEk9bifygIAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=6a265ec23b04b214f13f5fea26e45abf^sys_idNOT IN2a265ec23b04b214f13f5fea26e45ad6,76265ec23b04b214f13f5fea26e45ad8,f6265ec23b04b214f13f5fea26e45ad9"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">6a265ec23b04b214f13f5fea26e45abf</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:04</sys_created_on>
+        <sys_id>2a265ec23b04b214f13f5fea26e45ad6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:05:04</sys_updated_on>
+        <ui_id>01098b4e-1088-4a77-a75c-c58774479865</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXbW/bNhD+K4Q+bZmhyHGSZumXBc6yBmsT1DY6FHVHUBRls6VJlaQcO4H/+46kJBu2E8SAA6TYB8Pg8Xj33MtzpL48RDyLzqOz/DhJSPvk7E2SdDpJcnraoaSdpp1TmibpcRq1IkkmDDQtSQWD5ZSI0q1neFpqMsE5l0RSTnCCc0rx9znFXGZ8yrOSCJwxS7gwcC7jphBk/qk6ftXtor8/d9F1o4suG1065iLTTEbnX762ooKAH2aZjs4f1raeG4MgKROgOqiCWIvJzotmif1ekL1fPYZuwobSmYOStCI2s0xmDDDkRBjWiiZEZsQqPW8kmpHsVoqlYMylBYuRU54Zfg9+zxKnlzOIirKw1yxxlbYgzi+JJX2rS2pLXanSseKUmZCPjOWkFLa7KgsKt4XlSoYjIexwWolyIm9COqLGQF0lkJQGQLDCBeqQV2Hk/bG669Uor6DiLifVplCUiGZFrNU8La3D8xAxwSZgCE9IUXA5woVWUH53GLBM4pGARZwLdQdODR/JmFAHPIa8kvgK5Jde/Ilo7qL4AGbgMADiAjoEhxIaVWqfyimmojR+QxNpgq1o0YrM3HQFMWYZOaQc/ygd7pCHKmIckuaOUM0LewEmpqwKbtF6Fo1OkmXLUQUN71CYFS4ViuNMUcxmBddzDLGy25uBysj8j29kSoLn85GJUzbiUkLebnO//cuvawoAutnaJN2L+dknYX22asJ2V9O1LYUVdTdk77cZqKjb3ht1IY6fibzg/PVxd3c2hhRsp2Qt9K23rD2snlSODg+G8uDggkLmDXJYDy88eOTAo9JAvMiOGcoz7CUq/caojVHfG0ATmDJIM6isRAR5XsfIWbx1LYdkOUnhjxuk8twwi9I5+q2NuER/aq00egfdJ5yLPgsp82CmcB36m0f5+htU9RMqCwBWaIDqzgyjeBghkgPhanjuOJuRSSHYOaDRyIyVtpB+ioYlkC6rFWOo72jEdExLDe1gY6/o6ufjAq9vna0qssaKF7pfj/0oOQBBf7ni9xgFiiFoKwXc+lgyPYekGEALuUY1IH82Ir4QAY3ry383PPcHF71B/5/rwTvoPzuMnNPDoRzCAF80k5e+eXKWnCzHhnHmA2VWRu/mkNx5nD0DQj3OQjek88dQVdMs50xk2x4iV25j7SFy9P98iLzKWQaAMhyqxyUQ2r8qAeieh1zT/cnTN+nva33m22vZ+14Gl/omBwiyCt3vzIRnwKmZ0AffaBDwbIFYX+u+Zdav9FpYEaCzNwJ0jvZDgIcmzCaRW3Jef0i4atb6906frOu7objyfFlsI9hOPtu7+jxabBK4sxODV5st7Fw+0nN7/uJ4hJGtlxwBYzha+cOBv/iOZyNml95rrUzZOyK+b9uvOg7XhfLhvcDXy/GTtD1tLykKTMFwoUPxVj9f2vAK3pwh7VYQ7zZCnoGlTscHMkO9BsxWhNUYAaazka/N6hy5bqRVkx/v8bvg1d6kdbG2crCu2U/x0b8/Inz9DykZ8YkPEwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2a265ec23b04b214f13f5fea26e45ad6"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">6a265ec23b04b214f13f5fea26e45abf</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>78c4d986-4218-42b3-b34a-ac4398978d89</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:04</sys_created_on>
+        <sys_id>76265ec23b04b214f13f5fea26e45ad8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:05:04</sys_updated_on>
+        <ui_id>b80074bf-a531-41e6-a153-9edcaee9e464</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYFnwaAs23B8Kxz40iYpmjZAEccERa5iItSjJOXYNfLvXYqSY+SBJkAvAXrk7uxqZrhcXe+JkmRGJgnQ8UkyEWmSpkNKh9NRkk3SLBnKlAOMSExKXgAiHc80sPYQkw3XjQ9u2aYxvGC5KnkpFGeU5UKwu51ggluwCJXK1prvrrqKxXweff45j+aYxqxYKy0NlGR2fROTmmMzcGDIbP8k9Va2mmegEfrd032FvdvVL8a+HNdG5yFRGen50JjA1kEpAYnkXFuIScFLyV1ldmTmTIMBA1xelHp3QKxV6bAh8ditVb/xs1PqcTmgMgEhdziyzqwQzk+545fYWbjGdFCxrpRAX1tPJOS80W5+HAuAi9qpqgwlrcyuutJNUZ4HS8ihQX83GGkskoDa6/TMOxn55bq6/9azXKiytaRL6kpwfThx54zKGuf57AloKLARK3hdq/KW1abaqLYYuRSDW42HQa6re/yoVbflgAtPfIC28sEC46dt+Iob5VWcYRssfoiJ3dm55tY+akET2a/GMwnKOg0s2OBLhFG1+4Qf2EBH9yHun4EEevLqYCXZ4yC1k2+PnoCfc+anZ9lQmkrkV4NDHodHsLLryjgvsCWA8gLya4+MPCoSODwOZJRXJpKViGBbK7NbWYfRUJCM6Qolox8gmatCcL/sX9iSzJbkjN+BiX5YMEsSLwPJNpFOaT4Vk2maQQqThOZJmo9z4MMJjMY8zVp4OyotHP1lTd/FH5R8Y5uHlWisqwowR67gxCi8eH89zzbCfwPfa+A7l+bfZ7tfmgsFWtoXhr3fmFCgUQ5YGP4nW7NLRlddstucyb/anCNKP9LuDMI+/Oo8+ku+skRv/gAg1NmPTQgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=76265ec23b04b214f13f5fea26e45ad8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">6a265ec23b04b214f13f5fea26e45abf</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>78c4d986-4218-42b3-b34a-ac4398978d89</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:04</sys_created_on>
+        <sys_id>f6265ec23b04b214f13f5fea26e45ad9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:26:15</sys_updated_on>
+        <ui_id>80a7392b-d4c0-4f8e-8ec9-2233fbc301d6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9WVbW/TMBDHv0qV102V56Z7hzpNQsCQtoGEEIrO9nm1cB5InLJS7btzTtKntQwGDImXPvt8d/+7n/1x7SjhnDmRSIWYSd+Tvu97vhf7gZ9iioxPkykGqTN2CsiRTtbIy1rQegm6tYb1mqWeN42YdCEOfTfyMXHBj0N3hoID4gyjJJr0fvf35ClUU2lYvR8uIAtfKC1qLJyzj5/GTgU1xTJYO2frB1u/mqwGhpqOXm2yfZi9WVV2LUre5liYTG2MrwfP82Fn9PKcdsjJpuOPHbwzWAikPCToBsdODoUAU9arraVGEG8LvTMsVGH6QnO4a9Q3ihwG9pxEqowPImyX2SBQb5bnYODa1C03bb3Vq1Qcm14TgRJabeb7tv7A28qosuhdDDC98S51mxeXvSLO9oK9frQNJYGVLdRmTsGpCnm9KL9ebZK8UEUnyVCiLjno7QqMqRVrjU1n7bTq5pTavfm03qixO5hDVaniNqvqcqm6eJR9PrnVtJhIXX6lNBt1W0yA21In1AmYXJD9vDO/h1rZut/QNeRsY74r1JcWX9o5Er43DWced6cBTWvkcXBZKpgLLJBxFCVpwnznfuw0q2auoWl2ilGrsi+tLbjXb1Aq68TulM66gbPOvFaVeUHpLXHQ5348UJf6jw1yGOzmdu/OHXl32bIlUjKpCii4gszLJOfZ5xXPODSk/RFqF/P56NWH+WhO20/G7hey3WB30w3b6ewH8o5sr/d9R5f9xsBd8ETu+oE9gV3q/UfYDWX9OXcHWh9id6D2P6GOM8Ykw5nrM87daIqpmwYwdTH2eCiDkP4S+RvU/Yy16PHp3fvhitIoqTh0TdzR5iUeRGkiQhZ5EgTdE8pYIgQJRjHE7Ji2dxUJgyOzwBHeVapGMdq8gM3TP72f57+h7/KwgNNlDRjuYDik8GrPPkAYPg5hz9zv/H3UaVzaRmIOSmf9UP2AzAe1/WVKf5TJAbogJXKDgt5d1IKmL+t8nuUjldcINV9c2Ei2hz2nh5gfNJZgpxhHmO+38/kovzmeqQZNNsiS2QsyWdY52InoKnz4OEQzH6dhkLqzJKDHAcPYZSIMXZ8eC0RAGYjn+ZI/fQd1w+wXCgsAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f6265ec23b04b214f13f5fea26e45ad9"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=6a265ec23b04b214f13f5fea26e45abf^sys_idNOT INe2265ec23b04b214f13f5fea26e45ad4"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ed7c02293b883ed0f13f5fea26e45a0c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="System Flags Expired Documents and Notifies All Personas">6a265ec23b04b214f13f5fea26e45abf</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:04</sys_created_on>
+        <sys_id>e2265ec23b04b214f13f5fea26e45ad4</sys_id>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 07:53:19</sys_updated_on>
+        <ui_id>78c4d986-4218-42b3-b34a-ac4398978d89</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TXW+jMBD8L34mCMgHJG9Vq0qV7loprfpyqqLFXhLrjM3ZJilF+e+3DoRWfewT7Hh3dmYwPTOtb1rvXsyNc3Kv2ebPW8SkDhi990xDjWzDpMfasYgdQbWh7vskTdZFucBZmhTFbAF5PoN8yWd8WeT5YpGvi9Uy3iI3VrjzmUaFdI2C7vXnDPwglbA4imzAkjaPlm36b0dS0IJ0Lao1reDzbDXPkiQrFmm5mpdpJuaAYkWECkpU1Powuvtm1ndNKO0gYQR+jTPbCaVHEJElEcN3j1ogra9AOYxYDVqAN7ZjG29bAiyCeNKqmzoOUnuiY6H33ckP2pgmSWiskAxxHA6ncjfmOMDVHXh4JmruWzu28oORHN0QhcAKWuVvv2JDw1PjpdHDiIdSXaeNamv9OCTBJoLrZyOkdSQCm2A0SB99VM8Hc9peVd5LfQllPFSGg5oq8N7KsvVBT89QYU1EuxqaRur9rrHmKC/DpKWO94qKuFLmREvDFY2BB+Ex5QrxPeF3F/gVrAwufhMNDZ8j5jp3q8C5Ty8U4u5fG5QMzkYPuyGGMMKtbPwNLTjiKPf8Fm79wD1lyqUjCS8Be7j+K+Ggoxsk+VfoZOzfIP4TO/8Hap08/nUDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6a265ec23b04b214f13f5fea26e45abf"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>43c3f7193b4cbad0f13f5fea26e45a2f</sys_id>
+        <latest_snapshot>6a265ec23b04b214f13f5fea26e45abf</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch7-hotfix2-09-18-2025_09-21-2025_1435.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=43c3f7193b4cbad0f13f5fea26e45a2f^sys_idNOT INb2269ec23b04b214f13f5fea26e45a34"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"b2269ec23b04b214f13f5fea26e45a34","name":"plan","plan_signature":null}}</plan>
+        <plan_id>43c3f7193b4cbad0f13f5fea26e45a2f</plan_id>
+        <snapshot>1c3e65cb3b983210f13f5fea26e45af7</snapshot>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-19 09:05:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b2269ec23b04b214f13f5fea26e45a34</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 07:53:20</sys_updated_on>
+        <trigger display_value="">7a269ec23b04b214f13f5fea26e45a19</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=43c3f7193b4cbad0f13f5fea26e45a2f"/>
+</record_update>
