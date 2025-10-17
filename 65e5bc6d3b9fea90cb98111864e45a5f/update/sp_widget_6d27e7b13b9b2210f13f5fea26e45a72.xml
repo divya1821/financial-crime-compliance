@@ -4,6 +4,37 @@
         <client_script><![CDATA[api.controller = function(spModal, spUtil, $scope, $timeout, $interval, $window) {
   var c = this;
 	
+	// ---- Safe supplier country initialization ----
+c.formData = c.formData || {};
+
+// Auto-select exchange checkbox based on Customer Type & Subtype
+$scope.$watchGroup(['c.formData.customerType', 'c.formData.customerSubType'], function(newValues) {
+  const [type, subtype] = newValues;
+  c.formData.isTradedOnExchange = (type === 'Public' && subtype === 'Public Limited');
+});
+
+
+c.countryList = [ 'India', 'United States', 'United Kingdom', 'Singapore', 'Germany', 'Australia', 'France', 'Japan', 'Canada', 'Brazil' ];
+c.countrySearch = "";
+
+	c.toggleListeddCountry = function(countryy) {
+    let idx = c.formData.listedCountriesSelectedd.indexOf(countryy);
+    if (idx > -1) {
+      c.formData.listedCountriesSelectedd.splice(idx, 1); // remove
+    } else {
+      c.formData.listedCountriesSelectedd.push(countryy); // add
+    }
+  };
+	
+	c.toggleListedCountry = function(country) {
+    let idx = c.formData.listedCountriesSelected.indexOf(country);
+    if (idx > -1) {
+      c.formData.listedCountriesSelected.splice(idx, 1); // remove
+    } else {
+      c.formData.listedCountriesSelected.push(country); // add
+    }
+  };
+	
 	  $scope.qrUrl = '';
     $scope.recordSysId = '';
     $scope.loading = false;
@@ -75,6 +106,8 @@
 		"Video KYC",
     "Preview"
   ];
+// 1) Master list (or load from server if you prefer)
+
 
   // Dropdown options
   //c.customerTypes = ["Individual", "Corporate", "Partnership", "Trust", "Government"];
@@ -120,6 +153,13 @@ c.updateUSD = function() {
 	//alert(c.formData.amountInUSD);
 };
 
+	c.equiAmt = function() {
+  var rate = c.exchangeRates[c.formData.currencyType] || 1;  
+  var localAmount = c.formData.amountInLocal || 0;  
+  c.formData.annualRevenue = parseInt(localAmount * rate);
+	//alert(c.formData.amountInUSD);
+};
+
 	
   // Form data
  c.formData = {
@@ -135,6 +175,7 @@ c.updateUSD = function() {
   legalEntityDescription: c.data.describe_legal_entity_type_free_text,
   isTradedOnExchange: false,
   listedCountriesSelected: [],
+	listedCountriesSelectedd:[],
   primaryAssetsCountry: c.data.primary_country_of_assets,
   legalStreetAddress: c.data.legal_street_address,
   legalPostalCode: c.data.legal_postal_code,
@@ -204,14 +245,24 @@ c.removeFinancialStatement = function() {
 
 
   // Utility for multi-select chip dropdown
-  c.toggleListedCountry = function(country) {
-    let idx = c.formData.listedCountriesSelected.indexOf(country);
-    if (idx > -1) {
-      c.formData.listedCountriesSelected.splice(idx, 1); // remove
-    } else {
-      c.formData.listedCountriesSelected.push(country); // add
-    }
-  };
+ c.toggleSupplierCountry = function (country) {
+  const normalized = (country || "").toLowerCase();
+  const idx = c.formData.supplierCountries.findIndex(function (item) {
+    return (item || "").toLowerCase() === normalized;
+  });
+
+  if (idx > -1) {
+    c.formData.supplierCountries.splice(idx, 1); // remove
+  } else {
+    c.formData.supplierCountries.push(country); // add
+  }
+
+  // clear search text after selection
+  c.countrySearch = "";
+
+  console.log("Current selected:", c.formData.supplierCountries);
+};
+
 
   // Navigation
   c.nextStep = function() {
@@ -275,7 +326,7 @@ c.removeFinancialStatement = function() {
       case 4:
         return c.formData.totalAssets && c.formData.currencyType && c.formData.amountInUSD && c.formData.annualRevenueSource && c.formData.chequeWithdrawal && c.formData.achWithdrawal && c.formData.atmWithdrawal && c.formData.cashDeposit && c.formData.asOfDate && c.formData.amountInLocal && c.formData.annualRevenue && c.formData.transactionVolume&& c.formData.financialStatement;
       case 5:
-        return c.formData.significantSuppliers && c.formData.supplierCountries && c.formData.natureOfBusiness;
+        return c.formData.significantSuppliers && c.formData.listedCountriesSelectedd && c.formData.natureOfBusiness;
       default:
         return true;
     }
@@ -339,6 +390,16 @@ c.submitForm = function() {
       console.log("Error loading saved data:", e);
     }
   }
+	// ---- Close dropdown when clicking outside ----
+angular.element(document).on("click", function (e) {
+  const target = angular.element(e.target);
+  const isInside = target.closest(".form-group.position-relative").length > 0;
+  if (!isInside) {
+    c.showCountryDropdown = false;
+    $scope.$applyAsync();
+  }
+});
+
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>:root {
@@ -459,20 +520,48 @@ c.submitForm = function() {
   margin-bottom: 25px;
 }
 
-.form-section h5 {
-  color: #495057;
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: 600;
+.form-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-/* Form Controls */
-.form-group label {
-  font-weight: 500;
-  color: #495057;
-   font-size: 17px;
-  margin-bottom: 5px;
+.form-check-input {
+  position: relative;
+  margin-right: 10px !important; /* force spacing from text */
+  margin-left: 0 !important;     /* remove Bootstrap negative margin */
+  transform: scale(1.2);
+  cursor: pointer;
+  accent-color: #007bff;
 }
+
+.form-check-label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  padding-left: 2px; /* ensures first letter never gets clipped */
+}
+
+
+.form-check-label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+.form-check-label {
+  font-size: 15px;
+  color: #333;
+  margin: 0;                 /* reset weird alignment margin */
+  line-height: 1.4;          /* prevent label from looking cut off */
+}
+
 
 .form-control {
   border: 2px solid #e9ecef;
@@ -514,10 +603,13 @@ c.submitForm = function() {
 }
 
 /* Selected Countries Styling */
+
+
 .selected-countries {
+  margin-top: 6px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
 }
 
 .country-chip {
@@ -1228,7 +1320,7 @@ body, .kyc-container {
             grInd1.annual_revenue.setDisplayValue(record.currencyType + ";" + record.annualRevenue);
             grInd1.estimated_annual_transaction_volume = record.transactionVolume;
             grInd1.describe_the_customer_significant_suppliers_free_text = record.significantSuppliers;
-            grInd1.countries_of_the_customer_s_significant_suppliers = record.supplierCountries;
+            grInd1.countries_of_the_customer_s_significant_suppliers = record.listedCountriesSelectedd;
             grInd1.nature_of_business = record.natureOfBusiness;
             grInd1.is_there_significant_private_ownership = record.isThereSignificantPrivateOwnership;
 
@@ -1420,14 +1512,14 @@ body, .kyc-container {
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-12 13:33:19</sys_created_on>
         <sys_id>6d27e7b13b9b2210f13f5fea26e45a72</sys_id>
-        <sys_mod_count>327</sys_mod_count>
+        <sys_mod_count>380</sys_mod_count>
         <sys_name>FCC KYC Entity Form</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_6d27e7b13b9b2210f13f5fea26e45a72</sys_update_name>
-        <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 14:53:45</sys_updated_on>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-10-17 10:43:40</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">
@@ -1554,13 +1646,21 @@ body, .kyc-container {
         </div>
     </div>
 
-    <div class="form-check my-2">
-        <input type="checkbox" class="form-check-input"
-               ng-model="c.formData.isTradedOnExchange" id="isTraded">
-        <label class="form-check-label" for="isTraded">
-            Is the customer traded on an exchange?
-        </label>
-    </div>
+
+ <div class="form-check my-2">
+  <input type="checkbox" 
+         class="form-check-input"
+         id="isTraded"
+         ng-model="c.formData.isTradedOnExchange"
+         ng-change="c.formData.isTradedOnExchange = (c.formData.customerType === 'Public' && c.formData.customerSubType === 'Public Limited') || c.formData.isTradedOnExchange"
+         ng-checked="c.formData.customerType === 'Public' && c.formData.customerSubType === 'Public Limited'"
+         ng-disabled="true">
+  <label class="form-check-label" for="isTraded">
+    Is the customer traded on an exchange?
+  </label>
+</div>
+
+
 
    <!-- If Listed: Multi-select Countries -->
 <div class="form-group" ng-if="c.formData.isTradedOnExchange">
@@ -1573,6 +1673,7 @@ body, .kyc-container {
             <div ng-repeat="country in c.listedCountries" class="dropdown-item">
                 <input type="checkbox"
                        ng-checked="c.formData.listedCountriesSelected.indexOf(country) > -1"
+                     
                        ng-click="c.toggleListedCountry(country)" /> {{country}}
             </div>
         </div>
@@ -1749,16 +1850,44 @@ body, .kyc-container {
           
             <div class="col-md-4">
                 <div class="form-group">
-                    <label>Amount in USD ($) <span class="required-asterisk">*</span></label>
+                    <label>Equivalent Amount in USD ($) <span class="required-asterisk">*</span></label>
                     <input type="number" class="form-control no-spinner" ng-model="c.formData.amountInUSD" 
                            
                             readonly placeholder="0.00">
                 </div>
             </div>
         </div>
+      <div class="form-section">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>As of Date <span class="required-asterisk">*</span></label>
+                    <input type="date" class="form-control" ng-model="c.formData.asOfDate" max="{{c.today | date:'yyyy-MM-dd'}}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Total Revenue <span class="required-asterisk">*</span></label>
+                    <input type="number" class="form-control no-spinner" ng-model="c.formData.amountInLocal" step="0.01" min="0" placeholder="0.00" ng-change="c.equiAmt()">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Equivalent Amount in USD: <span class="required-asterisk">*</span></label>
+                    <input type="number" class="form-control no-spinner" ng-model="c.formData.annualRevenue" 
+                           readonly placeholder="0.00">
+                </div>
+            </div>
+        </div>
         <div class="form-group">
             <label>Describe the Source of Annual Revenue <span class="required-asterisk">*</span></label>
             <input type="text" class="form-control" ng-model="c.formData.annualRevenueSource" placeholder="Enter description">
+        </div>
+    </div>
+      
+       <div class="form-group">
+            <label>Estimated Annual Transaction Volume <span class="required-asterisk">*</span></label>
+           <input type="text" class="form-control no-spinner" ng-model="c.formData.transactionVolume" min="0" placeholder="Enter number only">
         </div>
     </div>
 
@@ -1779,32 +1908,7 @@ body, .kyc-container {
         </div>
     </div>
 
-    <div class="form-section">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label>As of Date <span class="required-asterisk">*</span></label>
-                    <input type="date" class="form-control" ng-model="c.formData.asOfDate" max="{{c.today | date:'yyyy-MM-dd'}}">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label>Amount in Local Currency ($) <span class="required-asterisk">*</span></label>
-                    <input type="number" class="form-control no-spinner" ng-model="c.formData.amountInLocal" step="0.01" min="0" placeholder="0.00">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label>Annual Revenue ($) <span class="required-asterisk">*</span></label>
-                    <input type="number" class="form-control no-spinner" ng-model="c.formData.annualRevenue" step="0.01" min="0" placeholder="0.00">
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label>Estimated Annual Transaction Volume <span class="required-asterisk">*</span></label>
-           <input type="text" class="form-control no-spinner" ng-model="c.formData.transactionVolume" min="0" placeholder="Enter number only">
-        </div>
-    </div>
+       
 
     <div class="form-section">
         <h5>Additional Transactions</h5>
@@ -1871,45 +1975,61 @@ body, .kyc-container {
     <i class="fa fa-industry mr-2"></i> Supplier Information
   </h4>
 
-  
+  <!-- ROW 1: two half-width fields -->
+  <div class="row">
+    <!-- Supplier Countries -->
+    
+<div class="form-group" >
+<label>Countries of the Customer's Significant Suppliers <span class="required-asterisk">*</span></label>
+<div class="dropdown">
+<button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Select Countries
+</button>
+<div class="dropdown-menu p-2">
+<div ng-repeat="countryy in c.listedCountries" class="dropdown-item">
+<input type="checkbox"
+                       ng-checked="c.formData.listedCountriesSelectedd.indexOf(countryy) > -1"
+                       ng-click="c.toggleListeddCountry(countryy)" /> {{countryy}}
+</div>
+</div>
+</div>
+ 
+    <!-- Chips for selected countries -->
+<div class="mt-3 selected-countries">
+<span class="country-chip"
+              ng-repeat="countryy in c.formData.listedCountriesSelectedd">
+            {{countryy}}
+<span class="remove-chip" ng-click="c.toggleListeddCountry(countryy)">×</span>
+</span>
+</div>
+</div>
 
-    <div class="row">
-      <!-- Supplier Countries -->
-      <div class="col-md-6">
-        <div class="form-group">
-          <label>Countries of the Customer's Significant Suppliers <span class="required-asterisk">*</span></label>
-          <input type="text" class="form-control"
-                 ng-model="c.formData.supplierCountries"
-                 placeholder="Enter countries">
-        </div>
-      </div>
 
-      <div class="form-section">
-    <div class="row">
-      <!-- Significant Suppliers -->
-      <div class="col-md-12">
-        <div class="form-group">
-          <label>Describe the Customer's Significant Suppliers <span class="required-asterisk">*</span></label>
-          <textarea class="form-control"
-                    ng-model="c.formData.significantSuppliers"
-                    rows="4"
-                    placeholder="Provide details about significant suppliers"></textarea>
-        </div>
-      </div>
-    </div>
-      
-      <!-- Nature of Business -->
-      <div class="col-md-6">
-        <div class="form-group">
-          <label>Nature of Business <span class="required-asterisk">*</span></label>
-          <input type="text" class="form-control"
-                 ng-model="c.formData.natureOfBusiness"
-                 placeholder="Enter nature of business">
-        </div>
+    <!-- Nature of Business -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Nature of Business <span class="required-asterisk">*</span></label>
+        <input type="text" class="form-control"
+               ng-model="c.formData.natureOfBusiness"
+               placeholder="Enter nature of business">
       </div>
     </div>
   </div>
 
+  <!-- ROW 2: full-width textarea -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Describe the Customer's Significant Suppliers <span class="required-asterisk">*</span></label>
+        <textarea class="form-control"
+                  ng-model="c.formData.significantSuppliers"
+                  rows="4"
+                  placeholder="Provide details about significant suppliers"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation (unchanged bindings) -->
   <div class="form-navigation">
     <button class="btn btn-secondary" ng-click="c.prevStep()">
       <i class="fa fa-arrow-left mr-2"></i> Back
@@ -1920,6 +2040,7 @@ body, .kyc-container {
   </div>
 </div>
 
+
   <!-- OWNERSHIP DETAILS -->      
  
 <!-- OWNERSHIP DETAILS -->
@@ -1928,13 +2049,15 @@ body, .kyc-container {
 
   <div class="form-section">
 
-    <!-- Significant Private Ownership -->
-    <div class="form-group">
-      <label>
-        <input type="checkbox" ng-model="c.formData.hasPrivateOwnership">
-        Is there significant private ownership?
-      </label>
-    </div>
+   <!-- Significant Private Ownership -->
+<div class="form-group">
+  <label>
+    <input type="checkbox"
+           ng-model="c.formData.hasPrivateOwnership"
+           ng-checked="true">
+    Is there significant private ownership?
+  </label>
+</div>
 
     <!-- Individuals (>10% Ownership) -->
     <div class="border rounded p-3 mb-3">
@@ -2062,6 +2185,28 @@ body, .kyc-container {
           </tr>
           <tr ng-repeat-end ng-show="entity.showDetails" class="bg-light">
             <td colspan="6">
+              
+              <form>
+<div class="form-row">
+<div class="form-group col-md-4">
+<label>Entity Legal Name<span class="required-asterisk">*</span></label>
+<input type="text" class="form-control" ng-model="entity.full_legal_name">
+</div>
+<div class="form-group col-md-4">
+<label>Address Line <span class="required-asterisk">*</span></label>
+<input type="text" class="form-control" ng-model="entity.address_line">
+</div>
+<div class="form-group col-md-4">
+<label>City <span class="required-asterisk">*</span></label>
+<input type="text" class="form-control" ng-model="entity.city">
+</div>
+<div class="form-group col-md-4">
+<label>Country of Incorporation<span class="required-asterisk">*</span></label>
+<input type="text" class="form-control" ng-model="entity.country_of_incorporation">
+</div>
+</div>
+</form>
+              
               <!-- Detail form retained -->
             </td>
           </tr>
@@ -2072,48 +2217,102 @@ body, .kyc-container {
       </button>
     </div>
 
-    <!-- Controllers -->
-    <div class="border rounded p-3 mb-3">
-      <h5>Controllers</h5>
-      <table class="table table-bordered">
-        <thead class="thead-light">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Date of Birth</th>
-            <th>Country of Residence</th>
-            <th style="width:70px;">Action</th>
-            <th style="width:100px;">Video KYC</th>
-            <th style="width:150px;">Upload Documents</th>
-            <th style="width:80px;">Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="ctrl in c.formData.controllers">
-            <td><input type="text" class="form-control" ng-model="ctrl.first_name"></td>
-            <td><input type="text" class="form-control" ng-model="ctrl.last_name"></td>
-            <td><input type="date" class="form-control" ng-model="ctrl.dob"></td>
-            <td><input type="text" class="form-control" ng-model="ctrl.country_of_residence"></td>
-            <td class="text-center">
-              <i class="fa"
-                 ng-class="{'fa-eye': !ctrl.showDetails, 'fa-eye-slash': ctrl.showDetails}"
-                 style="cursor:pointer;"
-                 ng-click="ctrl.showDetails = !ctrl.showDetails"></i>
-            </td>
-            <td class="text-center"><input type="checkbox" ng-model="ctrl.video_kyc"></td>
-            <td class="text-center"><input type="file" ng-model="ctrl.upload_docs"></td>
-            <td class="text-center">
-              <button type="button" class="btn btn-danger btn-sm" ng-click="c.formData.controllers.splice($index, 1)">
-                <i class="fa fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button class="btn btn-primary btn-sm" ng-click="c.formData.controllers.push({})">
-        <i class="fa fa-plus"></i> Add Row
-      </button>
-    </div>
+   <!-- Controllers -->
+<div class="border rounded p-3 mb-3">
+  <h5>Controllers</h5>
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Country of Residence</th>
+        <th style="width:70px;">Action</th>
+        <th style="width:100px;">Video KYC</th>
+        <th style="width:150px;">Upload Documents</th>
+        <th style="width:80px;">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- Row 1 (summary row) -->
+      <tr ng-repeat-start="ctrl in c.formData.controllers">
+        <td>{{ctrl.first_name}}</td>
+        <td>{{ctrl.last_name}}</td>
+        <td>{{ctrl.dob | date:'yyyy-MM-dd'}}</td>
+        <td>{{ctrl.country_of_residence}}</td>
+
+        <!-- Eye icon for expand/collapse -->
+        <td class="text-center">
+          <i class="fa"
+             ng-class="{'fa-eye': !ctrl.showDetails, 'fa-eye-slash': ctrl.showDetails}"
+             style="cursor:pointer;"
+             ng-click="ctrl.showDetails = !ctrl.showDetails"></i>
+        </td>
+
+        <!-- Video KYC -->
+        <td class="text-center">
+          <input type="checkbox" ng-model="ctrl.video_kyc">
+        </td>
+
+        <!-- Upload docs -->
+        <td class="text-center">
+          <input type="file" ng-model="ctrl.upload_docs">
+        </td>
+
+        <!-- Delete -->
+        <td class="text-center">
+          <button type="button" class="btn btn-danger btn-sm" ng-click="c.formData.controllers.splice($index, 1)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+
+      <!-- Row 2 (details row shown when expanded) -->
+      <tr ng-repeat-end ng-show="ctrl.showDetails" class="bg-light">
+        <td colspan="8">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label>First Name</label>
+                <input type="text" class="form-control" ng-model="ctrl.first_name">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Middle Name</label>
+                <input type="text" class="form-control" ng-model="ctrl.middle_name">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Last Name</label>
+                <input type="text" class="form-control" ng-model="ctrl.last_name">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Address Line</label>
+                <input type="text" class="form-control" ng-model="ctrl.address_line">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Postal Code</label>
+                <input type="text" class="form-control" ng-model="ctrl.postal_code">
+              </div>
+              <div class="form-group col-md-4">
+                <label>City</label>
+                <input type="text" class="form-control" ng-model="ctrl.city">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Country of Nationality</label>
+                <input type="text" class="form-control" ng-model="ctrl.country_of_nationality">
+              </div>
+            </div>
+          </form>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary btn-sm" ng-click="c.formData.controllers.push({})">
+    <i class="fa fa-plus"></i> Add Row
+  </button>
+</div>
 
     <!-- Authorized Signers -->
     <div class="border rounded p-3 mb-3">
@@ -2275,7 +2474,7 @@ body, .kyc-container {
     </div>
     <div class="row">
       <div class="col-md-6"><strong>Traded on Exchange:</strong> {{c.formData.isTraded ? 'Yes':'No'}}</div>
-      <div class="col-md-6"><strong>Listed Countries:</strong> {{c.formData.listedCountries.join(', ')}}</div>
+      <div class="col-md-6"><strong>Listed Countries:</strong> {{c.formData.listedCountriesSelected.join(', ')}}</div>
     </div>
   </div>
 
@@ -2287,12 +2486,12 @@ body, .kyc-container {
       <div class="col-md-6"><strong>Local Currency:</strong> {{c.formData.currencyType}}</div>
     </div>
     <div class="row">
-      <div class="col-md-6"><strong>Amount in USD:</strong> {{c.formData.amountInUSD | currency}}</div>
+      <div class="col-md-6"><strong>Equivalent Amount in USD:</strong> {{c.formData.amountInUSD | currency}}</div>
       <div class="col-md-6"><strong>As of Date:</strong> {{c.formData.asOfDate | date:'dd-MMM-yyyy'}}</div>
     </div>
     <div class="row">
-      <div class="col-md-6"><strong>Annual Revenue:</strong> {{c.formData.annualRevenue | currency}}</div>
-      <div class="col-md-6"><strong>Amount in Local Currency:</strong> {{c.formData.amountInLocal | currency}}</div>
+      <div class="col-md-6"><strong>Equivalent Amount in USD:</strong> {{c.formData.annualRevenue | currency}}</div>
+      <div class="col-md-6"><strong>Total Revenue:</strong> {{c.formData.amountInLocal | currency}}</div>
     </div>
     <div class="row">
       <div class="col-md-6"><strong>Cash Deposit:</strong> {{c.formData.cashDeposit}}</div>
@@ -2320,7 +2519,7 @@ body, .kyc-container {
     <h5>3. Significant Suppliers</h5>
     <div class="row">
       <div class="col-md-6"><strong>Supplier Description:</strong> {{c.formData.significantSuppliers}}</div>
-      <div class="col-md-6"><strong>Supplier Countries:</strong> {{c.formData.supplierCountries}}</div>
+      <div class="col-md-6"><strong>Supplier Countries:</strong> {{c.formData.listedCountriesSelectedd.join(', ')}}</div>
     </div>
     <div class="row">
       <div class="col-md-6"><strong>Nature of Business:</strong> {{c.formData.natureOfBusiness}}</div>
