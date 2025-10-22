@@ -13,6 +13,13 @@
         "Bank Information",
         "Preview"
     ];
+	c.productServicesOptions = [
+    "Savings Account",
+    "Current Account",
+    "Trade Finance",
+    "Consumer Loan",
+    "Cards"
+];
     c.required = false;
 
 		//c.data.type = true;
@@ -101,51 +108,16 @@
     c.currentStep = 1;
     c.sameAsPermanent = false;
 
-     // form data with placeholders
-    c.formData = {
-        pronoun: "Mr",
-        forenameFull: "Jack Smith",
-        dob: "1990-01-15",
-        addressLine: "123 Example Street",
-        postcode: "AB12 3CD",
-        city: "London",
-        //nationality: "UK",
-        countryResidence: "UK",
-        email: c.data.email,
-        homeContact: "02079460000",
-        mobile: "07123456789",
-        mobileContact: "07123456789",
-        usCitizen: false,
-        taxId: "UK123456789",
-        nonUkResident: false,
-        nonUkTaxId: "",
-        // employmentStatus: "Employed",
-        occupation: "Software Engineer",
-        sourceInitialDeposit: "Salary Savings",
-        sourceAnnualRevenue: "Employment Income",
-        employer: "Tech Solutions Ltd",
-        employmentIndustry: "Information Technology",
-        purposeOfAccount: "Personal Savings",
-        annualTxnVolume: 25000,
-        cashDeposit: 2000,
-        chequeDeposit: 1000,
-        atmDeposit: 500,
-        achWithdrawal: 3000,
-        cashWithdrawal: 1000,
-        chequeWithdrawal: 500,
-        atmWithdrawal: 1200,
-        achDeposit: 5000
-    };
-    /* c.formData = {
+     c.formData = angular.extend({
          pronoun: "",
-         forenameFull: form.forenameFull,
+         forenameFull: "",
          dob: "",
          addressLine: "",
          postcode: "",
          city: "",
-         nationality: form.nationality,
+         nationality: "",
          countryResidence: "",
-         email: form.email,
+         email: "",
          homeContact: "",
          mobile: "",
          mobileContact: "",
@@ -168,8 +140,10 @@
          cashWithdrawal: "",
          chequeWithdrawal: "",
          atmWithdrawal: "",
-         achDeposit: ""
-     };*/
+			   videoKYCStatus: "",
+         achDeposit: "",
+			  product_services: "" 
+     }, c.data.formData || {});
 
 
     // Utility for multi-select chip dropdown
@@ -297,6 +271,22 @@
         // c.currentStep = 1;
         // c.formData = {};
     };
+	
+	c.toggleProductService = function(service) {
+    if (!c.formData.productServicesSelected) {
+        c.formData.productServicesSelected = [];
+    }
+    let idx = c.formData.productServicesSelected.indexOf(service);
+    if (idx > -1) {
+        c.formData.productServicesSelected.splice(idx, 1); // remove
+    } else {
+        c.formData.productServicesSelected.push(service); // add
+    }
+
+    // Store as comma-separated string for submission
+    c.formData.product_services = c.formData.productServicesSelected.join(", ");
+};
+
 
     // Load saved data on initialization
     var savedData = localStorage.getItem('bankingFormData');
@@ -310,166 +300,175 @@
     }
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>$transition-time: 0.1s;
+        <css>:root {
+  --transition-time: 0.1s;
+}
 
 /* Global Widget Styles */
-        .banking-form-widget {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
+.banking-form-widget {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-        /* Step Tracker Styles */
-        .step-tracker {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-            padding: 0 20px;
-        }
+/* Step Tracker Styles */
+.step-tracker {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
 
-        .step-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            cursor: pointer;
-            transition: all $transition-time ease;
-        }
+.step-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-time) ease;
+}
 
-        .step-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            right: -50%;
-            width: 100%;
-            height: 2px;
-            background: #e9ecef;
-            z-index: 1;
-        }
+.step-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: #e9ecef;
+  z-index: 1;
+}
 
-        .step-item.completed:not(:last-child)::after {
-            background: #28a745;
-        }
+.step-item.completed:not(:last-child)::after {
+  background: #28a745;
+}
 
-        .step-circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 8px;
-            position: relative;
-            z-index: 2;
-            transition: all $transition-time ease;
-        }
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+  transition: all var(--transition-time) ease;
+}
 
-        .step-item.active .step-circle {
-            background: #007bff;
-            color: white;
-            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
-        }
+.step-item.active .step-circle {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
 
-        .step-item.completed .step-circle {
-            background: #28a745;
-            color: white;
-        }
+.step-item.completed .step-circle {
+  background: #28a745;
+  color: white;
+}
 
-        .step-item.inactive .step-circle {
-            background: #e9ecef;
-            color: #6c757d;
-        }
+.step-item.inactive .step-circle {
+  background: #e9ecef;
+  color: #6c757d;
+}
 
-        .step-label {
-            font-size: 12px;
-            text-align: center;
-            color: #6c757d;
-            font-weight: 500;
-            max-width: 80px;
-        }
+.step-label {
+  font-size: 12px;
+  text-align: center;
+  color: #6c757d;
+  font-weight: 500;
+  max-width: 80px;
+}
 
-        .step-item.active .step-label {
-            color: #007bff;
-            font-weight: 600;
-        }
+.step-item.active .step-label {
+  color: #007bff;
+  font-weight: 600;
+}
 
-        .step-item.completed .step-label {
-            color: #28a745;
-        }
+.step-item.completed .step-label {
+  color: #28a745;
+}
 
-        /* Form Content Styles */
-        .form-content {
-            //background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            min-height: 500px;
-        }
+/* Form Content Styles */
+.form-content {
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  min-height: 500px;
+}
 
-        .form-title {
-            color: #2c3e50;
-            margin-bottom: 25px;
-            font-weight: 600;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
+.form-title {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
 
-        .form-section {
-            margin-bottom: 25px;
-        }
+.form-section {
+  margin-bottom: 25px;
+}
 
-        .form-section h5 {
-            color: #495057;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+.form-section h5 {
+  color: #495057;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
 
-        /* Form Controls */
-        .form-group label {
-            font-weight: 500;
-            color: #495057;
-            margin-bottom: 5px;
-        }
+/* Form Controls */
+.form-group label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 5px;
+}
 
-        .form-control {
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
-            padding: 12px 15px;
-            font-size: 14px;
-            transition: all $transition-time ease;
-        }
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 14px;
+  transition: all var(--transition-time) ease;
+}
 
-        .form-control:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-        }
+/* Empty required fields = red */
+.form-control:invalid {
+  border-color: #dc3545; /* red */
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
 
-        .required-asterisk {
-            color: #dc3545;
-            margin-left: 3px;
-        }	
-				.form-group select.form-control {
-  height: 34px;             /* balanced height */
-  line-height: 36px;        /* centers text vertically */
-  padding: 0 10px;          /* removes uneven top/bottom padding */
+/* Valid + focus = blue */
+.form-control:valid:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.required-asterisk {
+  color: #dc3545;
+  margin-left: 3px;
+}
+
+.form-group select.form-control {
+  height: 34px;
+  line-height: 36px;
+  padding: 0 10px;
   font-size: 14px;
   border-radius: 6px;
 }
 
 .form-group select.form-control option {
-  line-height: normal;      /* options remain readable */
-  padding: 6px 10px;        /* clean spacing */
+  line-height: normal;
+  padding: 6px 10px;
   font-size: 14px;
 }
 
-				/* Make select button smaller */
+/* Make select button smaller */
 .btn-sm {
   font-size: 1.3rem;
   padding: 4px 10px;
@@ -486,7 +485,7 @@
 .country-chip {
   background: #007bff;
   color: #fff;
-  font-size: 1.3rem; /* bigger text */
+  font-size: 1.3rem;
   padding: 8px 14px;
   border-radius: 20px;
   display: inline-flex;
@@ -509,272 +508,269 @@
 .remove-chip:hover {
   color: #ff4d4d;
 }
-/* For text, email, number, and other input placeholders */
+
+/* Placeholders */
 .form-control::placeholder {
   color: #999;
-  vertical-align: center;
-  opacity: 1;              /* ensure visible in all browsers */
+  opacity: 1;
 }
 
-
-/* Hide number input spinners (all browsers) */
+/* Hide number input spinners */
 .no-spinner::-webkit-inner-spin-button,
 .no-spinner::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 .no-spinner {
-    -moz-appearance: textfield; /* Firefox */
+  -moz-appearance: textfield;
 }
 
+/* File Upload Styles */
+.file-upload-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
 
-        /* File Upload Styles */
-        .file-upload-wrapper {
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-            width: 100%;
-        }
+.file-upload-input {
+  position: absolute;
+  left: -9999px;
+}
 
-        .file-upload-input {
-            position: absolute;
-            left: -9999px;
-        }
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-time) ease;
+  background: #f8f9ff;
+}
 
-        .file-upload-label {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            border: 2px dashed #007bff;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all $transition-time ease;
-            background: #f8f9ff;
-        }
+.file-upload-label:hover {
+  background: #e3f2fd;
+  border-color: #0056b3;
+}
 
-        .file-upload-label:hover {
-            background: #e3f2fd;
-            border-color: #0056b3;
-        }
+.file-upload-label i {
+  margin-right: 8px;
+  color: #007bff;
+}
 
-        .file-upload-label i {
-            margin-right: 8px;
-            color: #007bff;
-        }
-				
-				
+/* Navigation Buttons */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
 
-        /* Navigation Buttons */
-        .form-navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e9ecef;
-        }
+.btn {
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all var(--transition-time) ease;
+  border: none;
+  cursor: pointer;
+}
 
-        .btn {
-            padding: 12px 24px;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all $transition-time ease;
-            border: none;
-            cursor: pointer;
-        }
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
 
-        .btn-primary {
-            background: #007bff;
-            color: white;
-        }
+.btn-primary:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
 
-        .btn-primary:hover {
-            background: #0056b3;
-            transform: translateY(-1px);
-        }
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
 
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
+.btn-secondary:hover {
+  background: #545b62;
+}
 
-        .btn-secondary:hover {
-            background: #545b62;
-        }
+.btn-success {
+  background: #28a745;
+  color: white;
+}
 
-        .btn-success {
-            background: #28a745;
-            color: white;
-        }
+.btn-success:hover {
+  background: #1e7e34;
+}
 
-        .btn-success:hover {
-            background: #1e7e34;
-        }
+.btn-outline-primary {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
 
-        .btn-outline-primary {
-            background: transparent;
-            color: #007bff;
-            border: 2px solid #007bff;
-        }
+.btn-outline-primary:hover {
+  background: #007bff;
+  color: white;
+}
 
-        .btn-outline-primary:hover {
-            background: #007bff;
-            color: white;
-        }
+/* Declarations Section */
+.declarations-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
 
-        /* Declarations Section */
-        .declarations-section {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-        }
+.info-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
 
-        .info-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 25px;
-        }
+.checkbox-group {
+  margin: 20px 0;
+}
 
-        .checkbox-group {
-            margin: 20px 0;
-        }
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-        .checkbox-group label {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            font-size: 14px;
-            cursor: pointer;
-        }
+.checkbox-group input[type="checkbox"] {
+  margin-right: 12px;
+  margin-top: 3px;
+  transform: scale(1.2);
+}
 
-        .checkbox-group input[type="checkbox"] {
-            margin-right: 12px;
-            margin-top: 3px;
-            transform: scale(1.2);
-        }
+.signature-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
 
-        .signature-section {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
+.signature-row {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
 
-        .signature-row {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
-        }
+.signature-box {
+  border: 3px dashed #007bff;
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px;
+  background: #f8f9ff;
+  transition: all var(--transition-time) ease;
+}
 
-        .signature-box {
-            border: 3px dashed #007bff;
-            flex: 1;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 8px;
-            background: #f8f9ff;
-            transition: all $transition-time ease;
-        }
+.signature-box:hover {
+  border-color: #0056b3;
+  background: #e3f2fd;
+}
 
-        .signature-box:hover {
-            border-color: #0056b3;
-            background: #e3f2fd;
-        }
+.signature-box button {
+  margin-top: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-        .signature-box button {
-            margin-top: 15px;
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+.signature-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-        .signature-details {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+.disclaimer-box {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #ff9800;
+}
 
-        .disclaimer-box {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #ff9800;
-        }
+/* Input Group Styling */
+.input-group-append .btn {
+  border-radius: 0 8px 8px 0;
+}
 
-        /* Input Group Styling */
-        .input-group-append .btn {
-            border-radius: 0 8px 8px 0;
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banking-form-widget {
+    padding: 15px;
+  }
+  
+  .step-tracker {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .step-item {
+    flex-basis: calc(50% - 5px);
+    margin-bottom: 15px;
+  }
+  
+  .step-item:not(:last-child)::after {
+    display: none;
+  }
+  
+  .form-content {
+    padding: 20px;
+  }
+  
+  .signature-row {
+    flex-direction: column;
+  }
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .banking-form-widget {
-                padding: 15px;
-            }
-            
-            .step-tracker {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            
-            .step-item {
-                flex-basis: calc(50% - 5px);
-                margin-bottom: 15px;
-            }
-            
-            .step-item:not(:last-child)::after {
-                display: none;
-            }
-            
-            .form-content {
-                padding: 20px;
-            }
-            
-            .signature-row {
-                flex-direction: column;
-            }
-        }
+/* Animation for step transitions */
+.step-content {
+  animation: fadeInUp var(--transition-time) ease-in-out;
+}
 
-        /* Animation for step transitions */
-        .step-content {
-            animation: fadeInUp $transition-time ease-in-out;
-        }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* Progress indicator */
+.progress-container {
+  margin: 20px 0;
+}
 
-        /* Progress indicator */
-        .progress-container {
-            margin: 20px 0;
-        }
+.progress {
+  height: 6px;
+  border-radius: 3px;
+  background: #e9ecef;
+}
 
-        .progress {
-            height: 6px;
-            border-radius: 3px;
-            background: #e9ecef;
-        }
+.progress-bar {
+  background: linear-gradient(90deg, #007bff, #28a745);
+  border-radius: 3px;
+  transition: width var(--transition-time) ease;
+}
 
-        .progress-bar {
-            background: linear-gradient(90deg, #007bff, #28a745);
-            border-radius: 3px;
-            transition: width $transition-time ease;
-        }
-
+/* Preview Section */
 .preview-section {
   margin-bottom: 25px;
   padding: 15px;
@@ -784,6 +780,7 @@
 }
 
 .preview-section h5 {
+  font-size: 25px;
   margin-bottom: 15px;
   font-weight: 600;
   color: #1d3557;
@@ -799,7 +796,6 @@
   font-size: 14px;
   padding: 6px 10px;
 }
-
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -820,23 +816,53 @@
     //console.log('Hi');
     data.type = $sp.getParameter('type');
     var table = 'x_vuram_financia_0_fcc_kyc_individual_details';
-    var sys_id = 'c62d25783b2faa10f13f5fea26e45afb';
+    //var sys_id = 'c62d25783b2faa10f13f5fea26e45afb';
     var userEmail = gs.getUser().getEmail();
-		data.email = userEmail;
+    //var userEmail = "jack.smith@example.com";
+    data.email = userEmail;
     var enq = "email=" + userEmail;
-    /* var grIndiviualLoad = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
+
+    var grIndiviualLoad = new GlideRecord(table);
     grIndiviualLoad.addEncodedQuery(enq);
     grIndiviualLoad.query();
     while (grIndiviualLoad.next()) {
-			console.log("Query");
-			sys_id = grIndiviualLoad.getValue('sys_id');
+        console.log("Query");
+        sys_id = grIndiviualLoad.getValue('sys_id');
         data.formData = {
+            pronoun: grIndiviualLoad.getValue('surname'),
             forenameFull: grIndiviualLoad.getValue('forename_in_full'),
+            dob: grIndiviualLoad.getValue('dob'),
+            addressLine: grIndiviualLoad.getValue('address_line'),
+            postcode: grIndiviualLoad.getValue('postcode'),
+            city: grIndiviualLoad.getValue('city'),
             nationality: grIndiviualLoad.getValue('country_of_nationality'),
+            countryResidence: grIndiviualLoad.getValue('country_of_residence'),
             email: grIndiviualLoad.getValue('email'),
-            //postcode: grIndiviualLoad.getValue('')
+            homeContact: grIndiviualLoad.getValue('home_contact'),
+            mobile: grIndiviualLoad.getValue('mobile'),
+            mobileContact: grIndiviualLoad.getValue('mobile_contact'),
+            taxId: grIndiviualLoad.getValue('tax_identification_number'),
+            nonUkTaxId: grIndiviualLoad.getValue('non_uk_tax_identification_number'),
+            employmentStatus: grIndiviualLoad.getValue('employment_status'),
+            occupation: grIndiviualLoad.getValue('occupation'),
+            sourceInitialDeposit: grIndiviualLoad.getValue('source_of_initial_deposit'),
+            sourceAnnualRevenue: grIndiviualLoad.getValue('describe_the_source_of_annual_revenue'),
+            employer: grIndiviualLoad.getValue('employer'),
+            employmentIndustry: grIndiviualLoad.getValue('employment_industry'),
+            purposeOfAccount: grIndiviualLoad.getValue('state_purpose_of_opening_account'),
+            annualTxnVolume: grIndiviualLoad.getValue('estimated_annual_transaction_volume'),
+            cashDeposit: grIndiviualLoad.getValue('cash_deposit'),
+            chequeDeposit: grIndiviualLoad.getValue('cheque_deposit'),
+            atmDeposit: grIndiviualLoad.getValue('atm_deposit'),
+            achWithdrawal: grIndiviualLoad.getValue('ach_withdrawal'),
+            cashWithdrawal: grIndiviualLoad.getValue('cash_withdrawal'),
+            chequeWithdrawal: grIndiviualLoad.getValue('cheque_withdrawal'),
+            atmWithdrawal: grIndiviualLoad.getValue('atm_withdrawal'),
+            videoKYCStatus: grIndiviualLoad.getValue('video_kyc_status'),
+            achDeposit: grIndiviualLoad.getValue('ach_deposit')
+
         };
-    }*/
+    }
 
     //var r = $sp.getRecord(table, sys_id, true);
     //console.log("Record - " + JSON.stringify(r.getRecordClassName()));
@@ -866,16 +892,16 @@
 
     if (input && input.action == 'submit') {
         var record = JSON.parse(input.record);
-				
+
         userEmail = gs.getUser().getEmail();
         enq = "email=" + userEmail;
-				console.log("Inside - " + enq);
+        console.log("Inside - " + enq);
         var grInd = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
         grInd.addQuery(enq);
         grInd.query();
 
         if (grInd.next()) {
-						console.log("Inside");
+            console.log("Inside");
             grInd.tax_identification_number = record.taxId;
             grInd.surname = record.pronoun;
             grInd.state_purpose_of_opening_account = record.purposeOfAccount;
@@ -897,7 +923,7 @@
             grInd.email = record.email;
             grInd.dob = record.dob;
             grInd.describe_the_source_of_annual_revenue = record.sourceAnnualRevenue;
-            grInd.country_of_residence = record.employmentStatus;
+            grInd.country_of_residence = record.countryResidence;
             grInd.country_of_nationality = record.nationality;
             grInd.city = record.city;
             grInd.cheque_withdrawal = record.chequeWithdrawal;
@@ -910,26 +936,29 @@
             grInd.are_you_a_resident_of_a_country_other_than_uk = record.nonUkResident;
             grInd.address_line = record.addressLine;
             grInd.ach_withdrawal = record.achWithdrawal;
-            grInd.ach_deposit = record.atmDeposit;
+            grInd.ach_deposit = record.achDeposit;
+            grInd.video_kyc_status = record.videoKYCStatus;
+            grInd.product_services = record.product_services;
 
 
             if (grInd.update()) {
                 data.status_of_submit = true;
-								data.individual_sys_id = grInd.sys_id;
-								var grCase = new GlideRecord("x_vuram_financia_0_fcc_kyc_cases");
-								grCase.addQuery('individual', grInd.sys_id);
-								grCase.query();
-							
-								if(grCase.next()){
-									grCase.state = 150;
-									grCase.assigned_to='380f8c683be3e610f13f5fea26e45a3b';
-									if(grCase.update()){
-										data.case_updated = true;
-										data.case_sys_id = grCase.sys_id;
-									} else {
-										data.case_updated = false;
-									}
-								}
+                data.individual_sys_id = grInd.sys_id;
+                var grCase = new GlideRecord("x_vuram_financia_0_fcc_kyc_cases");
+                grCase.addQuery('individual', grInd.sys_id);
+                grCase.query();
+
+                if (grCase.next()) {
+                    grCase.state = 150;
+                    grCase.assigned_to = '';
+                    //	grCase.assigned_to='380f8c683be3e610f13f5fea26e45a3b';
+                    if (grCase.update()) {
+                        data.case_updated = true;
+                        data.case_sys_id = grCase.sys_id;
+                    } else {
+                        data.case_updated = false;
+                    }
+                }
 
             } else {
                 data.status_of_submit = false;
@@ -948,14 +977,14 @@
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-14 12:07:56</sys_created_on>
         <sys_id>9ec62da23bd7e6d0cb98111864e45a45</sys_id>
-        <sys_mod_count>213</sys_mod_count>
+        <sys_mod_count>342</sys_mod_count>
         <sys_name>FCC KYC Individual Form</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_9ec62da23bd7e6d0cb98111864e45a45</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-09-05 06:27:25</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-10-22 10:12:18</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">
@@ -999,9 +1028,9 @@
       <!-- Surname/Pronoun -->
       <div class="col-md-3">
         <div class="form-group">
-          <label>Surname/Pronoun <span class="required-asterisk">*</span></label>
+          <label>Title<span class="required-asterisk">*</span></label>
           <select class="form-control" ng-model="c.formData.pronoun"
-                 ng-options="p.value as p.label for p in c.pronounList">
+                 ng-options="p.value as p.label for p in c.pronounList" required>
             <option value="">-- Select --</option>
           </select>
         </div>
@@ -1010,9 +1039,11 @@
       <!-- Forename in Full -->
       <div class="col-md-5">
         <div class="form-group">
-          <label>Forename in Full <span class="required-asterisk">*</span></label>
+          <label>Forename in Full
+            <span class="tooltip-icon" title="Enter your first name as per official documents">ⓘ</span>
+            <span class="required-asterisk">*</span></label>
           <input type="text" class="form-control" ng-model="c.formData.forenameFull"
-                 placeholder="Enter full name" maxlength="100" >
+                 placeholder="Enter full name" maxlength="100" required >
         </div>
       </div>
 
@@ -1030,27 +1061,27 @@
       <!-- Address Line -->
       <div class="col-md-6">
         <div class="form-group">
-          <label>Address Line <span class="required-asterisk">*</label>
+          <label>Address Line <span class="required-asterisk">*</span></label>
           <input type="text" class="form-control" ng-model="c.formData.addressLine"
-                 placeholder="Enter address line" maxlength="200">
+                 placeholder="Enter address line" maxlength="200" required>
         </div>
       </div>
 
       <!-- Postcode -->
       <div class="col-md-3">
         <div class="form-group">
-          <label>Postcode <span class="required-asterisk">*</label>
-          <input type="number" class="form-control" ng-model="c.formData.postcode"
-                 placeholder="Enter postcode">
+          <label>Postcode <span class="required-asterisk">*</span></label>
+          <input type="text" class="form-control" ng-model="c.formData.postcode"
+                 placeholder="Enter postcode" required>
         </div>
       </div>
 
       <!-- City -->
       <div class="col-md-3">
         <div class="form-group">
-          <label>City <span class="required-asterisk">*</label>
+          <label>City <span class="required-asterisk">*</span></label>
           <input type="text" class="form-control" ng-model="c.formData.city"
-                 placeholder="Enter city">
+                 placeholder="Enter city" required>
         </div>
       </div>
     </div>
@@ -1059,9 +1090,9 @@
       <!-- Country of Nationality -->
       <div class="col-md-6">
         <div class="form-group">
-          <label>Country of Nationality <span class="required-asterisk">*</label>
+          <label>Country of Nationality <span class="required-asterisk">*</span></label>
           <select class="form-control" ng-model="c.formData.nationality"
-                  ng-options="country for country in c.nationalities">
+                  ng-options="country for country in c.nationalities" required>
             <option value="">-- Select Nationality --</option>
           </select>
         </div>
@@ -1070,9 +1101,9 @@
       <!-- Country of Residence -->
       <div class="col-md-6">
         <div class="form-group">
-          <label>Country of Residence <span class="required-asterisk">*</label>
+          <label>Country of Residence <span class="required-asterisk">*</span></label>
           <input type="text" class="form-control" ng-model="c.formData.countryResidence"
-                 placeholder="Enter country of residence">
+                 placeholder="Enter country of residence" required>
         </div>
       </div>
     </div>
@@ -1089,7 +1120,7 @@
         <div class="form-group">
           <label>Surname/Pronoun <span class="required-asterisk">*</span></label>
           <select class="form-control" ng-model="c.jointForm.pronoun"
-                  ng-options="p for p in c.pronounList">
+                  ng-options="p for p in c.pronounList" required>
             <option value="">-- Select --</option>
           </select>
         </div>
@@ -1100,7 +1131,7 @@
         <div class="form-group">
           <label>Forename in Full <span class="required-asterisk">*</span></label>
           <input type="text" class="form-control" ng-model="c.jointForm.forenameFull"
-                 placeholder="Enter full name" maxlength="100" >
+                 placeholder="Enter full name" maxlength="100" required>
         </div>
       </div>
 
@@ -1120,7 +1151,7 @@
         <div class="form-group">
           <label>Address Line</label>
           <input type="text" class="form-control" ng-model="c.jointForm.addressLine"
-                 placeholder="Enter address line" maxlength="200">
+                 placeholder="Enter address line" maxlength="200" required>
         </div>
       </div>
 
@@ -1129,7 +1160,7 @@
         <div class="form-group">
           <label>Postcode</label>
           <input type="number" class="form-control" ng-model="c.jointForm.postcode"
-                 placeholder="Enter postcode">
+                 placeholder="Enter postcode" required>
         </div>
       </div>
 
@@ -1138,7 +1169,7 @@
         <div class="form-group">
           <label>City</label>
           <input type="text" class="form-control" ng-model="c.jointForm.city"
-                 placeholder="Enter city">
+                 placeholder="Enter city" required>
         </div>
       </div>
     </div>
@@ -1149,7 +1180,7 @@
         <div class="form-group">
           <label>Country of Nationality</label>
           <select class="form-control" ng-model="c.jointForm.nationality"
-                  ng-options="country for country in c.nationalities">
+                  ng-options="country for country in c.nationalities" required>
             <option value="">-- Select Nationality --</option>
           </select>
         </div>
@@ -1160,7 +1191,7 @@
         <div class="form-group">
           <label>Country of Residence</label>
           <input type="text" class="form-control" ng-model="c.jointForm.countryResidence"
-                 placeholder="Enter country of residence">
+                 placeholder="Enter country of residence" required>
         </div>
       </div>
     </div>
@@ -1201,9 +1232,9 @@
           <label>Home Contact</label>
           <input type="tel" class="form-control"
                  ng-model="c.formData.homeContact"
-                 placeholder="+1 555 1234567"
-                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
-          <small class="text-muted">Include country code, e.g., +1 555 1234567</small>
+                 
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/" required>
+         
         </div>
       </div>
     </div>
@@ -1215,21 +1246,21 @@
           <label>Mobile <span class="required-asterisk">*</span></label>
           <input type="tel" class="form-control"
                  ng-model="c.formData.mobile"
-                 placeholder="+91 9876543210"
+                
                  ng-pattern="/^\+?[0-9]{1,3}\s?[0-9]{6,12}$/"
                  required>
-          <small class="text-muted">Format: +CountryCode Number</small>
+          
         </div>
       </div>
 
       <!-- Mobile Contact -->
       <div class="col-md-6">
         <div class="form-group">
-          <label>Mobile Contact</label>
+          <label>Alternate Contact </label>
           <input type="tel" class="form-control"
                  ng-model="c.formData.mobileContact"
-                 placeholder="+44 7700 900123"
-                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
+                
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/" required>
         </div>
       </div>
     </div>
@@ -1260,7 +1291,7 @@
           <input type="tel" class="form-control"
                  ng-model="c.jointForm.homeContact"
                  placeholder="+1 555 1234567"
-                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/" required>
           <small class="text-muted">Include country code, e.g., +1 555 1234567</small>
         </div>
       </div>
@@ -1283,11 +1314,11 @@
       <!-- Mobile Contact -->
       <div class="col-md-6">
         <div class="form-group">
-          <label>Mobile Contact</label>
+          <label>Alternate Contact </label>
           <input type="tel" class="form-control"
                  ng-model="c.jointForm.mobileContact"
                  placeholder="+44 7700 900123"
-                 ng-pattern="/^\+?[0-9\s-]{7,15}$/">
+                 ng-pattern="/^\+?[0-9\s-]{7,15}$/" required>
         </div>
       </div>
     </div>
@@ -1321,7 +1352,7 @@
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input"
                id="usCitizen"
-               ng-model="c.formData.usCitizen">
+               ng-model="c.formData.usCitizen" required>
         <label class="form-check-label" for="usCitizen">Are you a US citizen?</label>
       </div>
     </div>
@@ -1338,25 +1369,25 @@
   </div>
 
   <div class="row">
-    <!-- Resident of other than UK -->
+    <!-- Resident of other than US -->
     <div class="col-md-6">
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input"
                id="nonUkResident"
                ng-model="c.formData.nonUkResident">
         <label class="form-check-label" for="nonUkResident">
-          Are you a resident of a country other than UK?
+          Are you a resident of a country other than US?
         </label>
       </div>
     </div>
 
-    <!-- Non-UK Tax Identification Number -->
+    <!-- Non-US Tax Identification Number -->
     <div class="col-md-6">
       <div class="form-group">
-        <label>Non-UK Tax Identification Number</label>
+        <label>Non-US Tax Identification Number</label>
         <input type="text" class="form-control"
                ng-model="c.formData.nonUkTaxId"
-               placeholder="Enter Non-UK Tax ID">
+               placeholder="Enter Non-US Tax ID" >
       </div>
     </div>
   </div>
@@ -1373,7 +1404,7 @@
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input"
                id="usCitizen"
-               ng-model="c.jointForm.usCitizen">
+               ng-model="c.jointForm.usCitizen" required>
         <label class="form-check-label" for="usCitizen">Are you a US citizen?</label>
       </div>
     </div>
@@ -1384,31 +1415,31 @@
         <label>Tax Identification Number</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.taxId"
-               placeholder="Enter your Tax Identification Number">
+               placeholder="Enter your Tax Identification Number" required>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <!-- Resident of other than UK -->
+    <!-- Resident of other than US -->
     <div class="col-md-6">
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input"
                id="nonUkResident"
-               ng-model="c.jointForm.nonUkResident">
+               ng-model="c.jointForm.nonUkResident" required>
         <label class="form-check-label" for="nonUkResident">
-          Are you a resident of a country other than UK?
+          Are you a resident of a country other than US?
         </label>
       </div>
     </div>
 
-    <!-- Non-UK Tax Identification Number -->
+    <!-- Non-US Tax Identification Number -->
     <div class="col-md-6">
       <div class="form-group">
-        <label>Non-UK Tax Identification Number</label>
+        <label>Non-US Tax Identification Number</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.nonUkTaxId"
-               placeholder="Enter Non-UK Tax ID">
+               placeholder="Enter Non-US Tax ID" required>
       </div>
     </div>
   </div>
@@ -1443,7 +1474,7 @@
       <div class="form-group">
         <label>Employment Status</label>
         <select class="form-control" ng-model="c.formData.employmentStatus"
-                ng-options="s.value as s.label for s in c.employmentStatuses">
+                ng-options="s.value as s.label for s in c.employmentStatuses" required>
           <option value="">-- Select --</option>
         </select>
       </div>
@@ -1455,7 +1486,7 @@
         <label>Occupation</label>
         <input type="text" class="form-control"
                ng-model="c.formData.occupation"
-               placeholder="Enter your occupation">
+               placeholder="Enter your occupation" required>
       </div>
     </div>
   </div>
@@ -1467,7 +1498,7 @@
         <label>Source of Initial Deposit</label>
         <input type="text" class="form-control"
                ng-model="c.formData.sourceInitialDeposit"
-               placeholder="Enter source of initial deposit">
+               placeholder="Enter source of initial deposit" required>
       </div>
     </div>
 
@@ -1477,7 +1508,7 @@
         <label>Describe the Source of Annual Revenue</label>
         <input type="text" class="form-control"
                ng-model="c.formData.sourceAnnualRevenue"
-               placeholder="Describe annual revenue source">
+               placeholder="Describe annual revenue source" required>
       </div>
     </div>
   </div>
@@ -1489,7 +1520,7 @@
         <label>Employer</label>
         <input type="text" class="form-control"
                ng-model="c.formData.employer"
-               placeholder="Enter employer name">
+               placeholder="Enter employer name" required>
       </div>
     </div>
 
@@ -1499,7 +1530,7 @@
         <label>Employment Industry</label>
         <input type="text" class="form-control"
                ng-model="c.formData.employmentIndustry"
-               placeholder="Enter industry name">
+               placeholder="Enter industry name" required>
       </div>
     </div>
   </div>
@@ -1511,17 +1542,17 @@
         <label>State Purpose of Opening Account</label>
         <input type="text" class="form-control"
                ng-model="c.formData.purposeOfAccount"
-               placeholder="Enter purpose of opening account">
+               placeholder="Enter purpose of opening account" required>
       </div>
     </div>
 
     <!-- Estimated Annual Transaction Volume -->
     <div class="col-md-6">
       <div class="form-group">
-        <label>Estimated Annual Transaction Volume</label>
-        <input type="number" class="form-control"
+        <label>Estimated Annual Transaction volume (in USD) </label>
+        <input type="text" class="form-control"
                ng-model="c.formData.annualTxnVolume"
-               placeholder="Enter estimated annual volume">
+               placeholder="Enter estimated annual volume" required>
       </div>
     </div>
   </div>
@@ -1552,7 +1583,7 @@
         <label>Occupation</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.occupation"
-               placeholder="Enter your occupation">
+               placeholder="Enter your occupation" required>
       </div>
     </div>
   </div>
@@ -1564,7 +1595,7 @@
         <label>Source of Initial Deposit</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.sourceInitialDeposit"
-               placeholder="Enter source of initial deposit">
+               placeholder="Enter source of initial deposit" required>
       </div>
     </div>
 
@@ -1574,7 +1605,7 @@
         <label>Describe the Source of Annual Revenue</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.sourceAnnualRevenue"
-               placeholder="Describe annual revenue source">
+               placeholder="Describe annual revenue source" required>
       </div>
     </div>
   </div>
@@ -1586,7 +1617,7 @@
         <label>Employer</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.employer"
-               placeholder="Enter employer name">
+               placeholder="Enter employer name" required>
       </div>
     </div>
 
@@ -1596,7 +1627,7 @@
         <label>Employment Industry</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.employmentIndustry"
-               placeholder="Enter industry name">
+               placeholder="Enter industry name" required>
       </div>
     </div>
   </div>
@@ -1608,17 +1639,17 @@
         <label>State Purpose of Opening Account</label>
         <input type="text" class="form-control"
                ng-model="c.jointForm.purposeOfAccount"
-               placeholder="Enter purpose of opening account">
+               placeholder="Enter purpose of opening account" required>
       </div>
     </div>
 
     <!-- Estimated Annual Transaction Volume -->
     <div class="col-md-6">
       <div class="form-group">
-        <label>Estimated Annual Transaction Volume</label>
-        <input type="number" class="form-control"
+        <label>Estimated Annual Transaction volume (in USD)</label>
+        <input type="text" class="form-control"
                ng-model="c.jointForm.annualTxnVolume"
-               placeholder="Enter estimated annual volume">
+               placeholder="Enter estimated annual volume" required>
       </div>
     </div>
   </div>
@@ -1639,13 +1670,13 @@
 </div>
 
 
-<!-- Step 5: Transaction Channels -->
+<!-- Step 5: Transaction Value -->
 <div ng-show="c.currentStep === 5" class="step-content">
   
   <!--Primary-->
   <div>
     <h4 class="form-title">
-    <i class="fa fa-credit-card mr-2"></i> Transaction Channels
+    <i class="fa fa-credit-card mr-2"></i> Annual Transaction value (In USD and in Thousands) 
   </h4>
 
   <div class="row">
@@ -1653,9 +1684,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cash Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.cashDeposit"
-               placeholder="Enter cash deposit amount">
+               placeholder="Enter cash deposit amount" required>
       </div>
     </div>
 
@@ -1663,9 +1694,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cheque Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.chequeDeposit"
-               placeholder="Enter cheque deposit amount">
+               placeholder="Enter cheque deposit amount" required>
       </div>
     </div>
   </div>
@@ -1675,9 +1706,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ATM Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.atmDeposit"
-               placeholder="Enter ATM deposit amount">
+               placeholder="Enter ATM deposit amount" required>
       </div>
     </div>
 
@@ -1685,9 +1716,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ACH Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.achWithdrawal"
-               placeholder="Enter ACH withdrawal amount">
+               placeholder="Enter ACH withdrawal amount" required>
       </div>
     </div>
   </div>
@@ -1697,9 +1728,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cash Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.cashWithdrawal"
-               placeholder="Enter cash withdrawal amount">
+               placeholder="Enter cash withdrawal amount" required>
       </div>
     </div>
 
@@ -1707,9 +1738,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cheque Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.chequeWithdrawal"
-               placeholder="Enter cheque withdrawal amount">
+               placeholder="Enter cheque withdrawal amount" required>
       </div>
     </div>
   </div>
@@ -1719,9 +1750,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ATM Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.atmWithdrawal"
-               placeholder="Enter ATM withdrawal amount">
+               placeholder="Enter ATM withdrawal amount" required>
       </div>
     </div>
 
@@ -1729,11 +1760,25 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ACH Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.formData.achDeposit"
-               placeholder="Enter ACH deposit amount">
+               placeholder="Enter ACH deposit amount" required>
       </div>
     </div>
+ 
+    
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Product & Services</label>
+     <div ng-repeat="service in c.productServicesOptions">
+    <input type="checkbox" 
+           ng-checked="c.formData.productServicesSelected.indexOf(service) > -1"
+           ng-click="c.toggleProductService(service)">
+    {{service}}
+</div>
+</div>
+  </div>
+    
   </div>
   </div>
   <!--Joint-->
@@ -1747,9 +1792,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cash Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.cashDeposit"
-               placeholder="Enter cash deposit amount">
+               placeholder="Enter cash deposit amount" required>
       </div>
     </div>
 
@@ -1757,9 +1802,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cheque Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.chequeDeposit"
-               placeholder="Enter cheque deposit amount">
+               placeholder="Enter cheque deposit amount" required>
       </div>
     </div>
   </div>
@@ -1769,9 +1814,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ATM Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.atmDeposit"
-               placeholder="Enter ATM deposit amount">
+               placeholder="Enter ATM deposit amount" required>
       </div>
     </div>
 
@@ -1779,9 +1824,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ACH Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.achWithdrawal"
-               placeholder="Enter ACH withdrawal amount">
+               placeholder="Enter ACH withdrawal amount" required>
       </div>
     </div>
   </div>
@@ -1791,9 +1836,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cash Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.cashWithdrawal"
-               placeholder="Enter cash withdrawal amount">
+               placeholder="Enter cash withdrawal amount" required>
       </div>
     </div>
 
@@ -1801,9 +1846,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Cheque Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.chequeWithdrawal"
-               placeholder="Enter cheque withdrawal amount">
+               placeholder="Enter cheque withdrawal amount" required>
       </div>
     </div>
   </div>
@@ -1813,9 +1858,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ATM Withdrawal</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.atmWithdrawal"
-               placeholder="Enter ATM withdrawal amount">
+               placeholder="Enter ATM withdrawal amount" required>
       </div>
     </div>
 
@@ -1823,9 +1868,9 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>ACH Deposit</label>
-        <input type="number" class="form-control no-spinner"
+        <input type="text" class="form-control no-spinner"
                ng-model="c.jointForm.achDeposit"
-               placeholder="Enter ACH deposit amount">
+               placeholder="Enter ACH deposit amount" required>
       </div>
     </div>
   </div>
@@ -1887,7 +1932,7 @@
     </div>
     <div class="row">
       <div class="col-md-6"><strong>Mobile:</strong> {{c.formData.mobile}}</div>
-      <div class="col-md-6"><strong>Mobile Contact:</strong> {{c.formData.mobileContact}}</div>
+      <div class="col-md-6"><strong>Alternate Contact:</strong> {{c.formData.mobileContact}}</div>
     </div>
   </div>
 
@@ -1899,8 +1944,8 @@
       <div class="col-md-6"><strong>Tax Identification Number:</strong> {{c.formData.taxId}}</div>
     </div>
     <div class="row">
-      <div class="col-md-6"><strong> Are you a resident of a country other than UK?:</strong> {{c.formData.nonUkResident ? 'Yes' : 'No'}}</div>
-      <div class="col-md-6" ng-if="c.formData.nonUkTaxId"><strong>Non-UK Tax Identification Number:</strong> {{c.formData.nonUkTaxId}}</div>
+      <div class="col-md-6"><strong> Are you a resident of a country other than US?:</strong> {{c.formData.nonUkResident ? 'Yes' : 'No'}}</div>
+      <div class="col-md-6" ng-if="c.formData.nonUkTaxId"><strong>Non-US Tax Identification Number:</strong> {{c.formData.nonUkTaxId}}</div>
     </div>
   </div>
 
@@ -1921,13 +1966,13 @@
     </div>
     <div class="row">
       <div class="col-md-6"><strong>Describe the Source of Annual Revenue:</strong> {{c.formData.sourceAnnualRevenue}}</div>
-      <div class="col-md-6"><strong>Estimated Annual Transaction Volume:</strong> {{c.formData.annualTxnVolume}}</div>
+      <div class="col-md-6"><strong>Estimated Annual Transaction volume (in USD):</strong> {{c.formData.annualTxnVolume}}</div>
     </div>
   </div>
 
-  <!-- Section 5: Transaction Channels -->
+  <!-- Section 5: Transaction Value -->
   <div class="preview-section">
-    <h5>Transaction Channels</h5>
+    <h5>Transaction value (annual in USD and in thousands) </h5>
     <div class="row">
       <div class="col-md-6"><strong>Cash Deposit:</strong> {{c.formData.cashDeposit}}</div>
       <div class="col-md-6"><strong>Cheque Deposit:</strong> {{c.formData.chequeDeposit}}</div>
@@ -1986,7 +2031,7 @@
     </div>
     <div class="row">
       <div class="col-md-6"><strong>Mobile:</strong> {{c.jointForm.mobile}}</div>
-      <div class="col-md-6"><strong>Mobile Contact:</strong> {{c.jointForm.mobileContact}}</div>
+      <div class="col-md-6"><strong>Alternate Contact:</strong> {{c.jointForm.mobileContact}}</div>
     </div>
   </div>
 
@@ -1998,8 +2043,8 @@
       <div class="col-md-6"><strong>Tax ID:</strong> {{c.jointForm.taxId}}</div>
     </div>
     <div class="row">
-      <div class="col-md-6"><strong>Non-UK Resident:</strong> {{c.jointForm.isNonUkResident ? 'Yes' : 'No'}}</div>
-      <div class="col-md-6" ng-if="c.formData.nonUkTaxId"><strong>Non-UK Tax ID:</strong> {{c.jointForm.nonUkTaxId}}</div>
+      <div class="col-md-6"><strong>Non-US Resident:</strong> {{c.jointForm.isNonUkResident ? 'Yes' : 'No'}}</div>
+      <div class="col-md-6" ng-if="c.formData.nonUkTaxId"><strong>Non-US Tax ID:</strong> {{c.jointForm.nonUkTaxId}}</div>
     </div>
   </div>
 
@@ -2024,9 +2069,9 @@
     </div>
   </div>
 
-  <!-- Section 5: Transaction Channels -->
+  <!-- Section 5: Transaction Value -->
   <div class="preview-section">
-    <h5>Transaction Channels</h5>
+    <h5>Transaction Value (annual in USD and in thousands) </h5>
     <div class="row">
       <div class="col-md-6"><strong>Cash Deposit:</strong> {{c.jointForm.cashDeposit}}</div>
       <div class="col-md-6"><strong>Cheque Deposit:</strong> {{c.jointForm.chequeDeposit}}</div>
@@ -2042,22 +2087,45 @@
     <div class="row">
       <div class="col-md-6"><strong>ATM Withdrawal:</strong> {{c.jointForm.atmWithdrawal}}</div>
       <div class="col-md-6"><strong>ACH Withdrawal:</strong> {{c.jointForm.achWithdrawal}}</div>
+  </div>
+  </div>
     </div>
-  </div>
-  </div>
+ 
   
+  <!-- Section 6: Transaction Value -->
+  <div class="preview-section">
+    <h5>Video KYC</h5>
+    <div class="row">
+      <div class="col-md-6"><strong>Video KYC Status:</strong> {{c.formData.videoKYCStatus}}</div>
+      </div>
+    </div>
   
-
-  <!-- Navigation -->
-  <div class="form-navigation mt-4">
-    <button class="btn btn-secondary" ng-click="c.prevStep()">
-      <i class="fa fa-arrow-left mr-2"></i> Back
-    </button>
-    <button class="btn btn-success" ng-click="c.submitForm()">
-      <i class="fa fa-check mr-2"></i> Submit
-    </button>
+<div class="preview-section">
+  <div class="form-group form-check">
+    <input type="checkbox"
+           class="form-check-input"
+           ng-model="c.data.visitBranch"
+           id="visitBranch">
+    <label class="form-check-label" for="visitBranch">
+      Visit Branch
+    </label>
   </div>
 </div>
+
+<!-- Navigation -->
+<div class="form-navigation mt-4">
+  <button class="btn btn-secondary" ng-click="c.prevStep()">
+    <i class="fa fa-arrow-left mr-2"></i> Back
+  </button>
+
+  <!-- Disable Submit if checkbox not checked -->
+  <button class="btn btn-success"
+          ng-click="c.submitForm()"
+          ng-disabled="!c.data.visitBranch">
+    <i class="fa fa-check mr-2"></i> Submit
+  </button>
+</div>
+
 
 
 
