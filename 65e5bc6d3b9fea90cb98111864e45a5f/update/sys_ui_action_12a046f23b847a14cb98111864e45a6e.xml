@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Calculate Risk</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+
+
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>gs.hasRole("x_vuram_financia_0.fcc_kyc_maker") &amp;&amp; (current.type == "risk_evaluation") &amp;&amp; (current.state!="4")</condition>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>true</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Calculate Risk</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[// This runs only on server side
+// current.u_industry = current.u_industry;
+// current.u_country_of_domicile = current.u_country_of_domicile;
+// current.ri_payout_jurisdiction = current.ri_payout_jurisdiction;
+// current.ri_expected_trade_frequency = current.ri_expected_trade_frequency;
+// current.ri_expected_fx_volume = current.ri_expected_fx_volume;
+// current.ri_business_start_year = current.ri_business_start_year;
+// current.ri_complexity_of_ownership = current.ri_complexity_of_ownership;
+
+// Update state
+current.state = 5;   // or "risk_review" if that's the display value
+current.update();
+
+// Call utility
+var au = new ActionUtils();
+au.postInsert(current);
+
+
+
+
+
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-21 15:28:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>12a046f23b847a14cb98111864e45a6e</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Calculate Risk</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ui_action_12a046f23b847a14cb98111864e45a6e</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-22 14:33:12</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_tasks</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
