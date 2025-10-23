@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $interval, $timeout, $window, $http) {
+  var c = this;
+  var video, canvas, stream;
+
+  // --- Initialize ---
+  c.data.cameraActive = false;
+  c.data.currentStep = 0;
+  c.data.allCaptured = false;
+ 
+	// --- Initial Data ---
+  c.data.selectedOption = null;
+
+  c.data.mobile = {
+    qrUrl: "",
+    sys_id: "",
+    loading: false,
+    errorMessage: ""
+  };
+
+  c.data.webcam = {
+    cameraActive: false,
+    currentStep: 0,
+    allCaptured: false,
+    photos: {
+      id_front_page: null,
+      id_back_page: null,
+      selfie_picture: null
+    },
+    captureSteps: [
+      { field: "id_front_page", label: "ID Front Page" },
+      { field: "id_back_page", label: "ID Back Page" },
+      { field: "selfie_picture", label: "Selfie Picture" }
+    ],
+    errorMessage: ""
+  };
+
+  // --- Select Option ---
+  c.selectOption = function(option) {
+    c.data.selectedOption = option;
+    console.log("KYC DEBUG: Selected option ->", option);
+    if (option === "mobile") {
+      c.data.mobile.qrUrl = "";
+      c.data.mobile.loading = false;
+      c.data.mobile.errorMessage = "";
+    } else if (option === "webcam") {
+      resetWebcamData();
+    }
+  };
+
+  // --- Mobile Flow (unchanged) ---
+  c.mobile = {
+    triggerFlow: function() {
+      c.data.mobile.loading = true;
+      c.data.mobile.errorMessage = "";
+      console.log("KYC DEBUG: Triggering mobile flow");
+
+      c.server.get({ action: "createRecord", mobileAction: "createRecord" }).then(function(resp) {
+        c.data.mobile.sys_id = resp.data.mobile.sys_id;
+        console.log("KYC DEBUG: Mobile sys_id ->", c.data.mobile.sys_id);
+
+        $timeout(function() {
+          var attempts = 0;
+          var maxAttempts = 10;
+
+          var stopPolling = $interval(function() {
+            attempts++;
+            c.server
+              .get({
+                action: "getRecord",
+                mobileAction: "getRecord",
+                sys_id: c.data.mobile.sys_id
+              })
+              .then(function(res) {
+                if (res.data.mobile.url) {
+                  c.data.mobile.qrUrl = res.data.mobile.url;
+                  c.data.mobile.loading = false;
+                  console.log("KYC DEBUG: Received QR URL ->", c.data.mobile.qrUrl);
+
+                  $timeout(function() {
+                    var qrContainer = document.getElementById("qrcode");
+                    if (qrContainer) {
+                      qrContainer.innerHTML = "";
+                      new QRCode(qrContainer, {
+                        text: c.data.mobile.qrUrl,
+                        width: 200,
+                        height: 200
+                      });
+                    }
+                  }, 0);
+
+                  $interval.cancel(stopPolling);
+                } else if (attempts >= maxAttempts) {
+                  c.data.mobile.loading = false;
+                  c.data.mobile.errorMessage = "Unable to generate QR code. Please try again.";
+                  $interval.cancel(stopPolling);
+                }
+              });
+          }, 500);
+        }, 500);
+      });
+    },
+
+    goPrevious: function() {
+      $window.location.href = "/fcc_kyc?id=fcc_kyc_individual_upload_document";
+    },
+
+    goProceed: function() {
+      if (c.data.mobile.sys_id) {
+        c.server
+          .get({ action: "markStarted", mobileAction: "markStarted", sys_id: c.data.mobile.sys_id })
+          .then(function() {
+            $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+          });
+      } else {
+        $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+      }
+    }
+  };
+
+  
+	//WEBCAM FLOW------------------
+ c.data.photos = {
+    id_front_page: null,
+    id_back_page: null,
+    selfie_picture: null
+  };
+
+  c.data.captureSteps = [
+    { field: 'id_front_page', label: 'ID Front Page' },
+    { field: 'id_back_page', label: 'ID Back Page' },
+    { field: 'selfie_picture', label: 'Selfie Picture' }
+  ];
+
+  // --- Start Camera ---
+  c.startCapture = function() {
+    c.data.cameraActive = true;
+
+    // Wait for DOM to render <video> before accessing it
+    $timeout(function() {
+      video = document.getElementById('video');
+      canvas = document.getElementById('canvas');
+
+      if (!video) {
+        alert('Video element not found. Please try again.');
+        return;
+      }
+
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function(s) {
+            stream = s;
+            video.srcObject = s;
+          })
+          .catch(function(err) {
+            alert('Error accessing camera: ' + err);
+          });
+      } else {
+        alert('Your browser does not support camera access.');
+      }
+    }, 300); // Wait for Angular to render DOM
+  };
+
+  // --- Capture Photo ---
+  c.capturePhoto = function() {
+    if (!video) {
+      alert('Camera not ready.');
+      return;
+    }
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    var imageData = canvas.toDataURL('image/png');
+    var currentField = c.data.captureSteps[c.data.currentStep].field;
+    c.data.photos[currentField] = imageData;
+
+    if (c.data.currentStep < c.data.captureSteps.length - 1) {
+      c.data.currentStep++;
+    } else {
+      c.data.allCaptured = true;
+      c.stopCamera();
+    }
+
+    $scope.$applyAsync();
+  };
+
+  // --- Stop Camera ---
+  c.stopCamera = function() {
+    if (stream) {
+      var tracks = stream.getTracks();
+      for (var i = 0; i < tracks.length; i++) {
+        tracks[i].stop();
+      }
+    }
+    c.data.cameraActive = false;
+  };
+
+  // --- Save Photos to Server ---
+  c.savePhotos = function() {
+    c.server.update({
+      photos: c.data.photos
+    }).then(function(response) {
+      if (response.data.status === 'success') {
+        alert('Photos saved successfully!');
+
+        // Optional: reset widget
+        c.data.allCaptured = false;
+        c.data.currentStep = 0;
+        c.data.photos = {
+          id_front_page: null,
+          id_back_page: null,
+          selfie_picture: null
+        };
+      } else {
+        alert('Error saving photos. Please check the logs.');
+      }
+    });
+  };
+
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseText {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+/* === PAGE LAYOUT === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;      /* center horizontally */
+  align-items: center;          /* center vertically */
+  min-height: 100vh;
+}
+
+/* === MAIN CONTAINER === */
+.kyc-widget-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 850px;
+  width: 100%;
+  animation: fadeInUp 0.6s ease-out;
+  margin: 0 auto;               /* ensures fallback centering */
+}
+
+/* === TITLE AND SUBTITLE === */
+.kyc-title {
+  text-align: center;
+  color: #1d4ed8;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.kyc-subtitle {
+  color: #334155;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* === CHOICE SCREEN === */
+.kyc-choice {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.kyc-choice h3 {
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* === PREPARATION BOX === */
+.kyc-prep-box {
+  background: #f1f5f9;
+  border-left: 5px solid #2563eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.kyc-prep-box h5 {
+  color: #1d4ed8;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.kyc-prep-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.kyc-prep-box li {
+  font-size: 16px;
+  color: #334155;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.kyc-prep-box li i {
+  color: #2563eb;
+}
+
+/* === BUTTONS === */
+.kyc-option-btn {
+  font-size: 16px;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.kyc-option-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.kyc-option-btn i {
+  font-size: 18px;
+}
+
+.kyc-button {
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 22px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+.kyc-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.kyc-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* === INSTRUCTIONS SECTION === */
+.kyc-instructions {
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.kyc-list {
+  color: #475569;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* === LAYOUT HELPERS === */
+.kyc-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* === QR CODE SECTION === */
+.kyc-options {
+  display: flex;
+  justify-content: center;     /* Center the QR section */
+  align-items: center;
+  text-align: center;
+}
+
+.kyc-qrcode {
+  display: flex;
+  justify-content: center;     /* Center the QR code itself */
+  align-items: center;
+  margin: 20px auto;
+}
+
+.kyc-tile {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+}
+.kyc-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.kyc-tile h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+.kyc-text {
+  color: #475569;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* === WEBCAM SECTION === */
+.kyc-webcam-box {
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.animated-instruction {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.animated-step {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1d4ed8;
+  animation: pulseText 1.5s infinite;
+}
+
+.progress-bar-container {
+  background: #e2e8f0;
+  border-radius: 8px;
+  height: 8px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: #2563eb;
+  height: 8px;
+  transition: width 0.4s ease;
+}
+
+/* === VIDEO CAPTURE === */
+video {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.capture-buttons button {
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.capture-buttons button:hover {
+  transform: scale(1.03);
+}
+
+/* === PREVIEW IMAGES === */
+.preview-images img {
+  width: 120px;
+  margin: 8px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.preview-images img:hover {
+  transform: scale(1.05);
+}
+
+/* === SPINNER === */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .kyc-option-btn { width: 100%; }
+  .kyc-buttons { flex-direction: column; align-items: stretch; }
+}
+
+/* === MILESTONE TRACKER === */
+.milestone-tracker {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+.milestone-tracker::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background-color: #e2e8f0;
+  z-index: 0;
+}
+.milestone {
+  text-align: center;
+  z-index: 1;
+}
+.milestone .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 22px;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+.milestone.active .circle {
+  background-color: #2563eb;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+}
+.milestone p {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #334155;
+}
+
+/* === CONFIRMATION SCREEN === */
+.kyc-confirmation {
+  animation: fadeInUp 0.6s ease;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.kyc-confirmation h4 {
+  color: #16a34a;
+  font-weight: 700;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>fcc_kyc_muti_vkyc</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>FCC KYC Muti VKYC</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  try {
+    data.mobile = {};
+    data.webcam = {};
+    var userEmail = gs.getUser().getEmail();
+    gs.info("KYC Widget Debug: Logged in user - " + userEmail);
+
+    // --- Mobile Video KYC Section ---
+    if (input && input.mobileAction) {
+      var table = "x_vuram_financia_0_fcc_kyc_individual_details";
+      gs.info("KYC Widget Debug: Mobile action received - " + input.mobileAction);
+
+      if (input.mobileAction === "createRecord") {
+        var gr = new GlideRecord(table);
+        gr.addQuery("email", userEmail);
+        gr.query();
+        if (gr.next()) {
+          data.mobile.sys_id = gr.sys_id.toString();
+          gs.info("KYC Widget Debug: Found existing mobile record for " + userEmail);
+        }
+      }
+
+      if (input.mobileAction === "getRecord") {
+        var gr2 = new GlideRecord(table);
+        if (gr2.get(input.sys_id)) {
+          data.mobile.url = gr2.getValue("video_kyc_link");
+          gs.info("KYC Widget Debug: Returning QR link for record " + input.sys_id);
+        }
+      }
+
+      if (input.mobileAction === "markStarted") {
+        var gr3 = new GlideRecord(table);
+        if (gr3.get(input.sys_id)) {
+          //gr3.video_kyc_status = "started";
+          gr3.video_kyc_device = "mobile";
+          gr3.update();
+          gs.info("KYC Widget Debug: Mobile KYC marked as started for " + userEmail);
+          data.mobile.message = "Record updated as started";
+        }
+      }
+    }
+
+		 var response = {};
+  try {
+   // var userEmail = gs.getUser().getEmail();
+    gs.info('KYC Widget Debug: User email - ' + userEmail);
+
+    // Function expression instead of declaration
+    var getAttachmentBase64 = function(attachmentSysId) {
+      if (!attachmentSysId) return '';
+      try {
+        var attachment = new GlideSysAttachment();
+        var bytes = attachment.getBytes(attachmentSysId);
+        if (!bytes) {
+          gs.info('KYC Widget Debug: No bytes found for attachment ' + attachmentSysId);
+          return '';
+        }
+        var base64String = GlideBase64.encode(bytes);
+        gs.info('KYC Widget Debug: Encoded attachment ' + attachmentSysId + ' to Base64, length: ' + base64String.length);
+        return base64String;
+      } catch (err) {
+        gs.error('KYC Widget Debug: Error encoding attachment ' + attachmentSysId + ' - ' + err.message);
+        return '';
+      }
+    };
+
+    if (input && input.photos) {
+      var gr1 = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
+      gr1.addQuery('email', userEmail);
+      gr1.query();
+
+      if (gr1.next()) {
+        gr1.setValue('id_front_page', input.photos.id_front_page);
+        gr1.setValue('id_back_page', input.photos.id_back_page);
+        gr1.setValue('video_recording', input.photos.selfie_picture);
+				gr1.setValue('video_kyc_device','web');
+        gr1.update();
+        gs.info('KYC Widget Info: Photos successfully inserted for user ' + userEmail);
+        data.status = 'success';
+        data.action = 'updated';
+      } else {
+        gr1.initialize();
+				gs.info('no Email Found ' + userEmail);
+        gr1.setValue('email', userEmail);
+        gr1.setValue('id_front_page', input.photos.id_front_page);
+        gr1.setValue('id_back_page', input.photos.id_back_page);
+        gr1.setValue('video_recording', input.photos.selfie_picture);
+        gr1.insert();
+        data.status = 'success';
+        data.action = 'inserted';
+      }
+    } else {
+      gs.info('KYC Widget Debug: No photos found in input');
+      response.status = 'waiting';
+      response.action = 'none';
+    }
+  } catch (e) {
+    gs.error('KYC Widget Error: ' + e.message);
+    response.status = 'error';
+    response.action = 'none';
+  }
+
+  data.status = response.status || 'waiting';
+  data.action = response.action || 'none';
+		
+		
+  } catch (e) {
+    gs.error("KYC Widget Error: " + e.message);
+    data.webcam.status = "error";
+    data.webcam.action = "none";
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-10-15 08:41:23</sys_created_on>
+        <sys_id>fef980e23ba4f290f13f5fea26e45a5b</sys_id>
+        <sys_mod_count>86</sys_mod_count>
+        <sys_name>FCC KYC Muti VKYC</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sp_widget_fef980e23ba4f290f13f5fea26e45a5b</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-10-23 06:00:59</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video KYC Widget</title>
+
+    <!-- Bootstrap & Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="video-kyc-widget.css" />
+  </head>
+
+  <body>
+    <div class="kyc-widget-container">
+      <!-- MAIN SELECTION SCREEN -->
+      <div ng-if="!c.data.selectedOption" class="kyc-choice">
+        <h3><i class="fa-solid fa-video"></i> Start Your Video KYC</h3>
+
+        <div class="kyc-prep-box">
+          <h5>
+            <i class="fa-solid fa-clipboard-list"></i> Please ensure the
+            following before starting:
+          </h5>
+          <ul>
+            <li>
+              <i class="fa-solid fa-id-card"></i> Keep your
+              <strong>original ID proof</strong> ready (same as uploaded
+              earlier).
+            </li>
+            <li>
+              <i class="fa-solid fa-lightbulb"></i> Sit in a
+              <strong>well-lit area</strong> with your face clearly visible.
+            </li>
+            <li>
+              <i class="fa-solid fa-wifi"></i> Make sure you have a
+              <strong>stable internet connection</strong>.
+            </li>
+            <li>
+              <i class="fa-solid fa-microphone"></i> Allow
+              <strong>camera and microphone access</strong> when prompted.
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i> Ensure you have
+              <strong>5–10 minutes</strong> uninterrupted for the process.
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center mt-4">
+          <button
+            class="btn btn-primary kyc-option-btn"
+            ng-click="c.selectOption('mobile'); c.mobile.triggerFlow()"
+          >
+            <i class="fa-solid fa-mobile-screen-button"></i> Continue on Mobile
+          </button>
+
+          <button
+            class="btn btn-success kyc-option-btn"
+            ng-click="c.selectOption('webcam')"
+          >
+            <i class="fa-solid fa-camera"></i> Continue on Webcam
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE VIDEO KYC -->
+      <div ng-if="c.data.selectedOption === 'mobile'" class="kyc-mobile-widget">
+        <div class="kyc-container">
+          <h1 class="kyc-title">
+            <i class="fa-solid fa-shield-check"></i> Mobile Video KYC
+          </h1>
+
+          <div class="kyc-instructions">
+            <h3 class="kyc-subtitle">
+              <i class="fa-solid fa-list-check"></i> Instructions
+            </h3>
+            <ul class="kyc-list">
+              <li>Prepare your original ID proof (same as uploaded earlier).</li>
+              <li>Ensure proper lighting and a stable internet connection.</li>
+              <li>Allow camera and microphone access.</li>
+              <li>Keep your face clearly visible during the session.</li>
+            </ul>
+          </div>
+
+          <div ng-if="c.data.mobile.loading" class="kyc-center">
+            <div class="spinner-border text-primary" role="status"></div>
+            <p class="kyc-text">Please wait while we initiate your session...</p>
+          </div>
+
+          <div
+            ng-if="c.data.mobile.qrUrl && !c.data.mobile.loading"
+            class="kyc-options"
+          >
+            <div class="kyc-tile">
+              <h5><i class="fa-solid fa-qrcode"></i> Scan the QR Code</h5>
+              <p class="kyc-text">
+                Scan this QR code to continue on your mobile device.
+              </p>
+              <div id="qrcode" class="kyc-qrcode"></div>
+            </div>
+          </div>
+
+          <div class="kyc-buttons">
+            <button
+              class="btn btn-secondary kyc-button"
+              ng-click="c.data.selectedOption = null"
+            >
+              <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+
+            <button
+              class="btn btn-outline-primary kyc-button"
+              ng-click="c.mobile.goPrevious()"
+            >
+              <i class="fa-solid fa-rotate-left"></i> Previous
+            </button>
+
+            <button
+              class="btn btn-primary kyc-button"
+              ng-click="c.mobile.goProceed()"
+              ng-disabled="!c.data.mobile.qrUrl"
+            >
+              <i class="fa-solid fa-arrow-right"></i> Proceed
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEBCAM VIDEO KYC -->
+      <div ng-if="c.data.selectedOption === 'webcam'" class="kyc-mobile-widget">
+        <div class="kyc-widget">
+          <h3 class="text-center">KYC Capture</h3>
+
+          <!-- Start button -->
+          <div class="text-center" ng-if="!c.data.cameraActive">
+            <button
+              class="btn btn-primary kyc-option-btn"
+              ng-click="c.startCapture()"
+            >
+              Start Capturing
+            </button>
+          </div>
+
+          <!-- Camera View -->
+          <div ng-if="c.data.cameraActive" class="capture-area text-center">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas" class="hidden"></canvas>
+
+            <div class="capture-buttons mt-3">
+              <button class="btn btn-success" ng-click="c.capturePhoto()">
+                Capture Photo
+              </button>
+
+              <button class="btn btn-danger" ng-click="c.stopCamera()">
+                Stop Camera
+              </button>
+            </div>
+
+            <div class="photo-status mt-3">
+              <p>
+                <strong>Next Capture:</strong>
+                {{c.data.captureSteps[c.data.currentStep].label}}
+              </p>
+            </div>
+          </div>
+
+          <!-- Preview -->
+          <div
+            class="preview mt-4 text-center"
+            ng-if="c.data.photos.id_front_page || c.data.photos.id_back_page || c.data.photos.selfie_picture"
+          >
+            <h5>Captured Photos</h5>
+            <div class="preview-images">
+              <img
+                ng-if="c.data.photos.id_front_page"
+                ng-src="{{c.data.photos.id_front_page}}"
+                alt="ID Front"
+              />
+              <img
+                ng-if="c.data.photos.id_back_page"
+                ng-src="{{c.data.photos.id_back_page}}"
+                alt="ID Back"
+              />
+              <img
+                ng-if="c.data.photos.selfie_picture"
+                ng-src="{{c.data.photos.selfie_picture}}"
+                alt="Selfie"
+              />
+            </div>
+          </div>
+
+          <!-- Save button -->
+          <div class="text-center mt-3" ng-if="c.data.allCaptured">
+            <button class="btn btn-primary kyc-option-btn" ng-click="c.savePhotos()">
+              Save
+            </button>
+          </div>
+
+          <div class="kyc-buttons">
+            <button
+              class="btn btn-secondary kyc-button"
+              ng-click="c.data.selectedOption = null"
+            >
+              <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+
+            <button
+              class="btn btn-primary kyc-option-btn"
+              ng-click="c.mobile.goProceed()"
+            >
+              <i class="fa-solid fa-arrow-right"></i> Proceed
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QR Code JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>
