@@ -1726,20 +1726,6 @@
                             },
                             "order": 400,
                             "type": "local"
-                        },
-                        {
-                            "icon": "record-details-outline",
-                            "id": "case_summarization",
-                            "label": {
-                                "type": "TRANSLATION_LITERAL",
-                                "value": {
-                                    "code": null,
-                                    "comment": "",
-                                    "message": "Case Summarization"
-                                }
-                            },
-                            "order": 500,
-                            "type": "local"
                         }
                     ],
                     "overrides": {
@@ -2373,227 +2359,6 @@
                                 "styles": {
                                     "width": "100%"
                                 }
-                            },
-                            {
-                                "definition": {
-                                    "id": "d356d14b6e293a3020a244b63d278d8f",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "case_summarization",
-                                "elementLabel": "Case Summarization",
-                                "eventMappings": [],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": null
-                                },
-                                "name": "Case Summarization",
-                                "overrides": {
-                                    "composition": [
-                                        {
-                                            "definition": {
-                                                "id": "1f6e0643eca7a637e36bd7833549ec9e",
-                                                "type": "MACROPONENT"
-                                            },
-                                            "elementId": "heading_7",
-                                            "elementLabel": "Heading 7",
-                                            "eventMappings": [],
-                                            "isHidden": {
-                                                "type": "JSON_LITERAL",
-                                                "value": null
-                                            },
-                                            "preset": null,
-                                            "propertyValues": {
-                                                "hasNoMargin": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "label": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Case Summarization"
-                                                    }
-                                                },
-                                                "level": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "6"
-                                                },
-                                                "variant": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "header-primary"
-                                                },
-                                                "wontWrap": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                }
-                                            },
-                                            "slot": null,
-                                            "styles": null
-                                        },
-                                        {
-                                            "definition": {
-                                                "id": "513f5c59b4e1b59f9c25206df95e7586",
-                                                "type": "MACROPONENT"
-                                            },
-                                            "elementId": "now_assist_context_menu_1",
-                                            "elementLabel": "Now Assist context menu 1",
-                                            "eventMappings": [],
-                                            "isHidden": {
-                                                "type": "JSON_LITERAL",
-                                                "value": null
-                                            },
-                                            "preset": null,
-                                            "propertyValues": {
-                                                "adminConfig": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "ambChannelName": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": ""
-                                                },
-                                                "caller": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "workspace"
-                                                },
-                                                "componentKey": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": ""
-                                                },
-                                                "dialogProps": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "documentSysId": {
-                                                    "binding": {
-                                                        "address": [
-                                                            "record",
-                                                            "sysId"
-                                                        ]
-                                                    },
-                                                    "type": "DATA_OUTPUT_BINDING"
-                                                },
-                                                "documentTableName": {
-                                                    "binding": {
-                                                        "address": [
-                                                            "record",
-                                                            "table"
-                                                        ]
-                                                    },
-                                                    "type": "DATA_OUTPUT_BINDING"
-                                                },
-                                                "draftedText": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": ""
-                                                },
-                                                "feedbackConfig": {
-                                                    "container": {},
-                                                    "type": "MAP_CONTAINER"
-                                                },
-                                                "payload": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "renderSkeleton": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "selectedText": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": ""
-                                                },
-                                                "skillConfigId": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "614cca7e3b3fae50f13f5fea26e45aaf"
-                                                },
-                                                "skillId": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "894c863e3b3fae50f13f5fea26e45a1b"
-                                                },
-                                                "timeoutErrorMessage": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": ""
-                                                },
-                                                "triggerProps": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "variant": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "draggable"
-                                                }
-                                            },
-                                            "slot": null,
-                                            "styles": null
-                                        }
-                                    ],
-                                    "layout": {
-                                        "default": {
-                                            "children": null,
-                                            "items": [
-                                                {
-                                                    "element_id": "heading_7",
-                                                    "styles": {
-                                                        "align-self": "center",
-                                                        "flex": "none"
-                                                    }
-                                                },
-                                                {
-                                                    "element_id": "now_assist_context_menu_1",
-                                                    "styles": {}
-                                                }
-                                            ],
-                                            "root": null,
-                                            "rules": null,
-                                            "styles": {
-                                                "flex-direction": "column",
-                                                "min-height": "300px",
-                                                "width": "100%"
-                                            },
-                                            "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
-                                            "type": "flex"
-                                        },
-                                        "version": "3.0.0"
-                                    }
-                                },
-                                "preset": null,
-                                "propertyValues": {
-                                    "ariaRegionHeadingLevel": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "1"
-                                    },
-                                    "ariaRegionName": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": ""
-                                        }
-                                    },
-                                    "ariaRole": {
-                                        "type": "JSON_LITERAL",
-                                        "value": ""
-                                    },
-                                    "hideEmptyStateUi": {
-                                        "type": "JSON_LITERAL",
-                                        "value": true
-                                    },
-                                    "includeAriaHeading": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "slotWrapperBehavior": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "fullheight"
-                                    },
-                                    "type": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "section"
-                                    }
-                                },
-                                "slot": "case_summarization",
-                                "styles": null
                             }
                         ],
                         "layout": null
@@ -12765,14 +12530,14 @@
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-13 09:01:28</sys_created_on>
         <sys_id>5d8277463b97e2d0cb98111864e45a4e</sys_id>
-        <sys_mod_count>221</sys_mod_count>
+        <sys_mod_count>223</sys_mod_count>
         <sys_name>Default Case</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_macroponent_5d8277463b97e2d0cb98111864e45a4e</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-22 14:11:45</sys_updated_on>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-23 04:25:45</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5d8277463b97e2d0cb98111864e45a4e"/>
 </record_update>
