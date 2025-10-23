@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_trigger_configuration">
+    <sn_aia_trigger_configuration action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_rule/>
+        <channel display_value="Now Assist Panel">b023fcb3537321106167ddeeff7b12a8</channel>
+        <condition table="x_vuram_financia_0_fcc_kyc_cases">individual.responseISNOTEMPTY^state=150<item endquery="false" field="individual.response" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item display_value="Work In Progress" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="150"/>
+        </condition>
+        <description/>
+        <enable_discovery>false</enable_discovery>
+        <internal_name>global.x_vuram_financia_0.screening</internal_name>
+        <name>screening</name>
+        <notification_script/>
+        <objective_template><![CDATA[Lookup Record for Individual Number: ${individual.number}]]></objective_template>
+        <portal/>
+        <profile/>
+        <run_as>assigned_to</run_as>
+        <run_as_script/>
+        <run_as_user/>
+        <run_dayofmonth/>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start/>
+        <run_time/>
+        <show_notifications>false</show_notifications>
+        <sys_class_name>sn_aia_trigger_configuration</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-22 12:57:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>4218aa4b3b0c3e14cb98111864e45af6</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>x_vuram_financia_0_fcc_kyc_cases</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_trigger_configuration_4218aa4b3b0c3e14cb98111864e45af6</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-23 04:55:23</sys_updated_on>
+        <target_table>x_vuram_financia_0_fcc_kyc_cases</target_table>
+        <trigger_flow display_value="FCC KYC Case - AI Agent: Screening Analysis - da18628b3b0c3e14cb98111864e45aa3">d218628b3b0c3e14cb98111864e45aa4</trigger_flow>
+        <trigger_flow_definition_type>record_update</trigger_flow_definition_type>
+        <usecase display_value="">undefined</usecase>
+        <usecase_discovery>false</usecase_discovery>
+    </sn_aia_trigger_configuration>
+</record_update>
