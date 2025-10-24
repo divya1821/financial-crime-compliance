@@ -3,8 +3,10 @@
         <active>true</active>
         <business_rule/>
         <channel display_value="Now Assist Panel">b023fcb3537321106167ddeeff7b12a8</channel>
-        <condition table="x_vuram_financia_0_fcc_kyc_cases">case_type=onboarding_case^state=150<item display_value="Onboarding Case" endquery="false" field="case_type" goto="false" newquery="false" operator="=" or="false" value="onboarding_case"/>
+        <condition table="x_vuram_financia_0_fcc_kyc_cases">case_type=onboarding_case^state=150^assigned_toISNOTEMPTY^customer_type=individual<item display_value="Onboarding Case" endquery="false" field="case_type" goto="false" newquery="false" operator="=" or="false" value="onboarding_case"/>
             <item display_value="Work In Progress" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="150"/>
+            <item endquery="false" field="assigned_to" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item display_value="Individual" endquery="false" field="customer_type" goto="false" newquery="false" operator="=" or="false" value="individual"/>
         </condition>
         <description/>
         <enable_discovery>false</enable_discovery>
@@ -28,15 +30,15 @@
         <sys_created_on>2025-09-25 14:18:41</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>9b77de803b1cf654cb98111864e45a5e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>x_vuram_financia_0_fcc_kyc_cases</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sn_aia_trigger_configuration_9b77de803b1cf654cb98111864e45a5e</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-23 05:05:07</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-24 13:26:15</sys_updated_on>
         <target_table>x_vuram_financia_0_fcc_kyc_cases</target_table>
         <trigger_flow display_value="FCC KYC Case - AI Agent: Data Validation Agent - 677752c03b1cf654cb98111864e45a05">637752c03b1cf654cb98111864e45a06</trigger_flow>
         <trigger_flow_definition_type>record_update</trigger_flow_definition_type>
