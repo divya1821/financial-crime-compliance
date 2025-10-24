@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
     <sys_generative_ai_prompt_config action="INSERT_OR_UPDATE">
-        <ai_config display_value="OneExtend Capability Definition: Fin Crime Record Summarization (Now LLM Generic - Now LLM Generic)">d0ab9b993bf87250f13f5fea26e45acc</ai_config>
+        <ai_config display_value="OneExtend Capability Definition: Fin Crime Record Summarization (Now LLM Generic - Now LLM Generic)">ada40ce93bb0b250f13f5fea26e45a0a</ai_config>
         <definition display_value="Fin Crime Record Summarization (Now LLM Generic - Now LLM Generic)">1d4cca7e3b3fae50f13f5fea26e45a4a</definition>
         <filter_properties>{}</filter_properties>
         <filter_type>default</filter_type>
@@ -8,17 +8,17 @@
         <order>0</order>
         <sys_class_name>sys_generative_ai_prompt_config</sys_class_name>
         <sys_created_by>harini.ks</sys_created_by>
-        <sys_created_on>2025-10-24 13:00:12</sys_created_on>
+        <sys_created_on>2025-10-24 15:59:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>54ab9b993bf87250f13f5fea26e45acf</sys_id>
+        <sys_id>a5a40ce93bb0b250f13f5fea26e45a0c</sys_id>
         <sys_mod_count>3</sys_mod_count>
-        <sys_name>d0ab9b993bf87250f13f5fea26e45acc</sys_name>
+        <sys_name>ada40ce93bb0b250f13f5fea26e45a0a</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
-        <sys_update_name>sys_generative_ai_prompt_config_54ab9b993bf87250f13f5fea26e45acf</sys_update_name>
+        <sys_update_name>sys_generative_ai_prompt_config_a5a40ce93bb0b250f13f5fea26e45a0c</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-24 15:22:32</sys_updated_on>
+        <sys_updated_on>2025-10-24 17:10:05</sys_updated_on>
     </sys_generative_ai_prompt_config>
 </record_update>
