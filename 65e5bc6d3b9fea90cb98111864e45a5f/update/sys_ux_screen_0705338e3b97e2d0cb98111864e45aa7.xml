@@ -4,6 +4,7 @@
         <app_config display_value="Financial Crime Compliance">5c8d49613bd32e90cb98111864e45a8d</app_config>
         <description/>
         <disable_auto_reflow>true</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
         <event_mappings>[
     {
         "eventMappingId": "UUjZveehhEZCEUvjjSMHiihPokcYA",
@@ -165,7 +166,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0705338e3b97e2d0cb98111864e45aa7</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Checker</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -173,7 +174,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_screen_0705338e3b97e2d0cb98111864e45aa7</sys_update_name>
         <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-08-21 10:19:22</sys_updated_on>
+        <sys_updated_on>2025-10-28 10:32:40</sys_updated_on>
     </sys_ux_screen>
     <sys_translated_text action="delete_multiple" query="documentkey=0705338e3b97e2d0cb98111864e45aa7"/>
 </record_update>
