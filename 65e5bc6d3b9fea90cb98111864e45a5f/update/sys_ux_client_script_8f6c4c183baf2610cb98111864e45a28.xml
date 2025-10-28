@@ -19,7 +19,13 @@ function handler({
     helpers,
     imports
 }) {
-    var entDocs = api.data.look_up_a_single_record_2.result.individual._reference;
+    //var entDocs = api.data.look_up_a_single_record_2.result.individual._reference;
+     var entDocs;
+     if(api.data.look_up_a_single_record_1.result.kyc_case._reference.customer_type.value=='entity')
+     entDocs = api.data.look_up_a_single_record_2.result.entity._reference;
+     else
+     entDocs = api.data.look_up_a_single_record_2.result.individual._reference;
+
 
     var docsList = Object.values(entDocs) // get values only
         .filter(doc => doc.value) // remove null / empty ones
@@ -42,14 +48,14 @@ function handler({
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-19 16:20:59</sys_created_on>
         <sys_id>8f6c4c183baf2610cb98111864e45a28</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>On successful query of attachment</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_client_script_8f6c4c183baf2610cb98111864e45a28</sys_update_name>
-        <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-09-01 10:13:12</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-28 10:58:22</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>
