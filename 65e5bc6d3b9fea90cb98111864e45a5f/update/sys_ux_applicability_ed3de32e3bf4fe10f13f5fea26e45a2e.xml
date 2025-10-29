@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_applicability">
+    <sys_ux_applicability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_name>x_vuram_financia_0.Audience for FCC App</api_name>
+        <description/>
+        <name>Audience for FCC App</name>
+        <role_names/>
+        <roles>f5e5bc6d3b9fea90cb98111864e45acf,e9e5bc6d3b9fea90cb98111864e45aa6,a1e5bc6d3b9fea90cb98111864e45ac6,ade5bc6d3b9fea90cb98111864e45aca,f9e5bc6d3b9fea90cb98111864e45ae0</roles>
+        <sys_class_name>sys_ux_applicability</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-10-28 11:31:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ed3de32e3bf4fe10f13f5fea26e45a2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Audience for FCC App</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_applicability_ed3de32e3bf4fe10f13f5fea26e45a2e</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-10-28 11:31:24</sys_updated_on>
+    </sys_ux_applicability>
+</record_update>
