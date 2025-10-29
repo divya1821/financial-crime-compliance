@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_vuram_financia_0_fcc_kyc_individual_details</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_vuram_financia_0_fcc_kyc_individual_details">pepVALCHANGES^ORsanctionsVALCHANGES^ORadverse_news_screeningVALCHANGES^EQ<item display_value="-- None --" endquery="false" field="pep" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item display_value="-- None --" endquery="false" field="sanctions" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item display_value="-- None --" endquery="false" field="adverse_news_screening" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>News Screening Case Assignment</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Sys_ids of Maker and Checker users
+    // var makerUser = '380f8c683be3e610f13f5fea26e45a3b'; // Maker
+    //  var checkerUser = 'fb1010e83be3e610f13f5fea26e45ad3'; // Checker
+
+    // Run only if screening fields changed
+    if (!(current.pep.changes() || current.sanctions.changes() || current.adverse_news_screening.changes())) {
+        return;
+    }
+
+    var pep = current.pep;
+    var sanc = current.sanctions;
+    var adv = current.adverse_news_screening;
+
+    //var assignUser, caseState;
+
+    // Condition 1: If any YES → Maker
+    if (pep == 'yes' || sanc == 'yes' || adv == 'yes') {
+        // assignUser = makerUser;
+        caseState = '150';
+
+        // Condition 2: If all NO → Checker
+    } else if (pep == 'no' && sanc == 'no' && adv == 'no') {
+        //assignUser = checkerUser;
+        caseState = '320';
+
+        // Condition 3: Any empty (or mix of NO + empty) → Do nothing
+    } else {
+        return;
+    }
+
+    // --- Update Case ---
+    var caseGR = new GlideRecord('x_vuram_financia_0_fcc_kyc_cases');
+    caseGR.addQuery('individual.email', current.fcc_kyc_case.individual.email);
+    caseGR.addQuery('case_type', 'periodic_kyc_case');
+    caseGR.addQuery('state', 'NOT IN', '300,350,400,450');
+    caseGR.query();
+    if (caseGR.next()) {
+        if (gs.nil(caseGR.assigned_to)) { // Only update if unassigned
+            caseGR.state = caseState;
+            //caseGR.assigned_to = assignUser;
+            caseGR.update();
+        }
+
+        // --- Update Tasks ---
+        var taskGR = new GlideRecord('x_vuram_financia_0_fcc_kyc_tasks');
+        taskGR.addQuery('kyc_case', caseGR.sys_id);
+        taskGR.addQuery('type', 'adverse_news_screening');
+        taskGR.query();
+
+        while (taskGR.next()) {
+            if (gs.nil(taskGR.assigned_to)) {
+                if (caseGR.state == '150') // Only update if unassigned
+                {
+                    taskGR.assigned_to = caseGR.assigned_to.sys_id;
+                }
+				else
+				{
+					taskGR.state='4';
+				}
+                taskGR.update();
+            }
+        }
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-09-16 12:38:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aa0d5b493b44f6d0cb98111864e45af6</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>News Screening Case Assignment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_script_aa0d5b493b44f6d0cb98111864e45af6</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-29 11:17:11</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=aa0d5b493b44f6d0cb98111864e45af6"/>
+</record_update>
