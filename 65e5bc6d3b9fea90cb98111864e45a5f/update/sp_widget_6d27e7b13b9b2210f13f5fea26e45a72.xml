@@ -3,7 +3,10 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller = function(spModal, spUtil, $scope, $timeout, $interval, $window) {
   var c = this;
-	
+	c.ownership_structure=[];
+	c.idv_ubo=[];
+	c.coi=[];
+	c.listingProof="";
 	// ---- Safe supplier country initialization ----
 c.formData = c.formData || {};
 
@@ -166,6 +169,7 @@ c.updateUSD = function() {
   legalName: c.data.legal_name || "",
   doingBusinessAsName: c.data.doing_business_as_name,   // ✅ match server
   sic: c.data.sic,
+	sameAsLegal:c.data.same_as_legal_address,
   customerType: c.data.customer_type,
   productServices: c.data.product_services,
   registrationNumber: c.data.registration_number,
@@ -196,7 +200,8 @@ c.updateUSD = function() {
   cashWithdrawal: parseInt(c.data.cash_withdrawal) || 0,
   achDeposit: parseInt(c.data.ach_deposit) || 0,
   chequeDeposit: parseInt(c.data.cheque_deposit) || 0,
-  asOfDate: new Date("2025-09-13"),   // ✅ fixed
+  asOfDate: new Date("2025-09-13"), // ✅ fixed
+
   amountInLocal: parseInt(c.data.amount_in_local_currency) || 0,
   annualRevenue: parseInt(c.data.annual_revenue) || 0,
   transactionVolume: c.data.estimated_annual_transaction_volume,
@@ -210,6 +215,45 @@ c.updateUSD = function() {
   controllers: c.data.controllers || [],
   authorizedSigners: c.data.authorizedSigners || []
 };
+	 
+ function toBase64(file, callback) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var base64 = e.target.result.split(",")[1];
+      callback(base64);
+    };
+    reader.readAsDataURL(file);
+  }
+	function uploadFile(inputId, prefix, fieldName, targetArray, successMsg) {
+    var input = document.getElementById(inputId);
+    if (!input.files.length) {
+      //if(callback) callback(); // continue if no file
+      return;
+    }
+    var file = input.files[0];
+    toBase64(file, function(base64String) {
+      c.server.get({
+        action: "upload",
+        recordSysId: c.data.sys_id,
+        fileName:file.name,
+        fileType: file.type,
+        fileContent: base64String,
+        fieldName: fieldName
+      }).then(function(response) {
+        if (response.data.success) {
+          $scope.$applyAsync(function() {
+            targetArray.push({
+              file_name: file.name,
+              sys_id: response.data.attachmentSysId
+            });
+          });
+         // if(callback) callback(); // continue after upload
+        } else {
+          alert("Upload failed for " + file.name + ": " + response.data.error);
+        }
+      });
+    });
+  }
 
 
 	// ]]>🔑<![CDATA[ Handle file selection for financial statements (only 1 allowed)
@@ -293,7 +337,7 @@ c.removeFinancialStatement = function() {
   };
 
   c.copyAddress = function() {
-    if (c.sameAsLegal) {
+    if (c.formData.sameAsLegal) {
       c.formData.physicalStreet = c.formData.legalStreetAddress;
       c.formData.physicalPostalCode = c.formData.legalPostalCode;
       c.formData.physicalCity = c.formData.legalCity;
@@ -338,7 +382,11 @@ c.removeFinancialStatement = function() {
 
   
 c.submitForm = function() {
+	
   var payload = angular.copy(c.formData);
+	 uploadFile("supportingDocsOS", "OS_", "ownership_structure", c.ownership_structure, "");
+	uploadFile("supportingDocsUBO", "OS_", "id_v_of_ubo_controller", c.idv_ubo, "")
+	uploadFile("supportingDocsCOI", "OS_", "constitution_doc_coi", c.coi, "")
 
   // Step 1 – upload the financial statement if present
   var uploadPromise = Promise.resolve();
@@ -1167,6 +1215,36 @@ body, .kyc-container {
     /* populate the 'data' object */
     /* e.g., data.table = $sp.getValue('table'); */
     //console.log('Hi');
+	if (input && input.action === "upload") {
+    try {
+      var gr = new GlideRecord("x_vuram_financia_0_fcc_kyc_entity_details");
+      if (gr.get(input.recordSysId)) {
+        var gsaa= new GlideSysAttachment();
+        var attachmentSysId = gsaa.writeBase64(
+          gr,
+          input.fileName,   // filename
+          input.fileType,   // MIME type
+          input.fileContent // Base64 string
+        );
+
+        // map to specific field if provided
+        if (input.fieldName) {
+          gr.setValue(input.fieldName, attachmentSysId);
+					gs.addErrorMessage(attachmentSysId+"-"+input.recordSysId);
+          gr.update();
+        }
+				
+        data.success = true;
+        data.attachmentSysId = attachmentSysId;
+      } else {
+        data.success = false;
+        data.error = "Record not found: " + input.recordSysId;
+      }
+    } catch (e) {
+      data.success = false;
+      data.error = e.message;
+    }
+  }
 	
 	var table = 'x_vuram_financia_0_fcc_kyc_entity_details';
     var userEmail = gs.getUser().getEmail();
@@ -1286,6 +1364,7 @@ body, .kyc-container {
             grInd1.legal_name = record.legalName;
             grInd1.doing_business_as_name = record.doingBusinessAsName;
             grInd1.sic = record.sic;
+					  grInd1.same_as_legal_address=record.sameAsLegal;
             grInd1.sic_description = record.sicDescription;
             grInd1.customer_type = record.customerType;
             grInd1.product_services = record.productServices;
@@ -1293,8 +1372,8 @@ body, .kyc-container {
             grInd1.customer_sub_type = record.customerSubType;
             grInd1.country_of_domicile = record.domicileCountry;
             grInd1.describe_legal_entity_type_free_text = record.legalEntityDescription;
-            grInd1.is_the_customer_traded_on_an_exchange = record.customerTradedOnExchange;
-            grInd1.if_listed_which_country_it_is_listed = record.ifListedWhichCountry;
+            grInd1.is_the_customer_traded_on_an_exchange = record.isTradedOnExchange;
+            grInd1.if_listed_which_country_it_is_listed = record.listedCountriesSelected.toString();
             grInd1.primary_country_of_assets = record.primaryAssetsCountry;
             grInd1.legal_street_address = record.legalStreetAddress;
             grInd1.legal_postal_code = record.legalPostalCode;
@@ -1317,10 +1396,10 @@ body, .kyc-container {
             grInd1.cash_deposit = record.cashDeposit;
             grInd1.as_of_date = record.asOfDate;
             grInd1.amount_in_local_currency.setDisplayValue(record.currencyType + ";" + record.amountInLocal);
-            grInd1.annual_revenue.setDisplayValue(record.currencyType + ";" + record.annualRevenue);
+            grInd1.annual_revenue.setDisplayValue("USD;" + record.annualRevenue);
             grInd1.estimated_annual_transaction_volume = record.transactionVolume;
             grInd1.describe_the_customer_significant_suppliers_free_text = record.significantSuppliers;
-            grInd1.countries_of_the_customer_s_significant_suppliers = record.listedCountriesSelectedd;
+            grInd1.countries_of_the_customer_s_significant_suppliers = record.listedCountriesSelectedd.toString();
             grInd1.nature_of_business = record.natureOfBusiness;
             grInd1.is_there_significant_private_ownership = record.isThereSignificantPrivateOwnership;
 
@@ -1373,6 +1452,7 @@ body, .kyc-container {
         data.legal_name = grInd.getValue('legal_name');
         data.doing_business_as_name = grInd.doing_business_as_name.toString();
         //data.doing_business_as_name = grInd.legal_name.toString();
+			  data.same_as_legal_address=grInd.same_as_legal_address;
         data.sic = grInd.sic.toString();
         data.customer_type = grInd.customer_type.toString();
         data.product_services = grInd.product_services.toString();
@@ -1512,14 +1592,14 @@ body, .kyc-container {
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-12 13:33:19</sys_created_on>
         <sys_id>6d27e7b13b9b2210f13f5fea26e45a72</sys_id>
-        <sys_mod_count>380</sys_mod_count>
+        <sys_mod_count>399</sys_mod_count>
         <sys_name>FCC KYC Entity Form</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_6d27e7b13b9b2210f13f5fea26e45a72</sys_update_name>
-        <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-10-17 10:43:40</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-10-30 11:44:15</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">
@@ -1678,6 +1758,8 @@ body, .kyc-container {
             </div>
         </div>
     </div>
+  
+  
 
     <!-- Chips for selected countries -->
     <div class="mt-3 selected-countries">
@@ -1687,6 +1769,10 @@ body, .kyc-container {
             <span class="remove-chip" ng-click="c.toggleListedCountry(country)">×</span>
         </span>
     </div>
+  <div class="form-group col-md-2">
+          <label>Listing Proof <span class="required-asterisk">*</span></label>
+          <input type="file" id=listingProof class="form-control-file" ng-model="c.listingProof">
+        </div>
 </div>
 
     <!-- Navigation -->
@@ -1770,7 +1856,7 @@ body, .kyc-container {
             <div class="col-md-12">
                 <div class="form-group mb-0">
                     <label class="d-flex align-items-center">
-                        <input type="checkbox" ng-model="c.sameAsLegal" ng-change="c.copyAddress()">
+                        <input type="checkbox" ng-model="c.formData.sameAsLegal" ng-change="c.copyAddress()">
                         <span class="ml-2">Same as Legal Address</span>
                     </label>
                 </div>
@@ -1831,14 +1917,14 @@ body, .kyc-container {
             <div class="col-md-4">
                 <div class="form-group">
                     <label>Total Assets <span class="required-asterisk">*</span></label>
-                    <input type="number" class="form-control no-spinner" ng-model="c.formData.totalAssets" step="0.01" min="0" placeholder="0.00">
+                    <input type="number" class="form-control no-spinner" ng-model="c.formData.totalAssets" ng-change="c.updateUSD()" step="0.01" min="0" placeholder="0.00">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label>Type of Currency <span class="required-asterisk">*</span></label>
                     <select class="form-control" ng-model="c.formData.currencyType"
-                        ng-change="c.updateUSD()">
+                        ng-change="c.updateUSD();c.equiAmt();">
                         <option value="">-- Select Currency --</option>
                         <option value="USD">USD - US Dollar</option>
                         <option value="EUR">EUR - Euro</option>
@@ -1895,7 +1981,7 @@ body, .kyc-container {
         <h5>Transaction Details</h5>
         <div class="row">
             <div class="col-md-3" ng-repeat="field in [
-                {label:'Cash Deposit', model:'cashDeposit'},
+                {label:'Cash Withdrawal', model:'cashWithdrawal'},
                 {label:'ATM Withdrawal', model:'atmWithdrawal'},
                 {label:'ACH Withdrawal', model:'achWithdrawal'},
                 {label:'Cheque Withdrawal', model:'chequeWithdrawal'}
@@ -1914,7 +2000,7 @@ body, .kyc-container {
         <h5>Additional Transactions</h5>
         <div class="row">
             <div class="col-md-4" ng-repeat="field in [
-                {label:'Cash Withdrawal', model:'cashWithdrawal'},
+                {label:'Cash Deposit', model:'cashDeposit'},
                 {label:'ACH Deposit', model:'achDeposit'},
                 {label:'Cheque Deposit', model:'chequeDeposit'}
             ]">
@@ -1939,7 +2025,7 @@ body, .kyc-container {
            
     <label for="financialStatement" class="file-upload-label">
       <i class="fa fa-cloud-upload-alt"></i>
-      Click to upload financial statement
+      Click to upload Financial Statement
     </label>
   </div>
 
@@ -2363,15 +2449,15 @@ body, .kyc-container {
       <div class="form-row mt-3">
         <div class="form-group col-md-4">
           <label>Ownership Structure </label>
-          <input type="file" class="form-control-file" ng-model="c.formData.supportingDocs.id_proof">
+          <input type="file" id=supportingDocsOS class="form-control-file" ng-model="c.formData.supportingDocsOS">
         </div>
         <div class="form-group col-md-4">
           <label>ID&V of UBO, Controller </label>
-          <input type="file" class="form-control-file" ng-model="c.formData.supportingDocs.back_page">
+          <input type="file" id=supportingDocsUBO class="form-control-file" ng-model="c.formData.supportingDocsUBO">
         </div>
         <div class="form-group col-md-4">
           <label>Constitution doc - COI </label>
-          <input type="file" class="form-control-file" ng-model="c.formData.supportingDocs.front_page">
+          <input type="file" id=supportingDocsCOI class="form-control-file" ng-model="c.formData.supportingDocsCOI">
         </div>
       </div>
     </div>
@@ -2434,6 +2520,9 @@ body, .kyc-container {
     </button>
     <button class="btn btn-primary" ng-click="goProceed(); c.nextStep()" ng-disabled="!qrUrl" >
       Next <i class="fa fa-arrow-right ml-2"></i>
+    </button>
+    <button class="btn btn-primary" ng-click="c.nextStep()" >
+      Skip Video KYC <i class="fa fa-arrow-right ml-2"></i>
     </button>
   </div>
             </div>
