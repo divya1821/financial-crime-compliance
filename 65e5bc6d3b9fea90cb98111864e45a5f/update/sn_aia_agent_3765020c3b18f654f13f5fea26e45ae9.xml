@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
     <sn_aia_agent action="INSERT_OR_UPDATE">
         <agent_type>internal</agent_type>
+        <applicability_script/>
         <compiled_handbook>```markdown
 - **Step 1: Fetch Individual Number**
   - Start by obtaining the trigger input number (case number) from the user or system context.
@@ -86,49 +87,60 @@
 ```</compiled_handbook>
         <description>The agent is designed to monitor and analyze changes in the risk behavior or transaction patterns of an individual. It compares current activities with historical data to identify unusual trends, potential risks, or deviations from normal behavior. This helps in early detection of suspicious activities and supports proactive risk management.</description>
         <external_agent_configuration/>
-        <instructions>#IMPORTANT: Ensure all the steps run properly.
+        <instructions>Steps:
 
-Steps:
-
-1. Execute the “Fetch Individual Number” script using the trigger input number and pass its output to the next step.
+1. Execute the “Fetch Individual Number” script using the trigger input number, and pass its output to the next step.
 
 2. Execute the “Lookup Individual Record” script to retrieve the changed field details.
 
 3. Use the lookup record response as input. The response contains field names with their old_value and new_value.
 
-4. Generate a detailed summary describing what changed for each field in a clear, human-readable format and display the summary to the user.
+4. Check whether there are any changes in risk level or risk score. If there are any changes, proceed to the next step.
 
-Example style:
+5. Generate a detailed summary describing what changed for each field.
+
+5.1 Explain the cause of change for each field.
+
+5.2 Include any updates in risk level or risk score.
+
+5.3 Present the summary in a clear, human-readable format.
+
+Example Output Style:
 
 The business start year has been updated from 2012 to 2008.
 
-The expected FX volume has changed from 1,000,000 - 5,000,000 to 100,000 - 1,000,000.
+The expected FX volume has changed from 1,000,000 – 5,000,000 to 100,000 – 1,000,000.
 
 The trade frequency has been modified from Bi-Weekly to Monthly.
 
-The payout jurisdiction has changed from Some MRJ's, few or no HRJ's or SJ's to Only Low Risk Jurisdiction.</instructions>
+The payout jurisdiction has changed from Some MRJ’s, few or no HRJ’s or SJ’s to Only Low-Risk Jurisdictions.
+
+Display the risk level and risk score for the individual record.</instructions>
         <internal_name>global.x_vuram_financia_0.Pattern Detection Analysis - Individual</internal_name>
         <name>Pattern Detection Analysis - Individual</name>
+        <parent/>
         <processing_message/>
-        <proficiency>- Expert in continuous behavioral data analysis for individuals, with a specialized focus on detecting significant changes in risk patterns, flagging anomalies, and providing actionable insights or recommendations to maintain compliance and prevent fraud. The agent ensures prompt and accurate identification of any shift in risk profile, making it indispensable for risk management and regulatory adherence.
-- Capable of executing the 'Fetch Individual Number' script to obtain the unique identifier for an individual based on a trigger input case number. This ensures precise targeting and retrieval of relevant behavioral data for further risk and anomaly analysis.
-- Proficient in executing the 'Lookup Individual Record' script to retrieve comprehensive details of changed fields within an individual's record, including both previous and updated values. This enables the agent to access granular data required for in-depth pattern analysis and risk assessment.
-- Skilled in orchestrating a multi-step process: first fetching the individual number using the case number, then retrieving the changed field details, and finally generating a detailed, human-readable summary of all detected changes. This end-to-end capability ensures that users receive clear insights into behavioral shifts and risk profile updates for effective decision-making.</proficiency>
+        <proficiency>- Expert in continuous monitoring and analysis of individual behavioral data to detect significant changes in risk patterns, flag anomalies, and provide actionable insights or recommendations. The agent ensures prompt and accurate identification of shifts in risk profiles, supporting compliance and fraud prevention efforts by maintaining vigilance over behavioral data and risk indicators.
+- Capable of executing the 'Fetch Individual Number' script to obtain the unique individual number from a given case number. This proficiency allows the agent to reliably initiate risk evaluation procedures by ensuring the correct individual record is targeted for further analysis.
+- Proficient in executing the 'Lookup Individual Record' script to fetch changed fields, risk level, and risk score for a specified individual. The agent can process the returned data, which includes old and new values for each field, enabling precise identification of behavioral or risk-related changes.
+- Skilled in orchestrating multi-step procedures by first fetching the individual number using the case number, then retrieving the individual's record to analyze changes. The agent can seamlessly integrate tool outputs to produce a detailed, human-readable summary of what changed, the causes, and any updates in risk level or score, supporting further investigation and decision-making.
+- Expert in synthesizing and presenting detailed summaries of individual record changes, including explanations for each field modification, causes of change, and explicit updates to risk level and risk score. The agent ensures that all findings are communicated in a clear, accessible format to support effective investigation and compliance monitoring.</proficiency>
         <record_type>custom</record_type>
         <role>The AI agent acts as an intelligent pattern detection system that continuously evaluates an individual’s behavior data. It identifies significant changes in risk patterns, flags potential anomalies, and provides insights or recommendations to the user or system for further investigation. The agent ensures that any shift in risk profile is detected promptly and accurately to maintain compliance and prevent fraud.</role>
+        <source_id/>
         <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
         <sys_class_name>sn_aia_agent</sys_class_name>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-25 13:13:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>3765020c3b18f654f13f5fea26e45ae9</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>Pattern Detection Analysis - Individual</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sn_aia_agent_3765020c3b18f654f13f5fea26e45ae9</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-16 15:21:16</sys_updated_on>
+        <sys_updated_on>2025-10-30 09:36:30</sys_updated_on>
     </sn_aia_agent>
 </record_update>
