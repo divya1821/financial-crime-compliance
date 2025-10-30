@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_vuram_financia_0_fcc_kyc_tasks</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_vuram_financia_0_fcc_kyc_tasks">type=adverse_news_screening^EQ<item display_value="Adverse News Screening" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="adverse_news_screening"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Screening Result Check</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var pep;
+    var sanc;
+    var adv;
+    var query = '';
+    if (current.kyc_case.entity != '') {
+        pep = current.kyc_case.entity.pep;
+        sanc = current.kyc_case.entity.sanctions;
+        adv = current.kyc_case.entity.adverse_news_screening;
+        query = "entity.email_id" + current.kyc_case.entity.email_id;
+    } else {
+        pep = current.kyc_case.individual.pep;
+        sanc = current.kyc_case.individual.sanctions;
+        adv = current.kyc_case.individual.adverse_news_screening;
+        query = "individual.email" + current.kyc_case.individual.email;
+    }
+    //var assignUser, caseState;
+
+    // Condition 1: If any YES → Maker
+    if (pep == 'yes' || sanc == 'yes' || adv == 'yes') {
+        caseState = '150';
+
+        // Condition 2: If all NO → Checker
+    } else if (pep == 'no' && sanc == 'no' && adv == 'no') {
+        //assignUser = checkerUser;
+        caseState = '320';
+
+        // Condition 3: Any empty (or mix of NO + empty) → Do nothing
+    } else {
+        return;
+    }
+    var caseGR = new GlideRecord('x_vuram_financia_0_fcc_kyc_cases');
+    caseGR.addEnocdedQuery(query);
+    caseGR.addQuery('case_type', 'periodic_kyc_case');
+    caseGR.addQuery('state', 'NOT IN', '300,350,400,450');
+    caseGR.query();
+    if (caseGR.next()) {
+        if (gs.nil(caseGR.assigned_to)) { // Only update if unassigned
+            caseGR.state = caseState;
+            //caseGR.assigned_to = assignUser;
+            caseGR.update();
+            if (caseState == '150')
+                current.assigned_to = caseGR.assigned_to;
+            else
+                current.state = '4';
+
+        }
+    }
+
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-10-29 11:28:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>43557c4b3bf03a10cb98111864e45a63</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Screening Result Check</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_script_43557c4b3bf03a10cb98111864e45a63</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-30 05:41:09</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=43557c4b3bf03a10cb98111864e45a63"/>
+</record_update>
