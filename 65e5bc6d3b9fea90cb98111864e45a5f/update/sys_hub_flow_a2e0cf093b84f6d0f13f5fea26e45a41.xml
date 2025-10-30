@@ -2,7 +2,7 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>true</active>
+        <active>false</active>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=3809940000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>27000</authored_on_release_version>
@@ -28,7 +28,7 @@
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>published</status>
+        <status>draft</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>harini.ks</sys_created_by>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a2e0cf093b84f6d0f13f5fea26e45a41</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>Calculating Risk for Individual</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -44,11 +44,11 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_flow_a2e0cf093b84f6d0f13f5fea26e45a41</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-30 11:57:20</sys_updated_on>
+        <sys_updated_on>2025-10-30 12:54:48</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record display_value="Created 2025-10-30 04:55:12">2a46025f3b783a50f13f5fea26e45a52</version_record>
+        <version_record display_value="Created 2025-10-30 05:52:17">6e53da933b7c3a50f13f5fea26e45a2b</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=a2e0cf093b84f6d0f13f5fea26e45a41"/>
     <sys_variable_value action="delete_multiple" query="document_key=a2e0cf093b84f6d0f13f5fea26e45a41"/>
@@ -82,15 +82,15 @@
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <data>{"run_on_extended":"false","run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any"}</data>
         <identifier>a2e0cf093b84f6d0f13f5fea26e45a41</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-10-30 11:57:20</sys_created_on>
         <sys_id>f1c6c2133bb83a50f13f5fea26e45a78</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-30 11:57:20</sys_updated_on>
+        <sys_updated_on>2025-10-30 12:53:34</sys_updated_on>
         <trigger display_value="">3dc6c2133bb83a50f13f5fea26e45a77</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=a2e0cf093b84f6d0f13f5fea26e45a41^sys_idNOT INf1c6c2133bb83a50f13f5fea26e45a78"/>
@@ -401,13 +401,13 @@
         <sys_created_by>divya.suresh</sys_created_by>
         <sys_created_on>2025-09-17 13:38:38</sys_created_on>
         <sys_id>2e914dad3b40fad0cb98111864e45aa6</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-30 11:56:55</sys_updated_on>
+        <sys_updated_on>2025-10-30 12:52:11</sys_updated_on>
         <ui_id>e8e29553-ccd3-49fa-bc6b-98e762567636</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1Xa2/bNhT9K4Q+2bEnv/Jo009ZUqPd1qRIumBF3Qm0dGVzlUiVpBx7hv/7Lh9y3NiOMzfAMKAJHEPk5bnnHh5eKp/mAUuC0+AQknbnZec47nV6vW673X1x2Bke94adbtKjAJ2gGXCaA0ZKiIVM8HlCs9IMzOe/FwnVkESdMC6lBK4XC5xPmCoyOrv1YTgSj1mW4Hxw+ulzMyioREQNMjidP5jSswKijA4hw4UXIi5zBCVvLxDjqWyr1dcV3Yf0TQ58Tjx6xMwgThk+nXYzgKkGngCmS2mmoBnklGOZQs6CUy1LHJBAkyuezZYRY8a1qzSnU8X+RvzDtolLAUuLvQrLx8grVIkjWAxXhWaCuxFNh1mlnMjKnF+6Eoy2kNIy0yvalgrxoDCUDQnHML0Zi7vrKl+fcVudZ5uJmGbLJ6q1ZMNSgzLbARlYUXJaFIyPokKKCbOLkUoejjJ8CNNM3GFOxUY8pLHhHaJANOzj+IUdvqWSmSLeIQwuXtjio6+lyevK8IQjW7MtOLIbhaEqlqzQZwg8AU9z0fR2HR49ZoD45f1+r2DeW3YaTUo0X5QyTnnMaNSO0jiOvsziCDViWCpSxNI0ZZlat3L//Jz8+vGcvF3Gkotl7H4m/2BokktH86klfrN4S8ne5t+MeZcfPZvLX/xHLveM/mc232XudvfR7ray09bPasXYkqkvkcIOB4Oy3e4l87llP/EEQzNvpxeLP21sBhPIXGya/ORYQbJu+ecD3vN8QI50NBBHqPlkpSqAPoMsURukqw6ITxBNfILlVfCMd0H7x23wPLeBK8iNGYb3ljNPj8UGrYMBPzg4i2NQihhyrTPLlhi2pFRYINFjIGkS2REx/AtiHZIbC0DyUmkiQZeSE0qsWUJiEK+MXwgv8yF+MUVEmirQZDgjjQ5hnLyWUkjyBo2TmRQ34DSyZCZ4d9gLQNgNV8R7gZQFEiskUjVrBkE4CAhN8bhU9MxymFL0LpwiG0nUWEiNesfEHb4qMMQNHY1AVq9ooQ00G2brwqyvDJavbIliBlsDPuAW2xzwCvfSVlqr4Kt2cN8J6q/MulaL9EHHY9QUyxgLPISkppAMH9UJikFiwScgNdHCi6dcMsSrUmGTUIBbRXVtpMIR6PdSoIP0rDbYcJWH18jgmmrM8Ju4GwR1Q8Qg5pCwMv9u0HcWZgV3zEbj70Z9gyAe0/yytLYqt++6pG0fu8fu72pEbASrzwec4I/fxQGeahQAIRcDDniwCcJuQK2k3ozrZFuDzr0MO9FXZN+cwOi3Bj+2etyDb5/HzqHoBJJl+zONZXldrfcD3+J+NITvaQgGGT+dCrRW29YP8JpBheSsXj9YOxLGDCcbjsUd4O5qOoJqsYus11t4HVfHDj/d3eljUXKbneyR/twtFumFyFnMMtjCo7ebR0FnotT70Xhv1/5SoqsTZl2ithA53E1E3HHssWNW7CuJsdaUaVTlqoLawuZoN5sZUGmIkH/P5GdzNPEg3Ggq9UfE2cLieDeLVMLXEl+KjEn3YPJB0gT6FcYWGie7aUzMex3sKcfraYEdBJL+H7cW5iENexWfJQmhWUaq93aF1y6mGYN0PLXQ+M+sJ2rPd8Ods4azecOZrOF2t+HktV8nVYpr1zBMx1R4P3DfQCyyj9n+zlCldtHrnX2x+PwP/uKaTrISAAA=</values>
+        <values>H4sIAAAAAAAA/+2Ub2vbMBDGv0rQa8/YcVravBsJgTLWQrcVRtcJWTonorLsybLbzPi77+R/ydq1hBIYg72zTqe75zn95NuaSEHmJJiKIDwPT3kURtE0CKZnszA+jeJwKiIGAMQjmqWAmRVTJRS4bj8wYGRxTwueGfhWBkEk6jpR2QOtmJEsVuC7/Xa7ab63uQoqUF1uIt4V3MjcgsCKQha5YtuboxfmG6mEAU3mt3ceyZlBKxYMmddPtuw2B6pYDAr7f4YU5ViYdIK8gyc1FFhJUKL4w+hcG1zbvgGt+gaZEU5VGAQegUcLWqD8ecJUAR5JmRbMZmZL5taUGDDAxJVW2zFjI7XFssTlPhbyJ/aYBa6WgQTQI4dud1zSfuJdmG8yyeEqtzLTXcS6OfebmSpTfdkZcXcFCSuVHe4KI2WB9SB3op2MTmPyaZM9XA/9VlK3Bnu9KuNMjStmrZFxaXFCeC+gIMU6NGV5LvWa5iarZHsYpaT+WuHCb3kQUMi19hl3un0cEfNXGF+24Zselo9YBg83rXn6o3R9Oxu9YNp6bg3T9rowtSPoPRauYDDUxVBh03j925nBq0SEOwAMIK5i7+3U9ZccFYOgoc9Lg0OyTfP8JbwZ4WXGSzfGycVy4PcAtcPp60HuU/k9v6KvTqXYh/d47P4n9yjktjJHXOOT1wDg57v73qu5Q/aRViXCRxOpmeaS0YAmnNP7Lac4I4lWUSJas0yq4jnKq8Vi8uHrYnIx5k6WY+4b/9NO5uSyk3moxd8Ov2B5+E3vx3rKT45G+dlforxX9I9h/hLcd78ADxGgGskIAAA=</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=2e914dad3b40fad0cb98111864e45aa6"/>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a2e0cf093b84f6d0f13f5fea26e45a41"/>
