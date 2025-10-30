@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <conditions/>
         <description/>
         <global>true</global>
@@ -11,7 +11,7 @@
         <on_load>true</on_load>
         <order>700</order>
         <reverse_if_false>true</reverse_if_false>
-        <run_scripts>true</run_scripts>
+        <run_scripts>false</run_scripts>
         <script_false><![CDATA[function onCondition() {
 
 }]]></script_false>
@@ -19,22 +19,22 @@
 return gs.hasRole('FCC KYC Relationship Manager');
 }]]></script_true>
         <set_values/>
-        <short_description>For RM work notes should be editable in task form</short_description>
+        <short_description>For RM work notes should be editable in task forms</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>abhipsa.jally</sys_created_by>
         <sys_created_on>2025-08-21 10:36:50</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4dc4d1703b27ea10cb98111864e45ac1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>For RM work notes should be editable in task form</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>For RM work notes should be editable in task forms</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_policy_4dc4d1703b27ea10cb98111864e45ac1</sys_update_name>
         <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-09-07 07:32:01</sys_updated_on>
+        <sys_updated_on>2025-10-30 12:07:48</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_tasks</table>
         <ui_type>0</ui_type>
         <view/>
