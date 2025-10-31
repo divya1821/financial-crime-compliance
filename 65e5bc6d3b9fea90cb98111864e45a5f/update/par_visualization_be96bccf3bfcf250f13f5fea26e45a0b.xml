@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_visualization">
+    <par_visualization action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <certified>false</certified>
+        <description/>
+        <macroponent display_value="Heatmap">d1f6c60ce95607ea1ef236430d5fdec9</macroponent>
+        <name>Risk Level by Employment Status</name>
+        <properties>{"showZero":true,"showDataLabels":true,"showLegend":true,"legendPosition":"bottom","newReporting":false,"enableAddZerosAtApi":true,"additionalGroupByConfig":[],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"wrapTitle":false,"showLoadingIndicator":false,"showHeaderSeparator":false,"contextMenuActions":[],"headingLevel":2,"showBorder":true,"bareBorder":false,"telemetry":null,"showDataPassthrough":false,"refreshRequest":"","showAdditionalGroupBySelector":false,"allowAdditionalGroupByPerMetric":false,"dataPassthrough":null,"sortByOrder":"desc","showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":true,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","hideDevSettings":false,"configPropModifiers":{},"showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":"previous","useCurrentDateForEnd":false,"period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"showFilterAsSeparateSeries":false,"userInfo":"@context.session.user","sharedContext":{},"colors":{},"filterConfigurations":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"FCC KYC Individual Details","sourceType":"table","tableOrViewName":"x_vuram_financia_0_fcc_kyc_individual_details","filterQuery":"","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4X3Z1cmFtX2ZpbmFuY2lhXzBfZmNjX2t5Y19pbmRpdmlkdWFsX2RldGFpbHMxNzYxNzM3MDA1MDQy","dataCategories":["trend","group","simple"]}],"componentId":"2yn6rerx","filterPerMetric":[],"sortBy":"value","groupBy":[{"groupBy":[{"dataSource":"dGFibGV4X3Z1cmFtX2ZpbmFuY2lhXzBfZmNjX2t5Y19pbmRpdmlkdWFsX2RldGFpbHMxNzYxNzM3MDA1MDQy","groupByField":"employment_status","isRange":false,"isChoice":true,"isPaBucket":false}],"categoryIndex":0,"maxNumberOfGroups":10,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"disableRanges":false},{"groupBy":[{"dataSource":"dGFibGV4X3Z1cmFtX2ZpbmFuY2lhXzBfZmNjX2t5Y19pbmRpdmlkdWFsX2RldGFpbHMxNzYxNzM3MDA1MDQy","groupByField":"risk_level","isRange":false,"isChoice":true,"isPaBucket":false}],"categoryIndex":1,"maxNumberOfGroups":10,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"disableRanges":false}],"metrics":[{"dataSource":"dGFibGV4X3Z1cmFtX2ZpbmFuY2lhXzBfZmNjX2t5Y19pbmRpdmlkdWFsX2RldGFpbHMxNzYxNzM3MDA1MDQy","id":"ZEdGaWJHVjRYM1oxY21GdFgyWnBibUZ1WTJsaFh6QmZabU5qWDJ0NVkxOXBibVJwZG1sa2RXRnNYMlJsZEdGcGJITXhOell4TnpNM01EQTFNRFF5MTc2MTczNzAwNzY1Ng==","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"rangesConfig":{},"colorConfig":{"type":"default"},"headerTitle":"Risk Level by Employment Status"}</properties>
+        <requested_by/>
+        <scheduled_count>0</scheduled_count>
+        <sys_class_name>par_visualization</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-10-29 11:28:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>be96bccf3bfcf250f13f5fea26e45a0b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Risk Level by Employment Status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>par_visualization_be96bccf3bfcf250f13f5fea26e45a0b</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-31 09:12:55</sys_updated_on>
+        <type>Heatmap</type>
+    </par_visualization>
+</record_update>
