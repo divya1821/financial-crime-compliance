@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="listing_details" label="Listing Proof" language="en" table="x_vuram_financia_0_fcc_kyc_entity_details">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>listing_details</element>
+            <help/>
+            <hint/>
+            <label>Listing Proof</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_entity_details</name>
+            <plural>Listing Proofs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-11-03 08:03:06</sys_created_on>
+            <sys_id>6187f1a43b857a90f13f5fea26e45ae7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Listing Proof</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_documentation_x_vuram_financia_0_fcc_kyc_entity_details_listing_details_en</sys_update_name>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-11-03 08:04:50</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

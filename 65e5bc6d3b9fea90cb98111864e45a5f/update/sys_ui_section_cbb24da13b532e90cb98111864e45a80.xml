@@ -3,140 +3,644 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>ff9b92fc3b27ea10f13f5fea26e45ae0</sys_id>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>716d9f4a3b40f214f13f5fea26e45ae9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>individual_10_ownership</element>
             <position>1</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>bf9b92fc3b27ea10f13f5fea26e45ae1</sys_id>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>bd6d9f4a3b40f214f13f5fea26e45ae9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>non_individual_10_ownership</element>
             <position>2</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>b79b92fc3b27ea10f13f5fea26e45ae2</sys_id>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>b56d9f4a3b40f214f13f5fea26e45aea</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>controllers</element>
             <position>3</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>3f9b92fc3b27ea10f13f5fea26e45afb</sys_id>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>bd6d9f4a3b40f214f13f5fea26e45aea</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>authorised_signers</element>
             <position>4</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>379b92fc3b27ea10f13f5fea26e45afc</sys_id>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>b56d9f4a3b40f214f13f5fea26e45aeb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>upload_audited_financial_statement</element>
+            <position>5</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>bd6d9f4a3b40f214f13f5fea26e45aeb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>fcc_kyc_case</element>
-            <position>5</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>3f9b92fc3b27ea10f13f5fea26e45afc</sys_id>
+            <position>6</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>b56d9f4a3b40f214f13f5fea26e45aec</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>legal_name</element>
-            <position>6</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>379b92fc3b27ea10f13f5fea26e45afd</sys_id>
+            <position>7</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>bd6d9f4a3b40f214f13f5fea26e45aec</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>physical_state</element>
-            <position>7</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>3f9b92fc3b27ea10f13f5fea26e45afd</sys_id>
+            <position>8</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>b56d9f4a3b40f214f13f5fea26e45aed</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>id_v_of_ubo_controller</element>
-            <position>8</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>379b92fc3b27ea10f13f5fea26e45afe</sys_id>
+            <position>9</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>bd6d9f4a3b40f214f13f5fea26e45aed</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>constitution_doc_coi</element>
-            <position>9</position>
+            <position>10</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>b56d9f4a3b40f214f13f5fea26e45aee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sic</element>
+            <position>11</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>bd6d9f4a3b40f214f13f5fea26e45aee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>legal_postal_code</element>
+            <position>12</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>b56d9f4a3b40f214f13f5fea26e45aef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>physical_postal_code</element>
+            <position>13</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756d9f4a3b40f214f13f5fea26e45afc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>source</element>
+            <position>14</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6d9f4a3b40f214f13f5fea26e45afc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>legal_street_address</element>
+            <position>15</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756d9f4a3b40f214f13f5fea26e45afd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sic_description</element>
+            <position>16</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6d9f4a3b40f214f13f5fea26e45afd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>amount_in_usd</element>
+            <position>17</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756d9f4a3b40f214f13f5fea26e45afe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>amount_in_local_currency</element>
+            <position>18</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6d9f4a3b40f214f13f5fea26e45afe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>as_of_date</element>
+            <position>19</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756d9f4a3b40f214f13f5fea26e45aff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>legal_city</element>
+            <position>20</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6d9f4a3b40f214f13f5fea26e45aff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cheque_withdrawal</element>
+            <position>21</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756ddf4a3b40f214f13f5fea26e45a00</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cheque_deposit</element>
+            <position>22</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6ddf4a3b40f214f13f5fea26e45a00</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cash_withdrawal</element>
+            <position>23</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756ddf4a3b40f214f13f5fea26e45a01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cash_deposit</element>
+            <position>24</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6ddf4a3b40f214f13f5fea26e45a01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>customer_sub_type</element>
+            <position>25</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756ddf4a3b40f214f13f5fea26e45a02</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>doing_business_as_name</element>
+            <position>26</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6ddf4a3b40f214f13f5fea26e45a02</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>atm_withdrawal</element>
+            <position>27</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756ddf4a3b40f214f13f5fea26e45a03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>describe_legal_entity_type_free_text</element>
+            <position>28</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6ddf4a3b40f214f13f5fea26e45a03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ach_withdrawal</element>
+            <position>29</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756ddf4a3b40f214f13f5fea26e45a04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ach_deposit</element>
+            <position>30</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6ddf4a3b40f214f13f5fea26e45a04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>atm_deposit</element>
+            <position>31</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756ddf4a3b40f214f13f5fea26e45a05</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>primary_country_of_assets</element>
+            <position>32</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>7d6ddf4a3b40f214f13f5fea26e45a05</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>estimated_annual_transaction_volume</element>
+            <position>33</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-19 14:16:18</sys_created_on>
+            <sys_id>756ddf4a3b40f214f13f5fea26e45a06</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-19 14:16:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pep</element>
+            <position>34</position>
             <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-21 15:45:06</sys_created_on>
-            <sys_id>3f9b92fc3b27ea10f13f5fea26e45afe</sys_id>
+            <sys_created_on>2025-09-25 02:55:59</sys_created_on>
+            <sys_id>723bbfff3b0c7654cb98111864e45a59</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
             <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-21 15:45:06</sys_updated_on>
+            <sys_updated_on>2025-09-25 02:55:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>adverse_news_screening</element>
+            <position>35</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:00</sys_created_on>
+            <sys_id>b23bbfff3b0c7654cb98111864e45a82</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sanctions</element>
+            <position>36</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:00</sys_created_on>
+            <sys_id>3e3bbfff3b0c7654cb98111864e45a8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>transactions</element>
+            <position>37</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:00</sys_created_on>
+            <sys_id>0f3bbfff3b0c7654cb98111864e45a98</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:00</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ri_expected_trade_frequency</element>
+            <position>38</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:01</sys_created_on>
+            <sys_id>cb3bbfff3b0c7654cb98111864e45ae2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ri_complexity_of_ownership</element>
+            <position>39</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:01</sys_created_on>
+            <sys_id>5f3bffff3b0c7654cb98111864e45a13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ri_expected_fx_volume</element>
+            <position>40</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:02</sys_created_on>
+            <sys_id>933bffff3b0c7654cb98111864e45a2c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ri_industry</element>
+            <position>41</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:02</sys_created_on>
+            <sys_id>533bffff3b0c7654cb98111864e45a38</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ri_business_start_year</element>
+            <position>42</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:02</sys_created_on>
+            <sys_id>2b3bffff3b0c7654cb98111864e45a50</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ri_country_of_domicile</element>
+            <position>43</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:03</sys_created_on>
+            <sys_id>af3bffff3b0c7654cb98111864e45a81</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ri_payout_jurisdiction</element>
+            <position>44</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 02:56:03</sys_created_on>
+            <sys_id>233bffff3b0c7654cb98111864e45a8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 02:56:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>listing_details</element>
+            <position>45</position>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-11-03 08:03:06</sys_created_on>
+            <sys_id>6187f1a43b857a90f13f5fea26e45ae0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_entity_details" sys_domain="global" view="Default view">cbb24da13b532e90cb98111864e45a80</sys_ui_section>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-11-03 08:03:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
