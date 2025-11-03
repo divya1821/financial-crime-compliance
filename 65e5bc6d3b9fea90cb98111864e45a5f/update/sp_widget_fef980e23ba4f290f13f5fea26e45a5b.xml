@@ -108,7 +108,7 @@
     },
 		
 		 goSkip: function() {
-      $window.location.href = "/fcc_kyc?id=fcc_kyc_individual_upload_document";
+      $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details";
     },
 
     goProceed: function() {
@@ -705,14 +705,14 @@ video {
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-10-15 08:41:23</sys_created_on>
         <sys_id>fef980e23ba4f290f13f5fea26e45a5b</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_name>FCC KYC Muti VKYC</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_fef980e23ba4f290f13f5fea26e45a5b</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-30 11:43:26</sys_updated_on>
+        <sys_updated_on>2025-11-03 10:20:14</sys_updated_on>
         <template><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -784,6 +784,13 @@ video {
           >
             <i class="fa-solid fa-camera"></i> Continue on Webcam
           </button>
+          
+            <button
+              class="btn btn-primary kyc-button"
+              ng-click="c.mobile.goSkip()"
+            >
+              <i class="fa-solid fa-arrow-right"></i> Skip Video KYC
+            </button>
         </div>
       </div>
 
@@ -846,12 +853,7 @@ video {
             >
               <i class="fa-solid fa-arrow-right"></i> Proceed
             </button>
-            <button
-              class="btn btn-primary kyc-button"
-              ng-click="c.mobile.goSkip()"
-            >
-              <i class="fa-solid fa-arrow-right"></i> Skip Video KYC
-            </button>
+          
           </div>
         </div>
       </div>
