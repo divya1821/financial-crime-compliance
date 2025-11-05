@@ -2,7 +2,7 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>true</active>
+        <active>false</active>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=52000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>28100</authored_on_release_version>
@@ -36,19 +36,19 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0e6312d33b7c3a50f13f5fea26e45a3b</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Calculating Risk for Individual - New</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_flow_0e6312d33b7c3a50f13f5fea26e45a3b</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-30 12:53:34</sys_updated_on>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-11-05 06:15:51</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record display_value="Created 2025-10-30 05:53:07">fe835ed33b7c3a50f13f5fea26e45a59</version_record>
+        <version_record display_value="Created 2025-11-03 23:18:03">dfc6ba783b0d7e90f13f5fea26e45a1c</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=0e6312d33b7c3a50f13f5fea26e45a3b"/>
     <sys_variable_value action="delete_multiple" query="document_key=0e6312d33b7c3a50f13f5fea26e45a3b"/>
@@ -88,9 +88,9 @@
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-10-30 12:53:34</sys_created_on>
         <sys_id>ada3da173b7c3a50f13f5fea26e45ade</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-30 12:53:34</sys_updated_on>
+        <sys_updated_on>2025-11-04 07:17:55</sys_updated_on>
         <trigger display_value="">3dc6c2133bb83a50f13f5fea26e45a77</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0e6312d33b7c3a50f13f5fea26e45a3b^sys_idNOT INada3da173b7c3a50f13f5fea26e45ade"/>
@@ -401,13 +401,13 @@
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-10-30 12:52:34</sys_created_on>
         <sys_id>fe6392d33b7c3a50f13f5fea26e45a43</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-30 12:53:23</sys_updated_on>
+        <sys_updated_by>Maker User 1</sys_updated_by>
+        <sys_updated_on>2025-10-30 13:08:13</sys_updated_on>
         <ui_id>e8e29553-ccd3-49fa-bc6b-98e762567636</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1WYW/bNhD9K4Q+OZkny3YatO6nIJnRYmtSJFuBoeoEmjxZXClSIyklnuH/viMl2V6dZEEbYBiwBIjD4/Hdu3dHnj+uI8GjWZRMeDJ+NT5l0/F0OkmSycuT8eJ0uhhP+JQCQDSMFC0BPRsqa7C4Dv+gwQj7ObNMG0jrJJny9TqX+jZrqBF0ISH2+2F7s/kt+EpoQLa+Of/eMiMqBxwRubCVpKsPzw7MCiG5ARXNPn4aRhU1mIoDE83WX2y5VQWZpAuQGP9nKJGOA9ISGj5ZqR5gLkBye490PgyuXRcga7oA2nDPapwkwwjuHCiO9Gc5lRaGUUkVp06bVTRzpkaDAcqvlFxtPQqhHMJG3vfOij8xxknisQzkgDkyaHe3y6xTvDWzQgsGV5UTWrUW53XuNrWsS3XZJuJrBTmtpetrhZbaIh5UnrSn0XLMbwp9e93HmwsVEuz4Ss2o3K6oc0YsaocKYV1AQok4WUmrSqhlVhndiHAYqZTxUuIiDv3AwYqliinzvGOUiMZztF8E84euWd4hDB7ehOSzP2oft02jI5yFnEPCWSgXurYddIbADfQJtTbPcNdyfvWYbzQ6TtXx8RljYC3x5EZngS3xbEltMUHiCiA5z4JFL34H5mJyEwBIWVtHDLjaKEJJaJaYeMQr3y9E1eUCP4QlOs8tOLJYke/GRCjygzHakDfYONKHuIFWo0CmoUL6bIkOBbek6wVSV0isMkjVn0mjOI0IzfG69PT8cbij2LswQzaG2EIbh3oz0l6+3jHGgi6XYGJWG6y/i4OjL1jIC6O+9lhdZlsUbxylKlUB21/wHvcyZDro4fvnYPcSHL3250YjMgfHCtQU0yg0XkIysEhGLY8IikGYVg0YR5zuxLNtMMTrQ+EjYQFLRd1gaeMluPdGYwe51SCN7rKmxicky4WiigmaJfE1MrimDiP8pG/T6MgT8YglcFGX3wz6LsDs4RZiWXwz6hsE6TD9r8gH+3J3ry5JwnJy2v7d92BesKN1qgj+dFVM8VajAAi5SRXgxSYIew9qL/X9uK1sB9BlJ8M/ou/Jfn8Ar98BfBH02IE/vI8vh6UN8O3zt9lsht0oPYFHB8R4Nw8MICW+N0rX618q7Gzg2bi/M5vN4WD86ol2oVntX1Xy9qIfZ09g25++7ul+Sb8bZ7xDzwTfn2XPN8r+H2TPMsgCzW27Ll481gDs1a7ee5i7lj18YLKcsezzimWokcBUkSKm5nDc2MNWnp+fkx9/PSdvt77kYuv7lV/bwlS7bGk+NcW/HX4g5f5b276t6/IXz9blL/+lLu8Y/cfa/KHm/vQXLFc0U9gMAAA=</values>
+        <values>H4sIAAAAAAAA/+1WXU8bORT9K9Y8AZudTAhFbfqEYFGrpVBBi7TqdEeOfSfjrceetT2BbJT/3muPJ4mAslTlYSstkSC+vj4+9/h+8GmZCJ5MkmyfZ6NXo0M2Ho3H+1m2//JgND0cT0f7fEwBIBkkitaAnnMqW7C4Dl/QYIT9UlimDeRtlo35cllKfVPMqRF0KiH1+2F7tfoz+EqYg+x8S/6rZUY0DjgicmEbSRfXzw7MKiG5AZVMPn0eJA01GIoDk0yWd7aeqoWkU5DoeipAcvuAOG7R+LWDGiNyUHRidfazePhD3CTXcVMb7kmNsmyQwK0DxZH9pKTSwiCpqeLUabNIJs60aDBA+YWSi7VHJZRD2MT73lrxDxI4yDyWgRIwRAbd7npZRME7c3lCHb1CbOZaE11ZpQXDgII4HEraSne8bescLhontOqOOP828bSWba3OO2mSNUD/vmhpLZKAxkfquXeBlVeVvrnsSZ4KFVSJQUrNqFyvqHNGTFvn6SwTkFAjTlHTphFqVjRGz0U4jFTqdCZxkYYc4mDFTKWUed4p6krTU7SfBPN1TLB3CIOHV4PELuyxpNZuQkENi79bz6QLLIZQBBWCBEVICX845OERXjWHPsTO5jlvEtevHvNNhnu52ts7Yii+JZ7u8CjwJ54/aS2GTFwFpORFsOjpX8BcSq4CAKlb64gBfFxFKAkJmRKPeOHTjqi2nuIfYYkuSwuOTBfklxERivxmjDbkDeaf9FdcQadaIDOnQvpoiQ4pYElMKdI2SKwxSNWfyZM0Twgtseh6ev443FIsAZggG0NspY3DF2CkK+HeMcUnns3ApKw1mBEuDY7+CUNceOtrjxUjW6N44zBXuQrYvk30uOch0p0evm8qm36y+9qfGw7JKThWoaYYRqWx0MmORTJqtktQDMK0moNxxOkonu0uQ7z+Kmw1FvCpqNuZ2XQG7r3RmFNusZMnt8W8xUZUlEJRxQQtsvQSGVxShzec6Zs82fVEPGINXLT1D4O+CzBbuJWYVT+M+gZBIqb/iHJnW+7Yu0kWlvuH3e9tD+YF213miuBPfMUc6xwFQMhVrgBLnSDsA6i91A/jdrLdg66jDP+KviX7wxd4/e7BV0GPDfi397FzWDoHvm6Iq9VqEAfyATw6hEabmWMAKfGtgbxcfmwws4EXo75mVqv74/W75+ITKPVz8bLndJdjnItcsza0asHvDMWTuEPenmxPxOcbiP+Pw//SOAzE10k/ffFYhrFXm4Tawtwk/v02VZSMFV8WrEDVBAaPFDFYh0PL3i+I0+Nj8vsfx+Tt2pecrH2/r1SeEEhfKh9CgjwcWP9f5F3b2fZZct5txFp58Wy18vJnqpUYxk9fLN8qkc9fAeX23JSqDQAA</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=fe6392d33b7c3a50f13f5fea26e45a43"/>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0e6312d33b7c3a50f13f5fea26e45a3b"/>
@@ -6470,9 +6470,9 @@
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0e6312d33b7c3a50f13f5fea26e45a3b^sys_idNOT IN69a3da173b7c3a50f13f5fea26e45adf"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
-        <plan/>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"69a3da173b7c3a50f13f5fea26e45adf","name":"plan","plan_signature":null}}</plan>
         <plan_id>0e6312d33b7c3a50f13f5fea26e45a3b</plan_id>
-        <snapshot>7b9396173b7c3a50f13f5fea26e45ad0</snapshot>
+        <snapshot>9bf6125b3bbc3a50f13f5fea26e45aae</snapshot>
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-10-30 12:53:34</sys_created_on>
         <sys_domain>global</sys_domain>

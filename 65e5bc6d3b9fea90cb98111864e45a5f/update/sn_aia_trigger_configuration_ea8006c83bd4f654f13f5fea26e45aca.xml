@@ -12,7 +12,7 @@
         <name>Entity Customer Sub Type Selected</name>
         <notification_script/>
         <objective_template><![CDATA[Help me resolve 
-Entity Customer Sub Type: ${entity.customer_sub_type}]]></objective_template>
+Case Number: ${number}]]></objective_template>
         <portal/>
         <profile/>
         <run_as>assigned_to</run_as>
@@ -29,7 +29,7 @@ Entity Customer Sub Type: ${entity.customer_sub_type}]]></objective_template>
         <sys_created_on>2025-09-25 12:38:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>ea8006c83bd4f654f13f5fea26e45aca</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>x_vuram_financia_0_fcc_kyc_cases</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -37,7 +37,7 @@ Entity Customer Sub Type: ${entity.customer_sub_type}]]></objective_template>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sn_aia_trigger_configuration_ea8006c83bd4f654f13f5fea26e45aca</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-23 05:04:29</sys_updated_on>
+        <sys_updated_on>2025-11-04 11:31:19</sys_updated_on>
         <target_table>x_vuram_financia_0_fcc_kyc_cases</target_table>
         <trigger_flow display_value="FCC KYC Case - AI Agent: Suggest Document - b680c6083bd4f654cb98111864e45a03">3680c6083bd4f654cb98111864e45a04</trigger_flow>
         <trigger_flow_definition_type>record_update</trigger_flow_definition_type>
