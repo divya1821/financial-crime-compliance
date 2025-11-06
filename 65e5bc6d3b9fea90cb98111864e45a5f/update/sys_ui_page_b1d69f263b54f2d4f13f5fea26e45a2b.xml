@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category/>
+        <client_script><![CDATA[// Setup referer URL for navigation
+var url = new GlideURL();
+url.setEncode(false);
+url.setFromCurrent();
+url.deleteParam('sysparm_record_scope');
+$('referer').value = url.getURL();
+
+// Context menu for each property
+function showPropertyContext(event, id) {
+    var mcm = new GwtContextMenu('context_menu_property_' + id);
+    mcm.clear();
+    mcm.addURL("${gs.getMessage('Edit Property')}", "sys_properties.do?sysparm_query=name=" + id, "gsft_main");
+    mcm.addHref("${gs.getMessage('Copy Name To Clipboard')}", "copyToClipboard('" + id + "')");
+    return contextShow(event, mcm.getID(), 500, 0, 0);
+}
+
+// Color preview handler
+function upgradeColor(id) {
+    var input = $(id);
+    var preview = $('example.' + id);
+    if (!input || !preview) return;
+
+    var color = input.value;
+    try {
+        preview.style.backgroundColor = color;
+    } catch (ex) {
+        alert('Invalid color: ' + color);
+        input.value = '';
+        preview.style.backgroundColor = 'white';
+    }
+}
+
+// Accessibility: auto-focus save button
+document.getElementById('saveBtn').focus();
+]]></client_script>
+        <description>This UI page contains the list of system properties for financial crime compliance application</description>
+        <direct>false</direct>
+        <endpoint>x_vuram_financia_0_application_configuration_manager.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:g2="glide" xmlns:j2="jelly:core">
+
+    <g:inline template="output_messages2.xml" />
+
+    <form id="system_properties_ui.do" name="system_properties" style="display: inline;" action="system_properties_update.do" method="POST">
+
+        <input name="sys_action" type="hidden" value="save" />
+        <input name="referer" id="referer" type="hidden" value="" />
+        <input id="section_form_id" type="hidden" value="system_properties_ui.do" />
+
+        <style>
+            /* Navbar styling (title bar) */
+            .navbar {
+                background-color: #293E6A !important;
+                border: none !important;
+                box-shadow: none !important;
+                margin-bottom: 0 !important;
+                padding: 10px 20px !important;
+            }
+
+            .navbar-title {
+                font-size: 20px;
+                font-weight: 600;
+                color: #fff !important;
+                margin: 0;
+            }
+
+            /* Save button style for contrast */
+            #saveBtn {
+                background-color: #556CD6 !important;
+                border-color: #556CD6 !important;
+                color: #fff !important;
+                font-weight: 500;
+            }
+
+            #saveBtn:hover {
+                background-color: #4255b0 !important;
+            }
+
+            /* Remove borders and lines elsewhere */
+            .panel,
+            .panel-default {
+                border: none !important;
+                box-shadow: none !important;
+                background: #f8f9fb !important;
+                border-radius: 6px !important;
+                padding: 15px !important;
+            }
+
+            .panel-heading {
+                border-bottom: none !important;
+            }
+
+            .panel-body {
+                background: #f8f9fb !important;
+            }
+
+            hr,
+            .container-fluid:first-of-type {
+                border: none !important;
+            }
+        </style>
+
+        <!-- Highlighted Top Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid" style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="navbar-header">
+                    <h1 class="navbar-title properties_page_title">
+                        <span class="caption">${gs.getMessage("FCC App Configuration Manager")}</span>
+                    </h1>
+                </div>
+                <div>
+                    <button class="btn" id="saveBtn" type="submit" name="action">${gs.getMessage("Save")}</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two-column layout -->
+        <div class="container-fluid" style="padding: 20px;">
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+                <!-- FCC Risk Configurations -->
+                <div style="flex: 1; min-width: 45%;">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_risk_configurations" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_risk_weightage_configuration" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_periodic_kyc_review_durations" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_uk_company_house_property" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_video_kyc_configuration" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_ocr_engine" />
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FCC UK Company House Property -->
+                <div style="flex: 1; min-width: 45%;">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_individual_ai_agents_property" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_entity_ai_agents_property" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_perpetual_kyc_configurations" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_entity_perpetual_kyc_configurations" />
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Save Button -->
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="btn btn-primary" type="submit" name="action">${gs.getMessage("Save")}</button>
+            </div>
+        </div>
+
+    </form>
+
+</j:jelly>]]></html>
+        <name>application_configuration_manager</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-10-03 13:21:41</sys_created_on>
+        <sys_id>b1d69f263b54f2d4f13f5fea26e45a2b</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>application_configuration_manager</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ui_page_b1d69f263b54f2d4f13f5fea26e45a2b</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-11-06 07:51:13</sys_updated_on>
+    </sys_ui_page>
+</record_update>
