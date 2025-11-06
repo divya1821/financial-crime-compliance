@@ -4,7 +4,23 @@
         <description/>
         <name>chrome_tab</name>
         <page display_value="Financial Crime Compliance">148dc9613bd32e90cb98111864e45a13</page>
-        <required_translations>[ ]</required_translations>
+        <required_translations>[ {
+  "message" : "New Change Request",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "New Incident",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "New Interaction",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "New Problem",
+  "code" : "",
+  "comment" : ""
+} ]</required_translations>
         <route/>
         <suffix>chrome_tab</suffix>
         <sys_class_name>sys_ux_page_property</sys_class_name>
@@ -13,19 +29,107 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>global</sys_domain_path>
         <sys_id>b6b8e4863bd362d0cb98111864e45ae2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>chrome_tab</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_page_property_b6b8e4863bd362d0cb98111864e45ae2</sys_update_name>
-        <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-08-18 14:45:56</sys_updated_on>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-11-06 12:15:51</sys_updated_on>
         <type>json</type>
         <unique_name>x_vuram_financia_0.148dc9613bd32e90cb98111864e45a13.root.global.chrome_tab</unique_name>
-        <value>[{"maxMainTabLimit": 10,&#13;
-  "maxTotalSubTabLimit": 30&#13;
-}]</value>
+        <value>{&#13;
+	"contextual": [&#13;
+		"record",&#13;
+		"kb_view"&#13;
+	],&#13;
+	"newTabMenu": [&#13;
+		{&#13;
+			"label": {&#13;
+				"translatable": true,&#13;
+				"message": "New Interaction"&#13;
+			},&#13;
+			"routeInfo": {&#13;
+				"route": "record",&#13;
+				"fields": {&#13;
+					"table": "interaction",&#13;
+					"sysId": "-1"&#13;
+				},&#13;
+				"multiInstField": "sysId"&#13;
+			},&#13;
+			"condition": {&#13;
+				"tableDescription": {&#13;
+					"table": "interaction",&#13;
+					"canCreate": true&#13;
+				}&#13;
+			}&#13;
+		},&#13;
+		{&#13;
+			"label": {&#13;
+				"translatable": true,&#13;
+				"message": "New Incident"&#13;
+			},&#13;
+			"routeInfo": {&#13;
+				"route": "record",&#13;
+				"fields": {&#13;
+					"table": "incident",&#13;
+					"sysId": "-1"&#13;
+				},&#13;
+				"multiInstField": "sysId"&#13;
+			},&#13;
+			"condition": {&#13;
+				"tableDescription": {&#13;
+					"table": "incident",&#13;
+					"canCreate": true&#13;
+				},&#13;
+				"roles": [&#13;
+					"sn_incident_write",&#13;
+					"itil"&#13;
+				]&#13;
+			}&#13;
+		},&#13;
+		{&#13;
+			"label": {&#13;
+				"translatable": true,&#13;
+				"message": "New Change Request"&#13;
+			},&#13;
+			"routeInfo": {&#13;
+				"route": "create-change-request-page",&#13;
+				"fields": {},&#13;
+				"multiInstField": ""&#13;
+			},&#13;
+			"condition": {&#13;
+				"tableDescription": {&#13;
+					"table": "change_request",&#13;
+					"canCreate": true&#13;
+				}&#13;
+			}&#13;
+		},&#13;
+		{&#13;
+			"label": {&#13;
+				"translatable": true,&#13;
+				"message": "New Problem"&#13;
+			},&#13;
+			"routeInfo": {&#13;
+				"route": "record",&#13;
+				"fields": {&#13;
+					"table": "problem",&#13;
+					"sysId": "-1"&#13;
+				},&#13;
+				"multiInstField": ""&#13;
+			},&#13;
+			"condition": {&#13;
+				"tableDescription": {&#13;
+					"table": "problem",&#13;
+					"canCreate": true&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+	],&#13;
+	"maxMainTabLimit": 10,&#13;
+	"maxTotalSubTabLimit": 30&#13;
+}</value>
     </sys_ux_page_property>
     <sys_translated_text action="delete_multiple" query="documentkey=b6b8e4863bd362d0cb98111864e45ae2"/>
 </record_update>
