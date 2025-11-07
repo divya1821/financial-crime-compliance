@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
     <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent/>
         <macroponent_config>{
     "table": "x_vuram_financia_0_fcc_kyc_cases",
-    "sysId": "e94a54453bf3ea10cb98111864e45a74",
+    "sysId": "8fcea6593bc5b690cb98111864e45a48",
     "query": "",
     "extraParams": "",
     "views": "default",
@@ -14,7 +15,7 @@
         "forcedViewName": "individual",
         "inputExtraParams": null,
         "inputQuery": null,
-        "inputSysId": "61cd9ccd3bf3ea10cb98111864e45ac3",
+        "inputSysId": "e94a54453bf3ea10cb98111864e45a74",
         "inputTable": "x_vuram_financia_0_fcc_kyc_cases",
         "isMappedToAppShell": true,
         "screen": null,
@@ -64,13 +65,13 @@
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-13 09:01:31</sys_created_on>
         <sys_id>f58277463b97e2d0cb98111864e45aca</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_uib_screen_test_values_f58277463b97e2d0cb98111864e45aca</sys_update_name>
-        <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-09-04 11:52:41</sys_updated_on>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-07 09:42:25</sys_updated_on>
     </sys_uib_screen_test_values>
 </record_update>
