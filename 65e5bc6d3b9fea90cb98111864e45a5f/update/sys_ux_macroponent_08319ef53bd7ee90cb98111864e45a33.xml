@@ -246,7 +246,7 @@
                                     },
                                     "columns": {
                                         "type": "JSON_LITERAL",
-                                        "value": "number,case_type,customer_type,state,sys_created_on"
+                                        "value": "number,customer_name,case_type,customer_type,state,sys_created_on"
                                     },
                                     "daClientActionContract": {
                                         "type": "JSON_LITERAL",
@@ -3837,7 +3837,7 @@
                                                             "type": "MACROPONENT"
                                                         },
                                                         "elementId": "button_1",
-                                                        "elementLabel": "Button 1",
+                                                        "elementLabel": "Create Case",
                                                         "eventMappings": [
                                                             {
                                                                 "eventMappingId": "iighhKffPdAAUIggjjdkEeeddreeXyqZA",
@@ -3899,7 +3899,7 @@
                                                                     "apiVersion": "2.0.0",
                                                                     "controllerElementId": null,
                                                                     "inlineScript": null,
-                                                                    "scriptSysId": "b9add13c3b67ea10cb98111864e45ab9",
+                                                                    "scriptSysId": "3d0288ca3b457ed0f13f5fea26e45a5e",
                                                                     "target": null
                                                                 },
                                                                 "type": "CLIENT_TRANSFORM_SCRIPT"
@@ -5075,84 +5075,111 @@
 ]</props>
         <required_translations>[ {
   "message" : "Afghanistan",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Australia",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Authorized Representative",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Brazil",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Canada",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Case Created Successfully",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Case created successfully. An email has been sent to the customer.",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Create case",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Current Photocard Driving License",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Current Signed Passport",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Customer Onboarding Cases",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Denmark",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Domicile Country",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Email Id",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Enter a label",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Entity",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Got it",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Identity Card Issued by the Electoral Office",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Identity Verification Types",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "India",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Individual",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Individual Name",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Legal Entity Name",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Legal Name",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "National Identity Card",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Registration Number",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "United Kingdom",
+  "code" : "",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -5268,14 +5295,14 @@
         <sys_created_by>divya.suresh</sys_created_by>
         <sys_created_on>2025-08-12 07:17:45</sys_created_on>
         <sys_id>08319ef53bd7ee90cb98111864e45a33</sys_id>
-        <sys_mod_count>109</sys_mod_count>
+        <sys_mod_count>116</sys_mod_count>
         <sys_name>Customer Onboarding Cases</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_macroponent_08319ef53bd7ee90cb98111864e45a33</sys_update_name>
-        <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-09-03 03:47:13</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-11-07 15:35:34</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=08319ef53bd7ee90cb98111864e45a33"/>
 </record_update>
