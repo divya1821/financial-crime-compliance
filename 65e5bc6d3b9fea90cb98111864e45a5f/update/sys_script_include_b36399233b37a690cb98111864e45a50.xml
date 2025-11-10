@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_vuram_financia_0.FinCrimeSummarize</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FinCrimeSummarize</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FinCrimeSummarize = Class.create();
+FinCrimeSummarize.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    summarizeQuote: function(recordSysID) {
+        //gs.info("@@@asifa script include called");
+        var table = 'x_vuram_financia_0_fcc_kyc_cases';
+        recordSysID = this.getParameter('sysparm_recordSysId');
+        //gs.info('@@@asifa' + recordSysID);
+        var data;
+        //   gs.info('I am in LLM For Quote - ' + recordSysID + ' - ' + (recordSysID && table));
+        // if (recordSysID && table) {
+        //     //gs.info('Inside first IF');
+        //     data = new global.getTableAndDetails().getFullRecordData(table, recordSysID);
+        // } else {
+        //     return 'Record SysId is Not Correct or have some problem';
+        // }
+
+        var inputsPayload = {};
+        // quote is a input of type: glide_record
+        // inputsPayload['json_object'] = data;
+        inputsPayload['fcc_kyc_case'] = {
+            tableName: table,
+            sysId: recordSysID,
+            queryString: ''
+        };
+
+       //gs.info(	"abhi-1"+JSON.stringify(inputsPayload));
+        var capabilityId = '894c863e3b3fae50f13f5fea26e45a1b';
+        var request = {
+            executionRequests: [{
+                payload: inputsPayload,
+                capabilityId: capabilityId,
+                meta: {
+                    skillConfigId: '614cca7e3b3fae50f13f5fea26e45aaf'
+                }
+            }],
+            mode: 'sync'
+        };
+        //gs.info('@@abhi0'+request);
+        try {
+            var response = sn_one_extend.OneExtendUtil.execute(request) || {};
+			//gs.info('@abhi2'+response);
+            var skillResponse = ((response["capabilities"] || {})[capabilityId] || {})["response"];
+			//gs.info("abhi3"+skillResponse+"");
+            var results = JSON.parse(skillResponse);
+            var plainText = results.model_output.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+            //gs.info('@@@asifa plainText = ' + plainText);
+
+            return plainText;
+        } catch (e) {
+            gs.error(e);
+            return 'Something went wrong while executing skill.';
+        }
+
+    },
+    // extractQuoteContent: function(input) {
+    //     var result = {
+    //         summary: '',
+    //         emailSubject: '',
+    //         emailBody: ''
+    //     };
+
+    //     // Split summary and email sections
+    //     var summaryMatch = input.match(/Summary:\s*([\s\S]*?)\s*Email:/);
+    //     var emailMatch = input.match(/Email:\s*([\s\S]*)/);
+
+    //     if (summaryMatch) {
+    //         result.summary = summaryMatch[1].trim();
+    //     }
+
+    //     if (emailMatch) {
+    //         var emailText = emailMatch[1].trim();
+
+    //         // Extract subject
+    //         var subjectMatch = emailText.match(/Subject:\s*(.+?)\s*\n/);
+    //         if (subjectMatch) {
+    //             result.emailSubject = subjectMatch[1].trim();
+    //         }
+
+    //         // Remove subject line from email body
+    //         result.emailBody = emailText.replace(/Subject:\s*.+?\n/, '').trim();
+    //     }
+
+    //     return result;
+    // },
+    type: 'FinCrimeSummarize'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-11 09:52:43</sys_created_on>
+        <sys_id>b36399233b37a690cb98111864e45a50</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>FinCrimeSummarize</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_script_include_b36399233b37a690cb98111864e45a50</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-10 09:55:03</sys_updated_on>
+    </sys_script_include>
+</record_update>
