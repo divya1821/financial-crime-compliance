@@ -6,9 +6,11 @@
 	c.ownership_structure=[];
 	c.idv_ubo=[];
 	c.coi=[];
-	c.listingProof="";
+	c.listingProof=[];
+	c.individualsNew=[];
 	// ---- Safe supplier country initialization ----
 c.formData = c.formData || {};
+
 
 // Auto-select exchange checkbox based on Customer Type & Subtype
 $scope.$watchGroup(['c.formData.customerType', 'c.formData.customerSubType'], function(newValues) {
@@ -180,6 +182,7 @@ c.updateUSD = function() {
   isTradedOnExchange: false,
   listedCountriesSelected: [],
 	listedCountriesSelectedd:[],
+	listingProof: c.listing_details,
   primaryAssetsCountry: c.data.primary_country_of_assets,
   legalStreetAddress: c.data.legal_street_address,
   legalPostalCode: c.data.legal_postal_code,
@@ -209,7 +212,7 @@ c.updateUSD = function() {
   supplierCountries: c.data.countries_of_the_customer_s_significant_suppliers,
   natureOfBusiness: c.data.nature_of_business,
   financialStatements:c.financialStatement,   // ✅ matches Preview
-  hasPrivateOwnership: c.data.is_there_significant_private_ownership,
+  privateOwnership: true, //c.data.is_there_significant_private_ownership,
   individuals: c.data.individuals || [],
   nonIndividuals: c.data.nonIndividuals || [],
   controllers: c.data.controllers || [],
@@ -286,6 +289,18 @@ c.removeFinancialStatement = function() {
   c.formData.financialStatement = null;
   c.tempFileContent = null;
 };
+	
+	c.onListingProofSelect = function(files) {
+  if (files && files.length > 0) {
+    $scope.$applyAsync(function() {
+      c.listingProof = Array.from(files);
+    });
+  } else {
+    $scope.$applyAsync(function() {
+      c.listingProof = [];
+    });
+  }
+};
 
 
   // Utility for multi-select chip dropdown
@@ -338,7 +353,7 @@ c.removeFinancialStatement = function() {
 
   c.copyAddress = function() {
     if (c.formData.sameAsLegal) {
-      c.formData.physicalStreet = c.formData.legalStreetAddress;
+			c.formData.physicalStreet = c.formData.legalStreetAddress;
       c.formData.physicalPostalCode = c.formData.legalPostalCode;
       c.formData.physicalCity = c.formData.legalCity;
       c.formData.physicalCountry = c.formData.legalCountry;
@@ -358,19 +373,24 @@ c.removeFinancialStatement = function() {
     localStorage.setItem('bankingFormData', JSON.stringify(c.formData));
     alert("Progress saved successfully!");
   };
-
+ 
   c.validateCurrentStep = function() {
+		
     switch(c.currentStep) {
       case 1:
-        return c.formData.legalName && c.formData.doingBusinessAsName && c.formData.sic && c.formData.customerType && c.formData.productServices && c.formData.registrationNumber && c.formData.domicileCountry && c.formData.sicDescription && c.formData.customerSubType &&  c.formData.legalEntityDescription;
-      case 2:
+				if(c.formData.isTradedOnExchange == true)
+				 return c.formData.legalName && c.formData.doingBusinessAsName && c.formData.sic && c.formData.customerType && c.formData.productServices && c.formData.registrationNumber && c.formData.domicileCountry && c.formData.sicDescription && c.formData.customerSubType &&  c.formData.legalEntityDescription && c.formData.listedCountriesSelected.length>0 && c.listingProof && c.listingProof.length > 0;
+				else
+					return c.formData.legalName && c.formData.doingBusinessAsName && c.formData.sic && c.formData.customerType && c.formData.productServices && c.formData.registrationNumber && c.formData.domicileCountry && c.formData.sicDescription && c.formData.customerSubType &&  c.formData.legalEntityDescription;
+		      case 2:
         return c.formData.domicileCountry && c.formData.primaryAssetsCountry;
       case 3:
         return c.formData.legalStreetAddress && c.formData.legalPostalCode && c.formData.legalCity && c.formData.legalCountry && c.formData.physicalStreet && c.formData.physicalPostalCode && c.formData.physicalCity && c.formData.physicalCountry;
       case 4:
         return c.formData.totalAssets && c.formData.currencyType && c.formData.amountInUSD && c.formData.annualRevenueSource && c.formData.chequeWithdrawal && c.formData.achWithdrawal && c.formData.atmWithdrawal && c.formData.cashDeposit && c.formData.asOfDate && c.formData.amountInLocal && c.formData.annualRevenue && c.formData.transactionVolume&& c.formData.financialStatement;
       case 5:
-        return c.formData.significantSuppliers && c.formData.listedCountriesSelectedd && c.formData.natureOfBusiness;
+         return c.formData.significantSuppliers &&(c.formData.listedCountriesSelectedd.length>0)&& c.formData.natureOfBusiness;
+			
       default:
         return true;
     }
@@ -385,8 +405,9 @@ c.submitForm = function() {
 	
   var payload = angular.copy(c.formData);
 	 uploadFile("supportingDocsOS", "OS_", "ownership_structure", c.ownership_structure, "");
-	uploadFile("supportingDocsUBO", "OS_", "id_v_of_ubo_controller", c.idv_ubo, "")
-	uploadFile("supportingDocsCOI", "OS_", "constitution_doc_coi", c.coi, "")
+	uploadFile("supportingDocsUBO", "OS_", "id_v_of_ubo_controller", c.idv_ubo, "");
+	uploadFile("supportingDocsCOI", "OS_", "constitution_doc_coi", c.coi, "");
+	uploadFile("listingProof", "OS_", "listing_details", c.listingProof, "");
 
   // Step 1 – upload the financial statement if present
   var uploadPromise = Promise.resolve();
@@ -426,6 +447,15 @@ c.submitForm = function() {
   }).catch(function(err) {
     console.error("Submit failed:", err);
   });
+};
+	c.onFileSelect = function(files) {
+  if (files && files.length > 0) {
+    c.listingProof = Array.from(files);
+    $scope.$applyAsync(); // ensure Angular digest updates
+  }
+};
+	c.triggerFileUpload = function(inputId) {
+  document.getElementById(inputId).click();
 };
 
   // Load saved data
@@ -1230,7 +1260,7 @@ body, .kyc-container {
         // map to specific field if provided
         if (input.fieldName) {
           gr.setValue(input.fieldName, attachmentSysId);
-					gs.addErrorMessage(attachmentSysId+"-"+input.recordSysId);
+					//gs.addErrorMessage(attachmentSysId+"-"+input.recordSysId);
           gr.update();
         }
 				
@@ -1361,6 +1391,7 @@ body, .kyc-container {
         grInd1.query();
 
         if (grInd1.next()) {
+					  grInd1.listing_details = record.listingProof;
             grInd1.legal_name = record.legalName;
             grInd1.doing_business_as_name = record.doingBusinessAsName;
             grInd1.sic = record.sic;
@@ -1401,7 +1432,7 @@ body, .kyc-container {
             grInd1.describe_the_customer_significant_suppliers_free_text = record.significantSuppliers;
             grInd1.countries_of_the_customer_s_significant_suppliers = record.listedCountriesSelectedd.toString();
             grInd1.nature_of_business = record.natureOfBusiness;
-            grInd1.is_there_significant_private_ownership = record.isThereSignificantPrivateOwnership;
+            grInd1.is_there_significant_private_ownership = record.privateOwnership;
 
 
             if (grInd1.update()) {
@@ -1592,14 +1623,14 @@ body, .kyc-container {
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-12 13:33:19</sys_created_on>
         <sys_id>6d27e7b13b9b2210f13f5fea26e45a72</sys_id>
-        <sys_mod_count>399</sys_mod_count>
+        <sys_mod_count>468</sys_mod_count>
         <sys_name>FCC KYC Entity Form</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_6d27e7b13b9b2210f13f5fea26e45a72</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-30 11:44:15</sys_updated_on>
+        <sys_updated_on>2025-11-10 12:25:02</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">
@@ -1743,7 +1774,7 @@ body, .kyc-container {
 
 
    <!-- If Listed: Multi-select Countries -->
-<div class="form-group" ng-if="c.formData.isTradedOnExchange">
+<div class="form-group" ng-show="c.formData.isTradedOnExchange">
     <label>If listed, which country it is listed <span class="required-asterisk">*</span></label>
     <div class="dropdown">
         <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -1769,16 +1800,29 @@ body, .kyc-container {
             <span class="remove-chip" ng-click="c.toggleListedCountry(country)">×</span>
         </span>
     </div>
-  <div class="form-group col-md-2">
-          <label>Listing Proof <span class="required-asterisk">*</span></label>
-          <input type="file" id=listingProof class="form-control-file" ng-model="c.listingProof">
-        </div>
-</div>
+<!--<div class="form-group col-md-3">
+  <label>Listing Proof <span class="required-asterisk">*</span></label>
+  <div class="input-group">
+    <button type="button"
+            class="btn btn-primary"
+            ng-click="c.triggerFileUpload('listingProof')">
+      <i class="fa fa-upload"></i> Choose File
+    </button>
+    <span class="ml-2" >
+      {{ c.listingProof[0].name }}
+    </span>
+    <input type="file"
+           id="listingProof"
+           class="d-none"
+            onchange="angular.element(this).scope().c.onFileSelect(this.files)">
+  </div>
+</div>-->
+  <div class="form-group col-md-2"> <label>Listing Proof <span class="required-asterisk">*</span></label> <input type="file" id=listingProof class="form-control-file" ng-model="c.listingProof" onchange="angular.element(this).scope().c.onListingProofSelect(this.files)"> </div> </div>
 
     <!-- Navigation -->
     <div class="form-navigation">
         <div></div>
-        <button ng-show="c.validateCurrentStep(c.currentStep)" class="btn btn-primary" ng-click="c.nextStep()">
+        <button ng-show="c.validateCurrentStep(c.currentStep) && (!c.formData.isTradedOnExchange || (c.listingProof && c.listingProof.length > 0))" class="btn btn-primary" ng-click="c.nextStep()">
             Next <i class="fa fa-arrow-right ml-2"></i>
         </button>
     </div>
@@ -2139,8 +2183,8 @@ body, .kyc-container {
 <div class="form-group">
   <label>
     <input type="checkbox"
-           ng-model="c.formData.hasPrivateOwnership"
-           ng-checked="true">
+           ng-model="c.formData.privateOwnership"
+           >
     Is there significant private ownership?
   </label>
 </div>
@@ -2322,11 +2366,11 @@ body, .kyc-container {
     <tbody>
 
       <!-- Row 1 (summary row) -->
-      <tr ng-repeat-start="ctrl in c.formData.controllers">
-        <td>{{ctrl.first_name}}</td>
-        <td>{{ctrl.last_name}}</td>
-        <td>{{ctrl.dob | date:'yyyy-MM-dd'}}</td>
-        <td>{{ctrl.country_of_residence}}</td>
+     <tr ng-repeat-start="ctrl in c.formData.controllers">
+        <td><input type="text" class="form-control" ng-model="ctrl.first_name"></td>
+        <td><input type="text" class="form-control" ng-model="ctrl.last_name"></td>
+        <td><input type="date" class="form-control" ng-model="ctrl.dob"></td>
+        <td><input type="text" class="form-control" ng-model="ctrl.country_of_residence"></td>
 
         <!-- Eye icon for expand/collapse -->
         <td class="text-center">
@@ -2375,6 +2419,10 @@ body, .kyc-container {
                 <label>Address Line</label>
                 <input type="text" class="form-control" ng-model="ctrl.address_line">
               </div>
+               <div class="form-group col-md-4">
+                <label>Date of Birth</label>
+                <input type="date" class="form-control" ng-model="ctrl.dob">
+              </div>
               <div class="form-group col-md-4">
                 <label>Postal Code</label>
                 <input type="text" class="form-control" ng-model="ctrl.postal_code">
@@ -2400,48 +2448,107 @@ body, .kyc-container {
   </button>
 </div>
 
-    <!-- Authorized Signers -->
-    <div class="border rounded p-3 mb-3">
-      <h5>Authorized Signers</h5>
-      <table class="table table-bordered">
-        <thead class="thead-light">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Date of Birth</th>
-            <th>Country of Residence</th>
-            <th style="width:70px;">Action</th>
-            <th style="width:100px;">Video KYC</th>
-            <th style="width:150px;">Upload Documents</th>
-            <th style="width:80px;">Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="signer in c.formData.authorizedSigners">
-            <td><input type="text" class="form-control" ng-model="signer.first_name"></td>
-            <td><input type="text" class="form-control" ng-model="signer.last_name"></td>
-            <td><input type="date" class="form-control" ng-model="signer.dob"></td>
-            <td><input type="text" class="form-control" ng-model="signer.country_of_residence"></td>
-            <td class="text-center">
-              <i class="fa"
-                 ng-class="{'fa-eye': !signer.showDetails, 'fa-eye-slash': signer.showDetails}"
-                 style="cursor:pointer;"
-                 ng-click="signer.showDetails = !signer.showDetails"></i>
-            </td>
-            <td class="text-center"><input type="checkbox" ng-model="signer.video_kyc"></td>
-            <td class="text-center"><input type="file" ng-model="signer.upload_docs"></td>
-            <td class="text-center">
-              <button type="button" class="btn btn-danger btn-sm" ng-click="c.formData.authorizedSigners.splice($index, 1)">
-                <i class="fa fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button class="btn btn-primary btn-sm" ng-click="c.formData.authorizedSigners.push({})">
-        <i class="fa fa-plus"></i> Add Row
-      </button>
-    </div>
+  <!-- Authorized Signers  -->
+<div class="border rounded p-3 mb-3">
+  <h5>Authorized Signers</h5>
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Country of Residence</th>
+        <th style="width:70px;">Action</th>
+        <th style="width:100px;">Video KYC</th>
+        <th style="width:150px;">Upload Documents</th>
+        <th style="width:80px;">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- NOTE: replicated style: no 'track by', inline splice delete, file input uses ng-model -->
+      <tr ng-repeat-start="signer in c.formData.authorizedSigners">
+        <td><input type="text" class="form-control" ng-model="signer.first_name"></td>
+        <td><input type="text" class="form-control" ng-model="signer.last_name"></td>
+        <td><input type="date" class="form-control" ng-model="signer.dob"></td>
+        <td><input type="text" class="form-control" ng-model="signer.country_of_residence"></td>
+
+        <td class="text-center">
+          <i class="fa"
+             ng-class="{'fa-eye': !signer.showDetails, 'fa-eye-slash': signer.showDetails}"
+             style="cursor:pointer;"
+             ng-click="signer.showDetails = !signer.showDetails"></i>
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox" ng-model="signer.video_kyc">
+        </td>
+
+        <td class="text-center">
+          <input type="file" ng-model="signer.upload_docs">
+        </td>
+
+        <td class="text-center">
+          <button type="button" class="btn btn-danger btn-sm"
+                  ng-click="c.formData.authorizedSigners.splice($index, 1)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+
+      <tr ng-repeat-end ng-show="signer.showDetails" class="bg-light">
+        <td colspan="8">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label>First Name</label>
+                <input type="text" class="form-control" ng-model="signer.first_name">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Middle Name</label>
+                <input type="text" class="form-control" ng-model="signer.middle_name">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Last Name</label>
+                <input type="text" class="form-control" ng-model="signer.last_name">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Address Line</label>
+                <input type="text" class="form-control" ng-model="signer.address_line">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Postal Code</label>
+                <input type="text" class="form-control" ng-model="signer.postal_code">
+              </div>
+              <div class="form-group col-md-4">
+                <label>City</label>
+                <input type="text" class="form-control" ng-model="signer.city">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Date of Birth</label>
+                <input type="date" class="form-control" ng-model="signer.dob">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Country of Residence</label>
+                <input type="text" class="form-control" ng-model="signer.country_of_residence">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Country of Nationality</label>
+                <input type="text" class="form-control" ng-model="signer.country_of_nationality">
+              </div>
+            </div>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary btn-sm" ng-click="c.formData.authorizedSigners.push({})">
+    <i class="fa fa-plus"></i> Add Row
+  </button>
+</div>
+
+
+
 
     <!-- Supporting Documents -->
     <div class="border rounded p-3 mb-3">
@@ -2543,7 +2650,7 @@ body, .kyc-container {
     <h5>1. Customer Section</h5>
     <div class="row">
       <div class="col-md-6"><strong>Legal Name:</strong> {{c.formData.legalName}}</div>
-      <div class="col-md-6"><strong>Doing Business As:</strong> {{c.formData.doingBusinessAs}}</div>
+      <div class="col-md-6"><strong>Doing Business As Name:</strong> {{c.formData.doingBusinessAsName}}</div>
     </div>
     <div class="row">
       <div class="col-md-6"><strong>SIC:</strong> {{c.formData.sic}}</div>
@@ -2619,7 +2726,7 @@ body, .kyc-container {
   <div class="preview-section">
     <h5>4. Ownership & Signatories</h5>
     <div class="row">
-      <div class="col-md-6"><strong>Private Ownership:</strong> {{c.formData.privateOwnership ? 'Yes':'No'}}</div>
+      <div class="col-md-6"><strong>Private Ownership:</strong> {{c.formData.privateOwnership === true ? 'Yes' : 'No'}}</div>
     </div>
 
     <div class="row">
@@ -2653,7 +2760,7 @@ body, .kyc-container {
       <div class="col-md-6">
         <strong>Authorised Signers:</strong>
         <ul>
-          <li ng-repeat="signer in c.formData.signers">{{signer.first_name}} {{signer.middle_name}} {{signer.last_name}}</li>
+          <li ng-repeat="signer in c.formData.authorizedSigners">{{signer.first_name}} {{signer.middle_name}} {{signer.last_name}}</li>
         </ul>
       </div>
     </div>
