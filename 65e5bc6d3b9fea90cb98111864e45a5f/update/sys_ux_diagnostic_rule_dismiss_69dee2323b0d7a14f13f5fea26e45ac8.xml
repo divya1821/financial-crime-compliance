@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_diagnostic_rule_dismiss">
+    <sys_ux_diagnostic_rule_dismiss action="INSERT_OR_UPDATE">
+        <dismiss_targets>{
+  "edd58c2a438182101f2bf7bb68b8f2c9": [
+    {
+      "dropdown_1": {
+        "dismissTimestamp": "2025-11-10T11:47:20.461Z",
+        "dismissedBy": "478b5c443bc3d210cb98111864e45a7c"
+      }
+    }
+  ],
+  "663b8deb9fa5c650055c6e043b0a1cf2": [
+    {
+      "action_bar_1": {
+        "dismissTimestamp": "2025-11-10T11:51:00.682Z",
+        "dismissedBy": "478b5c443bc3d210cb98111864e45a7c"
+      }
+    }
+  ]
+}</dismiss_targets>
+        <sys_class_name>sys_ux_diagnostic_rule_dismiss</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-11-10 11:51:06</sys_created_on>
+        <sys_id>69dee2323b0d7a14f13f5fea26e45ac8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_diagnostic_rule_dismiss_69dee2323b0d7a14f13f5fea26e45ac8</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-11-10 13:09:00</sys_updated_on>
+        <table_name>sys_ux_macroponent</table_name>
+        <target_id>0ee46b443b632610f13f5fea26e45a3a</target_id>
+    </sys_ux_diagnostic_rule_dismiss>
+</record_update>

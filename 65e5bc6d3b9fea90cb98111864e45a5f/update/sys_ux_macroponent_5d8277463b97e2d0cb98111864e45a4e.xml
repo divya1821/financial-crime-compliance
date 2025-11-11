@@ -222,9 +222,7 @@
                         "type": "section"
                     },
                     "slot": "content",
-                    "styles": {
-                        "width": "250px"
-                    }
+                    "styles": {}
                 }
             ]
         },
@@ -1211,7 +1209,12 @@
                                                 ],
                                                 "id": "4e106040332f87d1ac089faa2f01a491"
                                             },
-                                            "propertyValues": {},
+                                            "propertyValues": {
+                                                "hideDeclarativeActions": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": true
+                                                }
+                                            },
                                             "slot": null,
                                             "styles": {}
                                         }
@@ -6331,7 +6334,7 @@
                                 ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
-                                    "value": null
+                                    "value": false
                                 },
                                 "preset": null,
                                 "propertyValues": {
@@ -6344,8 +6347,37 @@
                                         "value": null
                                     },
                                     "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
+                                        "transform": {
+                                            "operands": {
+                                                "container": [
+                                                    {
+                                                        "operation": {
+                                                            "operand": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "workNotes"
+                                                                    ]
+                                                                },
+                                                                "type": "STATE_BINDING"
+                                                            },
+                                                            "operator": "NOT"
+                                                        },
+                                                        "type": "UNARY"
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": true
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": false
+                                                    }
+                                                ],
+                                                "type": "LIST_CONTAINER"
+                                            },
+                                            "operator": "IF"
+                                        },
+                                        "type": "CLIENT_TRANSFORM"
                                     },
                                     "icon": {
                                         "type": "JSON_LITERAL",
@@ -7181,7 +7213,7 @@
                                             {
                                                 "broker": null,
                                                 "clientScript": null,
-                                                "clientTransformScript": "javascript(/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: \"state=150^work_notes=Maker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value,\n\t\tuseSetDisplayValue: null\n\t};\n})",
+                                                "clientTransformScript": "javascript(/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: \"state=150^work_notes=Relationship Manager Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value,\n\t\tuseSetDisplayValue: null\n\t};\n})",
                                                 "conditional": null,
                                                 "declarativeAction": null,
                                                 "event": null,
@@ -7193,7 +7225,7 @@
                                                         "script": {
                                                             "apiVersion": "1.0.0",
                                                             "controllerElementId": null,
-                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: \"state=150^work_notes=Maker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value,\n\t\tuseSetDisplayValue: null\n\t};\n}",
+                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: \"state=150^work_notes=Relationship Manager Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value,\n\t\tuseSetDisplayValue: null\n\t};\n}",
                                                             "scriptSysId": null,
                                                             "target": null
                                                         },
@@ -7208,7 +7240,7 @@
                                 ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
-                                    "value": null
+                                    "value": false
                                 },
                                 "preset": null,
                                 "propertyValues": {
@@ -7221,8 +7253,37 @@
                                         "value": null
                                     },
                                     "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
+                                        "transform": {
+                                            "operands": {
+                                                "container": [
+                                                    {
+                                                        "operation": {
+                                                            "operand": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "workNotes3"
+                                                                    ]
+                                                                },
+                                                                "type": "STATE_BINDING"
+                                                            },
+                                                            "operator": "NOT"
+                                                        },
+                                                        "type": "UNARY"
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": true
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": false
+                                                    }
+                                                ],
+                                                "type": "LIST_CONTAINER"
+                                            },
+                                            "operator": "IF"
+                                        },
+                                        "type": "CLIENT_TRANSFORM"
                                     },
                                     "icon": {
                                         "type": "JSON_LITERAL",
@@ -8052,8 +8113,37 @@
                                         "value": null
                                     },
                                     "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
+                                        "transform": {
+                                            "operands": {
+                                                "container": [
+                                                    {
+                                                        "operation": {
+                                                            "operand": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "workNotes2"
+                                                                    ]
+                                                                },
+                                                                "type": "STATE_BINDING"
+                                                            },
+                                                            "operator": "NOT"
+                                                        },
+                                                        "type": "UNARY"
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": true
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": false
+                                                    }
+                                                ],
+                                                "type": "LIST_CONTAINER"
+                                            },
+                                            "operator": "IF"
+                                        },
+                                        "type": "CLIENT_TRANSFORM"
                                     },
                                     "icon": {
                                         "type": "JSON_LITERAL",
@@ -8843,7 +8933,7 @@
                                             {
                                                 "broker": null,
                                                 "clientScript": null,
-                                                "clientTransformScript": "javascript(/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: \"state=150^work_notes=Maker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value,\n\t\tuseSetDisplayValue: null\n\t};\n})",
+                                                "clientTransformScript": "javascript(/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\n\tvar case_risk;\n\tif(api.data.look_up_a_single_record_1.result.risk_level.value==\"low\")\n\tcase_risk=\"state=150^work_notes=Checker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value;\n\telse\n\tcase_risk=\"state=150^work_notes=Checker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value;\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: case_risk,\n\t\tuseSetDisplayValue: null\n\t};\n})",
                                                 "conditional": null,
                                                 "declarativeAction": null,
                                                 "event": null,
@@ -8855,7 +8945,7 @@
                                                         "script": {
                                                             "apiVersion": "1.0.0",
                                                             "controllerElementId": null,
-                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: \"state=150^work_notes=Maker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value,\n\t\tuseSetDisplayValue: null\n\t};\n}",
+                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\n\tvar case_risk;\n\tif(api.data.look_up_a_single_record_1.result.risk_level.value==\"low\")\n\tcase_risk=\"state=150^work_notes=Checker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value;\n\telse\n\tcase_risk=\"state=150^work_notes=Checker Comments: \"+api.state.workNotes3+\"^assigned_to=\"+api.data.look_up_a_single_record_1.result.previous_user.value+\"^previous_user=\"+api.data.look_up_a_single_record_1.result.assigned_to.value;\n\treturn {\n\t\ttable: \"x_vuram_financia_0_fcc_kyc_cases\",\n\t\trecordId: api.context.props.sysId,\n\t\ttemplateFields: case_risk,\n\t\tuseSetDisplayValue: null\n\t};\n}",
                                                             "scriptSysId": null,
                                                             "target": null
                                                         },
@@ -8883,8 +8973,37 @@
                                         "value": null
                                     },
                                     "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
+                                        "transform": {
+                                            "operands": {
+                                                "container": [
+                                                    {
+                                                        "operation": {
+                                                            "operand": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "workNotes3"
+                                                                    ]
+                                                                },
+                                                                "type": "STATE_BINDING"
+                                                            },
+                                                            "operator": "NOT"
+                                                        },
+                                                        "type": "UNARY"
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": true
+                                                    },
+                                                    {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": false
+                                                    }
+                                                ],
+                                                "type": "LIST_CONTAINER"
+                                            },
+                                            "operator": "IF"
+                                        },
+                                        "type": "CLIENT_TRANSFORM"
                                     },
                                     "icon": {
                                         "type": "JSON_LITERAL",
@@ -11086,7 +11205,7 @@
             },
             "returnFields": {
                 "type": "JSON_LITERAL",
-                "value": "case_type,customer_type,state,assigned_to,previous_user,relationship_manager"
+                "value": "case_type,customer_type,state,assigned_to,previous_user,relationship_manager,risk_level"
             },
             "returnTableMetadata": {
                 "type": "JSON_LITERAL",
@@ -12276,114 +12395,151 @@
 ]</props>
         <required_translations>[ {
   "message" : "Activity",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Agent assist",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Approve",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Attachment",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Attachments",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Cancel",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Case Summarization",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Checker Comments",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Comments to Maker",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Compose",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Continue?",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Custom Close Confirmation",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Details",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Editable record form and list of record activities",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Editable record form only",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Email template",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Enter Comments",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Enter Mandatory comments",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Enter a label",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "List of record activities and input fields for posting work notes or comments",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Maker Comments",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Mandatory justification and documents",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Record not found",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Reject",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Rejection Reason",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "RelatedList",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Return to RM",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Security constraints prevent access to requested page",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Send for Approval",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Send to Maker",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Sendback Comments",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Sendback to Maker",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Sendback to RM",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Submit",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Template",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Upgrade or Downgrade",
+  "code" : "",
   "comment" : ""
 }, {
   "message" : "Yes",
+  "code" : "",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -12530,14 +12686,14 @@
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-13 09:01:28</sys_created_on>
         <sys_id>5d8277463b97e2d0cb98111864e45a4e</sys_id>
-        <sys_mod_count>223</sys_mod_count>
+        <sys_mod_count>246</sys_mod_count>
         <sys_name>Default Case</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_macroponent_5d8277463b97e2d0cb98111864e45a4e</sys_update_name>
-        <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-10-23 04:25:45</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-11-10 12:44:20</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5d8277463b97e2d0cb98111864e45a4e"/>
 </record_update>
