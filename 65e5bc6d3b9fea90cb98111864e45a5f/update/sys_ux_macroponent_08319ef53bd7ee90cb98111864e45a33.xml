@@ -805,6 +805,23 @@
                                                                         "operation": null,
                                                                         "targetId": "UmLddjjfeeeAaavAjjVYMccObbdkeeeR",
                                                                         "type": "EVENT"
+                                                                    },
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": {
+                                                                            "payload": {
+                                                                                "type": "JSON_LITERAL",
+                                                                                "value": {}
+                                                                            },
+                                                                            "sysId": "fe9f0cee3bd7a6d0cb98111864e45afe"
+                                                                        },
+                                                                        "clientTransformScript": "",
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": null,
+                                                                        "operation": null,
+                                                                        "targetId": "eehhTPggZPccSDEeehhjjjjeeAJsRpvuiiaaH",
+                                                                        "type": "CLIENT_SCRIPT"
                                                                     }
                                                                 ]
                                                             }
@@ -1401,8 +1418,14 @@
                                                                 "value": "text"
                                                             },
                                                             "value": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "91328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             }
                                                         },
                                                         "slot": null,
@@ -1839,8 +1862,14 @@
                                                                 "value": "none"
                                                             },
                                                             "selectedItem": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "d1328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             },
                                                             "size": {
                                                                 "type": "JSON_LITERAL",
@@ -2110,11 +2139,17 @@
                                                             },
                                                             "search": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": "none"
+                                                                "value": "contains"
                                                             },
                                                             "selectedItem": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "15328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             },
                                                             "size": {
                                                                 "type": "JSON_LITERAL",
@@ -2304,8 +2339,14 @@
                                                                 "value": "email"
                                                             },
                                                             "value": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "55328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             }
                                                         },
                                                         "slot": null,
@@ -2721,8 +2762,14 @@
                                                                 "value": "text"
                                                             },
                                                             "value": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "95328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             }
                                                         },
                                                         "slot": null,
@@ -2907,8 +2954,14 @@
                                                                 "value": "text"
                                                             },
                                                             "value": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "d5328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             }
                                                         },
                                                         "slot": null,
@@ -3174,11 +3227,17 @@
                                                             },
                                                             "search": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": "none"
+                                                                "value": "contains"
                                                             },
                                                             "selectedItem": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "19328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             },
                                                             "size": {
                                                                 "type": "JSON_LITERAL",
@@ -3367,8 +3426,14 @@
                                                                 "value": "text"
                                                             },
                                                             "value": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "59328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             }
                                                         },
                                                         "slot": null,
@@ -3553,8 +3618,14 @@
                                                                 "value": "email"
                                                             },
                                                             "value": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "99328aff3bc9b654f13f5fea26e45ac8",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             }
                                                         },
                                                         "slot": null,
@@ -3913,7 +3984,7 @@
                                                                 "value": {
                                                                     "code": null,
                                                                     "comment": "",
-                                                                    "message": "Create case"
+                                                                    "message": "Initiate Onboarding"
                                                                 }
                                                             },
                                                             "landmark": {
@@ -4622,7 +4693,7 @@
             },
             "columnLimit": {
                 "type": "JSON_LITERAL",
-                "value": 0
+                "value": 10
             },
             "columnPreferenceKey": {
                 "type": "JSON_LITERAL",
@@ -4630,7 +4701,7 @@
             },
             "columns": {
                 "type": "JSON_LITERAL",
-                "value": ""
+                "value": "number,customer_name,case_type,customer_type,state,sys_created_on"
             },
             "currentPage": {
                 "type": "JSON_LITERAL",
@@ -4725,6 +4796,10 @@
                 "type": "JSON_LITERAL",
                 "value": "default"
             },
+            "nestBy": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
             "onlyEnableSelectionWhenRequiredByActions": {
                 "type": "JSON_LITERAL",
                 "value": true
@@ -4756,7 +4831,7 @@
             },
             "table": {
                 "type": "JSON_LITERAL",
-                "value": "task"
+                "value": "x_vuram_financia_0_fcc_kyc_cases"
             },
             "view": {
                 "type": "JSON_LITERAL",
@@ -5102,10 +5177,6 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Create case",
-  "code" : "",
-  "comment" : ""
-}, {
   "message" : "Current Photocard Driving License",
   "code" : "",
   "comment" : ""
@@ -5159,6 +5230,10 @@
   "comment" : ""
 }, {
   "message" : "Individual Name",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Initiate Onboarding",
   "code" : "",
   "comment" : ""
 }, {
@@ -5295,14 +5370,14 @@
         <sys_created_by>divya.suresh</sys_created_by>
         <sys_created_on>2025-08-12 07:17:45</sys_created_on>
         <sys_id>08319ef53bd7ee90cb98111864e45a33</sys_id>
-        <sys_mod_count>116</sys_mod_count>
+        <sys_mod_count>125</sys_mod_count>
         <sys_name>Customer Onboarding Cases</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_macroponent_08319ef53bd7ee90cb98111864e45a33</sys_update_name>
-        <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-11-07 15:35:34</sys_updated_on>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-11-13 12:39:54</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=08319ef53bd7ee90cb98111864e45a33"/>
 </record_update>

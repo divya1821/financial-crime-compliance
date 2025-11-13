@@ -158,7 +158,7 @@
                                     },
                                     "columns": {
                                         "type": "JSON_LITERAL",
-                                        "value": "number,priority,case_type,state,assigned_to,short_description"
+                                        "value": "number,customer_name,case_type,customer_type,state,sys_created_on"
                                     },
                                     "daClientActionContract": {
                                         "type": "JSON_LITERAL",
@@ -218,7 +218,7 @@
                                     },
                                     "hideDeclarativeActions": {
                                         "type": "JSON_LITERAL",
-                                        "value": false
+                                        "value": true
                                     },
                                     "hideDotwalk": {
                                         "type": "JSON_LITERAL",
@@ -393,7 +393,7 @@
                                     },
                                     "maxColumns": {
                                         "type": "JSON_LITERAL",
-                                        "value": 6
+                                        "value": 10
                                     },
                                     "menuSelection": {
                                         "type": "JSON_LITERAL",
@@ -675,6 +675,7 @@
         <props>[]</props>
         <required_translations>[ {
   "message" : "Periodic Review Cases",
+  "code" : "",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -688,14 +689,14 @@
         <sys_created_by>divya.suresh</sys_created_by>
         <sys_created_on>2025-08-12 09:49:42</sys_created_on>
         <sys_id>4ef3f6393b9fee90cb98111864e45a78</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_macroponent_4ef3f6393b9fee90cb98111864e45a78</sys_update_name>
         <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-08-19 18:06:26</sys_updated_on>
+        <sys_updated_on>2025-11-13 12:42:54</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=4ef3f6393b9fee90cb98111864e45a78"/>
 </record_update>

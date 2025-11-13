@@ -1307,6 +1307,7 @@
                                                                                                                                             {
                                                                                                                                                 "broker": null,
                                                                                                                                                 "clientScript": null,
+                                                                                                                                                "clientTransformScript": "",
                                                                                                                                                 "conditional": null,
                                                                                                                                                 "declarativeAction": null,
                                                                                                                                                 "event": {
@@ -1314,16 +1315,14 @@
                                                                                                                                                     "payload": {
                                                                                                                                                         "type": "JSON_LITERAL",
                                                                                                                                                         "value": {
-                                                                                                                                                            "external": {
-                                                                                                                                                                "url": "/x/vuram/financial-crime-compliance/customer-onboarding-cases"
-                                                                                                                                                            },
+                                                                                                                                                            "external": null,
                                                                                                                                                             "fields": null,
                                                                                                                                                             "multiInstField": null,
                                                                                                                                                             "navigationOptions": null,
                                                                                                                                                             "params": null,
                                                                                                                                                             "passiveNavigation": null,
                                                                                                                                                             "redirect": null,
-                                                                                                                                                            "route": null,
+                                                                                                                                                            "route": "customer-onboarding-cases",
                                                                                                                                                             "targetRoute": null,
                                                                                                                                                             "title": null
                                                                                                                                                         }
@@ -1378,7 +1377,7 @@
                                                                                                                                                         "value": {
                                                                                                                                                             "code": null,
                                                                                                                                                             "comment": "",
-                                                                                                                                                            "message": "Streamline customer onboarding"
+                                                                                                                                                            "message": "Streamline and simplify the customer onboarding process"
                                                                                                                                                         }
                                                                                                                                                     },
                                                                                                                                                     "value": {
@@ -1722,6 +1721,7 @@
                                                                                                                     {
                                                                                                                         "broker": null,
                                                                                                                         "clientScript": null,
+                                                                                                                        "clientTransformScript": "",
                                                                                                                         "conditional": null,
                                                                                                                         "declarativeAction": null,
                                                                                                                         "event": {
@@ -1729,16 +1729,14 @@
                                                                                                                             "payload": {
                                                                                                                                 "type": "JSON_LITERAL",
                                                                                                                                 "value": {
-                                                                                                                                    "external": {
-                                                                                                                                        "url": "/x/vuram/financial-crime-compliance/periodic-review-cases"
-                                                                                                                                    },
+                                                                                                                                    "external": null,
                                                                                                                                     "fields": null,
                                                                                                                                     "multiInstField": null,
                                                                                                                                     "navigationOptions": null,
                                                                                                                                     "params": null,
                                                                                                                                     "passiveNavigation": null,
                                                                                                                                     "redirect": null,
-                                                                                                                                    "route": null,
+                                                                                                                                    "route": "periodic-review-cases",
                                                                                                                                     "targetRoute": null,
                                                                                                                                     "title": null
                                                                                                                                 }
@@ -1993,6 +1991,7 @@
                                                                                                                     {
                                                                                                                         "broker": null,
                                                                                                                         "clientScript": null,
+                                                                                                                        "clientTransformScript": "",
                                                                                                                         "conditional": null,
                                                                                                                         "declarativeAction": null,
                                                                                                                         "event": {
@@ -2000,16 +1999,14 @@
                                                                                                                             "payload": {
                                                                                                                                 "type": "JSON_LITERAL",
                                                                                                                                 "value": {
-                                                                                                                                    "external": {
-                                                                                                                                        "url": "/x/vuram/financial-crime-compliance/perpetual-review-cases"
-                                                                                                                                    },
+                                                                                                                                    "external": null,
                                                                                                                                     "fields": null,
                                                                                                                                     "multiInstField": null,
                                                                                                                                     "navigationOptions": null,
                                                                                                                                     "params": null,
                                                                                                                                     "passiveNavigation": null,
                                                                                                                                     "redirect": null,
-                                                                                                                                    "route": null,
+                                                                                                                                    "route": "perpetual-review-cases",
                                                                                                                                     "targetRoute": null,
                                                                                                                                     "title": null
                                                                                                                                 }
@@ -2264,6 +2261,7 @@
                                                                                                                     {
                                                                                                                         "broker": null,
                                                                                                                         "clientScript": null,
+                                                                                                                        "clientTransformScript": "",
                                                                                                                         "conditional": null,
                                                                                                                         "declarativeAction": null,
                                                                                                                         "event": {
@@ -2271,16 +2269,14 @@
                                                                                                                             "payload": {
                                                                                                                                 "type": "JSON_LITERAL",
                                                                                                                                 "value": {
-                                                                                                                                    "external": {
-                                                                                                                                        "url": "/x/vuram/financial-crime-compliance/customer-offboarding-cases"
-                                                                                                                                    },
+                                                                                                                                    "external": null,
                                                                                                                                     "fields": null,
                                                                                                                                     "multiInstField": null,
                                                                                                                                     "navigationOptions": null,
                                                                                                                                     "params": null,
                                                                                                                                     "passiveNavigation": null,
                                                                                                                                     "redirect": null,
-                                                                                                                                    "route": null,
+                                                                                                                                    "route": "customer-offboarding-cases",
                                                                                                                                     "targetRoute": null,
                                                                                                                                     "title": null
                                                                                                                                 }
@@ -5555,7 +5551,7 @@
   "code" : "",
   "comment" : ""
 }, {
-  "message" : "Streamline customer onboarding",
+  "message" : "Streamline and simplify the customer onboarding process",
   "code" : "",
   "comment" : ""
 } ]</required_translations>
@@ -5604,14 +5600,14 @@
         <sys_created_by>divya.suresh</sys_created_by>
         <sys_created_on>2025-08-11 07:48:31</sys_created_on>
         <sys_id>81ae4d253bd32e90cb98111864e45a46</sys_id>
-        <sys_mod_count>121</sys_mod_count>
+        <sys_mod_count>124</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_macroponent_81ae4d253bd32e90cb98111864e45a46</sys_update_name>
         <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-10-31 09:33:23</sys_updated_on>
+        <sys_updated_on>2025-11-13 12:19:15</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=81ae4d253bd32e90cb98111864e45a46"/>
 </record_update>
