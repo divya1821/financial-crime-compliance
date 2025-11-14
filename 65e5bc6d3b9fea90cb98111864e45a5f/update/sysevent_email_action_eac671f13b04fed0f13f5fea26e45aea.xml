@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_vuram_financia_0_fcc_kyc_individual_details</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>triggered</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Hello RM User,&nbsp; ${relationship_manager.name},</p>
+<p>This is a reminder that one of your customer's documents is due to expire in 30 days. &nbsp;<br>Please take the necessary action to collect and update the new document.</p>
+<p>Customer Details:<br>- Customer Name: ${entity.legal_name}${individual.forename_in_full}<br>- Customer Type: ${customer_type}<br>- Document Type: ${poi_doc_type}<br>- Expiry Date: ${poi_doc_expiry_date}</p>
+<p>Case Reference: ${number}</p>
+<p>Click &lt;a href="${URI_REF}"&gt;here&lt;/a&gt; to review and update the customer&rsquo;s information.</p>
+<p>Thank you, &nbsp;<br>Compliance Team</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>30 days prior notification for doc exp</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups name="FCC KYC Relationship Manager ">dc53eb353bd722d0cb98111864e45a63</recipient_groups>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>[Action Required] Customer Document Expiring in 30 Days – ${entity.legal_name}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-18 12:21:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eac671f13b04fed0f13f5fea26e45aea</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>30 days prior notification for doc exp</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sysevent_email_action_eac671f13b04fed0f13f5fea26e45aea</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-22 04:29:07</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

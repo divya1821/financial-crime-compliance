@@ -43,7 +43,7 @@
   current.next_chaser_due = nextGdt;
 
   // add a work note for visibility in activity stream
-  current.work_notes = "Follow-up mail (Chaser #1) sent on " + nowGdt.getDisplayValue() +
+  current.work_notes = "Follow-up manual mail (Chaser #1) sent on " + nowGdt.getDisplayValue() +
     ". Next chaser due on " + nextGdt.getDisplayValue() + ".";
 
   current.setWorkflow(false);
@@ -65,7 +65,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1e5ec0593b3f6e10cb98111864e45a1d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Follow Up Mail</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -73,7 +73,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_action_1e5ec0593b3f6e10cb98111864e45a1d</sys_update_name>
         <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-09-04 08:34:35</sys_updated_on>
+        <sys_updated_on>2025-09-08 12:41:35</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

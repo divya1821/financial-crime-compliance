@@ -9,7 +9,7 @@
         <name>FCC KYC Entity Upload Document - Container 1</name>
         <order>1</order>
         <semantic_tag/>
-        <sp_page display_value="copy_of_fcc_kyc_individual_upload_docume">fadaff843bf7a210cb98111864e45aa8</sp_page>
+        <sp_page display_value="fcc_kyc_entity_upload_document">fadaff843bf7a210cb98111864e45aa8</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>varunapriyan.k</sys_created_by>

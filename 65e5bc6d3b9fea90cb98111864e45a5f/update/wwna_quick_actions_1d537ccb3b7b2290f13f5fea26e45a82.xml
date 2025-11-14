@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="wwna_quick_actions">
+    <wwna_quick_actions action="INSERT_OR_UPDATE">
+        <accepts_string_parameter>false</accepts_string_parameter>
+        <action_group/>
+        <action_type>common</action_type>
+        <active>false</active>
+        <apply_to_all_groups>true</apply_to_all_groups>
+        <apply_to_groups/>
+        <autogrow>false</autogrow>
+        <autogrow_level/>
+        <command_name>fcckycidentityproofs</command_name>
+        <condition/>
+        <description/>
+        <execution_mode>server</execution_mode>
+        <name>FCC KYC Identity Proofs</name>
+        <parameter_hint/>
+        <parameter_label/>
+        <script><![CDATA[// Convert the payload in string to escape quotes.
+	var stringifiedPayload = JSON.stringify(params[0]);
+
+	// Escape the characters & < > from the string
+	var escapedPayload = global.JSUtil.escapeText(stringifiedPayload);
+
+	// unescape HTML if escaped already
+	var unEscapedPayload = GlideStringUtil.unEscapeHTML(escapedPayload);
+
+	// parse the strigified Payload
+	var param = JSON.parse(unEscapedPayload);
+
+	var jsonPayload = JSON.parse(param);
+
+	var ambChannelName = jsonPayload.ambChannel;
+	var skillInputs = {"base64":null};
+	var PAYLOAD = Object.assign({
+		skill_description: jsonPayload.payload.skill_description,
+        skill_name: jsonPayload.payload.skill_name,
+        drafted_text: jsonPayload.payload.drafted_text,
+		skill_id: jsonPayload.payload.skill_id,
+		document_id: jsonPayload.payload.document_sys_id,
+		document_table: jsonPayload.payload.document_table_name,
+		caller: jsonPayload.payload.caller,
+		selected_text: jsonPayload.payload.selected_text,
+		context: jsonPayload.payload.context,
+	}, skillInputs);
+	
+	/**
+	   var contextRecord;
+	   if(PAYLOAD.document_table && PAYLOAD.document_id){
+			try {
+				contextRecord = new GlideRecord(PAYLOAD.document_table);
+				contextRecord.get(PAYLOAD.document_id);
+			} catch(err){
+				gs.info('Error while fetching context Record: '+err.message);
+			}
+	   }
+ 	*/
+	// PAYLOAD.skillConfiguration gives you the skill config record
+
+	var CAPABILITY_ID = '25fa89553b3bae10cb98111864e45a49';
+
+	// providing the promptConfigFilter will pick the right promptConfigID from sys_generative_ai_prompt_config
+	var PROMPT_CONFIG_FILTERS = {
+		"key": "value"
+	};
+
+	// Request payload for the capability
+	var request = {
+		"executionRequests": [{
+			"payload": PAYLOAD,
+			"meta": {
+				"configFilters": PROMPT_CONFIG_FILTERS,
+				"skillConfigId": PAYLOAD.skill_config_id,
+				"source": PAYLOAD.trigger_source,
+				"documentId": PAYLOAD.document_sys_id,
+				"documentTable": PAYLOAD.document_table_name
+			},
+			'returnRequest': true,
+			"capabilityId": CAPABILITY_ID
+		}],
+		"mode": "async",
+		"ambCallbackChannel": ambChannelName,
+		"timeout":20
+	};
+
+	// Call to the OneExtend Capability
+	var response  = sn_one_extend.OneExtendUtil.execute(request);
+
+	if (response.status === sn_wwna.WWNAConstants.ONE_EXTEND_STATES.ERROR) {
+		gs.publish(ambChannelName, {
+			"status": sn_wwna.WWNAConstants.ONE_EXTEND_STATES.ERROR,
+			"errorMessage": "<message_should_come_here>"
+		});
+	}
+
+	answer = {
+		success: true,
+		message: ""
+	};]]></script>
+        <skill display_value="FCC KYC Identity Proofs">25fa89553b3bae10cb98111864e45a49</skill>
+        <sys_class_name>wwna_quick_actions</sys_class_name>
+        <sys_created_by>raj.selvam</sys_created_by>
+        <sys_created_on>2025-09-09 18:11:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>1d537ccb3b7b2290f13f5fea26e45a82</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FCC KYC Identity Proofs</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>wwna_quick_actions_1d537ccb3b7b2290f13f5fea26e45a82</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-12 09:17:59</sys_updated_on>
+        <table_name>sys_one_extend_capability</table_name>
+    </wwna_quick_actions>
+</record_update>

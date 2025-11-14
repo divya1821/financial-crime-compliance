@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_usecase">
+    <sn_aia_usecase action="INSERT_OR_UPDATE">
+        <applicability_script/>
+        <base_plan>This workflow specializes in document verification and compliance checks.
+1. Individual Number is used to extract and validate the individual details.</base_plan>
+        <description>This workflow automates the validation of user-submitted documents and application forms. It checks for name mismatches, document expiration, utility bill date compliance, and suggests appropriate documents based on entity type. Designed for onboarding and verification teams.</description>
+        <execution_mode>copilot</execution_mode>
+        <internal_name>global.x_vuram_financia_0.Document Validation Workflow</internal_name>
+        <name>Document Validation Workflow</name>
+        <parent/>
+        <record_type>custom</record_type>
+        <source_id/>
+        <strategy display_value="ReActive Planner">b264c470ff1022106c36ffffffffff67</strategy>
+        <sys_class_name>sn_aia_usecase</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-09-25 09:37:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3d64158c3b9cb654f13f5fea26e45a28</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Document Validation Workflow</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_usecase_3d64158c3b9cb654f13f5fea26e45a28</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-09-25 13:42:18</sys_updated_on>
+        <team display_value="Document Validation Workflow">6817dd843bdcb654f13f5fea26e45aa0</team>
+    </sn_aia_usecase>
+</record_update>

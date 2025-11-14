@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_eval_attribute">
+    <sys_one_extend_eval_attribute action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <capability display_value="FCC KYC Transaction Pattern Analysis">b25a5b453bc8f6d0f13f5fea26e45a0c</capability>
+        <capability_attribute display_value="response">9b5a17c53bc8f6d0f13f5fea26e45a05</capability_attribute>
+        <data_type>string</data_type>
+        <label>Golden Response</label>
+        <name>response</name>
+        <sys_class_name>sys_one_extend_eval_attribute</sys_class_name>
+        <sys_created_by>raj.selvam</sys_created_by>
+        <sys_created_on>2025-09-16 11:29:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>175a17c53bc8f6d0f13f5fea26e45a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Golden Response</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_one_extend_eval_attribute_175a17c53bc8f6d0f13f5fea26e45a08</sys_update_name>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-09-16 11:29:06</sys_updated_on>
+        <template/>
+        <template_script><![CDATA[(function getValue(response) {
+   // response would give the response from capability 
+})(response);]]></template_script>
+    </sys_one_extend_eval_attribute>
+</record_update>

@@ -24,7 +24,7 @@
         <sys_updated_by>varunapriyan.k</sys_updated_by>
         <sys_updated_on>2025-08-18 06:01:38</sys_updated_on>
         <target_table/>
-        <task_definition display_value="">da093cb73b9ba250f13f5fea26e45a95</task_definition>
+        <task_definition display_value="Test - Invoice">da093cb73b9ba250f13f5fea26e45a95</task_definition>
         <type>table</type>
     </sys_di_key_group>
 </record_update>

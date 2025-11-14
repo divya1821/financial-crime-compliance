@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
     <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
         <active>true</active>
-        <agent display_value="Pattern Detection Analysis">3765020c3b18f654f13f5fea26e45ae9</agent>
+        <agent display_value="Pattern Detection Analysis - Individual">3765020c3b18f654f13f5fea26e45ae9</agent>
         <description>This script is used to fetch the individual number with the case number get from the trigger.</description>
         <display_output>false</display_output>
         <document_status/>
@@ -10,6 +10,7 @@
         <max_auto_executions>10</max_auto_executions>
         <name>Fetch Individual Number</name>
         <output_transformation_strategy>none</output_transformation_strategy>
+        <post_processing_script/>
         <pre_message/>
         <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
         <sys_created_by>harini.ks</sys_created_by>
@@ -27,5 +28,6 @@
         <sys_updated_on>2025-10-16 13:17:50</sys_updated_on>
         <tool display_value="Fetch Individual Number">e8ec823e3b2cfa90cb98111864e45a6e</tool>
         <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
     </sn_aia_agent_tool_m2m>
 </record_update>

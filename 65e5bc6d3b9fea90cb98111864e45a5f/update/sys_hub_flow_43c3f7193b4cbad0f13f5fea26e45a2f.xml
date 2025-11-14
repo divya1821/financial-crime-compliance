@@ -48,6 +48,7 @@
         <type>flow</type>
         <updation_source/>
         <version>2</version>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=43c3f7193b4cbad0f13f5fea26e45a2f"/>
     <sys_variable_value action="delete_multiple" query="document_key=43c3f7193b4cbad0f13f5fea26e45a2f"/>
@@ -77,22 +78,30 @@
     <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:7a269ec23b04b214f13f5fea26e45a19^sys_idNOT INfe269ec23b04b214f13f5fea26e45a19"/>
     <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
         <active>true</active>
+        <advanced>false</advanced>
         <business_calendar/>
         <condition/>
         <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
         <entered_time/>
         <max_drift/>
         <name>Trigger:7a269ec23b04b214f13f5fea26e45a19</name>
         <offset/>
         <offset_type>0</offset_type>
+        <repeat_every/>
         <run_as display_value="Abhipsa Jally">d01cf4403b431210f13f5fea26e45a3e</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek/>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
         <run_period/>
         <run_start>2025-09-19 09:05:05</run_start>
         <run_time>1970-01-01 20:00:00</run_time>
         <run_type>daily</run_type>
+        <run_weekinmonth/>
         <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('7a269ec23b04b214f13f5fea26e45a19');]]></script>
         <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
         <sys_created_by>abhipsa.jally</sys_created_by>
@@ -449,14 +458,15 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>43c3f7193b4cbad0f13f5fea26e45a2f</sys_id>
         <latest_snapshot>6a265ec23b04b214f13f5fea26e45abf</latest_snapshot>
-        <compiler_build>glide-yokohama-12-18-2024__patch7-hotfix2-09-18-2025_09-21-2025_1435.zip</compiler_build>
+        <compiler_build>glide-zurich-07-01-2025__patch1-hotfix2-10-11-2025_10-11-2025_2320.zip</compiler_build>
+        <version_record/>
     </sys_hub_flow>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=43c3f7193b4cbad0f13f5fea26e45a2f^sys_idNOT INb2269ec23b04b214f13f5fea26e45a34"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
         <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"b2269ec23b04b214f13f5fea26e45a34","name":"plan","plan_signature":null}}</plan>
         <plan_id>43c3f7193b4cbad0f13f5fea26e45a2f</plan_id>
-        <snapshot>1c3e65cb3b983210f13f5fea26e45af7</snapshot>
+        <snapshot>7497f5713bf87610cb98111864e45abc</snapshot>
         <sys_created_by>abhipsa.jally</sys_created_by>
         <sys_created_on>2025-09-19 09:05:05</sys_created_on>
         <sys_domain>global</sys_domain>

@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <controller_preset/>
         <includes/>
-        <macroponent display_value="Standard record page">0ee46b443b632610f13f5fea26e45a3a</macroponent>
+        <macroponent display_value="Default">0ee46b443b632610f13f5fea26e45a3a</macroponent>
         <name>viewport_gph/initiallyCollapsed</name>
         <preset/>
         <required_translations>[]</required_translations>

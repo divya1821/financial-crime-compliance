@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_vuram_financia_0_fcc_kyc_cases</collection>
+        <condition table="x_vuram_financia_0_fcc_kyc_cases">case_type=perpetual_kyc_case^EQ<item display_value="Perpetual KYC Case" endquery="false" field="case_type" goto="false" newquery="false" operator="=" or="false" value="perpetual_kyc_case"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>triggered</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Hello ${assigned_to.first_name},<br><br>A new perpetual KYC case <strong>${number}</strong> has been created and assigned to you because the document has expired.<br>Please check the details and do the needful.&nbsp;<br><br></p>
+<p>About this case:</p>
+<p>Customer Name: <strong>${individual.forename_in_full}</strong></p>
+<p>Customer Type: <strong>${customer_type}<br></strong><br>Individual POI Doc Expiry Date:<strong> ${individual.poi_doc_expiry_date}</strong></p>
+<p>Case Type:<strong> ${case_type}</strong></p>
+<p>Short description: <strong>${short_description}</strong></p>
+<p>Click <a href="${mail_script:intance_name}" target="_blank" rel="noopener">here</a> to view case details.</p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Update the expired documents</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>assigned_to</recipient_fields>
+        <recipient_groups name="FCC KYC Maker">cea7c86e3b9f6610f13f5fea26e45a39</recipient_groups>
+        <recipient_users>380f8c683be3e610f13f5fea26e45a3b</recipient_users>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>New Perpetual KYC Case has been created: ${number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-17 10:03:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>060a486d3b40fad0f13f5fea26e45a5b</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Update the expired documents</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sysevent_email_action_060a486d3b40fad0f13f5fea26e45a5b</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:23:39</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>060a486d3b40fad0f13f5fea26e45a5b</id>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-18 18:26:58</sys_created_on>
+        <sys_id>b32d8ffd3b803214f13f5fea26e45a44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-18 18:26:58</sys_updated_on>
+        <table>sysevent_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

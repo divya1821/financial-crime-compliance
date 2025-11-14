@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_trigger_agent_usecase_m2m">
+    <sn_aia_trigger_agent_usecase_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <objective_template><![CDATA[Help me analyze below screening results
+PEP: ${pep}
+Adverse News Screening: ${adverse_news_screening}
+Sanctions: ${sanctions}]]></objective_template>
+        <related_resource_record>30dbb38e3b48b214cb98111864e45ab9</related_resource_record>
+        <related_resource_table>sn_aia_agent</related_resource_table>
+        <sys_class_name>sn_aia_trigger_agent_usecase_m2m</sys_class_name>
+        <sys_created_by>raj.selvam</sys_created_by>
+        <sys_created_on>2025-09-20 04:19:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>676e16d23b407614f13f5fea26e45ace</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_trigger_agent_usecase_m2m_676e16d23b407614f13f5fea26e45ace</sys_update_name>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-09-20 04:19:39</sys_updated_on>
+        <trigger_configuration display_value="x_vuram_financia_0_fcc_kyc_individual_details">6b6e16d23b407614f13f5fea26e45aca</trigger_configuration>
+    </sn_aia_trigger_agent_usecase_m2m>
+</record_update>

@@ -57,7 +57,7 @@
         <sys_updated_on>2025-09-04 09:31:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
-        <unique>true</unique>
+        <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>

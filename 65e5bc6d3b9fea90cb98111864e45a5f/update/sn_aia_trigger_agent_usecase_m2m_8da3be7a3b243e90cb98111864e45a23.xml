@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_trigger_agent_usecase_m2m">
     <sn_aia_trigger_agent_usecase_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
         <objective_template><![CDATA[Help me resolve ${number}]]></objective_template>
         <related_resource_record>26c07e723b243e90cb98111864e45ac8</related_resource_record>
         <related_resource_table>sn_aia_agent</related_resource_table>

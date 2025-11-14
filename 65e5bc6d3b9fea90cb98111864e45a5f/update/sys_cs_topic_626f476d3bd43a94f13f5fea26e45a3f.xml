@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic">
+    <sys_cs_topic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability>true</applicability>
+        <autopilot_topic>false</autopilot_topic>
+        <cb_topic_id display_value="Test-FCC KYC">d62f4b2d3bd43a94f13f5fea26e45a19</cb_topic_id>
+        <channels/>
+        <definition>{"id":"d62f4b2d3bd43a94f13f5fea26e45a19","name":"Test-FCC KYC","system_topic":false,"autopilot_topic":false,"vendor_id":"c2f0b8f187033200246ddd4c97cb0bb9","description":"this topic is used for queries related to KYC onboarding process","applicability":"true","categories":[],"key_phrases":["Test-FCC KYC","KYC onboarding","required documets","required documents for KYC onboarding"],"variables":[{"name":"__segment_trigger_f595a87c556a4111a58beaac845a57f8_done","type":"java.lang.Object","init_value":"false"},{"name":"previous_graph_node","type":"java.lang.Object"}],"fields":[{"type":"Reference","table_name":"sys_user","auto_select":false,"name":"user","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[]},{"type":"Boolean","name":"RootDecisionBranch_2f04c914bf17465cb94fad890f0197c8","unique":false,"default_value":"true","key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[]},{"type":"String","name":"__silent_Branch_RootDecisionBranch_f730bbecb7484570b5773ad91decb05a","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_TerminateGoal_25a7fec6c18241cc9e009b3fad2f2be8","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_StartGoal_62acb1a2af844666b9c5692f5cb099f9","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_Decision_RootDecision_25805d534cbc421daf9b6960b94f9cd3","unique":false,"key_phrases":[],"mask_type":"NONE","input_format_type":"","list":false,"expert_mode":false,"choices":[],"static_enum_list":[],"encrypt_if_secure":true}],"actions":[],"tasks":[{"type":"Consumer to system","show_as_button":true,"name":"primary","description":"primary","applicability":"vaVars.__segment_trigger_f595a87c556a4111a58beaac845a57f8_done==false &amp;&amp; true","mode":"Qmode","key_phrases":[],"greeting_msg":"vaInputs.initialize(\"user\");vaInputs.initialize(\"RootDecisionBranch_2f04c914bf17465cb94fad890f0197c8\");vaInputs.initialize(\"__silent_TerminateGoal_25a7fec6c18241cc9e009b3fad2f2be8\");vaInputs.initialize(\"__silent_Branch_RootDecisionBranch_f730bbecb7484570b5773ad91decb05a\");vaInputs.initialize(\"__silent_Decision_RootDecision_25805d534cbc421daf9b6960b94f9cd3\");vaInputs.initialize(\"__silent_StartGoal_62acb1a2af844666b9c5692f5cb099f9\");null;","fields":[{"name":"__silent_Decision_RootDecision_25805d534cbc421daf9b6960b94f9cd3","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"RootDecision_for_goal_primary___RootDecision_25805d534cbc421daf9b6960b94f9cd3\";vaInputs.__silent_Decision_RootDecision_25805d534cbc421daf9b6960b94f9cd3=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"RootDecision_for_goal_primary___RootDecision_25805d534cbc421daf9b6960b94f9cd3\";var ackMsg=null;ackMsg=null;vaInputs.RootDecisionBranch_2f04c914bf17465cb94fad890f0197c8=true;(function() {vaInputs.__silent_Branch_RootDecisionBranch_f730bbecb7484570b5773ad91decb05a.reset();})();ackMsg;"},{"name":"__silent_Branch_RootDecisionBranch_f730bbecb7484570b5773ad91decb05a","applicable":"(vaVars.previous_graph_node==\"RootDecision_for_goal_primary___RootDecision_25805d534cbc421daf9b6960b94f9cd3\") &amp;&amp; (((vaInputs.RootDecisionBranch_2f04c914bf17465cb94fad890f0197c8.getValue() == true)))","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"RootDecisionBranch_f730bbecb7484570b5773ad91decb05a___RootDecisionBranch_f730bbecb7484570b5773ad91decb05a\";vaInputs.__silent_Branch_RootDecisionBranch_f730bbecb7484570b5773ad91decb05a=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"RootDecisionBranch_f730bbecb7484570b5773ad91decb05a___RootDecisionBranch_f730bbecb7484570b5773ad91decb05a\";var ackMsg=null;ackMsg=null;(function() {vaInputs.__silent_StartGoal_62acb1a2af844666b9c5692f5cb099f9.reset();})();ackMsg;"},{"name":"__silent_StartGoal_62acb1a2af844666b9c5692f5cb099f9","applicable":"(vaVars.previous_graph_node==\"RootDecisionBranch_f730bbecb7484570b5773ad91decb05a___RootDecisionBranch_f730bbecb7484570b5773ad91decb05a\")","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"Start___62acb1a2af844666b9c5692f5cb099f9\";vaInputs.__silent_StartGoal_62acb1a2af844666b9c5692f5cb099f9=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"Start___62acb1a2af844666b9c5692f5cb099f9\";var ackMsg=null;ackMsg=null;(function() {vaInputs.__silent_TerminateGoal_25a7fec6c18241cc9e009b3fad2f2be8.reset();})();ackMsg;"},{"name":"__silent_TerminateGoal_25a7fec6c18241cc9e009b3fad2f2be8","applicable":"(vaVars.previous_graph_node==\"Start___62acb1a2af844666b9c5692f5cb099f9\")","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"End___25a7fec6c18241cc9e009b3fad2f2be8\";vaInputs.__silent_TerminateGoal_25a7fec6c18241cc9e009b3fad2f2be8=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"cardFields":[],"expert_mode":false,"acknowledge_msg":"vaVars.previous_graph_node=\"End___25a7fec6c18241cc9e009b3fad2f2be8\";var ackMsg=null;ackMsg=null;vaVars.__segment_trigger_f595a87c556a4111a58beaac845a57f8_done=true;ackMsg;"}],"variables_update":[]}],"roles":["snc_internal"],"active":true,"published":true,"library":false,"expose_on_palette":false,"palette_label":"","flexible_conversation_switching":false,"design_categories":[{"name":"KYC Customer Onboarding","visible":false,"sysId":"8ff4a21d3b147694f13f5fea26e45a2d"}],"nlu_provider":"","nlu_model":"","nlu_intent":"","topic_type":"STANDARD","channels":[],"triggerable_by_notification":false,"secure_custom_input_control":false,"foundational":false,"modelType":"nlu_keyword","score":0.0,"visible":true,"discoverable":true,"sys_scope":"65e5bc6d3b9fea90cb98111864e45a5f","sys_domain":"global","title":"Test-FCC KYC","nlu_intent_label":"","nlu_model_label":"","dialog_acts_enabled":false,"modify_confirmation_enabled":false}</definition>
+        <description>this topic is used for queries related to KYC onboarding process</description>
+        <design_category>8ff4a21d3b147694f13f5fea26e45a2d</design_category>
+        <dialog_acts_enabled>false</dialog_acts_enabled>
+        <discoverable>true</discoverable>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <input_variables>[]</input_variables>
+        <is_system_topic>false</is_system_topic>
+        <key_phrases>Test-FCC KYC KYC onboarding required documets required documents for KYC onboarding</key_phrases>
+        <last_published_on>2025-09-30 10:16:03</last_published_on>
+        <library>false</library>
+        <library_usage>null</library_usage>
+        <metaphone/>
+        <model_type>nlu_keyword</model_type>
+        <modify_confirmation_enabled>false</modify_confirmation_enabled>
+        <name>Test-FCC KYC</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <published>true</published>
+        <roles>snc_internal</roles>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <sys_class_name>sys_cs_topic</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-30 10:13:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>626f476d3bd43a94f13f5fea26e45a3f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Test-FCC KYC</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_cs_topic_626f476d3bd43a94f13f5fea26e45a3f</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-30 10:16:03</sys_updated_on>
+        <title>Test-FCC KYC</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <vendor display_value="ServiceNow">c2f0b8f187033200246ddd4c97cb0bb9</vendor>
+        <visible>true</visible>
+    </sys_cs_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=626f476d3bd43a94f13f5fea26e45a3f"/>
+</record_update>

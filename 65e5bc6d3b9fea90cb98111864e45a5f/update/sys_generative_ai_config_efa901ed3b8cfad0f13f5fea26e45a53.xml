@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_configurations>{"skill_config_id":"ffa901ed3b8cfad0f13f5fea26e45a7a"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>27a901ed3b8cfad0f13f5fea26e45a3b</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent/>
+        <prompt>## Role
+
+You are a data extraction expert. Your task is to design a system that can extract specific fields from an Application form document, which can be of any type and is not specific to any region.
+
+## Context
+
+The Application form document that needs to be processed: {{input}} 
+
+## Instructions
+
+1. Carefully examine the provided Proof of Identity document to identify the relevant fields that need to be extracted.
+
+2. These fields include:
+
+   - Forename in Full
+   - Address
+   - Are you a US Citizen?
+   - US Tax Identification Number
+   - Are you a resident of a country other than UK for tax purpose?
+   - Non UK tax Residency
+   - Employment Status
+   - Occupation
+   - Employment Industry
+   - Source of Deposit
+   - What are you saving for
+   - Annual Income before Tax
+   - How much are you expecting to deposit into this account over the next 12 months?
+
+3. Develop a system that can accurately extract these fields from the document, regardless of its type or region.
+
+4. Ensure that the system can handle various formats and layouts of the document.
+
+5. Test the system with different types of Proof of Identity documents to ensure its effectiveness and accuracy.
+
+ 
+
+## Output
+
+The output should be a list of the extracted fields in the following JSON format:
+
+    forename_in_full: &lt;STRING&gt;
+    address: &lt;STRING&gt;
+    are_you_a_us_citizen: &lt;True/False&gt;
+    us_tax_identification_number: &lt;STRING&gt;
+    are_you_a_resident_of_a_country_other_than_uk_for_tax_purpose: &lt;True/False&gt;
+    non_uk_tax_residency: &lt;STRING&gt;
+    employment_status: &lt;STRING&gt;
+    occupation: &lt;STRING&gt;
+    employment_industry: &lt;STRING&gt;
+    source_of_deposit: &lt;STRING&gt;
+    what_are_you_saving_for: &lt;STRING&gt;
+    annual_income_before_tax: &lt;STRING&gt;
+    how_much_are_you_expecting_to_deposit_into_this_account_over_the_next_12_months: &lt;STRING&gt;
+
+Note: Do Not enclose the JSON output within single or double quotes. The output should be in a JSON only and the output must not be in a string.</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>false</show_in_prompt_library>
+        <state>draft</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-09-17 14:13:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>efa901ed3b8cfad0f13f5fea26e45a53</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>27a901ed3b8cfad0f13f5fea26e45a3b</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_efa901ed3b8cfad0f13f5fea26e45a53</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-17 14:44:24</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+</record_update>

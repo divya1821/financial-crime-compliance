@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_configurations>{"skill_config_id":"9b11b1043b14f654cb98111864e45a76"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>3e1171043b14f654cb98111864e45aeb</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent/>
+        <prompt>## Role
+You are a compliance officer. Your task is to assess the risk level of a customer based on their adverse news screening, Politically Exposed Person (PEP) status, sanctions, and risk level.
+
+## Context
+The customer's adverse news screening result:  {{fcc_kyc_case.individual.adverse_news_screening}} 
+The customer's PEP status:  {{fcc_kyc_case.individual.pep}} 
+The customer's sanctions status:  {{fcc_kyc_case.individual.sanctions}} 
+The customer's risk level:  {{fcc_kyc_case.individual.risk_level}} 
+
+## Instructions
+1. Review the provided customer information, including adverse news screening result, PEP status, sanctions status, and risk level.
+2. Apply the following scenarios to determine the customer's onboarding status:
+   - If adverse news screening is 'no', PEP status is 'no', sanctions status is 'no', and risk level is 'low', then the customer is good to be onboarded.
+   - If adverse news screening is 'no', PEP status is 'no', sanctions status is 'no', and risk level is 'medium', then the customer is ok to be onboarded but still consider other options.
+   - If adverse news screening is 'no', PEP status is 'no', sanctions status is 'no', and risk level is 'high', then the customer should not be onboarded.
+   - If adverse news screening is 'yes', PEP status is 'yes', sanctions status is 'yes', and risk level is 'low', then the customer should not be onboarded and requires additional checks.
+   - If adverse news screening is 'yes', PEP status is 'yes', sanctions status is 'yes', and risk level is 'medium', then the customer should not be onboarded.
+   - If adverse news screening is 'yes', PEP status is 'yes', sanctions status is 'yes', and risk level is 'high', then the customer should not be onboarded and recommend not to onboard the customer.
+   - If adverse news screening is 'yes', PEP status is 'yes', sanctions status is 'no', and risk level is 'low', then the customer is good to be onboarded.
+   - If adverse news screening is 'yes', PEP status is 'yes', sanctions status is 'no', and risk level is 'medium', then the customer should not be onboarded.
+   - If adverse news screening is 'yes', PEP status is 'yes', sanctions status is 'no', and risk level is 'high', then the customer should not be onboarded.
+3. Determine the customer's onboarding status based on the applied scenario.
+
+## Output
+Describe the customer's onboarding status: {{#output_onboarding_status}} along with the reasoning of why the customer is good to onboarded or not to onboard based on the   adverse news screening, pep, sanctions and risk values. The output should be in a consolidated format with a brief summary mentioning it in bulleted points.</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>archived</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-25 11:31:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb11b1043b14f654cb98111864e45a1d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>3e1171043b14f654cb98111864e45aeb</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_cb11b1043b14f654cb98111864e45a1d</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-25 14:54:29</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+</record_update>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_configurations>{"skill_config_id":"614cca7e3b3fae50f13f5fea26e45aaf"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>1d4cca7e3b3fae50f13f5fea26e45a4a</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent display_value="OneExtend Capability Definition: Fin Crime Record Summarization (Now LLM Generic - Now LLM Generic)">914cca7e3b3fae50f13f5fea26e45a63</parent>
+        <prompt>
+## Role
+You are a case summary expert. Your task is to generate a comprehensive summary of a KYC case, consolidating all relevant data, highlighting gaps or mismatches, and providing risk insights.
+
+## Context
+
+The customer type that needs to be checked:  {{fcc_kyc_case.customer_type}} 
+
+## Instructions
+1. Check the value of the customer type provided in the context.
+2. If the customer type is 'individual', choose the path for summarizing individual customer data.
+3. If the customer type is 'entity', choose the path for summarizing entity customer data.
+4. Based on the chosen path, proceed with the summarization process for the respective customer type.
+
+if(customer type == individual){
+## Context
+The case type that needs to be summarized: {{fcc_kyc_case.customer_type}} 
+The customer personal information that needs to be summarized:  {{fcc_kyc_case.individual.forename_in_full}}
+{{fcc_kyc_case.individual.dob}}
+{{fcc_kyc_case.individual.address_line}}
+{{fcc_kyc_case.individual.country_of_nationality}} 
+{{fcc_kyc_case.individual.tax_identification_number}} 
+
+The customer documents that need to be summarized:  
+{{fcc_kyc_case.individual.proof_of_identity}} = {{fcc_kyc_case.individual.poi_doc_expiry_date}} 
+{{fcc_kyc_case.individual.proof_of_address}} ={{fcc_kyc_case.individual.poa_doc_expiry_date}} 
+
+The customer financials that need to be summarized:  
+{{fcc_kyc_case.individual.employment_status}} 
+{{fcc_kyc_case.individual.occupation}}  
+{{fcc_kyc_case.individual.employer}} 
+{{fcc_kyc_case.individual.estimated_annual_transaction_volume}} 
+
+The risk scores that need to be summarized: 
+{{fcc_kyc_case.risk_level}} 
+{{fcc_kyc_case.onhold_reason}}  
+
+The case progress that needs to be summarized:  
+ {{fcc_kyc_case.state}} 
+
+## Instructions
+1. Based on the provided case type, customer personal information, documents, financials, risk scores, and case progress, generate a single-page snapshot of the KYC case.
+2. Consolidate all relevant data into a clear and concise summary.
+3. For document show the related document and their expiry date mention as (expiry date:).
+4. Highlight any gaps or mismatches in the data, such as name mismatches or missing UBO declarations.
+5. Provide a clear risk rating (Low, Medium, High) with reasoning, such as PEP hits or expired IDs.
+6. Summarize the case progress.
+Review the provided return value from the function.
+Match the return value with the corresponding case state from the following options:
+   - New-1
+   - Customer Update -100
+   - Work In Progress - 150
+   - On Hold - 250
+   - Review - 320
+   - approval pending - 300
+  - closed - 350
+   - Closed Complete - 400
+   - closed cancelled - 450
+Based on the matched case state, determine whether the case state should be visible or not.
+7. Ensure the summary is easy to review, allowing for quick identification of critical gaps and informed compliance decisions.
+
+
+## Output
+The output should be a brief summary of the KYC case in the following format:
+
+Case Summary:
+- Customer Personal Info: &lt;CUSTOMER_PERSONAL_INFO&gt; with the proper name
+- Documents:
+  - &lt;DOCUMENT1&gt; (Expiry date: &lt;EXPIRY_DATE&gt;)
+  - &lt;DOCUMENT2&gt; (Expiry date: &lt;EXPIRY_DATE&gt;)
+- Financials: &lt;FINANCIALS&gt;
+- Risk Rating: &lt;RISK_RATING&gt; (Reasoning: &lt;REASONING&gt;)  
+- Case Progress: &lt;CASE_PROGRESS&gt;
+
+Replace &lt;CUSTOMER_PERSONAL_INFO&gt; with the customer's personal information, &lt;DOCUMENT1&gt; and &lt;WXPIRY_DATE&gt; with the document names and expiry date, &lt;FINANCIALS&gt; with the customer's financial information, &lt;RISK_RATING&gt; and &lt;REASONING&gt; with the risk rating and reasoning, and &lt;CASE_PROGRESS&gt; with the case state display value don't show the number.
+}
+
+if(customer type == entity){
+## Context
+The case type that needs to be summarized: {{fcc_kyc_case.customer_type}}
+ {{fcc_kyc_case.entity.legal_name}}  
+ {{fcc_kyc_case.entity.registration_number}}
+ {{fcc_kyc_case.entity.country_of_domicile}} 
+ {{fcc_kyc_case.entity.authorized_representative}} 
+ {{fcc_kyc_case.entity.sic_description}} 
+
+The customer financials that need to be summarized:  
+{{fcc_kyc_case.entity.annual_revenue}}  
+{{fcc_kyc_case.entity.describe_the_source_of_annual_revenu0}} 
+}
+The risk scores that need to be summarized: 
+{{fcc_kyc_case.risk_level}} 
+{{fcc_kyc_case.onhold_reason}}  
+
+The case progress that needs to be summarized:  
+ {{fcc_kyc_case.state}} 
+
+For other information, to summarize  {{FCC KYC Case}} 
+
+## Instructions
+1. Based on the provided case type, customer personal information with the name, documents, financials, risk scores, and case progress, generate a single-page snapshot of the KYC case.
+2. Consolidate all relevant data into a clear and concise summary.
+3. For document show the related document and their expiry date mention as (expiry date:).
+4. Highlight any gaps or mismatches in the data, such as name mismatches or missing UBO declarations.
+5. Provide a clear risk rating (Low, Medium, High) with reasoning, such as PEP hits or expired IDs.
+6. Summarize the case progress.
+Review the provided return value from the function.
+Match the return value with the corresponding case state from the following options:
+   - New-1
+   - Customer Update -100
+   - Work In Progress - 150
+   - On Hold - 250
+   - Review - 320
+   - approval pending - 300
+  - closed - 350
+   - Closed Complete - 400
+   - closed cancelled - 450
+Based on the matched case state, determine whether the case state should be visible or not.
+7. Ensure the summary is easy to review, allowing for quick identification of critical gaps and informed compliance decisions.
+
+
+## Output
+The output should be a brief summary of the KYC case in the following format:
+
+Case Summary:
+- Customer Personal Info: &lt;CUSTOMER_PERSONAL_INFO&gt; with the proper name
+- Financials: &lt;FINANCIALS&gt;
+- Risk Rating: &lt;RISK_RATING&gt; (Reasoning: &lt;REASONING&gt;)  
+- Case Progress: &lt;CASE_PROGRESS&gt;
+
+Replace &lt;CUSTOMER_PERSONAL_INFO&gt; with the customer's personal information with the name, &lt;DOCUMENT1&gt; and &lt;WXPIRY_DATE&gt; with the document names and expiry date, &lt;FINANCIALS&gt; with the customer's financial information, &lt;RISK_RATING&gt; and &lt;REASONING&gt; with the risk rating and reasoning, and &lt;CASE_PROGRESS&gt; with the case state display value don't show the number.
+}
+</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>archived</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-09-11 07:45:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d027b42b3bff6690f13f5fea26e45aab</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>1d4cca7e3b3fae50f13f5fea26e45a4a</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_d027b42b3bff6690f13f5fea26e45aab</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-19 09:50:52</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>2</version>
+    </sys_generative_ai_config>
+</record_update>

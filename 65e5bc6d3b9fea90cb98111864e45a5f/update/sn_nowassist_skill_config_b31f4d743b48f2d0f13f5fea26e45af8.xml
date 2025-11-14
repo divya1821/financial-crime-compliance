@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <description><![CDATA[This skill is used to detect the abnormal transactions.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>transaction_analysis.b31f4d743b48f2d0f13f5fea26e45af8</internal_name>
+        <is_template>false</is_template>
+        <name>Transaction analysis</name>
+        <nap_skill_applicability/>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Other">a5efaf1c93764210aa5730f16489186d</skill_family>
+        <skill_id>6b1f05343b48f2d0f13f5fea26e45ae8</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>0</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-15 06:42:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b31f4d743b48f2d0f13f5fea26e45af8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Transaction analysis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_b31f4d743b48f2d0f13f5fea26e45af8</sys_update_name>
+        <sys_updated_by>nauman.ansari</sys_updated_by>
+        <sys_updated_on>2025-10-17 10:43:21</sys_updated_on>
+        <upstream_routing/>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=b31f4d743b48f2d0f13f5fea26e45af8"/>
+</record_update>

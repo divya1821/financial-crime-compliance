@@ -91,10 +91,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>62dd4da13bd32e90cb98111864e45ab7</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>anitha.p</sys_updated_by>
-            <sys_updated_on>2025-08-11 07:45:04</sys_updated_on>
-            <value>identity_card_issued_by_the_electoral_office</value>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-10-13 13:58:49</sys_updated_on>
+            <value>electoral_office</value>
         </sys_choice>
     </sys_choice>
 </record_update>

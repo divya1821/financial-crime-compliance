@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <controller_preset/>
         <includes>fdacb518b7320110aab961d9ce11a989</includes>
-        <macroponent display_value="Dashboards">eba5e38a3b53e210f13f5fea26e45afc</macroponent>
+        <macroponent display_value="Default">eba5e38a3b53e210f13f5fea26e45afc</macroponent>
         <name>Dashboard Widget Clicked</name>
         <preset/>
         <required_translations>[]</required_translations>

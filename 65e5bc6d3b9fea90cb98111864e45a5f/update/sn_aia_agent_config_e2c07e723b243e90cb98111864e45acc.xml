@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_config">
     <sn_aia_agent_config action="INSERT_OR_UPDATE">
         <active>true</active>
-        <agent display_value="Pattern Detection Analysis - Individual (Copy)">26c07e723b243e90cb98111864e45ac8</agent>
+        <agent display_value="Pattern Detection Analysis - Entity">26c07e723b243e90cb98111864e45ac8</agent>
+        <doc_url/>
+        <icon_url/>
         <proficiency/>
+        <public>false</public>
+        <run_as_user/>
         <sys_class_name>sn_aia_agent_config</sys_class_name>
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-10-16 15:28:13</sys_created_on>

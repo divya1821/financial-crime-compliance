@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Flag KYC Due Soon Cases</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="Abhipsa Jally">d01cf4403b431210f13f5fea26e45a3e</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period/>
+        <run_start>2025-09-04 05:45:37</run_start>
+        <run_time>1970-01-01 10:00:00</run_time>
+        <run_type>daily</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[(function executeRule() {
+    var today = new GlideDateTime();
+    var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_cases'); 
+    gr.query();
+
+    while (gr.next()) {
+        var risk = gr.getValue('risk_level'); 
+        var expiryDate = gr.getValue('kyc_expiry'); 
+        if (!expiryDate || !risk) continue;
+
+        var nextReviewDate = new GlideDateTime(expiryDate);
+
+        // Add duration based on risk level
+        if (risk === 'high') {
+            nextReviewDate.addDaysUTC(365);
+        } else if (risk === 'medium') {
+            nextReviewDate.addDaysUTC(1095);
+        } else if (risk === 'low') {
+            nextReviewDate.addDaysUTC(1825);
+        } else {
+            continue;
+        }
+
+        // Subtract 60 days for early notification
+        var notifyDate = new GlideDateTime(nextReviewDate);
+        notifyDate.addDaysUTC(-60);
+
+        // Flag if today >= notifyDate and not under review
+        if (today.compareTo(notifyDate) >= 0 && gr.getValue('case_status') !== 'Under Review') {
+            gr.setValue('kyc_due_soon', true);
+            gr.update();
+
+            // Trigger email and UI (bell icon) notifications
+            gs.eventQueue('kyc.review.due.soon.email', gr, gr.assigned_to, gs.getUserID());
+            gs.eventQueue('kyc.review.due.soon.ui', gr, gr.assigned_to, gs.getUserID());
+        } else {
+            gr.setValue('kyc_due_soon', false);
+            gr.update();
+        }
+    }
+})();
+
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-04 05:48:24</sys_created_on>
+        <sys_id>b2a854993bbf6e10f13f5fea26e45a14</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Flag KYC Due Soon Cases</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sysauto_script_b2a854993bbf6e10f13f5fea26e45a14</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-05 09:01:53</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

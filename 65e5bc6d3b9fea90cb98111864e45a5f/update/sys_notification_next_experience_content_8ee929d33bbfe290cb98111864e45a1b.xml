@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_next_experience_content">
+    <sys_notification_next_experience_content action="INSERT_OR_UPDATE">
+        <action_name/>
+        <action_payload/>
+        <active>true</active>
+        <is_default>false</is_default>
+        <message><![CDATA[
+Case Number: ${number}
+Customer Type: ${customer_type}
+]]></message>
+        <message_heading><![CDATA[Perpetual KYC Alert : ${entity.legal_name} ${individual.forename_in_full}]]></message_heading>
+        <name>RM Perpeptual Nofification</name>
+        <notification display_value="RM Perpetual Notification">c467251f3b7fe290cb98111864e45ad6</notification>
+        <route display_value="Next Experience Route">bccd1214533201107cd3ddeeff7b1289</route>
+        <sys_class_name>sys_notification_next_experience_content</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-09-10 16:56:27</sys_created_on>
+        <sys_id>8ee929d33bbfe290cb98111864e45a1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RM Perpeptual Nofification</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_notification_next_experience_content_8ee929d33bbfe290cb98111864e45a1b</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-09-10 16:56:27</sys_updated_on>
+        <use_action>false</use_action>
+    </sys_notification_next_experience_content>
+</record_update>

@@ -19,7 +19,7 @@
         <sys_updated_by>abhipsa.jally</sys_updated_by>
         <sys_updated_on>2025-08-19 07:16:24</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
-        <ui_policy display_value="For Checker form should be read only except work notes section">9e14313b3b572210f13f5fea26e45ab0</ui_policy>
+        <ui_policy display_value="For Checker and RM form should be read only except work notes section">9e14313b3b572210f13f5fea26e45ab0</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>true</visible>

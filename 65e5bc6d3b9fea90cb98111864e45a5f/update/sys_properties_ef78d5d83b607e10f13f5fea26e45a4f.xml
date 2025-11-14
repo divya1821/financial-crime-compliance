@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Whether transaction change property is required for perpetual KYC?</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_vuram_financia_0.fcc_transaction_change</name>
+        <read_roles/>
+        <suffix>fcc_transaction_change</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-10-08 14:39:27</sys_created_on>
+        <sys_id>ef78d5d83b607e10f13f5fea26e45a4f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_vuram_financia_0.fcc_transaction_change</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_properties_ef78d5d83b607e10f13f5fea26e45a4f</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:51:48</sys_updated_on>
+        <type>boolean</type>
+        <value>false</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=ef78d5d83b607e10f13f5fea26e45a4f"/>
+</record_update>

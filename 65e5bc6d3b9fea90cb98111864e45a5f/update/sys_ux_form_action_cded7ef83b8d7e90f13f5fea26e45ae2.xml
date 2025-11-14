@@ -19,7 +19,7 @@
         <sys_updated_by>harini.ks</sys_updated_by>
         <sys_updated_on>2025-11-04 07:49:01</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_tasks</table>
-        <ui_action display_value="test">3507bab83b0d7e90f13f5fea26e45acf</ui_action>
+        <ui_action/>
     </sys_ux_form_action>
     <sys_translated_text action="delete_multiple" query="documentkey=cded7ef83b8d7e90f13f5fea26e45ae2"/>
 </record_update>

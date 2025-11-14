@@ -40,7 +40,7 @@
 
     // Navigation
     $scope.goPrevious = function() {
-        $window.location.href = "/fcc_kyc?id=fcc_kyc_update_dashboard"; 
+        $window.location.href = "/fcc_kyc"; 
     };
 
     // Proceed: Update status then navigate
@@ -275,7 +275,7 @@ body, .kyc-container {&#13;
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>false</has_preview>
+        <has_preview>true</has_preview>
         <id>fcc_kyc_entity_video_kyc</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {
@@ -329,14 +329,14 @@ body, .kyc-container {&#13;
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-04 12:46:33</sys_created_on>
         <sys_id>d7d879d93b33ee10cb98111864e45a9e</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>FCC KYC Entity Video KYC</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_d7d879d93b33ee10cb98111864e45a9e</sys_update_name>
-        <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-04 13:22:29</sys_updated_on>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-10-14 09:54:29</sys_updated_on>
         <template><![CDATA[<header class="breadcrumb-header">
   <div class="breadcrumb">
     <a href="/fcc_kyc">Home</a> &gt; 
@@ -363,7 +363,7 @@ body, .kyc-container {&#13;
   
   <!-- Start Flow Button (hidden after click) -->
   <div ng-if="!loading && !qrUrl" class="kyc-center">
-    <button class="btn btn-primary kyc-button" ng-click="triggerFlow()">Start Flow</button>
+    <button class="btn btn-primary kyc-button" ng-click="triggerFlow()">Initiate Video KYC</button>
   </div>
 
   <!-- Loading Spinner (centered) -->
@@ -381,8 +381,8 @@ body, .kyc-container {&#13;
 
 <!-- Bottom Buttons (aligned right) -->
 <div class="kyc-buttons">
-  <button class="btn btn-primary kyc-button" ng-click="goPrevious()">Previous</button>
-  <button class="btn btn-primary kyc-button">Save Changes</button>
+  <!--<button class="btn btn-primary kyc-button" ng-click="goPrevious()">Previous</button>
+  <button class="btn btn-primary kyc-button">Save Changes</button> -->
   <button class="btn btn-primary kyc-button" ng-click="goProceed()" ng-disabled="!qrUrl">Proceed</button>
 </div>
 

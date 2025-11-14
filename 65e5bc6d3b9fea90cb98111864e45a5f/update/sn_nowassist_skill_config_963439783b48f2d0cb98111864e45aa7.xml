@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <description><![CDATA[This skill is used to detect the abnormal transactions.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>fcc_kyc_transaction_analysis_.963439783b48f2d0cb98111864e45aa7</internal_name>
+        <is_template>false</is_template>
+        <name>FCC KYC Transaction Analysis </name>
+        <nap_skill_applicability display_value="This skill is used to detect the abnormal transactions.">8f65397c3b48f2d0cb98111864e45ad2</nap_skill_applicability>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Financial Crime Compliance">e7ef75333bb76a90cb98111864e45ab5</skill_family>
+        <skill_id>9534b5f43b48f2d0cb98111864e45acb</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>1</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-15 09:24:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>963439783b48f2d0cb98111864e45aa7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>FCC KYC Transaction Analysis </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_963439783b48f2d0cb98111864e45aa7</sys_update_name>
+        <sys_updated_by>nauman.ansari</sys_updated_by>
+        <sys_updated_on>2025-10-17 10:43:21</sys_updated_on>
+        <upstream_routing/>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=963439783b48f2d0cb98111864e45aa7"/>
+</record_update>

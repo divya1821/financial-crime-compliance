@@ -14,13 +14,13 @@
         <event_parm_1_table>sys_user</event_parm_1_table>
         <event_parm_2>false</event_parm_2>
         <event_parm_2_table>sys_user</event_parm_2_table>
-        <include_originator>true</include_originator>
+        <include_originator>false</include_originator>
         <mandatory>false</mandatory>
         <name>KYC Review – Bell Alert</name>
         <notification_classifier/>
         <order>100</order>
-        <recipient_fields/>
-        <recipient_users>47b050ac3be3e610f13f5fea26e45a35,380f8c683be3e610f13f5fea26e45a3b</recipient_users>
+        <recipient_fields>assigned_to</recipient_fields>
+        <recipient_users/>
         <script><![CDATA[(function runRecipientScript(/*String*/ parm1, /*String*/ parm2) {
       /*
       //Create instance of AdvancedNotificationRecipients to add recipients
@@ -41,7 +41,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9131abd13b732250f13f5fea26e45a78</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>KYC Review – Bell Alert</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -49,7 +49,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_notification_9131abd13b732250f13f5fea26e45a78</sys_update_name>
         <sys_updated_by>abhipsa.jally</sys_updated_by>
-        <sys_updated_on>2025-09-04 20:29:34</sys_updated_on>
+        <sys_updated_on>2025-09-09 10:17:26</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
         <triggered_by>event</triggered_by>
     </sys_notification>

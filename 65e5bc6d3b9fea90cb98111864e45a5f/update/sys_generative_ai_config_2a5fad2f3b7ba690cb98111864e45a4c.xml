@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_configurations>{"skill_config_id":"7e5fad2f3b7ba690cb98111864e45a63"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>ae5fa92f3b7ba690cb98111864e45ae7</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent/>
+        <prompt>## Role
+You are a financial analyst. Your task is to analyze the extracted document content and perform anomaly detection by comparing various transaction totals against the FCC KYC individual details field threshold value.
+
+## Context
+The extracted document content that needs to be analyzed for anomaly detection:  {{document_extraction_string}} 
+The FCC KYC individual details field threshold value: 
+{{fcc_kyc_individual_details.ach_withdrawal}}  
+{{fcc_kyc_individual_details.ach_deposit}}  
+{{fcc_kyc_individual_details.atm_deposit}} 
+{{fcc_kyc_individual_details.atm_withdrawal}} 
+{{fcc_kyc_individual_details.cash_deposit}}
+{{fcc_kyc_individual_details.cash_withdrawal}} 
+{{fcc_kyc_individual_details.cheque_deposit}} 
+{{fcc_kyc_individual_details.cheque_withdrawal}} 
+
+## Instructions
+1. Calculate the Total Cash Credit, Total Cash Debit, Total ATM Deposit Credit, Total ATM Cash Debit, Total ACH Credit, Total ACH Debit, Total Cheque Deposit, and Total Cheque Debit from the provided document content.
+2. Compare each calculated total against the provided FCC KYC individual details field threshold value.
+3. If a total is more than 10% higher than the threshold value, set it as 'Red'.
+4. If a total is less than 10% of the threshold value, set it as 'Yellow'.
+5. If a total is within 10% of the threshold value, set it as 'Green'.
+6. Provide the results for each total in a clear and concise manner.
+
+## Output
+The output should be a brief summary of the anomaly detection results in the following JSON format:
+
+Total Cash Credit: &lt;TOTAL_CASH_CREDIT_STATUS&gt;
+Total Cash Debit: &lt;TOTAL_CASH_DEBIT_STATUS&gt;
+Total ATM Deposit Credit: &lt;TOTAL_ATM_DEPOSIT_CREDIT_STATUS&gt;
+Total ATM Cash Debit: &lt;TOTAL_ATM_CASH_DEBIT_STATUS&gt;
+Total ACH Credit: &lt;TOTAL_ACH_CREDIT_STATUS&gt;
+Total ACH Debit: &lt;TOTAL_ACH_DEBIT_STATUS&gt;
+Total Cheque Deposit: &lt;TOTAL_CHEQUE_DEPOSIT_STATUS&gt;
+Total Cheque Debit: &lt;TOTAL_CHEQUE_DEBIT_STATUS&gt;
+
+
+This is the sample response. Create a output in this Json Format. Take this as reference
+
+{
+  "Total Cash Credit": {
+    "Expected": "$200",
+    "Done": "$16000",
+    "Status": "Green"
+  },
+  "Total Cash Debit": {
+    "Expected": "$0",
+    "Done": "$0",
+    "Status": "Green"
+  },
+  "Total ATM Deposit Credit": {
+    "Expected": "$500",
+    "Done": "$23962",
+    "Status": "Green"
+  },
+  "Total ATM Cash Debit": {
+    "Expected": "$0",
+    "Done": "$0",
+    "Status": "Green"
+  },
+  "Total ACH Credit": {
+    "Expected": "$300000",
+    "Done": "$329033",
+    "Status": "Green"
+  },
+  "Total ACH Debit": {
+    "Expected": "$20000",
+    "Done": "$21909",
+    "Status": "Green"
+  },
+  "Total Cheque Deposit": {
+    "Expected": "$1000",
+    "Done": "$667",
+    "Status": "Yellow"
+  },
+  "Total Cheque Debit": {
+    "Expected": "$85000",
+    "Done": "$90038",
+    "Status": "Green"
+  }
+}
+</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>published</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-11 11:50:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2a5fad2f3b7ba690cb98111864e45a4c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>ae5fa92f3b7ba690cb98111864e45ae7</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_2a5fad2f3b7ba690cb98111864e45a4c</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-12 13:35:50</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+</record_update>

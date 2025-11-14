@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard">
     <par_dashboard action="INSERT_OR_UPDATE">
         <active>true</active>
+        <base_dashboard/>
         <certified>false</certified>
         <description>This dashboard is for checker</description>
         <experience display_value="Advanced Dashboards">8adc36706f01011089060168e25b3693</experience>

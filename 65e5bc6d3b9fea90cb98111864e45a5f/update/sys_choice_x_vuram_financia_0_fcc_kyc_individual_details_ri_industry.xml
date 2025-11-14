@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="ri_industry" table="x_vuram_financia_0_fcc_kyc_individual_details" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>ri_industry</element>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:43:05</sys_created_on>
+            <sys_id>a8a6a2413b80f6d0f13f5fea26e45a8c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ri_industry</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_choice_x_vuram_financia_0_fcc_kyc_individual_details_ri_industry</sys_update_name>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:43:05</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aero Space &amp; Aviation</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>092bd0ed3b88bad0cb98111864e45aa4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Aero Space &amp; Aviation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Antique/Art Dealer</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>052bd0ed3b88bad0cb98111864e45aa6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Antique/Art Dealer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Broker</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>092bd0ed3b88bad0cb98111864e45aa7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Broker</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Charity</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0d2bd0ed3b88bad0cb98111864e45aa8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Charity</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Chemical</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>012bd0ed3b88bad0cb98111864e45aaa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Chemical</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Property Development</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>052bd0ed3b88bad0cb98111864e45aab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Property Development</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Gaming</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>092bd0ed3b88bad0cb98111864e45aac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Gaming</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Software</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0d2bd0ed3b88bad0cb98111864e45aad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Software</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cosmetics</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>012bd0ed3b88bad0cb98111864e45aaf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>Cosmetics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>E Commerce</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>052bd0ed3b88bad0cb98111864e45ab0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:36</sys_updated_on>
+            <value>E Commerce</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

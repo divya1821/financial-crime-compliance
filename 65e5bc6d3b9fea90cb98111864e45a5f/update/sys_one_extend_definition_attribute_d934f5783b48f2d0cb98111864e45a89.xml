@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_definition_attribute">
+    <sys_one_extend_definition_attribute action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <apply_filter>false</apply_filter>
+        <attribute_label/>
+        <capability display_value="FCC KYC Transaction Analysis ">9534b5f43b48f2d0cb98111864e45acb</capability>
+        <choice_list/>
+        <contains_large_input>false</contains_large_input>
+        <data_type>glide_record</data_type>
+        <default_value/>
+        <definition/>
+        <description/>
+        <group/>
+        <hidden>false</hidden>
+        <info/>
+        <label>FCC KYC Individual Details</label>
+        <mandatory>false</mandatory>
+        <name>fcc_kyc_individual_details</name>
+        <order/>
+        <schema>{"tableName":"x_vuram_financia_0_fcc_kyc_individual_details","sysId":"274ae85d3b73ae10cb98111864e45a02"}</schema>
+        <sys_class_name>sys_one_extend_definition_attribute</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-15 09:24:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d934f5783b48f2d0cb98111864e45a89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fcc_kyc_individual_details</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_one_extend_definition_attribute_d934f5783b48f2d0cb98111864e45a89</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-15 09:24:18</sys_updated_on>
+        <translate>false</translate>
+        <truncate>false</truncate>
+        <type>input</type>
+        <user_query>false</user_query>
+    </sys_one_extend_definition_attribute>
+    <sys_translated_text action="delete_multiple" query="documentkey=d934f5783b48f2d0cb98111864e45a89"/>
+</record_update>

@@ -35,12 +35,13 @@ function sendtocheck()
 { 
 	var rltd_case=new FincrimeUtils().relatedTask( current.sys_id+'');
 	if(rltd_case)
-	{gs.addErrorMessage("Please complete complete all related tasks before proceeding.");
+	{gs.addErrorMessage("Please complete all related tasks before proceeding.");
 	}
 	else
 	{
 current.state = 320;
-current.assigned_to='fb1010e83be3e610f13f5fea26e45ad3';
+current.previous_user=current.assigned_to;
+current.assigned_to="";
 current.update();
 var au = new ActionUtils();
 au.postInsert(current);
@@ -58,7 +59,7 @@ au.postInsert(current);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ceca27f3b9f2210cb98111864e45aa5</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Send to Checker</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -66,7 +67,7 @@ au.postInsert(current);
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_action_5ceca27f3b9f2210cb98111864e45aa5</sys_update_name>
         <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-08-21 17:07:52</sys_updated_on>
+        <sys_updated_on>2025-09-29 13:23:40</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

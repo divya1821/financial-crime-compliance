@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>false</disabled>
+        <field>kyc_case.entity.pep</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-09-26 14:46:21</sys_created_on>
+        <sys_id>8427e7103b18fa54f13f5fea26e45adb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>kyc_case.entity.pep</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ui_policy_action_8427e7103b18fa54f13f5fea26e45adb</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-09-26 14:46:21</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_tasks</table>
+        <ui_policy display_value="when state is in work in progress the pep, sanctions and adverse news screening should be editable field">542d648c3b94b654cb98111864e45aaa</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="ri_complexity_of_ownership" table="x_vuram_financia_0_fcc_kyc_individual_details" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>ri_complexity_of_ownership</element>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:43:03</sys_created_on>
+            <sys_id>04a662413b80f6d0f13f5fea26e45abb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ri_complexity_of_ownership</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_choice_x_vuram_financia_0_fcc_kyc_individual_details_ri_complexity_of_ownership</sys_update_name>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:43:03</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_complexity_of_ownership</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1-2 levels ( including client )</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 12:37:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8ab3f4653bccbad0cb98111864e45a35</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 12:37:59</sys_updated_on>
+            <value>1-2 levels ( including client )</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_complexity_of_ownership</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3  levels , but no factors indicating elevated risk</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 12:37:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>86b3f4653bccbad0cb98111864e45a37</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 12:37:59</sys_updated_on>
+            <value>3  levels , but no factors indicating elevated risk</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>ri_complexity_of_ownership</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Elevated risk factors (ownership through Trust, UBOs in HRJ, highly complex ownership structure, etc</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>divya.suresh</sys_created_by>
+            <sys_created_on>2025-09-17 10:50:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d02b90ed3b88bad0cb98111864e45a91</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>divya.suresh</sys_updated_by>
+            <sys_updated_on>2025-09-17 10:50:33</sys_updated_on>
+            <value>Elevated risk factors (ownership through Trust, UBOs in HRJ, highly complex ownership structure, etc.)</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

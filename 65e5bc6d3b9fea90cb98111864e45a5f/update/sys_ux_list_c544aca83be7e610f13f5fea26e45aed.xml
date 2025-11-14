@@ -5,6 +5,8 @@
         <columns>number,case_type,state,short_description,assigned_to,priority,relationship_manager</columns>
         <condition/>
         <configuration display_value="FinCrime_menu_config">09316c603be7e610f13f5fea26e45a08</configuration>
+        <enable_infinite_scroll>false</enable_infinite_scroll>
+        <fixed_query/>
         <group_by_column/>
         <groups/>
         <hide_cell_filter>true</hide_cell_filter>
@@ -50,6 +52,7 @@
         <highlight_content_color/>
         <highlight_content_pattern/>
         <list_attributes/>
+        <live_updates>off</live_updates>
         <max_characters>4000</max_characters>
         <order>400</order>
         <override_word_wrap_user_pref>false</override_word_wrap_user_pref>

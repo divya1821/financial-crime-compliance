@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=100268000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>c7f285503ba8be10cb98111864e45a74</copied_from>
+        <copied_from_name>Perpetual KYC for Individual</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>perpetual_kyc_for_entity</internal_name>
+        <label_cache>[{"name":"Updated_1.current.legal_name","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record➛Legal Name","reference":"","reference_display":"Legal Name","type":"string","base_type":"string","parent_table_name":"x_vuram_financia_0_fcc_kyc_entity_details","column_name":"legal_name","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["customer_name"]}},{"name":"07e22982-d14d-4b21-aaab-7f62c4765cf5.var","label":"1 - Perpetual KYC System Property Selection - Entity➛var","reference_display":"var","type":"string","base_type":"string","usedInstances":{"c3d33831-56d9-44db-b6a7-c1459a39637b":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"82298094-960b-4f4e-9f8f-dd81b79cae03"}},{"name":"Updated_1.current.forename_in_full","label":"Trigger - Record Updated➛FCC KYC Individual Details Record➛Forename in full","reference":"","reference_display":"Forename in full","type":"string","base_type":"string","parent_table_name":"x_vuram_financia_0_fcc_kyc_individual_details","column_name":"forename_in_full","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["customer_name"]}},{"name":"Updated_1.current.risk_level","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record➛Risk Level","reference":"","reference_display":"Risk Level","type":"choice","base_type":"choice","parent_table_name":"x_vuram_financia_0_fcc_kyc_entity_details","column_name":"risk_level","choices":[{"label":"Low","image":"","used":false,"reference":false,"rawLabel":"Low","selected":false,"missing":false,"value":"low","parameters":{"name":"x_vuram_financia_0_fcc_kyc_entity_details","dependent_values":[""]}},{"label":"Medium","image":"","used":false,"reference":false,"rawLabel":"Medium","selected":false,"missing":false,"value":"medium","parameters":{"name":"x_vuram_financia_0_fcc_kyc_entity_details","dependent_values":[""]}},{"label":"High","image":"","used":false,"reference":false,"rawLabel":"High","selected":false,"missing":false,"value":"high","parameters":{"name":"x_vuram_financia_0_fcc_kyc_entity_details","dependent_values":[""]}}],"usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["risk_level"]}},{"name":"Updated_1.current.relationship_manager","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record➛Relationship Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_vuram_financia_0_fcc_kyc_entity_details","column_name":"relationship_manager","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["relationship_manager"]}},{"name":"21c6cb4e-6080-4c38-8fe9-8a8d5e2f9601.var","label":"1 - Perpetual KYC System Property Selection - Individual➛var","reference_display":"var","type":"string","base_type":"string","usedInstances":{"c3d33831-56d9-44db-b6a7-c1459a39637b":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"82298094-960b-4f4e-9f8f-dd81b79cae03"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record","reference":"x_vuram_financia_0_fcc_kyc_entity_details","reference_display":" FCC KYC Entity Details","type":"reference","base_type":"reference","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["individual","entity"]},"attributes":{}},{"name":"Updated_1.changed_fields","label":"Trigger - Record Updated➛Changed Fields","type":"array.object","base_type":"array.object","usedInstances":{"21c6cb4e-6080-4c38-8fe9-8a8d5e2f9601":["changedfields"],"07e22982-d14d-4b21-aaab-7f62c4765cf5":["changedfields"]},"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}}]</label_cache>
+        <master_snapshot>99e569e43b2cfe10f13f5fea26e45ab7</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Perpetual KYC for Entity</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>e5e5a9e43b2cfe10f13f5fea26e45a16</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a92ad6c3be8fe10f13f5fea26e45a7e</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Perpetual KYC for Entity</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_hub_flow_0a92ad6c3be8fe10f13f5fea26e45a7e</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:27</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_vuram_financia_0_fcc_kyc_entity_details">fcc_kyc_case.state=400<item display_value="Closed  Complete" endquery="false" field="fcc_kyc_case.state" goto="false" newquery="false" operator="=" or="false" value="400"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e5e5a9e43b2cfe10f13f5fea26e45a16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:43</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_entity_details</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>0a92ad6c3be8fe10f13f5fea26e45a7e</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-10-10 13:51:27</sys_created_on>
+        <sys_id>9611a3743be8f250f13f5fea26e45aea</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:27</sys_updated_on>
+        <trigger display_value="">e5e5a9e43b2cfe10f13f5fea26e45a16</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT IN9611a3743be8f250f13f5fea26e45aea"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT IN9a92ad6c3be8fe10f13f5fea26e45a7f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0a92ad6c3be8fe10f13f5fea26e45a7e</id>
+        <name>Perpetual KYC for Entity</name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:16</sys_created_on>
+        <sys_id>9a92ad6c3be8fe10f13f5fea26e45a7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:00:16</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=9a92ad6c3be8fe10f13f5fea26e45a7f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT IN5292ad6c3be8fe10f13f5fea26e45a86,9e92ad6c3be8fe10f13f5fea26e45aaf,d292ad6c3be8fe10f13f5fea26e45ab3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</model>
+        <model_id>0a92ad6c3be8fe10f13f5fea26e45a7e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0a92ad6c3be8fe10f13f5fea26e45a7e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:17</sys_created_on>
+        <sys_id>5292ad6c3be8fe10f13f5fea26e45a86</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5292ad6c3be8fe10f13f5fea26e45a86"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</model>
+        <model_id>0a92ad6c3be8fe10f13f5fea26e45a7e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0a92ad6c3be8fe10f13f5fea26e45a7e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:17</sys_created_on>
+        <sys_id>9e92ad6c3be8fe10f13f5fea26e45aaf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9e92ad6c3be8fe10f13f5fea26e45aaf"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</model>
+        <model_id>0a92ad6c3be8fe10f13f5fea26e45a7e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0a92ad6c3be8fe10f13f5fea26e45a7e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:17</sys_created_on>
+        <sys_id>d292ad6c3be8fe10f13f5fea26e45ab3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:00:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d292ad6c3be8fe10f13f5fea26e45ab3"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT INe792ed6c3be8fe10f13f5fea26e45afe"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:22</sys_created_on>
+        <sys_id>e792ed6c3be8fe10f13f5fea26e45afe</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:36</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT IN2f92ed6c3be8fe10f13f5fea26e45afc,40e529e43b2cfe10f13f5fea26e45a25"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>c3d33831-56d9-44db-b6a7-c1459a39637b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:22</sys_created_on>
+        <sys_id>2f92ed6c3be8fe10f13f5fea26e45afc</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:50</sys_updated_on>
+        <ui_id>fe0cfecd-e018-4947-86b5-95cb8aff4834</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WbW/bNhD+KwQ/5cVVpDgNWu9T4DQYsDUBmi3AENkELZ1srhSlkZRjzfB/75GUHbdO0hRYP2QIYEDW8e7hc8e7h7pdUpHTAT1NIH77PjnN+km/fxzHx+9Okslpf5Ic530OcEJ7VPES0NPyiQTmX3p0zmXjjAs2bzQvWSEUV5ngLGZFlrHPbcYybsCgay5MLXl700VcDIfkt7+GZIjLuJrNhMw1KDq4HfVozREMLGg6WH6z9Fy2kk9Aousfju4j7G1bP2j7fTuWXIaFSueOT9yjsLCgckAiBZcGerTkKue20i0dWN2gQQPPr5RsNx4zoSwCUue7MOJf3PZd7PwKwMwyCGubV9YVK5iLc275NSJnttGdazarRIZ19TXJoeCNtMNtW3C4qq2oVAjxaXbRlWxKdRlKQjcA67NBS2OQBNQuT8e8S6O4nlV3n9YsL4TyJekWZZVxuXnj1moxaazjs6QgoUQgVvK6FmrKal3NhQ9GLmU0lfgSFbK6w02NmKqIZ454hGXl0QXaz735hmvhsviIMBi86lHTmqHkxtzngkVk/zSOScisy4GFMriQTIvanuEGc+jornrrMcghfv9oYyWT+0bynW+2RsD1OXPdkzZx3M+RXw0WeWyGYGwst91q8jYeZ42xVQl6Kwh5CtuOwyOYlss/a6wC5CyJskZj4e1qNdbCfGYS5iAf9YrufVwASO4qamaixlNQfAr6idAHvBFkw9jV4PFoCVNM2/lgjJlV2rpT9VVHzBBX5G+CBfLxU4u7wvFa559U5x+U4O9PylqCLwTI3DwwOmv9hRIP2AILo/SNBneL5KZb7HQ4+a90+CSOX5ISh8RevBBv3bk7khxSDDbHeae1vfGJEHp0kKqDg7MMz8AQx/rozKdBXBqkMZg5sTMgRc68pZr8DZmNyLUHICXOH9GoKloRTnxXRsQhXrneI6opJ/gQhlRFYcCSSUsOEyIU+aB1pcmv2IbSbXENoXiezJwL6b8nKp+DIV1nkaZGYrVGqi4mpVFKCS9w8tb0XDgsOM4BDJCNJr4geBAZCXO8dozwpKcoIRuF2KncLw6ry2yD4oxHqXLIhR/Vj9xmM8jX6Lcj9CgqvbdwOe7sNeNqiroUQvdTtUwVIcT5t9v+LGHsK7GOcMN977skoth7Gvd2MYr8vy1NXIvYE/i37Shs4Rht5xbVjZnt7tnVbQr2QxiUH6K17wK9cO3tH+IpDsiVzINwDfBgD7+PhW0wF1VjghQ6DHIJdwGCPBOjS2IDkaYqpaEKq1StHjhoZmx3SX1dI1uh1mFT7u1jA3Rdk9Kh35Gcg8WONo6V2+BwBxFvN+zvDPZS2vO/QAShUA4Mn0O+UbmV04fX8f5fjTfDGwFvdnfDoN22zODd4wvGWPjw+tkC8DwGrxLxMiRitRp9AWwPLJ+tEAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2f92ed6c3be8fe10f13f5fea26e45afc"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Perpetual KYC System Property Selection - Entity">3852ed2c3be8fe10f13f5fea26e45aba</action_type>
+        <action_type_parent display_value="Perpetual KYC System Property Selection - Entity">9cfe51243be8fe10f13f5fea26e45acf</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>3852ed2c3be8fe10f13f5fea26e45aba</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:36</sys_created_on>
+        <sys_id>40e529e43b2cfe10f13f5fea26e45a25</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:50</sys_updated_on>
+        <ui_id>07e22982-d14d-4b21-aaab-7f62c4765cf5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41Sy27bMBD8F54tQdYrtm9FDAMF2hpomlyCQFiRS5sFRSki5cQ1/O9dWg8bRQPkJHB2djU7s88npgRbsSTNYhQxT0pcSJxHcp7ITCLEOaYZlMhmzECFxOR7MDsUUqEWluAD6M7jp9NjI8ChKObhwCl60vlMNKFso+H49Dk23ystWjRs9fwyYw209G+HLVud/il9Vrymj76q34zqP1jKHRsPW9cqsxve34YRDyNYt8JLms8Yvjs0AkmLBG1xxiowtF3dHiekRRBbo6/AXhlH05gnv1v1h/6XZ1EUeapEWpBjX56exeBhD8s1OCAtHXddO1D5vlYcbW+NQAmddve3WE/YNk7Vpm9xUOqxu9ZdZX70jrBpwBgZIZ0lEdj4Xb34YRP5sK/ffo4qN8pcbBmKuuagpxc4Mq/snNdzYp369T9fLwkXY2KbdR/OGh0obae6j2QibcvfyB3VUGNF2ooKmoamFU1bH9RFD61XhTtNj1Dq+o32sGpnQuDei5DSgnBD+PoCP0GrvDHfaQw1zwaptydxVUFoPf6/R4er+kh6px6Neu3wqz9eSKK7JWbLIBNRGaSxTAIQ8yRYxlkeC56n8SK6CLjpSTBBzFMIZJxAkJYpD2AR5UGaLrP8DmO5SEp2njF7tPcarL1mSsdUvHY+kT7hIcuiPwffwlvVuC/kygGH2M4vfwFVSkkUJgQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=40e529e43b2cfe10f13f5fea26e45a25"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT IN5f92ed6c3be8fe10f13f5fea26e45ad3"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f83e49943b2cbe10cb98111864e45aec</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:21</sys_created_on>
+        <sys_id>5f92ed6c3be8fe10f13f5fea26e45ad3</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:24</sys_updated_on>
+        <ui_id>c3d33831-56d9-44db-b6a7-c1459a39637b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2UX2/aMBTFv0qV5xAlhkDhrepWqdJapoEqTVMV3dgOWHPszHagDPHdd50/FK2gTdUe94bPte895+Yn9oGuXVU7u9Q31oqVCmbfnsNAKK/h732goOTBLKBaMeGEVlkjhMEGZO0Lt2tQK26vNKW1sVhgwlYSdk+X6nQtJDO8m1SBwX6Om2C2/63kdhXPJORcYpuFM0Kt8LlgeCpiKJIpTeiQjIckjsn1KMnHwzwhbAgchnivf3jbG7/61CjhxUR+Huq2n6QN87aSOAz4i+OKcRxdgLQ8DEpQDJw2u6NiOLC5kq/CWiiH7QJ/+cWKn9ibpKm/WHDMSHlbPB6zbnGtTNdaUD6vvMFWcZDL7g3Vsi7VY5vDr5wXUEvXrxyV2mI/XnnT3kVnqVis9fZLP/BOqCZgV5SagjyewOEa8tpx6z8Ml7zERlkJVYXLySqjN6J5jF7KaCXxEBVSb3GopygC6o1HuCOI7lD/0MhPYIRP8YBt8HFrMwcraNYQh+2cwQiHZi3Zj9obagN2UbJ2G3jBUiMqd4NzNrxzfQjf4npC6n4fTzgh02syYMmIDUY5SQYAkA8mxZjQ0WSc0iKNNmAOh/vF43z58eHz8utbot/d51+QP4W0SJM4PU/+aHyO/DPMX8ad/AF3/4H+kvY4jv/jfoq7sFmLbZetGf5u2p892u0E23LDOBUWjSy9dt//h/vCDgEQ9FTaavPdR3jVDr8AYeHtNQ0GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT IN279221ac3be8fe10f13f5fea26e45a01,af9221ac3be8fe10f13f5fea26e45a00"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0a92ad6c3be8fe10f13f5fea26e45a7e</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>67466b8c-c55f-4e2d-a44c-7ad4e062b41f</source_ui_id>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:22</sys_created_on>
+        <sys_id>279221ac3be8fe10f13f5fea26e45a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:00:22</sys_updated_on>
+        <transform_compositions>[{"id":"e0fce048c72333003884f80bf4c26002","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="to_lower_case">a809ecb7b7133300388487c2de11a9f7</transform_definition_id>
+        <ui_id>f34d2267-3674-426d-a1ca-314e7e874e3e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0a92ad6c3be8fe10f13f5fea26e45a7e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.risk_level}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:22</sys_created_on>
+        <sys_id>af9221ac3be8fe10f13f5fea26e45a00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:00:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>67466b8c-c55f-4e2d-a44c-7ad4e062b41f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0a92ad6c3be8fe10f13f5fea26e45a7e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:17</sys_created_on>
+        <sys_id>9e92ad6c3be8fe10f13f5fea26e45aae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:00:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0a92ad6c3be8fe10f13f5fea26e45a7e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:17</sys_created_on>
+        <sys_id>9e92ad6c3be8fe10f13f5fea26e45ab5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:00:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0a92ad6c3be8fe10f13f5fea26e45a7e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:00:17</sys_created_on>
+        <sys_id>d292ad6c3be8fe10f13f5fea26e45ab2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:00:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=61126000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>c7f285503ba8be10cb98111864e45a74</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>perpetual_kyc_for_entity</internal_name>
+        <label_cache>[{"name":"Updated_1.current.legal_name","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record➛Legal Name","reference":"","reference_display":"Legal Name","type":"string","base_type":"string","parent_table_name":"x_vuram_financia_0_fcc_kyc_entity_details","column_name":"legal_name","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["customer_name"]}},{"name":"07e22982-d14d-4b21-aaab-7f62c4765cf5.var","label":"1 - Perpetual KYC System Property Selection - Entity➛var","reference_display":"var","type":"string","base_type":"string","usedInstances":{"c3d33831-56d9-44db-b6a7-c1459a39637b":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"82298094-960b-4f4e-9f8f-dd81b79cae03"}},{"name":"Updated_1.current.forename_in_full","label":"Trigger - Record Updated➛FCC KYC Individual Details Record➛Forename in full","reference":"","reference_display":"Forename in full","type":"string","base_type":"string","parent_table_name":"x_vuram_financia_0_fcc_kyc_individual_details","column_name":"forename_in_full","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["customer_name"]}},{"name":"Updated_1.current.risk_level","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record➛Risk Level","reference":"","reference_display":"Risk Level","type":"choice","base_type":"choice","parent_table_name":"x_vuram_financia_0_fcc_kyc_entity_details","column_name":"risk_level","choices":[{"label":"Low","image":"","used":false,"reference":false,"rawLabel":"Low","selected":false,"missing":false,"value":"low","parameters":{"name":"x_vuram_financia_0_fcc_kyc_entity_details","dependent_values":[""]}},{"label":"Medium","image":"","used":false,"reference":false,"rawLabel":"Medium","selected":false,"missing":false,"value":"medium","parameters":{"name":"x_vuram_financia_0_fcc_kyc_entity_details","dependent_values":[""]}},{"label":"High","image":"","used":false,"reference":false,"rawLabel":"High","selected":false,"missing":false,"value":"high","parameters":{"name":"x_vuram_financia_0_fcc_kyc_entity_details","dependent_values":[""]}}],"usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["risk_level"]}},{"name":"Updated_1.current.relationship_manager","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record➛Relationship Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_vuram_financia_0_fcc_kyc_entity_details","column_name":"relationship_manager","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["relationship_manager"]}},{"name":"21c6cb4e-6080-4c38-8fe9-8a8d5e2f9601.var","label":"1 - Perpetual KYC System Property Selection - Individual➛var","reference_display":"var","type":"string","base_type":"string","usedInstances":{"c3d33831-56d9-44db-b6a7-c1459a39637b":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"82298094-960b-4f4e-9f8f-dd81b79cae03"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ FCC KYC Entity Details Record","reference":"x_vuram_financia_0_fcc_kyc_entity_details","reference_display":" FCC KYC Entity Details","type":"reference","base_type":"reference","usedInstances":{"fe0cfecd-e018-4947-86b5-95cb8aff4834":["individual","entity"]},"attributes":{}},{"name":"Updated_1.changed_fields","label":"Trigger - Record Updated➛Changed Fields","type":"array.object","base_type":"array.object","usedInstances":{"21c6cb4e-6080-4c38-8fe9-8a8d5e2f9601":["changedfields"],"07e22982-d14d-4b21-aaab-7f62c4765cf5":["changedfields"]},"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}}]</label_cache>
+        <master>true</master>
+        <name>Perpetual KYC for Entity</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Perpetual KYC for Entity">0a92ad6c3be8fe10f13f5fea26e45a7e</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>99e569e43b2cfe10f13f5fea26e45ab7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:26</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=99e569e43b2cfe10f13f5fea26e45ab7^sys_idNOT IN5de569e43b2cfe10f13f5fea26e45ab8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>99e569e43b2cfe10f13f5fea26e45ab7</id>
+        <name>Perpetual KYC for Entity</name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:41</sys_created_on>
+        <sys_id>5de569e43b2cfe10f13f5fea26e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:41</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5de569e43b2cfe10f13f5fea26e45ab8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=99e569e43b2cfe10f13f5fea26e45ab7^sys_idNOT IN1de569e43b2cfe10f13f5fea26e45ac7,2de569e43b2cfe10f13f5fea26e45adb,91e569e43b2cfe10f13f5fea26e45aba"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Perpetual KYC for Entity">99e569e43b2cfe10f13f5fea26e45ab7</model>
+        <model_id>99e569e43b2cfe10f13f5fea26e45ab7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_99e569e43b2cfe10f13f5fea26e45ab7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>1de569e43b2cfe10f13f5fea26e45ac7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-09 12:39:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1de569e43b2cfe10f13f5fea26e45ac7"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Perpetual KYC for Entity">99e569e43b2cfe10f13f5fea26e45ab7</model>
+        <model_id>99e569e43b2cfe10f13f5fea26e45ab7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_99e569e43b2cfe10f13f5fea26e45ab7</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>2de569e43b2cfe10f13f5fea26e45adb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2de569e43b2cfe10f13f5fea26e45adb"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Perpetual KYC for Entity">99e569e43b2cfe10f13f5fea26e45ab7</model>
+        <model_id>99e569e43b2cfe10f13f5fea26e45ab7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_99e569e43b2cfe10f13f5fea26e45ab7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:41</sys_created_on>
+        <sys_id>91e569e43b2cfe10f13f5fea26e45aba</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=91e569e43b2cfe10f13f5fea26e45aba"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=99e569e43b2cfe10f13f5fea26e45ab7^sys_idNOT INe5e569e43b2cfe10f13f5fea26e45aec"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">99e569e43b2cfe10f13f5fea26e45ab7</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>e5e569e43b2cfe10f13f5fea26e45aec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:42</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=99e569e43b2cfe10f13f5fea26e45ab7^sys_idNOT IN2de569e43b2cfe10f13f5fea26e45ae9,6de569e43b2cfe10f13f5fea26e45aea"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Perpetual KYC System Property Selection - Entity">3852ed2c3be8fe10f13f5fea26e45aba</action_type>
+        <action_type_parent display_value="Perpetual KYC System Property Selection - Entity">9cfe51243be8fe10f13f5fea26e45acf</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>3852ed2c3be8fe10f13f5fea26e45aba</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">99e569e43b2cfe10f13f5fea26e45ab7</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>2de569e43b2cfe10f13f5fea26e45ae9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:42</sys_updated_on>
+        <ui_id>07e22982-d14d-4b21-aaab-7f62c4765cf5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41Sy27bMBD8F54tQdYrtm9FDAMF2hpomlyCQFiRS5sFRSki5cQ1/O9dWg8bRQPkJHB2djU7s88npgRbsSTNYhQxT0pcSJxHcp7ITCLEOaYZlMhmzECFxOR7MDsUUqEWluAD6M7jp9NjI8ChKObhwCl60vlMNKFso+H49Dk23ystWjRs9fwyYw209G+HLVud/il9Vrymj76q34zqP1jKHRsPW9cqsxve34YRDyNYt8JLms8Yvjs0AkmLBG1xxiowtF3dHiekRRBbo6/AXhlH05gnv1v1h/6XZ1EUeapEWpBjX56exeBhD8s1OCAtHXddO1D5vlYcbW+NQAmddve3WE/YNk7Vpm9xUOqxu9ZdZX70jrBpwBgZIZ0lEdj4Xb34YRP5sK/ffo4qN8pcbBmKuuagpxc4Mq/snNdzYp369T9fLwkXY2KbdR/OGh0obae6j2QibcvfyB3VUGNF2ooKmoamFU1bH9RFD61XhTtNj1Dq+o32sGpnQuDei5DSgnBD+PoCP0GrvDHfaQw1zwaptydxVUFoPf6/R4er+kh6px6Neu3wqz9eSKK7JWbLIBNRGaSxTAIQ8yRYxlkeC56n8SK6CLjpSTBBzFMIZJxAkJYpD2AR5UGaLrP8DmO5SEp2njF7tPcarL1mSsdUvHY+kT7hIcuiPwffwlvVuC/kygGH2M4vfwFVSkkUJgQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2de569e43b2cfe10f13f5fea26e45ae9"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">99e569e43b2cfe10f13f5fea26e45ab7</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>c3d33831-56d9-44db-b6a7-c1459a39637b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>6de569e43b2cfe10f13f5fea26e45aea</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:26</sys_updated_on>
+        <ui_id>fe0cfecd-e018-4947-86b5-95cb8aff4834</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WbW/bNhD+KwQ/5cVVpDgNWu9T4DQYsDUBmi3AENkELZ1srhSlkZRjzfB/75GUHbdO0hRYP2QIYEDW8e7hc8e7h7pdUpHTAT1NIH77PjnN+km/fxzHx+9Okslpf5Ic530OcEJ7VPES0NPyiQTmX3p0zmXjjAs2bzQvWSEUV5ngLGZFlrHPbcYybsCgay5MLXl700VcDIfkt7+GZIjLuJrNhMw1KDq4HfVozREMLGg6WH6z9Fy2kk9Aousfju4j7G1bP2j7fTuWXIaFSueOT9yjsLCgckAiBZcGerTkKue20i0dWN2gQQPPr5RsNx4zoSwCUue7MOJf3PZd7PwKwMwyCGubV9YVK5iLc275NSJnttGdazarRIZ19TXJoeCNtMNtW3C4qq2oVAjxaXbRlWxKdRlKQjcA67NBS2OQBNQuT8e8S6O4nlV3n9YsL4TyJekWZZVxuXnj1moxaazjs6QgoUQgVvK6FmrKal3NhQ9GLmU0lfgSFbK6w02NmKqIZ454hGXl0QXaz735hmvhsviIMBi86lHTmqHkxtzngkVk/zSOScisy4GFMriQTIvanuEGc+jornrrMcghfv9oYyWT+0bynW+2RsD1OXPdkzZx3M+RXw0WeWyGYGwst91q8jYeZ42xVQl6Kwh5CtuOwyOYlss/a6wC5CyJskZj4e1qNdbCfGYS5iAf9YrufVwASO4qamaixlNQfAr6idAHvBFkw9jV4PFoCVNM2/lgjJlV2rpT9VVHzBBX5G+CBfLxU4u7wvFa559U5x+U4O9PylqCLwTI3DwwOmv9hRIP2AILo/SNBneL5KZb7HQ4+a90+CSOX5ISh8RevBBv3bk7khxSDDbHeae1vfGJEHp0kKqDg7MMz8AQx/rozKdBXBqkMZg5sTMgRc68pZr8DZmNyLUHICXOH9GoKloRTnxXRsQhXrneI6opJ/gQhlRFYcCSSUsOEyIU+aB1pcmv2IbSbXENoXiezJwL6b8nKp+DIV1nkaZGYrVGqi4mpVFKCS9w8tb0XDgsOM4BDJCNJr4geBAZCXO8dozwpKcoIRuF2KncLw6ry2yD4oxHqXLIhR/Vj9xmM8jX6Lcj9CgqvbdwOe7sNeNqiroUQvdTtUwVIcT5t9v+LGHsK7GOcMN977skoth7Gvd2MYr8vy1NXIvYE/i37Shs4Rht5xbVjZnt7tnVbQr2QxiUH6K17wK9cO3tH+IpDsiVzINwDfBgD7+PhW0wF1VjghQ6DHIJdwGCPBOjS2IDkaYqpaEKq1StHjhoZmx3SX1dI1uh1mFT7u1jA3Rdk9Kh35Gcg8WONo6V2+BwBxFvN+zvDPZS2vO/QAShUA4Mn0O+UbmV04fX8f5fjTfDGwFvdnfDoN22zODd4wvGWPjw+tkC8DwGrxLxMiRitRp9AWwPLJ+tEAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6de569e43b2cfe10f13f5fea26e45aea"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=99e569e43b2cfe10f13f5fea26e45ab7^sys_idNOT IN65e569e43b2cfe10f13f5fea26e45ae8"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f83e49943b2cbe10cb98111864e45aec</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Perpetual KYC for Entity">99e569e43b2cfe10f13f5fea26e45ab7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>65e569e43b2cfe10f13f5fea26e45ae8</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:26</sys_updated_on>
+        <ui_id>c3d33831-56d9-44db-b6a7-c1459a39637b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K5WfQ5QEAi1vFV2lSm2ZBqo0TVV04zhgzbEz24GyiP++63wAWqm2bnvcGz7X995zTnxETVRly8qapbo2hq8kmX559giXDsPfNZFQMDIlVMmMW65k0gAe2YCoXGG2Brli5kJRWmmDhYybUsDu6a06XXORadZtKkHjPMs0mdY/lXiG7XkAeXhFQzqMxsMoCKLLUZiOh2kYZUNgMMSBAlIm3Kae4sV9g3hvcre70uHGai5X3fm+m7LoQaUzxyoMPMJeLJMZQz45CMM8UoDMwCq9OyCaQTaX4gisubQ4jrjLL4Z/x4VRHLuLOUOJlLXFwzHpfGvh/AYsIJWK2kp3V+laccpMa07GcqiEnZ1i7YV56aS2LRZS0XcrURXysXWEHAb0nwmRyiAJVjqljnqnI1+s1fZTz/KWy8aVrigUBXE4gUXv0so6PjVhghU4KCmgLNHRpNRqw5tm5FL4K4EHPxdqi0vdy/OBOuI+Ggv+LeI3DfwEmjsVDzgGm1uaKRhOk+aV4ji0iZG9R8zOzAQYcxSJ7ibfKkexldyJS1p/XAvVvLTXuHnDOh177/WjP3nvdR1MWBRdXUaDLBxlg1EahQMASAeTfBzR0WQc0zz2N6D3+7vF43z54eHj8vPrXPzxnPfl5wriPA6D+Hx+RuNz+TmTnHeGJvpFaNwX+83MBEHwPzR/HRpukvapd9qa5f8wM88uIO3Og9eUG6S2dNhd/3/iCjt8XJyeQlulvzpRR2z/A5lczHCZBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=99e569e43b2cfe10f13f5fea26e45ab7^sys_idNOT IN6de569e43b2cfe10f13f5fea26e45aec,e1e569e43b2cfe10f13f5fea26e45aed"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>99e569e43b2cfe10f13f5fea26e45ab7</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.risk_level}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>6de569e43b2cfe10f13f5fea26e45aec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:42</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>67466b8c-c55f-4e2d-a44c-7ad4e062b41f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>99e569e43b2cfe10f13f5fea26e45ab7</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>67466b8c-c55f-4e2d-a44c-7ad4e062b41f</source_ui_id>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>e1e569e43b2cfe10f13f5fea26e45aed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:42</sys_updated_on>
+        <transform_compositions>[{"id":"e0fce048c72333003884f80bf4c26002","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="to_lower_case">a809ecb7b7133300388487c2de11a9f7</transform_definition_id>
+        <ui_id>f34d2267-3674-426d-a1ca-314e7e874e3e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_99e569e43b2cfe10f13f5fea26e45ab7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>29e569e43b2cfe10f13f5fea26e45ae0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_99e569e43b2cfe10f13f5fea26e45ab7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>91e569e43b2cfe10f13f5fea26e45ac5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_99e569e43b2cfe10f13f5fea26e45ab7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:42</sys_created_on>
+        <sys_id>e9e569e43b2cfe10f13f5fea26e45acc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-09 10:14:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_99e569e43b2cfe10f13f5fea26e45ab7"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0a92ad6c3be8fe10f13f5fea26e45a7e</sys_id>
+        <latest_snapshot>99e569e43b2cfe10f13f5fea26e45ab7</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch1-hotfix2-10-11-2025_10-11-2025_2320.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0a92ad6c3be8fe10f13f5fea26e45a7e^sys_idNOT INa5e5a9e43b2cfe10f13f5fea26e45a18"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"a5e5a9e43b2cfe10f13f5fea26e45a18","name":"plan","plan_signature":null}}</plan>
+        <plan_id>0a92ad6c3be8fe10f13f5fea26e45a7e</plan_id>
+        <snapshot>275463a63b303610cb98111864e45aa7</snapshot>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-09 10:14:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a5e5a9e43b2cfe10f13f5fea26e45a18</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-10-10 13:51:27</sys_updated_on>
+        <trigger display_value="">e5e5a9e43b2cfe10f13f5fea26e45a16</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
+</record_update>

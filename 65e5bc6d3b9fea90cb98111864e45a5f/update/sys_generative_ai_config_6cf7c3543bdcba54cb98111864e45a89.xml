@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_configurations>{"skill_config_id":"041f7a583b5cba54cb98111864e45a25"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>f70f3a583b5cba54cb98111864e45ad7</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Analysis Response</name>
+        <parent display_value="OneExtend Capability Definition: Analysis the response (Now LLM Generic - Now LLM Generic)">730f3a583b5cba54cb98111864e45ae4</parent>
+        <prompt>## Context
+
+The response to be analyzed:  {{response}} 
+
+## Instructions
+
+1. Read through the provided response and context carefully.
+2. Determine whether the response is a false positive based on the context.
+3. Provide a clear explanation for why the response is considered a false positive.
+
+
+## Output
+
+The output should be a brief statement indicating that the response is a false positive, followed by a clear explanation for this classification. The explanation should be concise and focused on the most important reasons why the response does not match the expected outcome based on the context and also with in 4095 tokens.
+
+False positive. The explanation for this classification should follow.
+
+#Sample Output
+
+False positive.
+The response is classified as a false positive because the search term "M HARINI" with the year "2004" does not match any of the provided names or associated data that would indicate a relevant match. The names in the response, such as "Misty Lee Haring", "Mathew Hirini Campbell", and others, do not closely match the search term, and the associated data, such as countries, aka, and listings related to match, do not provide any clear connection to the search term. Additionally, the search term's year "2004" is not mentioned or relevant to any of the provided data, further indicating a lack of match. Therefore, the response is considered a false positive, as it does not provide any relevant matches to the search term.</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>archived</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-26 12:28:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6cf7c3543bdcba54cb98111864e45a89</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>f70f3a583b5cba54cb98111864e45ad7</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_6cf7c3543bdcba54cb98111864e45a89</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-26 13:00:47</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>2</version>
+    </sys_generative_ai_config>
+</record_update>

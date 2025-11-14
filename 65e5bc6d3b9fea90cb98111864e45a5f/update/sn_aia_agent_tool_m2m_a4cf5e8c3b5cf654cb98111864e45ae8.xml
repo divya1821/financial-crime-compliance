@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Decision Maker Agent - Individual Customer">3fb029003b50f654cb98111864e45af9</agent>
+        <description>Use this skill to retrieve response for the PEP, Adverse new screening, sanctions and risk level of the customer</description>
+        <display_output>true</display_output>
+        <document_status/>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Screening and risk analysis tool</name>
+        <output_transformation_strategy>abstract_summary</output_transformation_strategy>
+        <post_processing_script/>
+        <pre_message/>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-25 14:54:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a4cf5e8c3b5cf654cb98111864e45ae8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Screening and risk analysis tool</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_a4cf5e8c3b5cf654cb98111864e45ae8</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-29 14:40:33</sys_updated_on>
+        <tool display_value="Screening and risk analysis tool">e8cf5e8c3b5cf654cb98111864e45ae5</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+    </sn_aia_agent_tool_m2m>
+</record_update>

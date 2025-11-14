@@ -19,7 +19,7 @@
         <sys_updated_by>divya.suresh</sys_updated_by>
         <sys_updated_on>2025-11-05 09:53:37</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
-        <ui_policy display_value="short description and description field should be visible only when it a perpetual KYC case">4083ac193b4db2d0f13f5fea26e45afc</ui_policy>
+        <ui_policy display_value="short description and description field should be visible only when it is a perpetual KYC case">4083ac193b4db2d0f13f5fea26e45afc</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>true</visible>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_tool">
+    <sn_aia_tool action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>This tool will extract all the information about an individual along with information extracted from the documents and the tool will give an object as output with all the information about the individual.</description>
+        <input_schema>[{"name":"individual_number","description":"this is the individual number which will be used used to query and find the record"}]</input_schema>
+        <name>Extract individual information</name>
+        <record_type>custom</record_type>
+        <script><![CDATA[(function(inputs) {
+// only string inputs are allowed 
+// return outputs object where the keys in it are understandable by LLM
+var gr_idv= new GlideRecord("x_vuram_financia_0_fcc_kyc_individual_details");
+gr_idv.get('number',inputs.individual_number);
+return JSON.stringify(gr_idv);
+})(inputs);]]></script>
+        <sys_class_name>sn_aia_tool</sys_class_name>
+        <sys_created_by>abhilash.nair</sys_created_by>
+        <sys_created_on>2025-09-25 10:06:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9ecd59c43b10f654cb98111864e45a7e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Extract individual information</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_tool_9ecd59c43b10f654cb98111864e45a7e</sys_update_name>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-09-25 10:26:53</sys_updated_on>
+        <target_document/>
+        <target_document_table/>
+        <type>script</type>
+    </sn_aia_tool>
+</record_update>

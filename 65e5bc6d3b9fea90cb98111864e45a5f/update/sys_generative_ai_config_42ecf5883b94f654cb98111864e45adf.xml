@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_configurations>{"skill_config_id":"6b8275083b14f654cb98111864e45a34"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>d38271083b14f654cb98111864e45af8</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent display_value="OneExtend Capability Definition: Document Suggestion (Now LLM Generic - Now LLM Generic)">5f8235083b14f654cb98111864e45a6f</parent>
+        <prompt>
+## Role
+You are a company registration expert. Your task is to identify the required documents for a specific type of company based on the entity type provided.
+
+## Context
+The entity type for which the required documents need to be identified: {{entity_type}} 
+
+## Instructions
+1. Refer to the provided list of company types and their corresponding required documents.
+2. Match the provided entity type with the correct company type in the list.
+3. Identify and list the required documents for the matched company type.
+
+## Output
+The required documents for the specified entity type: 
+Public Listed Company
+- Certificate of Incorporation
+- Memorandum &amp; Articles of Association
+- Board Resolution authorizing signatory
+- PAN/Tax Registration Certificate
+- Stock Exchange Listing proof
+or
+Private Limited
+- Certificate of Incorporation
+- Memorandum &amp; Articles of Association
+- PAN/Tax Certificate
+- Board Resolution &amp; Authorized Signatory ID
+- Shareholding Pattern
+or
+General Partnership
+- Partnership Deed
+- Registration Certificate (if applicable)
+- PAN/Tax Registration Certificate
+- IDs of all Partners
+or
+Limited Partnership
+- Limited Partnership Agreement
+- Certificate of Registration
+- PAN/Tax Registration
+- IDs of General &amp; Limited Partners
+or
+Limited Liability Partnership (LLP)
+- LLP Agreement
+- Certificate of Incorporation
+- Designated Partner Identification Numbers (DPINs)
+- PAN/Tax Certificate
+or
+Partnership – Joint Venture
+- JV Agreement
+- Certificate of Incorporation (if applicable)
+- Tax Registration Documents
+- Board Resolution &amp; Authorized Signatory IDs
+or
+Small Corporate
+- Certificate of Incorporation
+- Memorandum &amp; Articles of Association
+- Tax Registration Documents
+- Board Resolution
+or
+Large Corporate
+- Certificate of Incorporation
+- Memorandum &amp; Articles of Association
+- Board Resolution &amp; Signatory IDs
+- PAN/Tax Certificate
+- Annual Reports / Financial Statements
+or
+Limited Liability Company (LLC)
+- Certificate of Formation / Incorporation
+- LLC Agreement / Operating Agreement
+- Tax Registration Documents
+- IDs of Managing Members
+or
+Non-Profit Organization
+- Registration Certificate (NGO / Trust / Society)
+- Trust Deed / Bye-laws
+- PAN/Tax Exemption Certificate (like 12A/80G in India)
+- Board Resolution &amp; Authorized Signatory IDs</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>published</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-25 12:22:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>42ecf5883b94f654cb98111864e45adf</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>d38271083b14f654cb98111864e45af8</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_42ecf5883b94f654cb98111864e45adf</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-25 12:23:35</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>2</version>
+    </sys_generative_ai_config>
+</record_update>

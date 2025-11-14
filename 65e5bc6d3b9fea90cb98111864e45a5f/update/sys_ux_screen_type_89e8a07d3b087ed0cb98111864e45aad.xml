@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type">
+    <sys_ux_screen_type action="INSERT_OR_UPDATE">
+        <description/>
+        <name>Empty Inbox</name>
+        <sys_class_name>sys_ux_screen_type</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-09-18 06:29:10</sys_created_on>
+        <sys_id>89e8a07d3b087ed0cb98111864e45aad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Empty Inbox</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_screen_type_89e8a07d3b087ed0cb98111864e45aad</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-09-18 06:29:10</sys_updated_on>
+    </sys_ux_screen_type>
+    <sys_translated_text action="delete_multiple" query="documentkey=89e8a07d3b087ed0cb98111864e45aad"/>
+</record_update>

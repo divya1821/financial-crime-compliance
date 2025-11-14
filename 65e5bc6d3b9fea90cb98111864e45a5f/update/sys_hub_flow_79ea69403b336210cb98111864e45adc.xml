@@ -50,6 +50,7 @@
         <type>subflow</type>
         <updation_source/>
         <version>2</version>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=79ea69403b336210cb98111864e45adc"/>
     <sys_variable_value action="delete_multiple" query="document_key=79ea69403b336210cb98111864e45adc"/>

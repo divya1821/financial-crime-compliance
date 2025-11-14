@@ -8,6 +8,12 @@
   "message" : "Analytics Center",
   "comment" : ""
 }, {
+  "message" : "Home",
+  "comment" : ""
+}, {
+  "message" : "Inbox",
+  "comment" : ""
+}, {
   "message" : "List",
   "comment" : ""
 } ]</required_translations>
@@ -19,51 +25,103 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>global</sys_domain_path>
         <sys_id>7cbfa2403b6fe210cb98111864e45a29</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>chrome_toolbar</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_page_property_7cbfa2403b6fe210cb98111864e45a29</sys_update_name>
-        <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-09-04 14:16:52</sys_updated_on>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-09-29 12:06:12</sys_updated_on>
         <type>json</type>
         <unique_name>x_vuram_financia_0.148dc9613bd32e90cb98111864e45a13.root.global.chrome_toolbar</unique_name>
-        <value>[
-    {
-        "id": "list",
-        "label": {
-            "translatable": true,
-            "message": "List"
-        },
-        "icon": "list-outline",
-        "routeInfo": {
-            "route": "list"
-        },
-        "group": "top",
-        "order": 100,
-        "badge": {},
-        "presence": {},
-        "availability": {},
-        "viewportInfo": {}
-    },
-    {
-        "id": "checker-dashboard",
-        "label": {
-            "translatable": true,
-            "message": "Analytics Center"
-        },
-        "icon": "analytics-center-outline",
-        "routeInfo": {
-            "route": "analytics-center"
-        },
-        "group": "top",
-        "order": 200,
-        "badge": {},
-        "presence": {},
-        "availability": {},
-        "viewportInfo": {}
-    }
+        <value>[&#13;
+    {&#13;
+        "id": "Home",&#13;
+        "label": {&#13;
+            "translatable": true,&#13;
+            "message": "Home"&#13;
+        },&#13;
+        "icon": "home-outline",&#13;
+        "routeInfo": {&#13;
+            "route": "Home"&#13;
+        },&#13;
+        "group": "top",&#13;
+        "order": 0,&#13;
+        "badge": {},&#13;
+        "presence": {},&#13;
+        "availability": {},&#13;
+        "viewportInfo": {}&#13;
+    },&#13;
+    {&#13;
+        "id": "list",&#13;
+        "label": {&#13;
+            "translatable": true,&#13;
+            "message": "List"&#13;
+        },&#13;
+        "icon": "list-outline",&#13;
+        "routeInfo": {&#13;
+            "route": "list"&#13;
+        },&#13;
+        "group": "top",&#13;
+        "order": 100,&#13;
+        "badge": {},&#13;
+        "presence": {},&#13;
+        "availability": {},&#13;
+        "viewportInfo": {}&#13;
+    },&#13;
+    {&#13;
+        "id": "checker-dashboard",&#13;
+        "label": {&#13;
+            "translatable": true,&#13;
+            "message": "Analytics Center"&#13;
+        },&#13;
+        "icon": "analytics-center-outline",&#13;
+        "routeInfo": {&#13;
+            "route": "analytics-center"&#13;
+        },&#13;
+        "group": "top",&#13;
+        "order": 300,&#13;
+        "badge": {},&#13;
+        "presence": {},&#13;
+        "availability": {},&#13;
+        "viewportInfo": {}&#13;
+    },&#13;
+{&#13;
+    "id":"inbox",&#13;
+    "label":{&#13;
+      "translatable": true,&#13;
+      "message": "Inbox"&#13;
+    },&#13;
+    "icon":"inbox-outline",&#13;
+    "routeInfo":{&#13;
+      "route": "inbox"&#13;
+    },&#13;
+    "viewportInfo":{&#13;
+      "route":"inbox-sidebar",&#13;
+      "fields":{&#13;
+        "opened":false&#13;
+      },&#13;
+      "viewportElementId":"wsInboxSidebar"&#13;
+    },&#13;
+    "group":"top",&#13;
+    "order":300,&#13;
+    "badge":{&#13;
+      "count":0&#13;
+    },&#13;
+    "presence":{&#13;
+      "status":""&#13;
+    },&#13;
+    "show": false,&#13;
+    "availability":{&#13;
+      "roles":[&#13;
+        "awa_agent"&#13;
+      ],&#13;
+      "plugin":"com.glide.interaction.awa"&#13;
+    }&#13;
+  }&#13;
+&#13;
+&#13;
 ]</value>
     </sys_ux_page_property>
     <sys_translated_text action="delete_multiple" query="documentkey=7cbfa2403b6fe210cb98111864e45a29"/>

@@ -19,7 +19,7 @@
         <sys_updated_by>abhipsa.jally</sys_updated_by>
         <sys_updated_on>2025-08-21 10:37:45</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_tasks</table>
-        <ui_policy display_value="For RM work notes should be editable in task form">4dc4d1703b27ea10cb98111864e45ac1</ui_policy>
+        <ui_policy display_value="For RM work notes should be editable in task forms">4dc4d1703b27ea10cb98111864e45ac1</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>true</visible>

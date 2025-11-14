@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_feature_provider">
+    <one_api_feature_provider action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <feature display_value="ae5fa92f3b7ba690cb98111864e45ae7">293f297f3bb36a90cb98111864e45ab6</feature>
+        <feature_service display_value="OneExtendGenericProvider">5233278353111110c271ddeeff7b129b</feature_service>
+        <feature_service_factory><![CDATA[(function() { return new global.OneExtendGenericProvider(); })()]]></feature_service_factory>
+        <name>Anomaly Detection provider</name>
+        <short_description>Auto Generated </short_description>
+        <sys_class_name>one_api_feature_provider</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-12 06:28:32</sys_created_on>
+        <sys_id>293f297f3bb36a90cb98111864e45ab7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Anomaly Detection provider</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>one_api_feature_provider_293f297f3bb36a90cb98111864e45ab7</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-12 06:28:32</sys_updated_on>
+        <type>FDIH Subflow</type>
+        <type_document display_value="Now LLM Integration">936e514a53b3b110f028ddeeff7b128c</type_document>
+    </one_api_feature_provider>
+</record_update>

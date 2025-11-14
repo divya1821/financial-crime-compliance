@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-23 04:57:08</sys_created_on>
+        <sys_id>1e73e8013bb03614cb98111864e45a3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global.x_vuram_financia_0.Decision Maker Agent - Entity Customer.snc_internal</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_security_acl display_value="global.x_vuram_financia_0.Decision Maker Agent - Entity Customer">1273e8013bb03614cb98111864e45a3a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1e73e8013bb03614cb98111864e45a3a</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-23 04:57:08</sys_updated_on>
+        <sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

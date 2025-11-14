@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_team">
+    <sn_aia_team action="INSERT_OR_UPDATE">
+        <description>This workflow automates the validation of user-submitted documents and application forms. It checks for name mismatches, document expiration, utility bill date compliance, and suggests appropriate documents based on entity type. Designed for onboarding and verification teams.</description>
+        <name>Document Validation Workflow</name>
+        <sys_class_name>sn_aia_team</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-09-25 09:37:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>6817dd843bdcb654f13f5fea26e45aa0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Validation Workflow</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_team_6817dd843bdcb654f13f5fea26e45aa0</sys_update_name>
+        <sys_updated_by>srinithi.v</sys_updated_by>
+        <sys_updated_on>2025-09-25 09:37:15</sys_updated_on>
+    </sn_aia_team>
+</record_update>

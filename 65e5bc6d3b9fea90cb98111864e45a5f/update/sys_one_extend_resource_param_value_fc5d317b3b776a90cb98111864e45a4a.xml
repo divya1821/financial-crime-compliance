@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_resource_param_value">
+    <sys_one_extend_resource_param_value action="INSERT_OR_UPDATE">
+        <resource_mapping display_value="Correctness Metric">b45d317b3b776a90cb98111864e45a0c</resource_mapping>
+        <resource_param_name>configId</resource_param_name>
+        <resource_param_value>c834087d7f5202100a03b6257d866503</resource_param_value>
+        <sys_class_name>sys_one_extend_resource_param_value</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2025-09-12 07:30:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>fc5d317b3b776a90cb98111864e45a4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_one_extend_resource_param_value_fc5d317b3b776a90cb98111864e45a4a</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-09-12 07:30:13</sys_updated_on>
+    </sys_one_extend_resource_param_value>
+</record_update>

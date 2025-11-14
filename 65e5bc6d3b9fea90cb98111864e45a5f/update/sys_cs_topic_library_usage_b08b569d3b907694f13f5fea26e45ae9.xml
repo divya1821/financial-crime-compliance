@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage">
+    <sys_cs_topic_library_usage action="INSERT_OR_UPDATE">
+        <calling_cs_topic_id display_value="Questionnaires-Customer KYC Onboarding">ec8b569d3b907694f13f5fea26e45ab7</calling_cs_topic_id>
+        <library_cs_topic_id display_value="AI Output">fc4c14b2431cc21006650464dbb8f2a9</library_cs_topic_id>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"AI Output","library_topic_id":"fc4c14b2431cc21006650464dbb8f2a9","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"definition","value":{"type":"String","mode":"script","value":"(function execute() {\n        var config = {\n            configuration: {\"description\":\"{{0}}\"}\n        };\n        return JSON.stringify(config);\n    })()"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"inputs","metadata":{"type":"String","list":true,"items":[{"type":"String","mode":"string","value":"greet the user in a polite way"}],"use_items":true}}],"return-value-mappings":[],"header_card_fields":[],"id":"5c97c6d1b13e49eca67cc2c22e1646df","name":"Greeting message","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage>
+        <node_id>5c97c6d1b13e49eca67cc2c22e1646df</node_id>
+        <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-29 11:48:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b08b569d3b907694f13f5fea26e45ae9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_cs_topic_library_usage_b08b569d3b907694f13f5fea26e45ae9</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-29 11:48:41</sys_updated_on>
+    </sys_cs_topic_library_usage>
+</record_update>

@@ -9,7 +9,7 @@
         <name>Entity Video KYC - Container 1</name>
         <order>1</order>
         <semantic_tag/>
-        <sp_page display_value="copy_of_individual_video_kyc_1">a18d77c83bf7a210cb98111864e45a34</sp_page>
+        <sp_page display_value="entity_video_kyc">a18d77c83bf7a210cb98111864e45a34</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>varunapriyan.k</sys_created_by>

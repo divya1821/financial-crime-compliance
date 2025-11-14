@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_configurations>{"skill_config_id":"614cca7e3b3fae50f13f5fea26e45aaf"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>1d4cca7e3b3fae50f13f5fea26e45a4a</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent display_value="OneExtend Capability Definition: Fin Crime Record Summarization (Now LLM Generic - Now LLM Generic)">3fe058a93b34b250f13f5fea26e45a0c</parent>
+        <prompt>
+## Role
+You are a case summary expert. Your task is to generate a comprehensive summary of a KYC case, consolidating all relevant data, highlighting gaps or mismatches, and providing risk insights.
+
+## Context
+
+The customer type that needs to be checked:  {{fcc_kyc_case.customer_type}} 
+
+## Instructions
+1. Check the value of the customer type provided in the context.
+2. If the customer type is 'individual', choose the path for summarizing individual customer data.
+3. If the customer type is 'entity', choose the path for summarizing entity customer data.
+4. Based on the chosen path, proceed with the summarization process for the respective customer type.
+
+if(customer type == individual){
+## Context
+The case type that needs to be summarized: 
+Customer Type: {{fcc_kyc_case.customer_type}} 
+The customer personal information that needs to be summarized:  
+Customer Name: {{fcc_kyc_case.individual.forename_in_full}}
+Date of Birth: {{fcc_kyc_case.individual.dob}}
+Address: {{fcc_kyc_case.individual.address_line}}
+Country of Nationality: {{fcc_kyc_case.individual.country_of_nationality}} 
+Tax Identification Number: {{fcc_kyc_case.individual.tax_identification_number}} 
+Email: {{fcc_kyc_case.individual.email}} 
+Mobile Number: {{fcc_kyc_case.individual.mobile}} 
+Relationship Manager: {{fcc_kyc_case.individual.relationship_manager.name}} 
+
+
+The customer financials that need to be summarized:  
+Employment Status: {{fcc_kyc_case.individual.employment_status}} 
+Occupation: {{fcc_kyc_case.individual.occupation}}  
+Employer: {{fcc_kyc_case.individual.employer}} 
+Annual Revenue: {{fcc_kyc_case.individual.describe_the_source_of_annual_revenue}} 
+Transaction Volume: {{fcc_kyc_case.individual.estimated_annual_transaction_volume}} 
+
+
+The risk scores that need to be summarized: 
+Risk Level: {{fcc_kyc_case.individual.risk_level}} 
+Risk Score: {{fcc_kyc_case.individual.risk_score}} 
+If on hold reason is not empty then show Reason for Hold: {{fcc_kyc_case.onhold_reason}}  
+
+The case progress that needs to be summarized:  
+State: {{fcc_kyc_case.state}} 
+
+For other information, to summarize  {{FCC KYC Case}} 
+
+## Instructions
+1. Based on the provided case type, customer personal information, financials, risk scores, and case progress, generate a single-page snapshot of the KYC case.
+2. Consolidate all relevant data into a clear and concise summary.
+3. Highlight any gaps or mismatches in the data, such as name mismatches or missing UBO declarations.
+4. Provide a clear risk rating (Low, Medium, High) with reasoning, such as PEP hits or expired IDs.
+5. Summarize the case progress.
+Review the provided return value from the function.
+Match the return value with the corresponding case state from the following options:
+   - New-1
+   - Customer Update - 100
+   - Work In Progress - 150
+   - On Hold - 250
+   - Review - 320
+   - approval pending - 300
+  - closed - 350
+   - Closed Complete - 400
+   - closed cancelled - 450
+Based on the matched case state, determine whether the case state don't show the numerical value anywhere in the output.
+7. Ensure the summary is easy to review, allowing for quick identification of critical gaps and informed compliance decisions.
+
+## Output
+Your output should include **only** the following parts:
+1. **Summary** – A concise narrative of the KYC case status, highlighting key information, missing data, and risk insights.
+2. **Recommendations** – Clear, actionable next steps for case completion.
+3. **Next Steps** – Practical actions to move the case forward.
+
+Do not display customer details, financial data, or any other contextual information in the final output.
+Display only the summary content as described above.
+
+}
+
+if(customer type == entity){
+## Context
+The case type that needs to be summarized: 
+Customer Type: {{fcc_kyc_case.customer_type}}
+Legal Name: {{fcc_kyc_case.entity.legal_name}}  
+Registration Number: {{fcc_kyc_case.entity.registration_number}}
+Country of Domicile: {{fcc_kyc_case.entity.country_of_domicile}} 
+Representative: {{fcc_kyc_case.entity.authorized_representative}} 
+Description: {{fcc_kyc_case.entity.sic_description}} 
+
+The contact that need to be summarized: 
+Email: {{fcc_kyc_case.entity.email_id}}  
+Relationship Manager: {{fcc_kyc_case.entity.relationship_manager.name}} 
+Status: {{fcc_kyc_case.entity.video_kyc_status}} 
+
+The customer financials that need to be summarized:  
+Annual Revenue: {{fcc_kyc_case.entity.annual_revenue}}  
+Source of Annual Revenue: {fcc_kyc_case.entity.describe_the_source_of_annual_revenu0}} 
+Transaction Volume: {{fcc_kyc_case.entity.estimated_annual_transaction_volume}} 
+
+The risk scores that need to be summarized: 
+Risk Level: {{fcc_kyc_case.entity.risk_level}}  
+Risk Score: {{fcc_kyc_case.entity.risk_score}} 
+If on hold reason is not empty then show - Reason for Hold: {{fcc_kyc_case.onhold_reason}}  
+
+The case progress that needs to be summarized:  
+State: {{fcc_kyc_case.state}} 
+
+For other information, to summarize  {{FCC KYC Case}} 
+
+## Instructions
+1. Based on the provided case type, customer personal information with the name, financials, risk scores, and case progress, generate a single-page snapshot of the KYC case.
+2. Consolidate all relevant data into a clear and concise summary.
+3. Highlight any gaps or mismatches in the data, such as name mismatches or missing UBO declarations.
+4. Provide a clear risk rating (Low, Medium, High) with reasoning, such as PEP hits or expired IDs.
+5. Summarize the case progress.
+Review the provided return value from the function.
+Match the return value with the corresponding case state from the following options:
+   - New-1
+   - Customer Update - 100
+   - Work In Progress - 150
+   - On Hold - 250
+   - Review - 320
+   - approval pending - 300
+  - closed - 350
+   - Closed Complete - 400
+   - closed cancelled - 450
+Based on the matched case state, determine whether the case state don't show the numerical value anywhere in the output.
+7. Ensure the summary is easy to review, allowing for quick identification of critical gaps and informed compliance decisions.
+
+Generate only the final summary section.
+
+##output
+Your output should include **only** the following parts:
+1. **Summary** – A concise narrative of the KYC case status, highlighting key information, missing data, and risk insights.
+2. **Recommendations** – Clear, actionable next steps for case completion.
+3. **Next Steps** – Practical actions to move the case forward.
+
+Do not display customer details, financial data, or any other contextual information in the final output.
+Display only the summary content as described above.
+}
+</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>published</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-10-30 14:09:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d4f4a25b3bb07a50f13f5fea26e45a62</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>1d4cca7e3b3fae50f13f5fea26e45a4a</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_d4f4a25b3bb07a50f13f5fea26e45a62</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-10-30 14:11:23</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>8</version>
+    </sys_generative_ai_config>
+</record_update>

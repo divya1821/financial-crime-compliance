@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer/>
+        <condition/>
+        <decision_table display_value="FCC KYC Risk Engine">70ca377b3bfbaa90cb98111864e45a35</decision_table>
+        <default_answer>true</default_answer>
+        <input_table>var__m_sys_decision_input_70ca377b3bfbaa90cb98111864e45a35</input_table>
+        <label>FCC KYC Risk Engine default result</label>
+        <marked_for_deletion>false</marked_for_deletion>
+        <order>100</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>raj.selvam</sys_created_by>
+        <sys_created_on>2025-09-12 16:48:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c02d7b333b3faa90cb98111864e45a95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FCC KYC Risk Engine default result</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_decision_question_c02d7b333b3faa90cb98111864e45a95</sys_update_name>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-09-12 16:48:35</sys_updated_on>
+    </sys_decision_question>
+</record_update>

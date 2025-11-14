@@ -4,6 +4,7 @@
         <app_config display_value="Financial Crime Compliance">5c8d49613bd32e90cb98111864e45a8d</app_config>
         <description/>
         <disable_auto_reflow>true</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
         <event_mappings>[
     {
         "eventMappingId": "vffvQhheehhyqBENjjeeddAwPpeehhnKSUoV",

@@ -43,6 +43,7 @@ Format the output as a clean, flat JSON object. Each data point should be a top-
         <sys_updated_by>varunapriyan.k</sys_updated_by>
         <sys_updated_on>2025-08-19 15:14:39</sys_updated_on>
         <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
         <version>1</version>
     </sys_generative_ai_config>
 </record_update>

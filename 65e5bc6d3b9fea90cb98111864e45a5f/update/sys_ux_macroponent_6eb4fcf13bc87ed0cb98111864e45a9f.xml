@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <bundles>[]</bundles>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[
+    {
+        "definition": {
+            "id": "299b4786a330c80085c1d0de5bf855bb",
+            "type": "MACROPONENT"
+        },
+        "elementId": "agent_inbox_empty_1",
+        "elementLabel": "Agent Inbox Empty 1",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": ""
+        },
+        "isNonDestructive": false,
+        "overrides": null,
+        "propertyValues": {
+            "moduleId": {
+                "type": "JSON_LITERAL",
+                "value": "module_inbox"
+            }
+        },
+        "slot": null,
+        "styles": {}
+    }
+]</composition>
+        <da_relay_models/>
+        <data>[]</data>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <dispatched_events>17c70da73bd0b610cb98111864e45aec</dispatched_events>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <form_factors>{}</form_factors>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{
+    "MACROPONENT_READY": [
+        {
+            "broker": null,
+            "clientScript": null,
+            "clientTransformScript": "",
+            "conditional": null,
+            "declarativeAction": null,
+            "event": {
+                "apiName": "x_vuram_financia_0.NAV_ITEM_SELECTED_RELAY_6eb4fcf13bc87ed0cb98111864e45a9f",
+                "payload": {
+                    "type": "JSON_LITERAL",
+                    "value": {
+                        "external": null,
+                        "fields": null,
+                        "multiInstField": null,
+                        "navigationOptions": null,
+                        "params": null,
+                        "passiveNavigation": null,
+                        "redirect": null,
+                        "route": "inbox",
+                        "targetRoute": null,
+                        "title": null
+                    }
+                },
+                "sysId": "17c70da73bd0b610cb98111864e45aec"
+            },
+            "operation": null,
+            "targetId": "bbQdxeeddPNMCaaKbbjjTUNIyeeddggjjGjja",
+            "type": "EVENT"
+        }
+    ]
+}</internal_event_mappings>
+        <layout>{
+    "default": {
+        "children": null,
+        "items": [
+            {
+                "element_id": "agent_inbox_empty_1",
+                "rules": {},
+                "styles": {
+                    "flex": "1 0 auto",
+                    "height": "250px"
+                }
+            }
+        ],
+        "root": null,
+        "rules": null,
+        "styles": {
+            "flex-direction": "column"
+        },
+        "templateId": "28bde4cd53431010e6bcddeeff7b12cc",
+        "type": "flex"
+    },
+    "version": "3.0.0"
+}</layout>
+        <macroponent_dependencies/>
+        <name>Inbox Empty</name>
+        <output_prop_mapping/>
+        <props>[]</props>
+        <required_translations>[ ]</required_translations>
+        <root_component/>
+        <root_component_config>{}</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_persistence_config/>
+        <state_properties>[]</state_properties>
+        <style_config>{}</style_config>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>srinithi.v</sys_created_by>
+        <sys_created_on>2025-09-18 07:20:52</sys_created_on>
+        <sys_id>6eb4fcf13bc87ed0cb98111864e45a9f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Inbox Empty</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_macroponent_6eb4fcf13bc87ed0cb98111864e45a9f</sys_update_name>
+        <sys_updated_by>akshera.singh@snc</sys_updated_by>
+        <sys_updated_on>2025-10-06 05:47:09</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=6eb4fcf13bc87ed0cb98111864e45a9f"/>
+</record_update>

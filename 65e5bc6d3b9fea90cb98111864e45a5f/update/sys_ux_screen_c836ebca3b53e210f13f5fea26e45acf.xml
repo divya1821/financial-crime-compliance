@@ -4,8 +4,9 @@
         <app_config display_value="Advanced Dashboards">02dc36706f01011089060168e25b3691</app_config>
         <description/>
         <disable_auto_reflow>false</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
         <event_mappings/>
-        <macroponent display_value="Checker Dashboard">8436ebca3b53e210f13f5fea26e45acc</macroponent>
+        <macroponent display_value="Checker Dashboard default">8436ebca3b53e210f13f5fea26e45acc</macroponent>
         <macroponent_config>{}</macroponent_config>
         <name>Checker Dashboard default</name>
         <order>0</order>

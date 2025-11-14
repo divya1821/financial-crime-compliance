@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_definition_attribute">
+    <sys_one_extend_definition_attribute action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <apply_filter>false</apply_filter>
+        <attribute_label/>
+        <capability display_value="Case creation skill">1e071a7f3bfb6a90f13f5fea26e45adb</capability>
+        <choice_list/>
+        <contains_large_input>false</contains_large_input>
+        <data_type>string</data_type>
+        <default_value/>
+        <definition/>
+        <description>Error Code</description>
+        <group/>
+        <hidden>false</hidden>
+        <info/>
+        <label>errorCode</label>
+        <mandatory>false</mandatory>
+        <name>errorcode</name>
+        <order/>
+        <schema/>
+        <sys_class_name>sys_one_extend_definition_attribute</sys_class_name>
+        <sys_created_by>asifa.ekkeem</sys_created_by>
+        <sys_created_on>2025-09-12 09:22:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ea07da7f3bfb6a90f13f5fea26e45a44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>errorcode</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_one_extend_definition_attribute_ea07da7f3bfb6a90f13f5fea26e45a44</sys_update_name>
+        <sys_updated_by>asifa.ekkeem</sys_updated_by>
+        <sys_updated_on>2025-09-12 09:22:33</sys_updated_on>
+        <translate>false</translate>
+        <truncate>false</truncate>
+        <type>output</type>
+        <user_query>false</user_query>
+    </sys_one_extend_definition_attribute>
+    <sys_translated_text action="delete_multiple" query="documentkey=ea07da7f3bfb6a90f13f5fea26e45a44"/>
+</record_update>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="Test-FCC KYC 1">2e915fe13b183a94f13f5fea26e45aa6</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"1002773c8ccf4ea997ae05a6e3b0ab1d","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"1002773c8ccf4ea997ae05a6e3b0ab1d"}],"goals":[{"name":"primary","trigger_id":"1002773c8ccf4ea997ae05a6e3b0ab1d","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":""},"id":"15d6812fb3ac4f4ebd23de7d71d3a263","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"2b17b5da82bc47cd840b1f763f61d148","name":"End","expert_mode":false}],"edges":[{"type":"Edge","source_node_id":"15d6812fb3ac4f4ebd23de7d71d3a263","target_node_id":"2b17b5da82bc47cd840b1f763f61d148","id":"84f8d5f8d2314ff09d1149ba9fe877fa"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":["snc_internal"],"scope":"65e5bc6d3b9fea90cb98111864e45a5f","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"46815f213b183a94f13f5fea26e45a1c","name":"Test-FCC KYC 1","key_phrases":[],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"description":"Topic is used for checking the list of required documents for KYC onboarding process","model_type":"llm","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Test-FCC KYC 1","library":false,"csTopicId":"2e915fe13b183a94f13f5fea26e45aa6","readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>46815f213b183a94f13f5fea26e45a1c</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "15d6812fb3ac4f4ebd23de7d71d3a263": {
+          "id": "15d6812fb3ac4f4ebd23de7d71d3a263",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "2b17b5da82bc47cd840b1f763f61d148": {
+          "id": "2b17b5da82bc47cd840b1f763f61d148",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "84f8d5f8d2314ff09d1149ba9fe877fa",
+          "edgeType": "Edge",
+          "source": "15d6812fb3ac4f4ebd23de7d71d3a263",
+          "target": "2b17b5da82bc47cd840b1f763f61d148",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph>
+        <name>Test-FCC KYC 1</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-30 10:23:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2e915fe13b183a94f13f5fea26e45aab</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_cb_design_topic_2e915fe13b183a94f13f5fea26e45aab</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-30 10:23:49</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

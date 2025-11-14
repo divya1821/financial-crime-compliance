@@ -95,6 +95,7 @@ $color-gray-light: #E9ECEB;&#13;
         <footer/>
         <footer_fixed>true</footer_fixed>
         <header/>
+        <matching_now_experience_theme/>
         <name>FCC KYC Theme</name>
         <navbar_fixed>true</navbar_fixed>
         <sys_class_name>sp_theme</sys_class_name>

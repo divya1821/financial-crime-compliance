@@ -13,7 +13,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label/>
+        <column_label>Score</column_label>
         <comments>Score</comments>
         <create_roles/>
         <default_value/>

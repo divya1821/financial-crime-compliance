@@ -9,6 +9,7 @@
         <collection>x_vuram_financia_0_fcc_kyc_cases</collection>
         <condition/>
         <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
         <default_interval/>
         <description/>
         <digest_from/>
@@ -21,6 +22,7 @@
         <digest_subject/>
         <digest_template/>
         <digest_text/>
+        <digest_type>single</digest_type>
         <digestable>false</digestable>
         <enable_dynamic_translation>false</enable_dynamic_translation>
         <event_name>x_vuram_financia_0.kyc.awaiting.customer</event_name>
@@ -54,7 +56,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Reminder: KYC documents pending for Case ${number}</subject>
+        <subject>Reminder  ${chaser_count}: KYC documents pending for Case ${number}</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>srinithi.v</sys_created_by>
@@ -62,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>393d88553b3f6e10cb98111864e45aa2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>KYC Reminder – Awaiting Customer</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -70,7 +72,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sysevent_email_action_393d88553b3f6e10cb98111864e45aa2</sys_update_name>
         <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-09-04 12:09:43</sys_updated_on>
+        <sys_updated_on>2025-09-08 13:24:20</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

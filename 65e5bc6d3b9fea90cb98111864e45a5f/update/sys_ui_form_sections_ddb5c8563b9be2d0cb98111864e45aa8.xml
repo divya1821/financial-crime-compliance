@@ -2,143 +2,17 @@
     <sys_ui_form_sections form_id="ddb5c8563b9be2d0cb98111864e45aa8" sys_domain="global" table="x_vuram_financia_0_fcc_kyc_cases" version="3">
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:25:19</sys_created_on>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-09-04 13:07:56</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>95b5c8563b9be2d0cb98111864e45aad</sys_id>
+            <sys_id>42edfd1d3b73ee10cb98111864e45a6c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:25:19</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:25:19</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>15b5c8563b9be2d0cb98111864e45aae</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb588563b9be2d0cb98111864e45a46</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:25:19</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>2</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:25:19</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>29b5c8563b9be2d0cb98111864e45af0</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Country Information" display_value="Country Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">55b5c8563b9be2d0cb98111864e45aa5</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:25:19</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>3</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:25:19</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>29b5c8563b9be2d0cb98111864e45af4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Legal Address" display_value="Legal Address" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">15b5c8563b9be2d0cb98111864e45aa6</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:25:19</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>4</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-17 13:42:33</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>6d3959af3b53a214cb98111864e45af9</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Physical Address" display_value="Physical Address" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">513959af3b53a214cb98111864e45a7b</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-17 13:42:33</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>5</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:25:20</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>25b5c8563b9be2d0cb98111864e45afd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Financial Information" display_value="Financial Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">91b5c8563b9be2d0cb98111864e45aa8</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:25:20</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>6</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:42:26</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>84a940123bdbe2d0cb98111864e45ae9</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Business Information" display_value="Business Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">88a940123bdbe2d0cb98111864e45a41</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:42:26</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>7</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:42:26</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>58a940123bdbe2d0cb98111864e45aee</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Relationship Information" display_value="Relationship Information" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">cca940123bdbe2d0cb98111864e45a42</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:42:26</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>8</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-13 10:42:27</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>1ca980123bdbe2d0cb98111864e45a0c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Ownership Structure" display_value="Ownership Structure" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">48a940123bdbe2d0cb98111864e45ae5</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-13 10:42:27</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>9</position>
-            <sys_created_by>abhilash.nair</sys_created_by>
-            <sys_created_on>2025-08-19 03:13:45</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>ce7c590c3b6ba210f13f5fea26e45a1f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_cases" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">ddb5c8563b9be2d0cb98111864e45aa8</sys_ui_form>
-            <sys_ui_section caption="Document" display_value="Document" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">427c190c3b6ba210f13f5fea26e45acf</sys_ui_section>
-            <sys_updated_by>abhilash.nair</sys_updated_by>
-            <sys_updated_on>2025-08-19 03:13:45</sys_updated_on>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-09-04 13:07:56</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_vuram_financia_0_fcc_kyc_cases</name>

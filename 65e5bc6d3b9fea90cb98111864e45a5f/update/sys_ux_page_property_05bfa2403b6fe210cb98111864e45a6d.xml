@@ -6,7 +6,7 @@
         <page display_value="Financial Crime Compliance">148dc9613bd32e90cb98111864e45a13</page>
         <required_translations/>
         <route/>
-        <suffix/>
+        <suffix>ribbonConfigId</suffix>
         <sys_class_name>sys_ux_page_property</sys_class_name>
         <sys_created_by>abhipsa.jally</sys_created_by>
         <sys_created_on>2025-08-19 09:17:24</sys_created_on>

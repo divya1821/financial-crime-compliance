@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_tool">
+    <sn_aia_tool action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Use this skill to retrieve response for the PEP, Adverse new screening, sanctions and risk level of the customer</description>
+        <input_schema>[]</input_schema>
+        <name>Screening and Risk Analysis</name>
+        <record_type>custom</record_type>
+        <script><![CDATA[(function(inputs) {
+// only string inputs are allowed 
+// return outputs object where the keys in it are understandable by LLM
+})(inputs);]]></script>
+        <sys_class_name>sn_aia_tool</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-25 12:56:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>dea486843b18f654cb98111864e45a9f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Screening and Risk Analysis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_tool_dea486843b18f654cb98111864e45a9f</sys_update_name>
+        <sys_updated_by>nauman.ansari</sys_updated_by>
+        <sys_updated_on>2025-10-17 10:53:48</sys_updated_on>
+        <target_document>9b11b1043b14f654cb98111864e45a76</target_document>
+        <target_document_table>sn_nowassist_skill_config</target_document_table>
+        <type>capability</type>
+    </sn_aia_tool>
+</record_update>

@@ -7,6 +7,7 @@
         <action_type>type</action_type>
         <active>true</active>
         <animate_icon>false</animate_icon>
+        <button_position>right</button_position>
         <button_type>primary</button_type>
         <client_action display_value="FccCaseReturnPopup">5b81f68c3be7e210f13f5fea26e45a34</client_action>
         <client_conditions/>

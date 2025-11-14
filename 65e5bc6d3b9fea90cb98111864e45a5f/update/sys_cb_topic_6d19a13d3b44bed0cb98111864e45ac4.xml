@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description>This topic is related to customer onboarding KYC process where it is used to fetch the list of required documents for onboarding customer during KYC onboarding process</description>
+        <dialog_acts_enabled>false</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "732a90f844cb4ebcb23bb1291101f433": {
+          "id": "732a90f844cb4ebcb23bb1291101f433",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hi, "
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.user.name}}",
+                      "displayValue": "Input Variables➛User➛Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ",Good day."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "851c5d7079da4a619799248de22a5c38": {
+          "id": "851c5d7079da4a619799248de22a5c38",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "5c97c6d1b13e49eca67cc2c22e1646df": {
+          "id": "5c97c6d1b13e49eca67cc2c22e1646df",
+          "stepType": "AITextOutput",
+          "name": "Greeting message",
+          "description": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "greet the user in a polite way"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "20ae8668f46b419d833e3493e7355cc4": {
+          "id": "20ae8668f46b419d833e3493e7355cc4",
+          "stepType": "ReusableTopic",
+          "name": "Customer onboarding queries",
+          "fields": [],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "useTemplateTopic": false,
+          "reusableTopicChoice": "Customer Onboarding Queries",
+          "reusableTopicId": "08915e3d3b4cbed0cb98111864e45ace",
+          "inputs": {},
+          "variableIds": [],
+          "dynamicTopicBlockName": {
+            "value": "",
+            "mode": "simple"
+          },
+          "inputDynamicModal": {},
+          "outputDynamicModal": {},
+          "outputs": [],
+          "outdatedNote": false,
+          "loading": false
+        }
+      },
+      "edges": [
+        {
+          "id": "9ba9990adf80435d99f71e5bdef85294",
+          "edgeType": "Edge",
+          "source": "5c97c6d1b13e49eca67cc2c22e1646df",
+          "target": "20ae8668f46b419d833e3493e7355cc4",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1dc3406d485648a491287d7e3daeef1c",
+          "edgeType": "Edge",
+          "source": "732a90f844cb4ebcb23bb1291101f433",
+          "target": "5c97c6d1b13e49eca67cc2c22e1646df",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2da4890f01ff45c18f30e8f3369bc7dd",
+          "edgeType": "Edge",
+          "source": "20ae8668f46b419d833e3493e7355cc4",
+          "target": "851c5d7079da4a619799248de22a5c38",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph>
+        <key_phrases/>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>llm</model_type>
+        <modify_confirmation_enabled>false</modify_confirmation_enabled>
+        <name>Questionnaires-Customer KYC Onboarding</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles>admin</roles>
+        <root_topic_id/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-18 11:09:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>6d19a13d3b44bed0cb98111864e45ac4</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Questionnaires-Customer KYC Onboarding</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_cb_topic_6d19a13d3b44bed0cb98111864e45ac4</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-30 09:52:06</sys_updated_on>
+        <title>Onboarding a KYC Customer</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=6d19a13d3b44bed0cb98111864e45ac4"/>
+</record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_configurations>{"skill_config_id":"3e07da7f3bfb6a90f13f5fea26e45a6b"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>6607da7f3bfb6a90f13f5fea26e45a22</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent/>
+        <prompt>##Role
+You are a data extraction expert. Your task is to extract relevant information from a given string and create a record in x_vuram_financia_0_fcc_kyc_individual_details table.
+
+
+## Context
+The input string that needs to be processed: {{input}} 
+
+## Instructions
+
+1. Read through the input string carefully to identify the relevant information.
+2. Extract the following details:
+- Individual
+- Individual Name
+- Domicile Country
+- Identity Verification Types
+- Email ID
+
+3. Ensure that the extracted information is accurate and relevant to the provided context.
+4. Once extraction is completed, create a new record in x_vuram_financia_0_fcc_kyc_individual_details table and map the extracted values as mentioned below:
+
+- Individual Name to be mapped to Forename in full
+- Domicile Country to mapped to Forename in full
+- Identity Verification Types to mapped to Proof of Identity
+- Email ID to mapped to Email
+
+##Output
+Create the record in x_vuram_financia_0_fcc_kyc_individual_details table as directed and display the sys id of the created record
+</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>false</show_in_prompt_library>
+        <state>draft</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>asifa.ekkeem</sys_created_by>
+        <sys_created_on>2025-09-12 09:22:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aa07da7f3bfb6a90f13f5fea26e45a2d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>6607da7f3bfb6a90f13f5fea26e45a22</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_aa07da7f3bfb6a90f13f5fea26e45a2d</sys_update_name>
+        <sys_updated_by>asifa.ekkeem</sys_updated_by>
+        <sys_updated_on>2025-09-12 10:10:03</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+</record_update>

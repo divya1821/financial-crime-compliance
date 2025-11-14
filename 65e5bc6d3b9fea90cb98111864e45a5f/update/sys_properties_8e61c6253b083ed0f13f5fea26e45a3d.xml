@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>weightage score for Business Start Year</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_vuram_financia_0.weightageBusinessStartYear</name>
+        <read_roles/>
+        <suffix>weightageBusinessStartYear</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-17 18:18:49</sys_created_on>
+        <sys_id>8e61c6253b083ed0f13f5fea26e45a3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vuram_financia_0.weightageBusinessStartYear</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_properties_8e61c6253b083ed0f13f5fea26e45a3d</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-17 18:18:49</sys_updated_on>
+        <type>integer</type>
+        <value>10</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=8e61c6253b083ed0f13f5fea26e45a3d"/>
+</record_update>

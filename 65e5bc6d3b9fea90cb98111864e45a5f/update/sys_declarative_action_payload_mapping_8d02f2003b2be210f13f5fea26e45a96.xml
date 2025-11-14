@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_mapping">
     <sys_declarative_action_payload_mapping action="INSERT_OR_UPDATE">
-        <action_payload_definition display_value="">5b81f68c3be7e210f13f5fea26e45a34</action_payload_definition>
+        <action_payload_definition display_value="FccCaseReturnPopup">5b81f68c3be7e210f13f5fea26e45a34</action_payload_definition>
         <label>null Form</label>
         <model display_value="Form">360935e9534723003eddddeeff7b127d</model>
         <payload_map>caseSysId=^EQ</payload_map>

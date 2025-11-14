@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-10-09 07:44:57</sys_created_on>
+        <sys_id>1773cde83ba4fe10f13f5fea26e45ae0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>28c7f82c3b24fe10f13f5fea26e45ac4.x_vuram_financia_0.fcc_kyc_relationship_manager</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_security_acl display_value="28c7f82c3b24fe10f13f5fea26e45ac4">8bac74a83b64fe10f13f5fea26e45a88</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1773cde83ba4fe10f13f5fea26e45ae0</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-09 07:44:57</sys_updated_on>
+        <sys_user_role display_value="x_vuram_financia_0.fcc_kyc_relationship_manager" name="x_vuram_financia_0.fcc_kyc_relationship_manager">ade5bc6d3b9fea90cb98111864e45aca</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

@@ -38,7 +38,7 @@
         <sys_updated_by>harini.ks</sys_updated_by>
         <sys_updated_on>2025-10-23 04:55:23</sys_updated_on>
         <target_table>x_vuram_financia_0_fcc_kyc_cases</target_table>
-        <trigger_flow display_value="FCC KYC Case - AI Agent: Screening Analysis - da18628b3b0c3e14cb98111864e45aa3">d218628b3b0c3e14cb98111864e45aa4</trigger_flow>
+        <trigger_flow display_value="FCC KYC Case - AI Agent: Screening Analysis - Individual - da18628b3b0c3e14cb98111864e45aa3">d218628b3b0c3e14cb98111864e45aa4</trigger_flow>
         <trigger_flow_definition_type>record_update</trigger_flow_definition_type>
         <usecase display_value="">undefined</usecase>
         <usecase_discovery>false</usecase_discovery>

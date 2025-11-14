@@ -48,6 +48,7 @@
         <type>flow</type>
         <updation_source/>
         <version>2</version>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=af2f16383b67ea10f13f5fea26e45a4f"/>
     <sys_variable_value action="delete_multiple" query="document_key=af2f16383b67ea10f13f5fea26e45a4f"/>
@@ -71,25 +72,25 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>80153c8a3b6fa650f13f5fea26e45ad2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
-        <sys_updated_by>jaiganesh.vetriselvan</sys_updated_by>
-        <sys_updated_on>2025-08-25 05:29:25</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 14:50:47</sys_updated_on>
         <table>x_vuram_fcc_kyc_0_api_logs</table>
         <trigger_definition/>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <active>false</active>
+        <data>{"run_on_extended":"false","run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any"}</data>
         <identifier>af2f16383b67ea10f13f5fea26e45a4f</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>jaiganesh.vetriselvan</sys_created_by>
         <sys_created_on>2025-08-25 10:34:17</sys_created_on>
         <sys_id>a5dab5ca3b6be650f13f5fea26e45af6</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>jaiganesh.vetriselvan</sys_updated_by>
-        <sys_updated_on>2025-08-25 10:34:17</sys_updated_on>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-01 04:46:13</sys_updated_on>
         <trigger display_value="">80153c8a3b6fa650f13f5fea26e45ad2</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=af2f16383b67ea10f13f5fea26e45a4f^sys_idNOT INa5dab5ca3b6be650f13f5fea26e45af6"/>
@@ -734,6 +735,7 @@
         <sys_id>af2f16383b67ea10f13f5fea26e45a4f</sys_id>
         <latest_snapshot>7b053c8a3b6fa650f13f5fea26e45a2e</latest_snapshot>
         <compiler_build>glide-yokohama-12-18-2024__patch5-06-11-2025_06-25-2025_1836.zip</compiler_build>
+        <version_record/>
     </sys_hub_flow>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=af2f16383b67ea10f13f5fea26e45a4f^sys_idNOT IN40153c8a3b6fa650f13f5fea26e45ad4"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">

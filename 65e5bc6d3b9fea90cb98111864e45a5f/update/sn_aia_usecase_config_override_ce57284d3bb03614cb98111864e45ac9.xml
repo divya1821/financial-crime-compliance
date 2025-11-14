@@ -16,6 +16,6 @@
         <sys_update_name>sn_aia_usecase_config_override_ce57284d3bb03614cb98111864e45ac9</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
         <sys_updated_on>2025-10-23 05:14:03</sys_updated_on>
-        <usecase_configuration display_value="KYC Screening Flow">fdcb961e3b007614f13f5fea26e45a10</usecase_configuration>
+        <usecase_configuration/>
     </sn_aia_usecase_config_override>
 </record_update>

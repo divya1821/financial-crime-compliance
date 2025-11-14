@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="f6c4c00c3b9c7654cb98111864e45ae1" sys_domain="global" table="x_vuram_financia_0_fcc_kyc_tasks" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 03:37:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83c4c00c3b9c7654cb98111864e45ae5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">f6c4c00c3b9c7654cb98111864e45ae1</sys_ui_form>
+            <sys_ui_section caption="Risk Assessment Details" display_value="Risk Assessment Details" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">bec4c00c3b9c7654cb98111864e45ade</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 03:37:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 03:37:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03c4c00c3b9c7654cb98111864e45ae6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_fcc_kyc_tasks" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">f6c4c00c3b9c7654cb98111864e45ae1</sys_ui_form>
+            <sys_ui_section caption="Risk Score Outcome" display_value="Risk Score Outcome" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">fac4c00c3b9c7654cb98111864e45ae0</sys_ui_section>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 03:37:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_vuram_financia_0_fcc_kyc_tasks</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>abhilash.nair</sys_created_by>
+            <sys_created_on>2025-09-25 03:37:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f6c4c00c3b9c7654cb98111864e45ae1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vuram_financia_0_fcc_kyc_tasks</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_f6c4c00c3b9c7654cb98111864e45ae1</sys_update_name>
+            <sys_updated_by>abhilash.nair</sys_updated_by>
+            <sys_updated_on>2025-09-25 03:37:46</sys_updated_on>
+            <sys_user/>
+            <view display_value="Risk View Entity" name="Risk_View_Entity">b2c4c00c3b9c7654cb98111864e45a51</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

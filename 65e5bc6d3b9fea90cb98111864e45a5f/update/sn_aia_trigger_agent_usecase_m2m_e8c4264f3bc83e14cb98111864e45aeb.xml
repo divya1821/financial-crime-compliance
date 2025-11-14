@@ -19,6 +19,6 @@ Individual Number: ${individual.number}]]></objective_template>
         <sys_update_name>sn_aia_trigger_agent_usecase_m2m_e8c4264f3bc83e14cb98111864e45aeb</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
         <sys_updated_on>2025-10-23 05:14:18</sys_updated_on>
-        <trigger_configuration display_value="x_vuram_financia_0_fcc_kyc_cases">64c4264f3bc83e14cb98111864e45ae8</trigger_configuration>
+        <trigger_configuration/>
     </sn_aia_trigger_agent_usecase_m2m>
 </record_update>

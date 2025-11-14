@@ -5,6 +5,7 @@
         <extension_point/>
         <fields/>
         <icon/>
+        <interoperable>false</interoperable>
         <name>Dashboard</name>
         <optional_parameters>sysId,tabSysId,filter,edit,element</optional_parameters>
         <order>0</order>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description/>
+        <event_name>x_vuram_financia_0.kyc.expiry.30days</event_name>
+        <fired_by/>
+        <priority>100</priority>
+        <queue/>
+        <suffix>kyc.expiry.30days</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-09-23 07:21:44</sys_created_on>
+        <sys_id>81c4e6df3b4cfe14f13f5fea26e45a6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vuram_financia_0.kyc.expiry.30days</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sysevent_register_81c4e6df3b4cfe14f13f5fea26e45a6b</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-09-23 07:21:44</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_individual_details</table>
+    </sysevent_register>
+</record_update>

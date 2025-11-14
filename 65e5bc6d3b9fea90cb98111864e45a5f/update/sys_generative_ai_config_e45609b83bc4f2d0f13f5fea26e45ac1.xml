@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <additional_configurations>{"skill_config_id":"664d7d3b3b776a90cb98111864e45a4a"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>fd4d3d3b3b776a90cb98111864e45a5c</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <max_tokens>1000</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>llm_generic_small</model>
+        <name>Prompt name</name>
+        <parent display_value="OneExtend Capability Definition: FCC KYC Proof of Address Skill (Now LLM Generic - Now LLM Generic)">c87409743bc4f2d0f13f5fea26e45ab2</parent>
+        <prompt>## Role
+
+You are a data extraction expert. Your task is to extract relevant information from a given string.
+
+
+
+## Context
+
+The input string that needs to be processed:  {{input}} 
+
+
+
+## Instructions
+
+1. Read through the input string carefully to identify the relevant information.
+
+2. Extract the following details:
+
+   - Address
+
+   - City
+
+   - Post code
+
+   - Country of residence
+
+   - Country of nationality
+
+   - Name of the person
+
+   - Issue date
+
+   - Document number
+
+3. Ensure that the extracted information is accurate and relevant to the provided context.
+
+
+## Output
+
+The extracted information in the following JSON Format:
+
+Address: &lt;ADDRESS&gt;
+
+City: &lt;CITY&gt;
+
+Post code: &lt;POST_CODE&gt;
+
+Country of residence: &lt;COUNTRY_OF_RESIDENCE&gt;
+
+Country of nationality: &lt;COUNTRY_OF_NATIONALITY&gt;
+
+Name of the person: &lt;NAME_OF_PERSON&gt;
+
+Issue date: &lt;ISSUE_DATE&gt;
+
+Document number: &lt;DOCUMENT_NUMBER&gt;</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <request_tokens>31518</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>archived</state>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-15 06:03:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e45609b83bc4f2d0f13f5fea26e45ac1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>fd4d3d3b3b776a90cb98111864e45a5c</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_config_e45609b83bc4f2d0f13f5fea26e45ac1</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-09-16 08:09:31</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>3</version>
+    </sys_generative_ai_config>
+</record_update>

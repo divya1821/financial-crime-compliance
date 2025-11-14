@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
+    <sys_generative_ai_prompt_config action="INSERT_OR_UPDATE">
+        <ai_config display_value="OneExtend Capability Definition: FCC KYC Transaction Analysis _Anomaly Detection (Now LLM Generic - Now LLM Generic)">6da47db83b48f2d0cb98111864e45a24</ai_config>
+        <definition display_value="FCC KYC Transaction Analysis _Anomaly Detection (Now LLM Generic - Now LLM Generic)">ca3439783b48f2d0cb98111864e45a41</definition>
+        <filter_properties/>
+        <filter_type>default</filter_type>
+        <is_default>true</is_default>
+        <order>0</order>
+        <sys_class_name>sys_generative_ai_prompt_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-15 09:26:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>21a47db83b48f2d0cb98111864e45a26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>6da47db83b48f2d0cb98111864e45a24</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_prompt_config_21a47db83b48f2d0cb98111864e45a26</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-15 09:26:14</sys_updated_on>
+    </sys_generative_ai_prompt_config>
+</record_update>

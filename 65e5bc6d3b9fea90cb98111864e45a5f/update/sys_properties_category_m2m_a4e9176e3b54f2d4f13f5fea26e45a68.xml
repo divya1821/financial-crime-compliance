@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="fcc_risk_configurations">1f881be63b54f2d4f13f5fea26e45a58</category>
+        <order>300</order>
+        <property display_value="x_vuram_financia_0.RiskRatingMedium" name="x_vuram_financia_0.RiskRatingMedium">3a703c393b84bed0f13f5fea26e45a35</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-10-03 13:33:35</sys_created_on>
+        <sys_id>a4e9176e3b54f2d4f13f5fea26e45a68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vuram_financia_0.RiskRatingMedium.fcc_risk_configurations</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_a4e9176e3b54f2d4f13f5fea26e45a68</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-03 13:33:35</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

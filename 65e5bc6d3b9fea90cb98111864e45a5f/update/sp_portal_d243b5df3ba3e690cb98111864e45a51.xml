@@ -5,8 +5,10 @@
         <css_variables/>
         <dark_theme/>
         <default>false</default>
+        <embeddable_macroponents/>
         <enable_ais>true</enable_ais>
         <enable_certificate_based_authentication>false</enable_certificate_based_authentication>
+        <enable_embeddables>false</enable_embeddables>
         <enable_favorites>false</enable_favorites>
         <hide_portal_name>false</hide_portal_name>
         <homepage display_value="fcc_kyc_entity_homepage">dfb431173be3e690cb98111864e45ac2</homepage>
@@ -16,6 +18,7 @@
         <kb_knowledge_page/>
         <login_page/>
         <logo/>
+        <logo_alt_text/>
         <notfound_page/>
         <quick_start_config/>
         <rtl_enabled>false</rtl_enabled>

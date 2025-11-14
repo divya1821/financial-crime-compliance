@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <controller_preset/>
         <includes/>
-        <macroponent display_value="Customer Onboarding Cases">d576e2c03bebe210cb98111864e45ab3</macroponent>
+        <macroponent display_value="Customer Onboarding Cases copy">d576e2c03bebe210cb98111864e45ab3</macroponent>
         <name>New client script 1</name>
         <preset/>
         <required_translations>[]</required_translations>

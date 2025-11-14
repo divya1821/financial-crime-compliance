@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage">
+    <sys_cs_topic_library_usage action="INSERT_OR_UPDATE">
+        <calling_cs_topic_id display_value="Questionnaires-Customer KYC Onboarding">ec8b569d3b907694f13f5fea26e45ab7</calling_cs_topic_id>
+        <library_cs_topic_id display_value="Customer Onboarding Queries">08915e3d3b4cbed0cb98111864e45ace</library_cs_topic_id>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"Customer Onboarding Queries","library_topic_id":"08915e3d3b4cbed0cb98111864e45ace","library_topic_is_template":false,"parameter-mappings":[],"return-value-mappings":[],"header_card_fields":[],"id":"20ae8668f46b419d833e3493e7355cc4","name":"Customer onboarding queries","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage>
+        <node_id>20ae8668f46b419d833e3493e7355cc4</node_id>
+        <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-29 11:48:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>388b569d3b907694f13f5fea26e45ac0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_cs_topic_library_usage_388b569d3b907694f13f5fea26e45ac0</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-29 11:48:40</sys_updated_on>
+    </sys_cs_topic_library_usage>
+</record_update>

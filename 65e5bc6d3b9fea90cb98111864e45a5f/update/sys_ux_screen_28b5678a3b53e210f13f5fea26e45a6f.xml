@@ -4,8 +4,9 @@
         <app_config display_value="Financial Crime Compliance">5c8d49613bd32e90cb98111864e45a8d</app_config>
         <description/>
         <disable_auto_reflow>false</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
         <event_mappings/>
-        <macroponent display_value="Dashboards">eba5e38a3b53e210f13f5fea26e45afc</macroponent>
+        <macroponent display_value="Default">eba5e38a3b53e210f13f5fea26e45afc</macroponent>
         <macroponent_config>{
     "bare": {
         "type": "JSON_LITERAL",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
     <sys_generative_ai_config action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <additional_configurations>{"skill_config_id":"614cca7e3b3fae50f13f5fea26e45aaf"}</additional_configurations>
         <ai_suggested>false</ai_suggested>
         <definition>1d4cca7e3b3fae50f13f5fea26e45a4a</definition>
@@ -153,14 +153,14 @@ Display only the summary content as described above.
         <prompt_template_role>user</prompt_template_role>
         <request_tokens>31518</request_tokens>
         <show_in_prompt_library>true</show_in_prompt_library>
-        <state>published</state>
+        <state>archived</state>
         <sys_class_name>sys_generative_ai_config</sys_class_name>
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-10-24 16:53:06</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3fe058a93b34b250f13f5fea26e45a0c</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>1d4cca7e3b3fae50f13f5fea26e45a4a</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -168,7 +168,7 @@ Display only the summary content as described above.
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_generative_ai_config_3fe058a93b34b250f13f5fea26e45a0c</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-24 17:10:05</sys_updated_on>
+        <sys_updated_on>2025-10-30 14:11:23</sys_updated_on>
         <temperature>0.2</temperature>
         <thinking_tokens>0</thinking_tokens>
         <version>7</version>

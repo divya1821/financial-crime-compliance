@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_eval_strategy">
+    <sys_one_extend_eval_strategy action="INSERT_OR_UPDATE">
+        <capability display_value="Screening Analysis">2b408a723b847a14cb98111864e45a7f</capability>
+        <default>true</default>
+        <name>Default</name>
+        <skill_config_id>405002b23b847a14cb98111864e45abb</skill_config_id>
+        <sys_class_name>sys_one_extend_eval_strategy</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-21 15:25:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>985002b23b847a14cb98111864e45ad0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_one_extend_eval_strategy_985002b23b847a14cb98111864e45ad0</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-21 15:25:03</sys_updated_on>
+    </sys_one_extend_eval_strategy>
+</record_update>

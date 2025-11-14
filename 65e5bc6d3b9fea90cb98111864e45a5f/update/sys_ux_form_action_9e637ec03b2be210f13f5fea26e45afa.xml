@@ -2,7 +2,7 @@
     <sys_ux_form_action action="INSERT_OR_UPDATE">
         <action_type>declarative_action</action_type>
         <active>true</active>
-        <declarative_action display_value="return">405faa083be7e210f13f5fea26e45a48</declarative_action>
+        <declarative_action display_value="return_back">405faa083be7e210f13f5fea26e45a48</declarative_action>
         <description/>
         <name>Return</name>
         <specificity>20</specificity>

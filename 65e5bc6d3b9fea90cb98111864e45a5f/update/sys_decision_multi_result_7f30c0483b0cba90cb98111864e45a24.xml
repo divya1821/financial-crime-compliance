@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="INSERT_OR_UPDATE">
+        <decision_table display_value="FCC KYC Risk Engine">70ca377b3bfbaa90cb98111864e45a35</decision_table>
+        <label>Score: 4</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>raj.selvam</sys_created_by>
+        <sys_created_on>2025-09-12 17:02:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7f30c0483b0cba90cb98111864e45a24</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Score: 4</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_decision_multi_result_7f30c0483b0cba90cb98111864e45a24</sys_update_name>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-09-12 17:02:13</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="delete_multiple" query="document_key=7f30c0483b0cba90cb98111864e45a24"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>7f30c0483b0cba90cb98111864e45a24</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>raj.selvam</sys_created_by>
+        <sys_created_on>2025-09-12 17:02:13</sys_created_on>
+        <sys_id>7330c0483b0cba90cb98111864e45a25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-09-12 17:02:13</sys_updated_on>
+        <value>4</value>
+        <variable display_value="Score">a61d3b333b3faa90cb98111864e45a1b</variable>
+    </sys_variable_value>
+</record_update>

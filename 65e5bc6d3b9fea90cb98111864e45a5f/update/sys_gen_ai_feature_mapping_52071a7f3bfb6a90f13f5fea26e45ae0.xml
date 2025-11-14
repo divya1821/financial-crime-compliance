@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_feature_mapping">
+    <sys_gen_ai_feature_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <customer_updatable>true</customer_updatable>
+        <default_tier>false</default_tier>
+        <document>1e071a7f3bfb6a90f13f5fea26e45adb</document>
+        <document_table>sys_one_extend_capability</document_table>
+        <feature_name>Case creation skill</feature_name>
+        <licensable>true</licensable>
+        <metadata/>
+        <skip_on_group_call>false</skip_on_group_call>
+        <sys_class_name>sys_gen_ai_feature_mapping</sys_class_name>
+        <sys_created_by>asifa.ekkeem</sys_created_by>
+        <sys_created_on>2025-09-12 09:22:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>52071a7f3bfb6a90f13f5fea26e45ae0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Case creation skill</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_gen_ai_feature_mapping_52071a7f3bfb6a90f13f5fea26e45ae0</sys_update_name>
+        <sys_updated_by>asifa.ekkeem</sys_updated_by>
+        <sys_updated_on>2025-09-12 09:22:33</sys_updated_on>
+        <tier/>
+    </sys_gen_ai_feature_mapping>
+</record_update>

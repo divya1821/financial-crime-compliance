@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>enter the query</key>
+        <language>en</language>
+        <message>Enter the query</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-18 14:25:31</sys_created_on>
+        <sys_id>47e51e793b8cbed0cb98111864e45a21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>enter the query</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ui_message_47e51e793b8cbed0cb98111864e45a21</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-09-18 14:25:31</sys_updated_on>
+    </sys_ui_message>
+</record_update>

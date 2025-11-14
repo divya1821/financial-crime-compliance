@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_selection" table="var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_selection</element>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_id>dd482a453b80f6d0f13f5fea26e45a4a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_selection</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_choice_var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa_u_selection</sys_update_name>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aero Space &amp; Aviation</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d1482a453b80f6d0f13f5fea26e45a4a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>aero_space_aviation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Antique/Art Dealer</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>99482a453b80f6d0f13f5fea26e45a67</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>antique_art_dealer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Charity</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d5482a453b80f6d0f13f5fea26e45a6a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>charity</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Chemical</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>25482a453b80f6d0f13f5fea26e45a6d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>chemical</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Property Development</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>61482a453b80f6d0f13f5fea26e45a70</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>property_development</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Gaming</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>60</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ad482a453b80f6d0f13f5fea26e45a72</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>gaming</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Software</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>70</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e9482a453b80f6d0f13f5fea26e45a75</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>software</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cosmetics</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>80</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>29482a453b80f6d0f13f5fea26e45a78</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>cosmetics</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>E Commerce</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>90</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65482a453b80f6d0f13f5fea26e45a7b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>e_commerce</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Broker</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 07:50:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a1482a453b80f6d0f13f5fea26e45a7e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 07:50:15</sys_updated_on>
+            <value>broker</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not and MRJ,HRJ or sJ</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>110</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 11:25:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4f8913453bc8f6d0f13f5fea26e45a29</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 11:25:32</sys_updated_on>
+            <value>not_and_mrj_hrj_or_sj</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Medium Risk Jurisdiction ( MRJ0  )</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>120</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 11:25:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>878913453bc8f6d0f13f5fea26e45a2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 11:25:33</sys_updated_on>
+            <value>medium_risk_jurisdiction_mrj0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>High Risk Jurisdiction or Sanctioned jur</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>130</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 11:25:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>978913453bc8f6d0f13f5fea26e45a6f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 11:25:33</sys_updated_on>
+            <value>high_risk_jurisdiction_or_sanctioned_jur</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Some MRJ's ,few or no HRJ's or SJ's</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>140</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 11:25:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d38913453bc8f6d0f13f5fea26e45a72</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 11:25:33</sys_updated_on>
+            <value>some_mrj_s_few_or_no_hrj_s_or_sj_s</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Only Low Risk Jurisdiction</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>150</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 11:25:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>138913453bc8f6d0f13f5fea26e45a75</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 11:25:33</sys_updated_on>
+            <value>only_low_risk_jurisdiction</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_selection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Significant Proportion of HRJ's or SJ's</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e84822413b80f6d0f13f5fea26e45aaa</name>
+            <sequence>160</sequence>
+            <synonyms/>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-09-16 11:25:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5f8913453bc8f6d0f13f5fea26e45a77</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-09-16 11:25:33</sys_updated_on>
+            <value>significant_proportion_of_hrj_s_or_sj_s</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

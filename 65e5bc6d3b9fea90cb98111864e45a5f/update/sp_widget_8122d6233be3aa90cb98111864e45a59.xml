@@ -6,176 +6,213 @@
   var c = this;
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>/* Header Section */&#13;
+        <css>/* ==== HEADER SECTION ==== */&#13;
 .custom-header {&#13;
   width: 100%;&#13;
-  background: linear-gradient(to right, #1e3a8a, #2563eb); /* blue gradient */&#13;
+  background: linear-gradient(120deg, #1e3a8a, #2563eb, #1e40af);&#13;
   color: white;&#13;
-  padding: 40px;&#13;
+  padding: 60px 40px;&#13;
+  border-radius: 0 0 50px 50px;&#13;
+  position: relative;&#13;
   overflow: hidden;&#13;
-  border-bottom-left-radius: 40px;  /* curved edges */&#13;
-  border-bottom-right-radius: 40px;&#13;
-  border-top-left-radius: 40px;  /* curved edges */&#13;
-  border-top-right-radius: 40px;&#13;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);&#13;
+  animation: fadeIn 1s ease;&#13;
 }&#13;
 &#13;
 .header-content {&#13;
   max-width: 1200px;&#13;
   margin: 0 auto;&#13;
   display: flex;&#13;
+  flex-wrap: wrap;&#13;
   align-items: center;&#13;
   justify-content: space-between;&#13;
 }&#13;
 &#13;
 .header-text h1 {&#13;
-  font-size: 2.5em;&#13;
+  font-size: 3em;&#13;
   margin: 0;&#13;
+  letter-spacing: 1px;&#13;
+  animation: slideIn 1s ease forwards;&#13;
 }&#13;
 &#13;
 .header-text p {&#13;
-  font-size: 1.2em;&#13;
-  margin-top: 8px;&#13;
-  color: #ddd;&#13;
+  font-size: 1.3em;&#13;
+  margin-top: 10px;&#13;
+  color: #e0e7ff;&#13;
 }&#13;
 &#13;
-.header-graphic {&#13;
-  display: flex;&#13;
-  align-items: flex-end;&#13;
-  gap: 12px;&#13;
+/* Decorative Animated Wave */&#13;
+.wave {&#13;
+  position: absolute;&#13;
+  bottom: 0;&#13;
+  left: 0;&#13;
+  width: 200%;&#13;
+  height: 120px;&#13;
+  background: rgba(255,255,255,0.15);&#13;
+  border-radius: 100%;&#13;
+  transform: translateX(-25%);&#13;
+  animation: waveMove 6s linear infinite;&#13;
 }&#13;
 &#13;
+/* Header Shapes */&#13;
 .shape {&#13;
-  background-color: #888;&#13;
-  border-radius: 4px;&#13;
+  border-radius: 8px;&#13;
   position: relative;&#13;
   animation: float 3s ease-in-out infinite;&#13;
 }&#13;
 &#13;
 .shape1 {&#13;
-  width: 40px;&#13;
-  height: 60px;&#13;
+  width: 40px; height: 60px;&#13;
   background-color: #9ca3af;&#13;
-  animation-delay: 0s;&#13;
 }&#13;
 .shape2 {&#13;
-  width: 50px;&#13;
-  height: 80px;&#13;
+  width: 50px; height: 80px;&#13;
   background-color: #6b7280;&#13;
   animation-delay: 0.5s;&#13;
 }&#13;
 .shape3 {&#13;
-  width: 30px;&#13;
-  height: 50px;&#13;
-  background-color: #9ca3af;&#13;
+  width: 30px; height: 50px;&#13;
+  background-color: #93c5fd;&#13;
   animation-delay: 1s;&#13;
 }&#13;
 &#13;
-/* Decorative Circles */&#13;
-.shape1::before,&#13;
-.shape2::before,&#13;
-.shape3::before {&#13;
+/* Decorative Dots */&#13;
+.shape::before {&#13;
   content: "";&#13;
   position: absolute;&#13;
-  width: 8px;&#13;
-  height: 8px;&#13;
+  width: 10px; height: 10px;&#13;
   border-radius: 50%;&#13;
-  top: -12px;&#13;
-  left: 50%;&#13;
+  top: -14px; left: 50%;&#13;
   transform: translateX(-50%);&#13;
+  background-color: #38bdf8;&#13;
   animation: pulse 2s infinite ease-in-out;&#13;
 }&#13;
-.shape1::before { background-color: #38bdf8; } /* light blue */&#13;
-.shape2::before { background-color: #93c5fd; } /* softer blue */&#13;
-.shape3::before { background-color: #60a5fa; } /* medium blue */&#13;
 &#13;
-/* Floating Animation */&#13;
-@keyframes float {&#13;
-  0%, 100% { transform: translateY(0); }&#13;
-  50% { transform: translateY(-8px); }&#13;
-}&#13;
-@keyframes pulse {&#13;
-  0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }&#13;
-  50% { transform: translateX(-50%) scale(1.4); opacity: 0.7; }&#13;
-}&#13;
-&#13;
-/* Cards Section */&#13;
+/* ==== CARD SECTION ==== */&#13;
 .cards-section {&#13;
   display: flex;&#13;
   justify-content: center;&#13;
-  gap: 20px;&#13;
-  padding: 30px 20px;&#13;
-  background-color: #f8f9fa;&#13;
+  flex-wrap: wrap;&#13;
+  gap: 25px;&#13;
+  padding: 60px 20px;&#13;
+  background-color: #f8fafc;&#13;
 }&#13;
 &#13;
 .card {&#13;
   background: white;&#13;
-  border-radius: 12px;&#13;
-  padding: 20px;&#13;
-  width: 280px;&#13;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);&#13;
+  border-radius: 20px;&#13;
+  padding: 30px;&#13;
+  width: 300px;&#13;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);&#13;
   text-align: center;&#13;
-  transition: transform 0.2s ease;&#13;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;&#13;
+  animation: fadeInUp 0.8s ease both;&#13;
 }&#13;
 &#13;
 .card:hover {&#13;
-  transform: translateY(-5px);&#13;
+  transform: translateY(-10px);&#13;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);&#13;
 }&#13;
 &#13;
 .card-icon {&#13;
-  font-size: 40px;&#13;
+  font-size: 45px;&#13;
   margin-bottom: 15px;&#13;
+  animation: popIn 1s ease;&#13;
 }&#13;
 &#13;
 .card h3 {&#13;
-  margin: 10px 0;&#13;
-  font-size: 1.2em;&#13;
+  font-size: 1.3em;&#13;
+  margin: 12px 0;&#13;
+  color: #1e3a8a;&#13;
 }&#13;
 &#13;
 .card p {&#13;
-  font-size: 0.95em;&#13;
+  font-size: 1em;&#13;
   color: #555;&#13;
-  margin-bottom: 20px;&#13;
+  margin-bottom: 25px;&#13;
 }&#13;
 &#13;
+/* Buttons */&#13;
 .card-btn {&#13;
   display: inline-block;&#13;
-  padding: 8px 16px;&#13;
-  border-radius: 6px;&#13;
-  background-color: #f3f4f6;&#13;
-  border: 1px solid #ccc;&#13;
-  color: black;&#13;
+  padding: 10px 20px;&#13;
+  border-radius: 8px;&#13;
+  background: linear-gradient(to right, #2563eb, #1e40af);&#13;
+  color: white;&#13;
   text-decoration: none;&#13;
   font-weight: bold;&#13;
-  transition: background 0.3s ease;&#13;
+  transition: all 0.3s ease;&#13;
 }&#13;
 &#13;
 .card-btn:hover {&#13;
-  background-color: #e0e0e0;&#13;
-}&#13;
-&#13;
-.disabled {&#13;
-  opacity: 0.5;&#13;
+  background: linear-gradient(to right, #1e40af, #2563eb);&#13;
+  transform: scale(1.05);&#13;
+  box-shadow: 0 0 15px rgba(37,99,235,0.4);&#13;
 }&#13;
 &#13;
 .disabled-btn {&#13;
   display: inline-block;&#13;
-  padding: 8px 16px;&#13;
-  border-radius: 6px;&#13;
-  background-color: #f3f4f6;&#13;
-  border: 1px solid #ccc;&#13;
-  color: #666;&#13;
+  padding: 10px 20px;&#13;
+  border-radius: 8px;&#13;
+  background-color: #e5e7eb;&#13;
+  color: #777;&#13;
   font-weight: bold;&#13;
 }&#13;
 &#13;
+/* ==== ANIMATIONS ==== */&#13;
+@keyframes float {&#13;
+  0%,100% { transform: translateY(0); }&#13;
+  50% { transform: translateY(-8px); }&#13;
+}&#13;
 &#13;
+@keyframes pulse {&#13;
+  0%,100% { transform: scale(1); opacity: 1; }&#13;
+  50% { transform: scale(1.5); opacity: 0.6; }&#13;
+}&#13;
 &#13;
+@keyframes waveMove {&#13;
+  0% { transform: translateX(0) translateY(0); }&#13;
+  100% { transform: translateX(-50%) translateY(0); }&#13;
+}&#13;
+&#13;
+@keyframes fadeIn {&#13;
+  from { opacity: 0; }&#13;
+  to { opacity: 1; }&#13;
+}&#13;
+&#13;
+@keyframes fadeInUp {&#13;
+  from { opacity: 0; transform: translateY(30px); }&#13;
+  to { opacity: 1; transform: translateY(0); }&#13;
+}&#13;
+&#13;
+@keyframes slideIn {&#13;
+  from { opacity: 0; transform: translateX(-30px); }&#13;
+  to { opacity: 1; transform: translateX(0); }&#13;
+}&#13;
+&#13;
+@keyframes popIn {&#13;
+  0% { transform: scale(0); opacity: 0; }&#13;
+  100% { transform: scale(1); opacity: 1; }&#13;
+}&#13;
+&#13;
+/* ==== UTILITY ANIMATION CLASSES ==== */&#13;
+.fade-in { animation: fadeIn 1.2s ease both; }&#13;
+.fade-in-up { animation: fadeInUp 1.2s ease both; }&#13;
+.slide-in-left { animation: slideIn 1.2s ease both; }&#13;
+.float-up { animation: float 4s ease-in-out infinite; }&#13;
+&#13;
+/* Responsive */&#13;
+@media (max-width: 768px) {&#13;
+  .header-content { flex-direction: column; text-align: center; }&#13;
+  .cards-section { flex-direction: column; align-items: center; }&#13;
+}&#13;
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>false</has_preview>
+        <has_preview>true</has_preview>
         <id>fcc_kyc_landing_page</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {
@@ -279,85 +316,79 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-08-30 04:08:26</sys_created_on>
         <sys_id>8122d6233be3aa90cb98111864e45a59</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>FCC KYC Landing Page</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_8122d6233be3aa90cb98111864e45a59</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-02 07:03:39</sys_updated_on>
+        <sys_updated_on>2025-10-15 14:18:05</sys_updated_on>
         <template><![CDATA[<div class="container">
 
-
-
   <!-- Customer Widget HTML -->
-  <div ng-if="data.show_customer">
-    <div class="custom-header">
+  <div ng-if="data.show_customer" class="fade-in">
+    <div class="custom-header animated-header">
       <div class="header-content">
-        <div class="header-text">
+        <div class="header-text slide-in-left">
           <h1>Bank Of XYZ</h1>
-          <p>We're always here to help.</p>
+          <p>Your trusted partner in financial growth.</p>
         </div>
-        <div class="header-graphic">
+        <div class="header-graphic float-up">
           <div class="shape shape1"></div>
           <div class="shape shape2"></div>
           <div class="shape shape3"></div>
         </div>
       </div>
+      <div class="wave"></div>
     </div>
 
-    <div class="cards-section">
-      <!-- Card 1 -->
+    <div class="cards-section fade-in-up">
       <div class="card">
         <div class="card-icon">]]>📄<![CDATA[</div>
         <h3>Individual Customer KYC</h3>
         <p>Complete your Know Your Customer verification process.</p>
-        <a href="/fcc_kyc?id=fcc_kyc_individual_upload_document"  
-           class="card-btn">Update Details</a>
+        <a href="/fcc_kyc?id=fcc_kyc_individual_upload_document" class="card-btn">Update Details</a>
       </div>
 
-      <!-- Card 2 -->
       <div class="card">
         <div class="card-icon">]]>📅<![CDATA[</div>
         <h3>Ongoing KYC</h3>
-        <p>Update your KYC for an existing customer</p>
+        <p>Update your KYC for an existing customer.</p>
         <div class="disabled-btn">Update Details</div>
       </div>
     </div>
   </div>
 
   <!-- Entity Widget HTML -->
-  <div ng-if="data.show_entity">
-    <div class="custom-header">
+  <div ng-if="data.show_entity" class="fade-in">
+    <div class="custom-header animated-header">
       <div class="header-content">
-        <div class="header-text">
+        <div class="header-text slide-in-left">
           <h1>Bank Of XYZ</h1>
-          <p>We're always here to help.</p>
+          <p>Your trusted partner in financial growth.</p>
         </div>
-        <div class="header-graphic">
+        <div class="header-graphic float-up">
           <div class="shape shape1"></div>
           <div class="shape shape2"></div>
           <div class="shape shape3"></div>
         </div>
       </div>
+      <div class="wave"></div>
     </div>
 
-    <div class="cards-section">
-      <!-- Card 1 -->
+    <div class="cards-section fade-in-up">
       <div class="card">
-        <div class="card-icon">]]>📄<![CDATA[</div>
+        <div class="card-icon">]]>🏢<![CDATA[</div>
         <h3>Entity KYC</h3>
         <p>Complete your Know Your Customer verification process.</p>
-        <a href="/fcc_kyc?id=fcc_kyc_entity_upload_document"  
-           class="card-btn">Update Details</a>
+        <a href="/fcc_kyc?id=fcc_kyc_update_entity_details" class="card-btn">Update Details</a>
       </div>
 
-      <!-- Card 2 -->
       <div class="card">
         <div class="card-icon">]]>📅<![CDATA[</div>
         <h3>Ongoing KYC</h3>
-        <p>Update your KYC for an existing Entity</p>
+        <p>Update your KYC for an existing entity.</p>
         <div class="disabled-btn">Update Details</div>
       </div>
     </div>
@@ -367,13 +398,10 @@
   <div ng-if="data.show_customer">
     <sp-widget widget="widgetInstances['fcc_kyc_customer_welcome_page']"></sp-widget>
   </div>
-
   <div ng-if="data.show_entity">
     <sp-widget widget="widgetInstances['fcc_kyc_entity_landing_page']"></sp-widget>
   </div>
-
-
-
+</div>
 ]]></template>
     </sp_widget>
 </record_update>

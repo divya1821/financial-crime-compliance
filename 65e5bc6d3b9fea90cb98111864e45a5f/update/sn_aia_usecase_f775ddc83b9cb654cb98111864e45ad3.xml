@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_usecase">
+    <sn_aia_usecase action="INSERT_OR_UPDATE">
+        <applicability_script/>
+        <base_plan>This agentic workflow specializes in evaluating customer profiles for onboarding decisions based on risk and compliance data.
+1. Collect and review adverse news screening results for the customer.
+2. Check the customer's status against PEP (Politically Exposed Person) lists.
+3. Verify if the customer appears on any sanctions lists.
+4. Assess the overall risk level of the customer profile.
+5. Consolidate findings from all checks to determine if the customer has a clean profile.
+6. Provide a clear onboarding suggestion to the Relationship Manager based on the consolidated results.</base_plan>
+        <description>This workflow enables an AI agent to assess customer profiles for onboarding eligibility. It consolidates results from adverse news screening, PEP, sanctions checks, and risk level analysis to provide clear onboarding suggestions to Relationship Managers. The intended audience is Relationship Managers seeking automated, risk-based onboarding recommendations.</description>
+        <execution_mode>copilot</execution_mode>
+        <internal_name>global.x_vuram_financia_0.Decision Maker - Individual Customer</internal_name>
+        <name>Decision Maker - Individual Customer</name>
+        <parent/>
+        <record_type>custom</record_type>
+        <source_id/>
+        <strategy display_value="ReActive Planner">b264c470ff1022106c36ffffffffff67</strategy>
+        <sys_class_name>sn_aia_usecase</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-09-25 10:07:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f775ddc83b9cb654cb98111864e45ad3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Decision Maker - Individual Customer</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_aia_usecase_f775ddc83b9cb654cb98111864e45ad3</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-15 08:52:17</sys_updated_on>
+        <team display_value="Decision Maker - Individual Customer">770e1d083b10f654cb98111864e45a15</team>
+    </sn_aia_usecase>
+</record_update>

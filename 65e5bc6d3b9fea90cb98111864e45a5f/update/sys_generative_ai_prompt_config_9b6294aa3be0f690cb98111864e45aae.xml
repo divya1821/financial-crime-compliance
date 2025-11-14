@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
+    <sys_generative_ai_prompt_config action="INSERT_OR_UPDATE">
+        <ai_config display_value="OneExtend Capability Definition: Screening Analysis Onboarding suggestion (Now LLM Generic - Now LLM Generic)">d76294aa3be0f690cb98111864e45aab</ai_config>
+        <definition display_value="Screening Analysis Onboarding suggestion (Now LLM Generic - Now LLM Generic)">3e1171043b14f654cb98111864e45aeb</definition>
+        <filter_properties>{}</filter_properties>
+        <filter_type>default</filter_type>
+        <is_default>true</is_default>
+        <order>0</order>
+        <sys_class_name>sys_generative_ai_prompt_config</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-10-15 09:17:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9b6294aa3be0f690cb98111864e45aae</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>d76294aa3be0f690cb98111864e45aab</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_generative_ai_prompt_config_9b6294aa3be0f690cb98111864e45aae</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-10-15 09:40:23</sys_updated_on>
+    </sys_generative_ai_prompt_config>
+</record_update>

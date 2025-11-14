@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <controller_preset/>
         <includes/>
-        <macroponent display_value="Default">5d8277463b97e2d0cb98111864e45a4e</macroponent>
+        <macroponent display_value="Default Case">5d8277463b97e2d0cb98111864e45a4e</macroponent>
         <name>New client script 1</name>
         <preset/>
         <required_translations>[]</required_translations>

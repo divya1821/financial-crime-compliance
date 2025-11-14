@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="video_kyc_device" label="Video KYC Device" language="en" table="x_vuram_financia_0_fcc_kyc_individual_details">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>video_kyc_device</element>
+            <help/>
+            <hint/>
+            <label>Video KYC Device</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>varunapriyan.k</sys_created_by>
+            <sys_created_on>2025-10-15 09:57:23</sys_created_on>
+            <sys_id>de7b98a63b68f290f13f5fea26e45a78</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Video KYC Device</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_documentation_x_vuram_financia_0_fcc_kyc_individual_details_video_kyc_device_en</sys_update_name>
+            <sys_updated_by>varunapriyan.k</sys_updated_by>
+            <sys_updated_on>2025-10-15 09:57:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

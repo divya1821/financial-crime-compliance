@@ -27,7 +27,7 @@
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Integer">integer</internal_type>
+        <internal_type display_value="">float</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
         <name>x_vuram_financia_0_fcc_kyc_entity_details</name>
@@ -53,8 +53,8 @@
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_dictionary_x_vuram_financia_0_fcc_kyc_entity_details_risk_score</sys_update_name>
-        <sys_updated_by>jaiganesh.vetriselvan</sys_updated_by>
-        <sys_updated_on>2025-08-11 07:44:21</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-09-25 07:11:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <description><![CDATA[This skill is used for screening analysis.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>screening_analysis.405002b23b847a14cb98111864e45abb</internal_name>
+        <is_template>false</is_template>
+        <name>Screening Analysis</name>
+        <nap_skill_applicability display_value="This skill is used for screening analysis.">da8e51433b8cfa14cb98111864e45a37</nap_skill_applicability>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Financial Crime Compliance">e7ef75333bb76a90cb98111864e45ab5</skill_family>
+        <skill_id>2b408a723b847a14cb98111864e45a7f</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>1</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-21 15:25:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>405002b23b847a14cb98111864e45abb</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Screening Analysis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_405002b23b847a14cb98111864e45abb</sys_update_name>
+        <sys_updated_by>nauman.ansari</sys_updated_by>
+        <sys_updated_on>2025-10-17 10:43:20</sys_updated_on>
+        <upstream_routing/>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=405002b23b847a14cb98111864e45abb"/>
+</record_update>

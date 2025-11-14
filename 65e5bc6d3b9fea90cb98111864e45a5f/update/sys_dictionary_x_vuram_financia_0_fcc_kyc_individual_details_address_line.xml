@@ -29,7 +29,7 @@
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
+        <max_length>100</max_length>
         <name>x_vuram_financia_0_fcc_kyc_individual_details</name>
         <next_element/>
         <primary>false</primary>
@@ -53,8 +53,8 @@
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_dictionary_x_vuram_financia_0_fcc_kyc_individual_details_address_line</sys_update_name>
-        <sys_updated_by>anitha.p</sys_updated_by>
-        <sys_updated_on>2025-08-11 07:13:36</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-10-07 11:36:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

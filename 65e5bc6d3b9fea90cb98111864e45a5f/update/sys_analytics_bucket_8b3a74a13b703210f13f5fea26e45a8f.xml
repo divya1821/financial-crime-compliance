@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_analytics_bucket">
+    <sys_analytics_bucket action="INSERT_OR_UPDATE">
+        <analytics_channel display_value="NextExperience">c8ae7e45732130107d804c9885f6a7a5</analytics_channel>
+        <application_name>Financial Crime Compliance</application_name>
+        <bucket_document_id>148dc9613bd32e90cb98111864e45a13</bucket_document_id>
+        <bucket_metadata/>
+        <bucket_metadata_customer_override/>
+        <bucket_table_name>sys_ux_page_registry</bucket_table_name>
+        <bucket_type/>
+        <enable_unauthenticated_user_tracking>false</enable_unauthenticated_user_tracking>
+        <enabled>true</enabled>
+        <internal_name_for_index>x_vuram_financia_0.sys_ux_page_registry.148dc9613bd32e90cb98111864e45a13</internal_name_for_index>
+        <sys_class_name>sys_analytics_bucket</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2025-10-24 19:53:33</sys_created_on>
+        <sys_id>8b3a74a13b703210f13f5fea26e45a8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Financial Crime Compliance</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_analytics_bucket_8b3a74a13b703210f13f5fea26e45a8f</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-10-24 19:53:33</sys_updated_on>
+    </sys_analytics_bucket>
+</record_update>
