@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="aab2c9a13b532e90cb98111864e45acb" label=" FCC KYC Entity Details" max_length="40" name="x_vuram_financia_0_fcc_kyc_entity_details" type="collection">
+        <element label="ACH deposit" max_length="40" name="ach_deposit" type="integer"/>
+        <element label="ACH withdrawal" max_length="40" name="ach_withdrawal" type="integer"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element choice="1" label="Adverse News Screening" max_length="40" name="adverse_news_screening" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="1" value="no"/>
+                <element inactive_on_update="false" label="Possible Match Found" sequence="2" value="possible_match_found"/>
+            </choice>
+        </element>
+        <element label="Total Revenue" max_length="40" name="amount_in_local_currency" type="currency"/>
+        <element label="Amount in USD" max_length="40" name="amount_in_usd" type="currency"/>
+        <element label="Equivalent Amount in USD" max_length="40" name="annual_revenue" type="currency"/>
+        <element label="Assets" max_length="500" name="assets" type="string"/>
+        <element label="As of Date" max_length="40" name="as_of_date" type="glide_date"/>
+        <element label="ATM Deposit" max_length="40" name="atm_deposit" type="integer"/>
+        <element label="ATM withdrawal" max_length="40" name="atm_withdrawal" type="integer"/>
+        <element label="Authorised signers" max_length="1024" name="authorised_signers" reference="x_vuram_financia_0_fcc_kyc_ownerships" type="glide_list"/>
+        <element label="Authorized Representative" max_length="40" name="authorized_representative" type="string"/>
+        <element label="Cash Deposit" max_length="40" name="cash_deposit" type="integer"/>
+        <element label="Cash withdrawal" max_length="40" name="cash_withdrawal" type="integer"/>
+        <element label="Changed Fields" max_length="400000" name="changed_fields" type="string"/>
+        <element label="Cheque Deposit" max_length="40" name="cheque_deposit" type="integer"/>
+        <element label="Cheque withdrawal" max_length="40" name="cheque_withdrawal" type="integer"/>
+        <element label="Constitution doc - COI" max_length="40" name="constitution_doc_coi" type="file_attachment"/>
+        <element label="Controllers" max_length="1024" name="controllers" reference="x_vuram_financia_0_fcc_kyc_ownerships" type="glide_list"/>
+        <element label="Countries of the customer's significant suppliers" max_length="100" name="countries_of_the_customer_s_significant_suppliers" type="string"/>
+        <element label="Country of Domicile" max_length="40" name="country_of_domicile" type="string"/>
+        <element choice="1" default="private" label="Customer Sub Type" max_length="40" name="customer_sub_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Private" sequence="1" value="private"/>
+                <element inactive_on_update="false" label="Public" sequence="2" value="Public"/>
+                <element inactive_on_update="false" label="Government" sequence="3" value="Government"/>
+                <element inactive_on_update="false" label="General Partnership" sequence="4" value="general_partnership"/>
+                <element inactive_on_update="false" label="Limited Partnership" sequence="5" value="limited_partnership"/>
+                <element inactive="true" inactive_on_update="true" label="Small Corporate" sequence="6" value="small_corporate"/>
+                <element inactive_on_update="false" label="Limited Liability Partnership" sequence="13" value="limited_liability_partnership"/>
+                <element inactive_on_update="false" label="Sole-trader" sequence="14" value="Sole-trader"/>
+                <element inactive_on_update="false" label="Partnership - Joint Venture" sequence="15" value="partnership_joint_venture"/>
+                <element inactive_on_update="false" label="SPV" sequence="16" value="SPV"/>
+                <element inactive_on_update="false" label="Limited Liability Company" sequence="17" value="limited_liability_company"/>
+                <element inactive_on_update="false" label="Non-Profit Organisation" sequence="18" value="non_profit_organisation"/>
+                <element inactive_on_update="false" label="Others" sequence="20" value="Others"/>
+            </choice>
+        </element>
+        <element choice="3" label="Customer Type" max_length="40" name="customer_type" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="General Partnership" value="general_partnership"/>
+                <element inactive="true" inactive_on_update="true" label="Limited Partnership" value="limited_partnership"/>
+                <element inactive="true" inactive_on_update="true" label="Bank" sequence="0" value="Bank"/>
+                <element inactive_on_update="false" label="Private Limited" sequence="0" value="private limited"/>
+                <element inactive="true" inactive_on_update="true" label="Non-Banking Financial Institution" sequence="1" value="Non-Banking Financial Institution"/>
+                <element inactive_on_update="false" label="Public Limited" sequence="1" value="Public Limited"/>
+                <element inactive="true" inactive_on_update="true" label="Public Traded company" sequence="2" value="Public Traded company"/>
+                <element inactive_on_update="false" label="LLP" sequence="3" value="LLP"/>
+                <element inactive="true" inactive_on_update="true" label="Private Company" sequence="3" value="Private Company"/>
+                <element inactive="true" inactive_on_update="true" label="Others" sequence="4" value="Others"/>
+                <element inactive_on_update="false" label="Sole Proprietor" sequence="4" value="Sole Proprietor"/>
+                <element inactive_on_update="false" label="Non-Profit" sequence="5" value="Non-Profit"/>
+                <element inactive="true" inactive_on_update="true" label="Government" sequence="6" value="Government"/>
+                <element inactive="true" inactive_on_update="true" label="General Partnership" sequence="7" value="General Partnership"/>
+                <element inactive="true" inactive_on_update="true" label="Limited Partnership" sequence="8" value="Limited Partnership"/>
+                <element inactive="true" inactive_on_update="true" label="Limited Liability Partnership" sequence="9" value="Limited Liability Partnership"/>
+                <element inactive="true" inactive_on_update="true" label="Partnership - Joint Venture" sequence="11" value="Partnership - Joint Venture"/>
+                <element inactive="true" inactive_on_update="true" label="Limited Liability Company" sequence="13" value="Limited Liability Company"/>
+            </choice>
+        </element>
+        <element label="Describe Legal Entity Type (Free Text)" max_length="50" name="describe_legal_entity_type_free_text" type="string"/>
+        <element label="Describe the customer significant suppliers (free text)" max_length="255" name="describe_the_customer_significant_suppliers_free_text" type="string"/>
+        <element label="Describe the source of annual revenue" max_length="100" name="describe_the_source_of_annual_revenu0" type="string"/>
+        <element label="Describe the source of annual revenue" max_length="255" name="describe_the_source_of_annual_revenue" type="string"/>
+        <element label="Doing Business as Name" max_length="100" name="doing_business_as_name" type="string"/>
+        <element label="Domicile Country" max_length="40" name="domicile_country" type="string"/>
+        <element label="Email ID" max_length="40" name="email_id" type="string"/>
+        <element label="Estimated annual transaction volume" max_length="40" name="estimated_annual_transaction_volume" type="integer"/>
+        <element label="FCC KYC Case" max_length="32" name="fcc_kyc_case" reference="x_vuram_financia_0_fcc_kyc_cases" type="reference"/>
+        <element label="ID Back Page" max_length="40" name="id_back_page" type="file_attachment"/>
+        <element label="ID Front Page" max_length="40" name="id_front_page" type="file_attachment"/>
+        <element label="ID&amp;V of UBO, Controller" max_length="40" name="id_v_of_ubo_controller" type="file_attachment"/>
+        <element label="If listed, which country it is listed" max_length="40" name="if_listed_which_country_it_is_listed" type="glide_list"/>
+        <element label="Individual (&gt;10% ownership)" max_length="1024" name="individual_10_ownership" reference="x_vuram_financia_0_fcc_kyc_ownerships" type="glide_list"/>
+        <element label="Is there significant private ownership" max_length="40" name="is_there_significant_private_ownership" type="boolean"/>
+        <element label="Is the customer Traded on an exchange" max_length="40" name="is_the_customer_traded_on_an_exchange" type="boolean"/>
+        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="KYC Expiry" max_length="40" name="kyc_expiry" type="glide_date" use_dynamic_default="true"/>
+        <element label="City" max_length="40" name="legal_city" type="string"/>
+        <element label="Country" max_length="40" name="legal_country" type="string"/>
+        <element label="Legal Name" max_length="100" name="legal_name" type="string"/>
+        <element label="Postal Code" max_length="255" name="legal_postal_code" type="string"/>
+        <element label="Street Address" max_length="255" name="legal_street_address" type="string"/>
+        <element label="Listing Proof" max_length="40" name="listing_details" type="file_attachment"/>
+        <element choice="1" label="Local Currency" max_length="40" name="local_currency" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="USD - US Dollar" sequence="1" value="USD"/>
+                <element inactive_on_update="false" label="EUR - Euro" sequence="2" value="EUR"/>
+                <element inactive_on_update="false" label="GBP - British Pound" sequence="3" value="GBP"/>
+            </choice>
+        </element>
+        <element label="Nature of Business" max_length="40" name="nature_of_business" type="string"/>
+        <element label="Non-Individual (&gt;10% ownership)" max_length="1024" name="non_individual_10_ownership" reference="x_vuram_financia_0_fcc_kyc_ownerships" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Ownership Structure" max_length="40" name="ownership_structure" type="file_attachment"/>
+        <element choice="1" label="PEP" max_length="40" name="pep" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="1" value="no"/>
+                <element inactive_on_update="false" label="Possible Match Found" sequence="2" value="possible_match_found"/>
+            </choice>
+        </element>
+        <element label="City" max_length="40" name="physical_city" type="string"/>
+        <element label="Country" max_length="40" name="physical_country" type="string"/>
+        <element label="Postal Code" max_length="255" name="physical_postal_code" type="string"/>
+        <element label="State" max_length="40" name="physical_state" type="string"/>
+        <element label="Street Address" max_length="255" name="physical_street_address" type="string"/>
+        <element label="Primary Country of Assets" max_length="40" name="primary_country_of_assets" type="string"/>
+        <element choice="3" label="Product &amp; Services" max_length="40" name="product_services" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Savings Account" sequence="0" value="Savings Account"/>
+                <element inactive_on_update="false" label="Current Account" sequence="1" value="Current Account"/>
+                <element inactive_on_update="false" label="Trade Finance" sequence="2" value="Trade Finance"/>
+                <element inactive_on_update="false" label="Consumer Loan" sequence="3" value="Consumer Loan"/>
+                <element inactive_on_update="false" label="Cards" sequence="4" value="Cards"/>
+            </choice>
+        </element>
+        <element label="Registration Number" max_length="40" name="registration_number" type="string"/>
+        <element label="Relationship Manager" mandatory="true" max_length="32" name="relationship_manager" reference="sys_user" reference_qual="emailISNOTEMPTY^EQ" reference_qual_condition="emailISNOTEMPTY^EQ" type="reference"/>
+        <element label="Response" max_length="400000" name="response" type="string"/>
+        <element choice="3" label="Risk Level" max_length="40" name="risk_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" sequence="0" value="low"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
+                <element inactive_on_update="false" label="High" sequence="2" value="high"/>
+            </choice>
+        </element>
+        <element label="Risk Score" max_length="40" name="risk_score" type="float"/>
+        <element choice="1" label="Business Start Year" max_length="40" name="ri_business_start_year" type="string">
+            <choice>
+                <element inactive_on_update="false" label="2003" sequence="0" value="2003"/>
+                <element inactive_on_update="false" label="2004" sequence="1" value="2004"/>
+                <element inactive_on_update="false" label="2005" sequence="2" value="2005"/>
+                <element inactive_on_update="false" label="2006" sequence="3" value="2006"/>
+                <element inactive_on_update="false" label="2007" sequence="4" value="2007"/>
+                <element inactive_on_update="false" label="2008" sequence="5" value="2008"/>
+                <element inactive_on_update="false" label="2009" sequence="6" value="2009"/>
+                <element inactive_on_update="false" label="2010" sequence="7" value="2010"/>
+                <element inactive_on_update="false" label="2011" sequence="8" value="2011"/>
+                <element inactive_on_update="false" label="2012" sequence="9" value="2012"/>
+                <element inactive_on_update="false" label="2013" sequence="10" value="2013"/>
+                <element inactive_on_update="false" label="2014" sequence="11" value="2014"/>
+                <element inactive_on_update="false" label="2015" sequence="12" value="2015"/>
+                <element inactive_on_update="false" label="2016" sequence="13" value="2016"/>
+                <element inactive_on_update="false" label="2017" sequence="14" value="2017"/>
+                <element inactive_on_update="false" label="2018" sequence="15" value="2018"/>
+                <element inactive_on_update="false" label="2019" sequence="16" value="2019"/>
+                <element inactive_on_update="false" label="2020" sequence="17" value="2020"/>
+                <element inactive_on_update="false" label="2021" sequence="18" value="2021"/>
+                <element inactive_on_update="false" label="2022" sequence="19" value="2022"/>
+                <element inactive_on_update="false" label="2023" sequence="20" value="2023"/>
+                <element inactive_on_update="false" label="2024" sequence="21" value="2024"/>
+                <element inactive_on_update="false" label="2025" sequence="22" value="2025"/>
+            </choice>
+        </element>
+        <element choice="1" label="Complexity of Ownership" max_length="40" name="ri_complexity_of_ownership" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1-2 levels ( including client )" sequence="0" value="1-2 levels ( including client )"/>
+                <element inactive_on_update="false" label="3  levels , but no factors indicating elevated risk" sequence="1" value="3  levels , but no factors indicating elevated risk"/>
+                <element inactive_on_update="false" label="Elevated risk factors (ownership through Trust, UBOs in HRJ, highly complex ownership structure, etc" sequence="2" value="Elevated risk factors (ownership through Trust, UBOs in HRJ, highly complex ownership structure, etc.)"/>
+            </choice>
+        </element>
+        <element choice="1" label="Country of Domicile" max_length="40" name="ri_country_of_domicile" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Not and MRJ,HRJ or sJ" sequence="0" value="Not and MRJ,HRJ or sJ"/>
+                <element inactive_on_update="false" label="Medium Risk Jurisdiction ( MRJ0" sequence="1" value="Medium Risk Jurisdiction ( MRJ0"/>
+                <element inactive_on_update="false" label="High Risk Jurisdiction or Sanctioned jurisdiction ( HRJ/SJ)" sequence="2" value="High Risk Jurisdiction or Sanctioned jurisdiction ( HRJ/SJ)"/>
+            </choice>
+        </element>
+        <element choice="1" label="Expected FX Volume" max_length="40" name="ri_expected_fx_volume" type="string">
+            <choice>
+                <element inactive_on_update="false" label="0 - 100,000" sequence="0" value="0 - 100,000"/>
+                <element inactive_on_update="false" label="100,000 - 1,000,000" sequence="1" value="100,000 - 1,000,000"/>
+                <element inactive_on_update="false" label="1,000,000 - 5,000,000" sequence="2" value="1,000,000 - 5,000,000"/>
+                <element inactive_on_update="false" label="5,000,000 - 25,000,000" sequence="3" value="5,000,000 - 25,000,000"/>
+                <element inactive_on_update="false" label="25,000,000" sequence="4" value="25,000,000"/>
+            </choice>
+        </element>
+        <element choice="1" label="Expected Trade Frequency" max_length="40" name="ri_expected_trade_frequency" type="string">
+            <choice>
+                <element inactive_on_update="false" label="One off Purchase" sequence="0" value="One off Purchase"/>
+                <element inactive_on_update="false" label="Yearly" sequence="1" value="Yearly"/>
+                <element inactive_on_update="false" label="Half Yearly" sequence="2" value="Half Yearly"/>
+                <element inactive_on_update="false" label="Monthly" sequence="3" value="Monthly"/>
+                <element inactive_on_update="false" label="Weekly" sequence="4" value="Weekly"/>
+                <element inactive_on_update="false" label="Bi- Weekly" sequence="5" value="Bi- Weekly"/>
+                <element inactive_on_update="false" label="Daily" sequence="6" value="Daily"/>
+                <element inactive_on_update="false" label="Quarterly" sequence="7" value="Quarterly"/>
+            </choice>
+        </element>
+        <element choice="1" label="Industry" max_length="40" name="ri_industry" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Aero Space &amp; Aviation" sequence="0" value="Aero Space &amp; Aviation"/>
+                <element inactive_on_update="false" label="Antique/Art Dealer" sequence="1" value="Antique/Art Dealer"/>
+                <element inactive_on_update="false" label="Broker" sequence="2" value="Broker"/>
+                <element inactive_on_update="false" label="Charity" sequence="3" value="Charity"/>
+                <element inactive_on_update="false" label="Chemical" sequence="4" value="Chemical"/>
+                <element inactive_on_update="false" label="Property Development" sequence="5" value="Property Development"/>
+                <element inactive_on_update="false" label="Gaming" sequence="6" value="Gaming"/>
+                <element inactive_on_update="false" label="Software" sequence="7" value="Software"/>
+                <element inactive_on_update="false" label="Cosmetics" sequence="8" value="Cosmetics"/>
+                <element inactive_on_update="false" label="E Commerce" sequence="9" value="E Commerce"/>
+            </choice>
+        </element>
+        <element choice="1" label="Payout Jurisdiction" max_length="40" name="ri_payout_jurisdiction" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Some MRJ's ,few or no HRJ's or SJ's" sequence="0" value="Some MRJ's ,few or no HRJ's or SJ's"/>
+                <element inactive_on_update="false" label="Only Low Risk Jurisdiction" sequence="1" value="Only Low Risk Jurisdiction"/>
+                <element inactive_on_update="false" label="Significant Proportion of HRJ's or SJ's" sequence="2" value="Significant Proportion of HRJ's or SJ's"/>
+            </choice>
+        </element>
+        <element label="Same as Legal Address" max_length="40" name="same_as_legal_address" type="boolean"/>
+        <element choice="1" label="Sanctions" max_length="40" name="sanctions" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="1" value="no"/>
+                <element inactive_on_update="false" label="Possible Match Found" sequence="3" value="Possible Match Found"/>
+            </choice>
+        </element>
+        <element label="Session_ID" max_length="40" name="session_id" type="string"/>
+        <element label="SIC" max_length="40" name="sic" type="string"/>
+        <element label="SIC Description" max_length="500" name="sic_description" type="string"/>
+        <element label="Signing arrangement – Board resolution" max_length="40" name="signing_arrangement_board_resolution" type="file_attachment"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Source" max_length="40" name="source" read_only="true" type="string"/>
+        <element label="Source of initial deposit" max_length="100" name="source_of_initial_deposit" type="string"/>
+        <element label="State purpose of opening account" max_length="100" name="state_purpose_of_opening_account" type="string"/>
+        <element label="Total Assets" max_length="40" name="total_assets" type="currency"/>
+        <element label="Transactions" max_length="40" name="transactions" type="file_attachment"/>
+        <element label="Upload audited financial Statement" max_length="40" name="upload_audited_financial_statement" type="file_attachment"/>
+        <element label="Video KYC Link" max_length="1024" name="video_kyc_link" type="url"/>
+        <element label="Video KYC Status" max_length="40" name="video_kyc_status" type="string"/>
+        <element label="Video Recording" max_length="40" name="video_recording" type="video"/>
+        <index name="index">
+            <element name="fcc_kyc_case"/>
+        </index>
+        <index name="index2">
+            <element name="relationship_manager"/>
+        </index>
+    </element>
+</database>

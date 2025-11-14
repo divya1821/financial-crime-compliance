@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="967fb8693b536214f13f5fea26e45a7a" extends="task" label="FCC KYC Task" max_length="40" name="x_vuram_financia_0_fcc_kyc_tasks" text_index="true" type="collection">
+        <element choice="1" label="Risk Level" max_length="40" name="backend_risk_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" value="high"/>
+                <element inactive_on_update="false" label="Low" value="low"/>
+                <element inactive_on_update="false" label="Medium" value="medium"/>
+            </choice>
+        </element>
+        <element label="KYC Case" max_length="32" name="kyc_case" reference="x_vuram_financia_0_fcc_kyc_cases" type="reference"/>
+        <element label="Risk Override Reason" max_length="4000" name="risk_override_reason" type="string"/>
+        <element attributes="allowed_extensions=jpg,png,jpeg,jfif,pdf,docx" label="Supporting document" max_length="40" name="supporting_document" type="file_attachment"/>
+        <element choice="3" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Data Validation" sequence="0" value="data_validation"/>
+                <element inactive_on_update="false" label="Risk Evaluation" sequence="1" value="risk_evaluation"/>
+                <element inactive_on_update="false" label="Adverse News Screening" sequence="2" value="adverse_news_screening"/>
+                <element inactive_on_update="false" label="Periodic Case Review" sequence="3" value="periodic_case_review"/>
+            </choice>
+        </element>
+    </element>
+</database>

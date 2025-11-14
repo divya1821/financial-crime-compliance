@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_type" table="var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_type</element>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_type</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_choice_var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace_u_type</sys_update_name>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Industry</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+            <value>industry</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Country of Domicile</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+            <value>country_of_domicile</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Payout Jurisdiction</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+            <value>payout_jurisdiction</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Complexity of Ownership</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+            <value>complexity_of_ownership</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Year</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+            <value>year</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Trade Frequency</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sequence>60</sequence>
+            <synonyms/>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+            <value>trade_frequency</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Expected FX Volume</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_a55e33f33b3faa90cb98111864e45ace</name>
+            <sequence>70</sequence>
+            <synonyms/>
+            <sys_created_by>raj.selvam</sys_created_by>
+            <sys_created_on>2025-09-12 17:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>raj.selvam</sys_updated_by>
+            <sys_updated_on>2025-09-12 17:01:48</sys_updated_on>
+            <value>expected_fx_volume</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

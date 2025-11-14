@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="75b2c9a13b532e90cb98111864e45a3f" label="FCC KYC Ownerships" max_length="40" name="x_vuram_financia_0_fcc_kyc_ownerships" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Address Line" max_length="255" name="address_line" type="string"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Country of Incorporation" max_length="40" name="country_of_incorporation" type="string"/>
+        <element label="Country of Nationality" max_length="40" name="country_of_nationality" type="string"/>
+        <element label="Country of Residence" max_length="40" name="country_of_residence" type="string"/>
+        <element label="DOB" max_length="40" name="dob" type="string"/>
+        <element label="FCC KYC Case" max_length="32" name="fcc_kyc_case" reference="x_vuram_financia_0_fcc_kyc_cases" type="reference"/>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element label="Full Legal Name" max_length="40" name="full_legal_name" type="string"/>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Middle Name" max_length="40" name="middle_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Postal Code" max_length="40" name="postal_code" type="string"/>
+        <element label="Registration Number" max_length="40" name="registration_number" type="string"/>
+        <element label="Relationship Manager" max_length="32" name="relationship_manager" reference="sys_user" type="reference"/>
+        <element choice="3" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Authorized Signers" value="authorized_signers"/>
+                <element inactive_on_update="false" label="Controller" value="controller"/>
+                <element inactive_on_update="false" label="Individual" sequence="0" value="individual"/>
+                <element inactive_on_update="false" label="Entity" sequence="1" value="entity"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="fcc_kyc_case"/>
+        </index>
+        <index name="index2">
+            <element name="relationship_manager"/>
+        </index>
+    </element>
+</database>

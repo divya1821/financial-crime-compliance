@@ -47,7 +47,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-11 06:35:14</sys_created_on>
-        <sys_id>afdd30653b536214f13f5fea26e45aff</sys_id>
         <sys_name>Risk Level</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>

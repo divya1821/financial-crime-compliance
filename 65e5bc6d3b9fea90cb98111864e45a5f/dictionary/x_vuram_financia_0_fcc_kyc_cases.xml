@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true" audit="true" db_object_id="074b7c6d3b136214f13f5fea26e45a86" extends="task" label="FCC KYC Case" max_length="40" name="x_vuram_financia_0_fcc_kyc_cases" text_index="true" type="collection">
+        <element choice="3" label="Case Type" max_length="40" name="case_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="KYC Case" sequence="0" value="kyc_case"/>
+                <element inactive_on_update="false" label="Onboarding Case" sequence="1" value="onboarding_case"/>
+                <element inactive_on_update="false" label="Perpetual KYC Case" sequence="2" value="perpetual_kyc_case"/>
+                <element inactive_on_update="false" label="Periodic KYC Case" sequence="3" value="periodic_kyc_case"/>
+                <element inactive_on_update="false" label="Offboarding Case" sequence="4" value="offboarding_case"/>
+            </choice>
+        </element>
+        <element default="0" label="Chaser Count" max_length="40" name="chaser_count" type="integer"/>
+        <element label="Customer Name" max_length="70" name="customer_name" type="string"/>
+        <element choice="1" label="Customer Type" max_length="40" name="customer_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Entity" sequence="0" value="entity"/>
+                <element inactive_on_update="false" label="Individual" sequence="1" value="individual"/>
+            </choice>
+        </element>
+        <element label="Email ID" max_length="40" name="email_id" type="string"/>
+        <element label="Entity Registration Number" max_length="32" name="entity" reference="x_vuram_financia_0_fcc_kyc_entity_details" type="reference"/>
+        <element label="Individual Registration Number" max_length="32" name="individual" reference="x_vuram_financia_0_fcc_kyc_individual_details" type="reference"/>
+        <element label="Internal Notes" max_length="4000" name="internal_notes" type="string"/>
+        <element label="KYC Due Soon" max_length="40" name="kyc_due_soon" type="boolean"/>
+        <element label="KYC Expiry" max_length="40" name="kyc_expiry" type="glide_date_time"/>
+        <element label="Last Chaser Date" max_length="40" name="last_chaser_date" type="glide_date_time"/>
+        <element label="Next Chaser Due" max_length="40" name="next_chaser_due" type="glide_date_time"/>
+        <element label="Next Review Date" max_length="40" name="next_review_date" type="glide_date_time"/>
+        <element choice="1" label="On Hold Reason" max_length="40" name="onhold_reason" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Document Information Mismatch" sequence="10" value="pending_doc"/>
+                <element inactive_on_update="false" label="Integration/Technical Issue" sequence="20" value="integration_technical_issue"/>
+            </choice>
+        </element>
+        <element label="Previous User" max_length="32" name="previous_user" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Relationship Manager" mandatory="true" max_length="32" name="relationship_manager" reference="sys_user" reference_qual="emailISNOTEMPTY^EQ" reference_qual_condition="emailISNOTEMPTY^EQ" type="reference"/>
+        <element label="Review Completion Date" max_length="40" name="review_completion_date" type="glide_date_time"/>
+        <element choice="1" label="Risk Level" max_length="40" name="risk_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="0" value="high"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
+                <element inactive_on_update="false" label="Low" sequence="2" value="low"/>
+            </choice>
+        </element>
+        <element label="Risk Score" max_length="38" name="risk_score" type="decimal"/>
+    </element>
+</database>

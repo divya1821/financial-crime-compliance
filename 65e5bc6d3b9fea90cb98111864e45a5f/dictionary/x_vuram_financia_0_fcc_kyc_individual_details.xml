@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0ff185213b532e90cb98111864e45afe" label="FCC KYC Individual Details" max_length="40" name="x_vuram_financia_0_fcc_kyc_individual_details" type="collection">
+        <element default="57301509540" label="Account Number" max_length="40" name="account_number" type="string"/>
+        <element label="ACH deposit" max_length="40" name="ach_deposit" type="integer"/>
+        <element label="ACH Withdrawal" max_length="40" name="ach_withdrawal" type="integer"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Address Attachment" max_length="40" name="address_attachment" type="file_attachment"/>
+        <element label="Address Line" max_length="100" name="address_line" type="string"/>
+        <element choice="1" label="Adverse News Screening" max_length="40" name="adverse_news_screening" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="2" value="no"/>
+                <element inactive_on_update="false" label="Possible Match Found" sequence="3" value="possible_match_found"/>
+            </choice>
+        </element>
+        <element label="Application Form" max_length="40" name="application_form" type="file_attachment"/>
+        <element label="Are you a resident of a country other than UK" max_length="40" name="are_you_a_resident_of_a_country_other_than_uk" type="boolean"/>
+        <element label="Are you a US citizen" max_length="40" name="are_you_a_us_citizen" type="boolean"/>
+        <element label="ATM Deposit" max_length="40" name="atm_deposit" type="integer"/>
+        <element label="ATM Withdrawal" max_length="40" name="atm_withdrawal" type="integer"/>
+        <element label="Cash Deposit" max_length="40" name="cash_deposit" type="integer"/>
+        <element label="Cash Withdrawal" max_length="40" name="cash_withdrawal" type="integer"/>
+        <element label="Cheque Deposit" max_length="40" name="cheque_deposit" type="integer"/>
+        <element label="Cheque Withdrawal" max_length="40" name="cheque_withdrawal" type="integer"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Country of Nationality" max_length="40" name="country_of_nationality" type="string"/>
+        <element label="Country of Residence" max_length="40" name="country_of_residence" type="string"/>
+        <element choice="1" label="Credit Analysis" max_length="40" name="credit_analysis" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Within Limit" sequence="0" value="Within Limit"/>
+                <element inactive_on_update="false" label="Abnormal Transaction Pattern Warning" sequence="1" value="Abnormal Transaction Pattern Warning"/>
+                <element inactive_on_update="false" label="Abnormal Transaction Pattern Detected" sequence="2" value="Abnormal Transaction Pattern Detected"/>
+            </choice>
+        </element>
+        <element choice="1" label="Debit Analysis" max_length="40" name="debit_analysis" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Within Limit" sequence="0" value="Within Limit"/>
+                <element inactive_on_update="false" label="Abnormal Transaction Pattern Warning" sequence="1" value="Abnormal Transaction Pattern Warning"/>
+                <element inactive_on_update="false" label="Abnormal Transaction Pattern Detected" sequence="2" value="Abnormal Transaction Pattern Detected"/>
+            </choice>
+        </element>
+        <element label="Describe the Source of Annual Revenue" max_length="40" name="describe_the_source_of_annual_revenue" type="string"/>
+        <element label="DOB" max_length="40" name="dob" type="glide_date"/>
+        <element label="Email" max_length="40" name="email" type="string"/>
+        <element label="Employer" max_length="40" name="employer" type="string"/>
+        <element label="Employment Industry" max_length="40" name="employment_industry" type="string"/>
+        <element choice="3" label="Employment Status" max_length="40" name="employment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Self business" sequence="0" value="self_business"/>
+                <element inactive_on_update="false" label="Salaried" sequence="1" value="salaried"/>
+                <element inactive_on_update="false" label="Retired" sequence="2" value="retired"/>
+                <element inactive_on_update="false" label="Student" sequence="3" value="student"/>
+            </choice>
+        </element>
+        <element label="Estimated Annual Transaction Volume" max_length="40" name="estimated_annual_transaction_volume" type="integer"/>
+        <element label="FCC KYC Case" max_length="32" name="fcc_kyc_case" reference="x_vuram_financia_0_fcc_kyc_cases" type="reference"/>
+        <element label="Forename in full" max_length="40" name="forename_in_full" type="string"/>
+        <element label="Home Contact" max_length="40" name="home_contact" type="string"/>
+        <element label="Identity Attachment" max_length="40" name="identity_attachment" type="file_attachment"/>
+        <element label="ID Back Page" max_length="600000" name="id_back_page" type="string"/>
+        <element label="ID Front Page" max_length="600000" name="id_front_page" type="string"/>
+        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="KYC Expiry" max_length="40" name="kyc_expiry" type="glide_date" use_dynamic_default="true"/>
+        <element label="Mobile" max_length="40" name="mobile" type="string"/>
+        <element label="Mobile Contact" max_length="40" name="mobile_contact" type="string"/>
+        <element label="Non UK tax identification number" max_length="40" name="non_uk_tax_identification_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Occupation" max_length="40" name="occupation" type="string"/>
+        <element label="Old Employment Industry" max_length="40" name="old_employment_industry" type="string"/>
+        <element label="Changed Fields" max_length="4000000" name="old_occupation" type="string"/>
+        <element choice="1" label="PEP" max_length="40" name="pep" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="2" value="no"/>
+                <element inactive_on_update="false" label="Possible Match Found" sequence="3" value="possible_match_found"/>
+            </choice>
+        </element>
+        <element label="POA Doc Expiry Date" max_length="40" name="poa_doc_expiry_date" type="glide_date"/>
+        <element label="POA Doc ID No" max_length="40" name="poa_doc_id_no" type="string"/>
+        <element label="POA Doc Issued By" max_length="40" name="poa_doc_issued_by" type="string"/>
+        <element label="POA Doc Issued Date" max_length="40" name="poa_doc_issued_date" type="glide_date"/>
+        <element label="POA ForeName" max_length="40" name="poa_doc_name" type="string"/>
+        <element label="POA Doc Place of Issuance" max_length="40" name="poa_doc_place_of_issuance" type="string"/>
+        <element label="POA Identity Doc Type" max_length="40" name="poa_identity_doc_type" type="string"/>
+        <element label="POI Doc Expiry Date" max_length="255" name="poi_doc_expiry_date" type="glide_date"/>
+        <element label="POI Doc ID No" max_length="40" name="poi_doc_id_no" type="string"/>
+        <element label="POI Doc Issued By" max_length="40" name="poi_doc_issued_by" type="string"/>
+        <element label="POI Doc Issued Date" max_length="40" name="poi_doc_issued_date" type="glide_date"/>
+        <element label="POI ForeName" max_length="40" name="poi_doc_name" type="string"/>
+        <element label="POI Doc Place of Issuance" max_length="40" name="poi_doc_place_of_issuance" type="string"/>
+        <element label="POI Identity Doc type" max_length="40" name="poi_identity_doc_type" type="string"/>
+        <element label="Postcode" max_length="40" name="postcode" type="string"/>
+        <element label="Product &amp; Services" max_length="40" name="product_services" type="glide_list"/>
+        <element choice="3" label="Proof of Address" max_length="40" name="proof_of_address" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Utility bill issued in the last 3 months" sequence="0" value="utility_bill_issued_in_the_last_3_months"/>
+                <element inactive_on_update="false" label="Mobile bill issued in the last 3 months" sequence="1" value="mobile_bill_issued_in_the_last_3_months"/>
+                <element inactive_on_update="false" label="Bank statement last 3 months" sequence="2" value="bank_statement_last_3_months"/>
+                <element inactive_on_update="false" label="Government issues IDs which has customer name and address" sequence="3" value="government_issues"/>
+            </choice>
+        </element>
+        <element choice="3" label="Proof of Identity" max_length="40" name="proof_of_identity" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Current signed passport" sequence="0" value="current_signed_passport"/>
+                <element inactive_on_update="false" label="Current photocard driving license" sequence="1" value="current_photocard_driving_license"/>
+                <element inactive_on_update="false" label="National Identity card" sequence="2" value="national_identity_card"/>
+                <element inactive_on_update="false" label="Identity Card issued by the Electoral office" sequence="3" value="electoral_office"/>
+            </choice>
+        </element>
+        <element default="1896b4083b03d210f13f5fea26e45acf" label="Relationship Manager" max_length="32" name="relationship_manager" reference="sys_user" type="reference"/>
+        <element label="Response" max_length="400000" name="response" type="string"/>
+        <element choice="3" label="Risk Level" max_length="40" name="risk_level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" sequence="0" value="low"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
+                <element inactive_on_update="false" label="High" sequence="2" value="high"/>
+            </choice>
+        </element>
+        <element label="Risk Score" max_length="40" name="risk_score" type="float"/>
+        <element choice="1" label="Business Start Year" max_length="4" name="ri_business_start_year" type="string">
+            <choice>
+                <element inactive_on_update="false" label="2003" sequence="0" value="2003"/>
+                <element inactive_on_update="false" label="2004" sequence="1" value="2004"/>
+                <element inactive_on_update="false" label="2005" sequence="2" value="2005"/>
+                <element inactive_on_update="false" label="2006" sequence="3" value="2006"/>
+                <element inactive_on_update="false" label="2007" sequence="4" value="2007"/>
+                <element inactive_on_update="false" label="2008" sequence="5" value="2008"/>
+                <element inactive_on_update="false" label="2009" sequence="6" value="2009"/>
+                <element inactive_on_update="false" label="2010" sequence="7" value="2010"/>
+                <element inactive_on_update="false" label="2011" sequence="8" value="2011"/>
+                <element inactive_on_update="false" label="2012" sequence="9" value="2012"/>
+                <element inactive_on_update="false" label="2013" sequence="10" value="2013"/>
+                <element inactive_on_update="false" label="2014" sequence="11" value="2014"/>
+                <element inactive_on_update="false" label="2015" sequence="12" value="2015"/>
+                <element inactive_on_update="false" label="2016" sequence="13" value="2016"/>
+                <element inactive_on_update="false" label="2017" sequence="14" value="2017"/>
+                <element inactive_on_update="false" label="2018" sequence="15" value="2018"/>
+                <element inactive_on_update="false" label="2019" sequence="16" value="2019"/>
+                <element inactive_on_update="false" label="2020" sequence="17" value="2020"/>
+                <element inactive_on_update="false" label="2021" sequence="18" value="2021"/>
+                <element inactive_on_update="false" label="2022" sequence="19" value="2022"/>
+                <element inactive_on_update="false" label="2023" sequence="20" value="2023"/>
+                <element inactive_on_update="false" label="2024" sequence="21" value="2024"/>
+                <element inactive_on_update="false" label="2025" sequence="22" value="2025"/>
+            </choice>
+        </element>
+        <element choice="1" label="Complexity of Ownership" max_length="100" name="ri_complexity_of_ownership" type="string">
+            <choice>
+                <element inactive_on_update="false" label="1-2 levels ( including client )" sequence="0" value="1-2 levels ( including client )"/>
+                <element inactive_on_update="false" label="3  levels , but no factors indicating elevated risk" sequence="1" value="3  levels , but no factors indicating elevated risk"/>
+                <element inactive_on_update="false" label="Elevated risk factors (ownership through Trust, UBOs in HRJ, highly complex ownership structure, etc" sequence="2" value="Elevated risk factors (ownership through Trust, UBOs in HRJ, highly complex ownership structure, etc.)"/>
+            </choice>
+        </element>
+        <element choice="1" label="Country of Domicile" max_length="100" name="ri_country_of_domicile" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Not and MRJ,HRJ or sJ" sequence="0" value="Not and MRJ,HRJ or sJ"/>
+                <element inactive_on_update="false" label="Medium Risk Jurisdiction (MRJ0)" sequence="1" value="Medium Risk Jurisdiction ( MRJ0"/>
+                <element inactive_on_update="false" label="High Risk Jurisdiction or Sanctioned jurisdiction ( HRJ/SJ)" sequence="2" value="High Risk Jurisdiction or Sanctioned jurisdiction ( HRJ/SJ)"/>
+            </choice>
+        </element>
+        <element choice="1" label="Expected FX Volume" max_length="100" name="ri_expected_fx_volume" type="string">
+            <choice>
+                <element inactive_on_update="false" label="0 - 100,000" sequence="0" value="0 - 100,000"/>
+                <element inactive_on_update="false" label="100,000 - 1,000,000" sequence="1" value="100,000 - 1,000,000"/>
+                <element inactive_on_update="false" label="1,000,000 - 5,000,000" sequence="2" value="1,000,000 - 5,000,000"/>
+                <element inactive_on_update="false" label="5,000,000 - 25,000,000" sequence="3" value="5,000,000 - 25,000,000"/>
+                <element inactive_on_update="false" label="25,000,000" sequence="4" value="25,000,000"/>
+            </choice>
+        </element>
+        <element choice="1" label="Expected Trade Frequency" max_length="100" name="ri_expected_trade_frequency" type="string">
+            <choice>
+                <element inactive_on_update="false" label="One off Purchase" sequence="0" value="One off Purchase"/>
+                <element inactive_on_update="false" label="Yearly" sequence="1" value="Yearly"/>
+                <element inactive_on_update="false" label="Half Yearly" sequence="2" value="Half Yearly"/>
+                <element inactive_on_update="false" label="Monthly" sequence="3" value="Monthly"/>
+                <element inactive_on_update="false" label="Weekly" sequence="4" value="Weekly"/>
+                <element inactive_on_update="false" label="Bi- Weekly" sequence="5" value="Bi- Weekly"/>
+                <element inactive_on_update="false" label="Daily" sequence="6" value="Daily"/>
+                <element inactive_on_update="false" label="Quarterly" sequence="7" value="Quarterly"/>
+            </choice>
+        </element>
+        <element choice="1" label="Industry" max_length="100" name="ri_industry" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Aero Space &amp; Aviation" sequence="0" value="Aero Space &amp; Aviation"/>
+                <element inactive_on_update="false" label="Antique/Art Dealer" sequence="1" value="Antique/Art Dealer"/>
+                <element inactive_on_update="false" label="Broker" sequence="2" value="Broker"/>
+                <element inactive_on_update="false" label="Charity" sequence="3" value="Charity"/>
+                <element inactive_on_update="false" label="Chemical" sequence="4" value="Chemical"/>
+                <element inactive_on_update="false" label="Property Development" sequence="5" value="Property Development"/>
+                <element inactive_on_update="false" label="Gaming" sequence="6" value="Gaming"/>
+                <element inactive_on_update="false" label="Software" sequence="7" value="Software"/>
+                <element inactive_on_update="false" label="Cosmetics" sequence="8" value="Cosmetics"/>
+                <element inactive_on_update="false" label="E Commerce" sequence="9" value="E Commerce"/>
+            </choice>
+        </element>
+        <element choice="1" label="Payout Jurisdiction" max_length="100" name="ri_payout_jurisdiction" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Some MRJ's ,few or no HRJ's or SJ's" sequence="0" value="Some MRJ's ,few or no HRJ's or SJ's"/>
+                <element inactive_on_update="false" label="Only Low Risk Jurisdiction" sequence="1" value="Only Low Risk Jurisdiction"/>
+                <element inactive_on_update="false" label="Significant Proportion of HRJ's or SJ's" sequence="2" value="Significant Proportion of HRJ's or SJ's"/>
+            </choice>
+        </element>
+        <element choice="1" label="Sanctions" max_length="40" name="sanctions" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="2" value="no"/>
+                <element inactive_on_update="false" label="Possible Match Found" sequence="3" value="Possible Match Found"/>
+            </choice>
+        </element>
+        <element label="Session ID" max_length="40" name="session_id" type="string"/>
+        <element label="Source of Initial Deposit" max_length="40" name="source_of_initial_deposit" type="string"/>
+        <element label="State Purpose of Opening Account" max_length="40" name="state_purpose_of_opening_account" type="string"/>
+        <element choice="3" label="Title" max_length="40" name="surname" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Mr" sequence="0" value="mr"/>
+                <element inactive_on_update="false" label="Ms" sequence="1" value="ms"/>
+                <element inactive_on_update="false" label="Mrs" sequence="2" value="mrs"/>
+                <element inactive_on_update="false" label="Miss" sequence="3" value="miss"/>
+            </choice>
+        </element>
+        <element label="Tax Identification Number" max_length="40" name="tax_identification_number" type="string"/>
+        <element label="Transactions" max_length="40" name="transactions" type="file_attachment"/>
+        <element label="Video KYC Device" max_length="40" name="video_kyc_device" type="string"/>
+        <element label="Video KYC Link" max_length="1024" name="video_kyc_link" type="url"/>
+        <element label="Video KYC Status" max_length="40" name="video_kyc_status" type="string"/>
+        <element label="Selfie Picture" max_length="600000" name="video_recording" type="string"/>
+        <index name="index">
+            <element name="fcc_kyc_case"/>
+        </index>
+        <index name="index2">
+            <element name="relationship_manager"/>
+        </index>
+    </element>
+</database>
