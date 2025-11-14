@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>293ee7953b0cbad0f13f5fea26e45ab9</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="DELETE">
+        <active>true</active>
+        <answer>b9bcd7cd3bc8f6d0f13f5fea26e45a93</answer>
+        <condition table="var__m_sys_decision_input_70ca377b3bfbaa90cb98111864e45a35">u_testrLIKENot and MRJ,HRJ or sJ^EQ<item endquery="false" field="u_testr" goto="false" newquery="false" operator="LIKE" or="false" value="Not and MRJ,HRJ or sJ"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="FCC KYC Risk Engine">70ca377b3bfbaa90cb98111864e45a35</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_70ca377b3bfbaa90cb98111864e45a35</input_table>
+        <label>FCC KYC Risk Engine_100</label>
+        <marked_for_deletion>true</marked_for_deletion>
+        <order>100</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-17 07:34:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>293ee7953b0cbad0f13f5fea26e45ab9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>FCC KYC Risk Engine_100</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_decision_question_293ee7953b0cbad0f13f5fea26e45ab9</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-18 06:11:04</sys_updated_on>
+    </sys_decision_question>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-09-17 07:34:18</sys_created_on>
+        <sys_id>e93ee7953b0cbad0f13f5fea26e45abb</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>FCC KYC Risk Engine_100</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_metadata_link_e93ee7953b0cbad0f13f5fea26e45abb</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-09-18 06:20:57</sys_updated_on>
+        <tablename>sys_decision_question</tablename>
+    </sys_metadata_link>
+</record_update>
