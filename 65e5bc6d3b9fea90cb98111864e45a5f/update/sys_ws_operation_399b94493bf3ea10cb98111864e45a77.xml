@@ -4,7 +4,7 @@
         <consumes>application/json,application/xml,text/xml</consumes>
         <consumes_customized>false</consumes_customized>
         <default_operation_uri/>
-        <enforce_acl/>
+        <enforce_acl>c58b931a3b197e10f13f5fea26e45a7e</enforce_acl>
         <http_method>POST</http_method>
         <name>events</name>
         <operation_script><![CDATA[(function process(request, response) {
@@ -84,22 +84,22 @@
         <produces_customized>false</produces_customized>
         <relative_path>/</relative_path>
         <request_example/>
-        <requires_acl_authorization>false</requires_acl_authorization>
-        <requires_authentication>false</requires_authentication>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
         <requires_snc_internal_role>false</requires_snc_internal_role>
         <short_description/>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-09-03 11:21:22</sys_created_on>
         <sys_id>399b94493bf3ea10cb98111864e45a77</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>events</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ws_operation_399b94493bf3ea10cb98111864e45a77</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-29 11:55:48</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-11-21 12:36:13</sys_updated_on>
         <web_service_definition display_value="Webhook API">8ae45c453bb3ea10cb98111864e45a46</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

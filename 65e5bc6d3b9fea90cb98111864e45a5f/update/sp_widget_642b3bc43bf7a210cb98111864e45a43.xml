@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function($scope, $window) {
+        <client_script><![CDATA[api.controller = function($scope, $window, $location) {
   var c = this;
 
   // Arrays to hold uploaded attachment info
@@ -114,7 +114,7 @@
 
     function finishProceed() {
       alert("All documents uploaded successfully. Moving to next step...");
-      $window.location.href = "/fcc_kyc?id=entity_video_kyc";
+      $location.url = "/fcc_kyc?id=entity_video_kyc";
     }
   };
 };
@@ -268,11 +268,11 @@ h3 {
         <name>FCC KYC Entity Document Upload</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
+        <roles>snc_internal</roles>
         <script><![CDATA[(function($sp) { 
   // Get recordSysId from user email
   var email_ind = gs.getUser().getEmail();
-  var gr_rr = new GlideRecord('x_vuram_financia_0_fcc_kyc_entity_details');
+  var gr_rr = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
   gr_rr.addQuery('email_id', email_ind);
   gr_rr.query();
   if (gr_rr.next()) {
@@ -282,7 +282,7 @@ h3 {
   // ---------------- Upload ----------------
   if (input && input.action === "upload") {
     try {
-      var gr = new GlideRecord("x_vuram_financia_0_fcc_kyc_entity_details");
+      var gr = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_entity_details");
       if (gr.get(input.recordSysId)) {
         var gsa = new GlideSysAttachment();
         var attachmentSysId = gsa.writeBase64(
@@ -313,7 +313,7 @@ h3 {
   // ---------------- Save Draft ----------------
   if (input && input.action === "saveDraft") {
     try {
-      var draftGr = new GlideRecord("x_vuram_financia_0_fcc_kyc_entity_details");
+      var draftGr = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_entity_details");
       if (draftGr.get(input.recordSysId)) {
         // Option 1: store everything as JSON in one field
         if (draftGr.isValidField("u_draft_data")) {
@@ -358,14 +358,14 @@ h3 {
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 01:02:39</sys_created_on>
         <sys_id>642b3bc43bf7a210cb98111864e45a43</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>FCC KYC Entity Document Upload</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_642b3bc43bf7a210cb98111864e45a43</sys_update_name>
-        <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-10-14 09:56:12</sys_updated_on>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-21 06:46:40</sys_updated_on>
         <template><![CDATA[<header class="breadcrumb-header">
   <div class="breadcrumb">
     <a href="/fcc_kyc">Home</a> &gt;

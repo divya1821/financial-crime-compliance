@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="canvas_user" name="canvas_user">8536f54bc713330072b211d4d8c26080</contains>
+        <role display_value="x_vuram_fcc_kyc_0.user" name="x_vuram_fcc_kyc_0.user">0a13247c3babaa10cb98111864e45a98</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-11-20 13:12:30</sys_created_on>
+        <sys_id>d351a2c23bd57a10f13f5fea26e45a42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>canvas_user.x_vuram_fcc_kyc_0.user</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_user_role_contains_d351a2c23bd57a10f13f5fea26e45a42</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-20 13:12:30</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

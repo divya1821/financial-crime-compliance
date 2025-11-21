@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function($scope, $interval, $timeout, $window, $http) {
+        <client_script><![CDATA[api.controller = function($scope, $interval, $timeout, $window, $http, $location) {
   var c = this;
   var video, canvas, stream;
 
@@ -104,11 +104,11 @@
     },
 
     goPrevious: function() {
-      $window.location.href = "/fcc_kyc?id=fcc_kyc_individual_upload_document";
+      $location.url = "/fcc_kyc?id=fcc_kyc_individual_upload_document";
     },
 		
 		 goSkip: function() {
-      $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+      $location.url = "/fcc_kyc?id=fcc_kyc_update_customer_details";
     },
 
     goProceed: function() {
@@ -116,10 +116,10 @@
         c.server
           .get({ action: "markStarted", mobileAction: "markStarted", sys_id: c.data.mobile.sys_id })
           .then(function() {
-            $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+            $location.url = "/fcc_kyc?id=fcc_kyc_update_customer_details";
           });
       } else {
-        $window.location.href = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+        $location.url = "/fcc_kyc?id=fcc_kyc_update_customer_details";
       }
     }
   };
@@ -586,7 +586,7 @@ video {
         <name>FCC KYC Muti VKYC</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
+        <roles>snc_internal</roles>
         <script><![CDATA[(function() {
   try {
     data.mobile = {};
@@ -600,7 +600,7 @@ video {
       gs.info("KYC Widget Debug: Mobile action received - " + input.mobileAction);
 
       if (input.mobileAction === "createRecord") {
-        var gr = new GlideRecord(table);
+        var gr = new GlideRecordSecure(table);
         gr.addQuery("email", userEmail);
         gr.query();
         if (gr.next()) {
@@ -610,7 +610,7 @@ video {
       }
 
       if (input.mobileAction === "getRecord") {
-        var gr2 = new GlideRecord(table);
+        var gr2 = new GlideRecordSecure(table);
         if (gr2.get(input.sys_id)) {
           data.mobile.url = gr2.getValue("video_kyc_link");
           gs.info("KYC Widget Debug: Returning QR link for record " + input.sys_id);
@@ -618,7 +618,7 @@ video {
       }
 
       if (input.mobileAction === "markStarted") {
-        var gr3 = new GlideRecord(table);
+        var gr3 = new GlideRecordSecure(table);
         if (gr3.get(input.sys_id)) {
           //gr3.video_kyc_status = "started";
           gr3.video_kyc_device = "mobile";
@@ -654,7 +654,7 @@ video {
     };
 
     if (input && input.photos) {
-      var gr1 = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
+      var gr1 = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
       gr1.addQuery('email', userEmail);
       gr1.query();
 
@@ -705,14 +705,14 @@ video {
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-10-15 08:41:23</sys_created_on>
         <sys_id>fef980e23ba4f290f13f5fea26e45a5b</sys_id>
-        <sys_mod_count>90</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>FCC KYC Muti VKYC</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_fef980e23ba4f290f13f5fea26e45a5b</sys_update_name>
-        <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:20:14</sys_updated_on>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-21 06:43:37</sys_updated_on>
         <template><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>

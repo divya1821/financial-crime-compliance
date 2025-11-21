@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function($scope) {
+        <client_script><![CDATA[api.controller = function($scope, $location) {
     var c = this;
 
     // Step configuration
@@ -261,7 +261,7 @@
         }).then(function(response) {
             if (response.data.status_of_submit) {
                 alert("]]>🎉<![CDATA[ Application submitted successfully! You will receive a confirmation email shortly with your application reference number.");
-                window.location.href = "/fcc_kyc";
+                $location.url = "/fcc_kyc";
             } else {
                 alert("Not Updated");
             }
@@ -809,7 +809,7 @@
         <name>FCC KYC Individual Form</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
+        <roles>snc_internal</roles>
         <script><![CDATA[(function($sp) {
     /* populate the 'data' object */
     /* e.g., data.table = $sp.getValue('table'); */
@@ -822,11 +822,11 @@
     data.email = userEmail;
     var enq = "email=" + userEmail;
 
-    var grIndiviualLoad = new GlideRecord(table);
+    var grIndiviualLoad = new GlideRecordSecure(table);
     grIndiviualLoad.addEncodedQuery(enq);
     grIndiviualLoad.query();
     while (grIndiviualLoad.next()) {
-        console.log("Query");
+        //console.log("Query");
         sys_id = grIndiviualLoad.getValue('sys_id');
         data.formData = {
             pronoun: grIndiviualLoad.getValue('surname'),
@@ -895,13 +895,13 @@
 
         userEmail = gs.getUser().getEmail();
         enq = "email=" + userEmail;
-        console.log("Inside - " + enq);
-        var grInd = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');
+      //  console.log("Inside - " + enq);
+        var grInd = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
         grInd.addQuery(enq);
         grInd.query();
 
         if (grInd.next()) {
-            console.log("Inside");
+        //    console.log("Inside");
             grInd.tax_identification_number = record.taxId;
             grInd.surname = record.pronoun;
             grInd.state_purpose_of_opening_account = record.purposeOfAccount;
@@ -944,7 +944,7 @@
             if (grInd.update()) {
                 data.status_of_submit = true;
                 data.individual_sys_id = grInd.sys_id;
-                var grCase = new GlideRecord("x_vuram_financia_0_fcc_kyc_cases");
+                var grCase = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_cases");
                 grCase.addQuery('individual', grInd.sys_id);
                 grCase.query();
 
@@ -977,14 +977,14 @@
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-14 12:07:56</sys_created_on>
         <sys_id>9ec62da23bd7e6d0cb98111864e45a45</sys_id>
-        <sys_mod_count>343</sys_mod_count>
+        <sys_mod_count>347</sys_mod_count>
         <sys_name>FCC KYC Individual Form</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_9ec62da23bd7e6d0cb98111864e45a45</sys_update_name>
-        <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-30 11:42:41</sys_updated_on>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-21 06:47:39</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function(spModal, spUtil, $scope, $timeout) {
+        <client_script><![CDATA[api.controller = function(spModal, spUtil, $scope, $timeout, $location) {
   var c = this;
 
   c.data.legalNameTooltip = "Name should exactly match the name shown in certificate of incorporation (eg. Magnum Ltd. Should be typed as Magnum Ltd. and not Magnum Limited)";
@@ -269,7 +269,7 @@ c.submitForm = function() {
   }).then(function(response) {
     if (response.data.status_of_submit) {
       spUtil.addInfoMessage("Application submitted successfully!");
-      window.location.href = "/fcc_kyc";
+      $location.url = "/fcc_kyc";
     } else {
       alert("Not Updated");
     }
@@ -800,7 +800,7 @@ c.submitForm = function() {
         <name>Entity Form Copy</name>
         <option_schema/>
         <public>false</public>
-        <roles/>
+        <roles>snc_internal</roles>
         <script><![CDATA[(function($sp) {
 
     data.sys_id = '';
@@ -812,7 +812,7 @@ c.submitForm = function() {
     //var userEmail = "tyla.connor@gmail.com";
     if (input && input.action === 'upload_financial') {
         try {
-            var grfin = new GlideRecord('x_vuram_financia_0_fcc_kyc_entity_details');
+            var grfin = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
             if (grfin.get(input.recordSysId)) {
                 var gsa = new GlideSysAttachment();
 
@@ -846,7 +846,7 @@ c.submitForm = function() {
         var x = 0;
         var record = JSON.parse(input.record);
         arr_vy = [].concat(record.nonIndividuals, record.individuals, record.controllers, record.authorizedSigners);
-        var grEnt = new GlideRecord('x_vuram_financia_0_fcc_kyc_ownerships');
+        var grEnt = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_ownerships');
         grEnt.addQuery('fcc_kyc_case.entity.email_id', userEmail);
         grEnt.orderByDesc('number');
         grEnt.setLimit(9);
@@ -880,8 +880,8 @@ c.submitForm = function() {
 
         //userEmail = gs.getUser().getEmail();
         enq = "email_id=" + userEmail;
-        console.log("Inside - " + enq);
-        var grInd1 = new GlideRecord('x_vuram_financia_0_fcc_kyc_entity_details');
+      //  console.log("Inside - " + enq);
+        var grInd1 = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
         grInd1.addQuery('email_id', userEmail);
         grInd1.query();
 
@@ -931,7 +931,7 @@ c.submitForm = function() {
             if (grInd1.update()) {
                 data.status_of_submit = true;
                 data.individual_sys_id = grInd1.sys_id;
-                var grCase = new GlideRecord("x_vuram_financia_0_fcc_kyc_cases");
+                var grCase = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_cases");
                 grCase.addQuery('entity', grInd1.sys_id);
                 grCase.query();
 
@@ -964,13 +964,13 @@ c.submitForm = function() {
    // var userEmail = user.getEmail();
     var sysIds = [];
 
-    var grInd = new GlideRecord(table);
+    var grInd = new GlideRecordSecure(table);
     grInd.addQuery('email_id', userEmail);
     grInd.query();
 
     if (grInd.next()) {
 
-        console.log("HELLO");
+     //   console.log("HELLO");
         // just return sys_id
         data.sys_id = grInd.sys_id.toString();
         data.legal_name = grInd.getValue('legal_name');
@@ -1014,7 +1014,7 @@ c.submitForm = function() {
         data.countries_of_the_customer_s_significant_suppliers = grInd.countries_of_the_customer_s_significant_suppliers.toString();
         data.nature_of_business = grInd.nature_of_business.toString();
         data.is_there_significant_private_ownership = grInd.is_there_significant_private_ownership;
-        console.log(data.as_of_date + "..." + typeof(data.as_of_date));
+       // console.log(data.as_of_date + "..." + typeof(data.as_of_date));
         if (!gs.nil(grInd.controllers)) {
             sysIds = sysIds.concat(grInd.controllers.split(','));
         }
@@ -1038,13 +1038,13 @@ c.submitForm = function() {
     sysIds = sysIds.filter(function(id) {
         return id && id.trim();
     });
-    console.log(sysIds + '');
+   // console.log(sysIds + '');
     data.individuals = [];
     data.controllers = [];
     data.authorizedSigners = [];
     data.nonIndividuals = [];
 
-    var gr_con = new GlideRecord('x_vuram_financia_0_fcc_kyc_ownerships');
+    var gr_con = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_ownerships');
     gr_con.addQuery('sys_id', 'IN', sysIds + '');
     gr_con.query();
     gr_con.orderByDesc('number');
@@ -1107,7 +1107,7 @@ c.submitForm = function() {
     var form = $sp.getForm(table);
 
 
-    console.log('Case Form - ' + JSON.stringify(form, null, 2));
+  //  console.log('Case Form - ' + JSON.stringify(form, null, 2));
 
 })($sp);]]></script>
         <servicenow>false</servicenow>
@@ -1115,14 +1115,14 @@ c.submitForm = function() {
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-10-14 12:12:06</sys_created_on>
         <sys_id>82b073c23b283290f13f5fea26e45a84</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Entity Form Copy</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_82b073c23b283290f13f5fea26e45a84</sys_update_name>
-        <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-14 12:32:34</sys_updated_on>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-21 06:45:38</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">
