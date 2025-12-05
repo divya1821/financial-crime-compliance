@@ -134,15 +134,6 @@ document.getElementById('saveBtn').focus();
 							<table class="table table-striped">
                                 <g2:system_properties_categorized category="fcc_periodic_kyc_review_durations" />
                             </table>
-							<table class="table table-striped">
-                                <g2:system_properties_categorized category="fcc_uk_company_house_property" />
-                            </table>
-							<table class="table table-striped">
-                                <g2:system_properties_categorized category="fcc_video_kyc_configuration" />
-                            </table>
-							<table class="table table-striped">
-                                <g2:system_properties_categorized category="fcc_ocr_engine" />
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -153,16 +144,13 @@ document.getElementById('saveBtn').focus();
                     <div class="panel panel-default">
                         <div class="panel-body">
 							<table class="table table-striped">
-                                <g2:system_properties_categorized category="fcc_individual_ai_agents_property" />
-                            </table>
-							<table class="table table-striped">
-                                <g2:system_properties_categorized category="fcc_entity_ai_agents_property" />
-                            </table>
-							<table class="table table-striped">
                                 <g2:system_properties_categorized category="fcc_perpetual_kyc_configurations" />
                             </table>
 							<table class="table table-striped">
                                 <g2:system_properties_categorized category="fcc_entity_perpetual_kyc_configurations" />
+                            </table>
+							<table class="table table-striped">
+                                <g2:system_properties_categorized category="fcc_uk_company_house_property" />
                             </table>
                         </div>
                     </div>
@@ -184,13 +172,13 @@ document.getElementById('saveBtn').focus();
         <sys_created_by>srinithi.v</sys_created_by>
         <sys_created_on>2025-10-03 13:21:41</sys_created_on>
         <sys_id>b1d69f263b54f2d4f13f5fea26e45a2b</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>application_configuration_manager</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_page_b1d69f263b54f2d4f13f5fea26e45a2b</sys_update_name>
         <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-11-06 07:51:13</sys_updated_on>
+        <sys_updated_on>2025-12-05 11:11:21</sys_updated_on>
     </sys_ui_page>
 </record_update>
