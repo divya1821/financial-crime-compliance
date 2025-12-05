@@ -12,7 +12,7 @@
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
-        <sys_suggestion_reader_group_id display_value="Suggested Query Reader Group for Now Assist in Virtual Agent - 1">06f97aa93bd03a94f13f5fea26e45a38</sys_suggestion_reader_group_id>
+        <sys_suggestion_reader_group_id display_value="Suggested Query Reader Group for Agent Tina">06f97aa93bd03a94f13f5fea26e45a38</sys_suggestion_reader_group_id>
         <sys_suggestion_reader_id display_value="Popular Query Reader">ddf6d5b77320001052c7d5fdbdf6a76f</sys_suggestion_reader_id>
         <sys_update_name>m2m_sys_suggestion_reader_sys_suggestion_reader_group_cef97aa93bd03a94f13f5fea26e45a3e</sys_update_name>
         <sys_updated_by>divya.suresh</sys_updated_by>

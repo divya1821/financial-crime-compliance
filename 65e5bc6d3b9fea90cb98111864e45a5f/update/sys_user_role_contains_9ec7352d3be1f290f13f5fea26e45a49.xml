@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="snc_external" name="snc_external">940ba702933002009c8579b4f47ffbe2</contains>
+        <role display_value="x_vuram_financia_0.user" name="x_vuram_financia_0.user">f9e5bc6d3b9fea90cb98111864e45ae0</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>varunapriyan.k</sys_created_by>
+        <sys_created_on>2025-12-01 07:09:33</sys_created_on>
+        <sys_id>9ec7352d3be1f290f13f5fea26e45a49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>snc_external.x_vuram_financia_0.user</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_user_role_contains_9ec7352d3be1f290f13f5fea26e45a49</sys_update_name>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-12-01 07:09:33</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

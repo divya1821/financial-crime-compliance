@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_vuram_financia_0.fincrime_docintel_user" name="x_vuram_financia_0.fincrime_docintel_user">4a2cf5253ba5f290f13f5fea26e45abd</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 07:28:39</sys_created_on>
+        <sys_id>862cf5253ba5f290f13f5fea26e45ac0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4a2cf5253ba5f290f13f5fea26e45abd</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_embedded_help_role_862cf5253ba5f290f13f5fea26e45ac0</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 07:28:39</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

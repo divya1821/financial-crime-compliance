@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_user_registration_config">
+    <sys_user_registration_config action="INSERT_OR_UPDATE">
+        <activation_error_page display_value="sn_user_activation_error">b8e54fb1533200102b12ddeeff7b1286</activation_error_page>
+        <activation_link_expiry_time>24</activation_link_expiry_time>
+        <activation_success_page display_value="fcc_kyc_landing_page">5da25eab3be3aa90cb98111864e45ad7</activation_success_page>
+        <activation_table>x_vuram_financia_0_user_acti_req_478024</activation_table>
+        <active>true</active>
+        <description/>
+        <enable_captcha>false</enable_captcha>
+        <enable_terms>false</enable_terms>
+        <internal_name>x_vuram_financia_0.Financial Crime Compliance</internal_name>
+        <name>Financial Crime Compliance</name>
+        <post_registration_redirect_page display_value="fcc_kyc_landing_page">5da25eab3be3aa90cb98111864e45ad7</post_registration_redirect_page>
+        <record_producer display_value="Financial Crime Compliance">1db5b6e73b913a10cb98111864e45a95</record_producer>
+        <registration_label>Register</registration_label>
+        <registration_table>x_vuram_financia_0_user_reg_req_478024</registration_table>
+        <requires_user_verification>true</requires_user_verification>
+        <role_to_assign name="x_vuram_financia_0.user">f9e5bc6d3b9fea90cb98111864e45ae0</role_to_assign>
+        <sys_class_name>sys_user_registration_config</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-11-25 06:32:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>db2576673b913a10cb98111864e45af5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Financial Crime Compliance</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_user_registration_config_db2576673b913a10cb98111864e45af5</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-26 07:07:04</sys_updated_on>
+        <terms_and_condition_url/>
+        <transform_map display_value="u_reg_xmap_381401">35b5f6e73b913a10cb98111864e45ac8</transform_map>
+        <user_onboarding_flow display_value="External User Onboarding">3539c77e5376001001a3ddeeff7b1214</user_onboarding_flow>
+        <user_table>x_vuram_financia_0_self_reg_user_profile_478024</user_table>
+        <user_verification_flow display_value="External User Verification">ecebaf7a533200102b12ddeeff7b1257</user_verification_flow>
+    </sys_user_registration_config>
+</record_update>

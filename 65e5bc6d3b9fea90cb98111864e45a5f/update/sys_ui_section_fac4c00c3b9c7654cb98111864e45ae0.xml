@@ -4,69 +4,41 @@
             <element>kyc_case.entity.risk_score</element>
             <position>0</position>
             <sys_created_by>harini.ks</sys_created_by>
-            <sys_created_on>2025-10-22 12:21:25</sys_created_on>
-            <sys_id>6c9fb07c3bf8ba10f13f5fea26e45a55</sys_id>
+            <sys_created_on>2025-11-24 10:34:09</sys_created_on>
+            <sys_id>4f73a65b3b953610f13f5fea26e45a08</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Risk Score Outcome" display_value="Risk Score Outcome" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">fac4c00c3b9c7654cb98111864e45ae0</sys_ui_section>
             <sys_updated_by>harini.ks</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:21:25</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>risk_override_reason</element>
-            <position>1</position>
-            <sys_created_by>harini.ks</sys_created_by>
-            <sys_created_on>2025-10-22 12:21:25</sys_created_on>
-            <sys_id>6c9fb07c3bf8ba10f13f5fea26e45a94</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Risk Score Outcome" display_value="Risk Score Outcome" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">fac4c00c3b9c7654cb98111864e45ae0</sys_ui_section>
-            <sys_updated_by>harini.ks</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:21:25</sys_updated_on>
+            <sys_updated_on>2025-11-24 10:34:09</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>2</position>
+            <position>1</position>
             <sys_created_by>harini.ks</sys_created_by>
-            <sys_created_on>2025-10-22 12:21:25</sys_created_on>
-            <sys_id>649fb07c3bf8ba10f13f5fea26e45a95</sys_id>
+            <sys_created_on>2025-11-24 10:34:09</sys_created_on>
+            <sys_id>8773a65b3b953610f13f5fea26e45a3b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Risk Score Outcome" display_value="Risk Score Outcome" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">fac4c00c3b9c7654cb98111864e45ae0</sys_ui_section>
             <sys_updated_by>harini.ks</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:21:25</sys_updated_on>
+            <sys_updated_on>2025-11-24 10:34:09</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>kyc_case.entity.risk_level</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>harini.ks</sys_created_by>
-            <sys_created_on>2025-10-22 12:21:25</sys_created_on>
-            <sys_id>6c9fb07c3bf8ba10f13f5fea26e45a95</sys_id>
+            <sys_created_on>2025-11-24 10:34:09</sys_created_on>
+            <sys_id>8f73a65b3b953610f13f5fea26e45a3b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Risk Score Outcome" display_value="Risk Score Outcome" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">fac4c00c3b9c7654cb98111864e45ae0</sys_ui_section>
             <sys_updated_by>harini.ks</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:21:25</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>supporting_document</element>
-            <position>4</position>
-            <sys_created_by>harini.ks</sys_created_by>
-            <sys_created_on>2025-10-22 12:21:25</sys_created_on>
-            <sys_id>649fb07c3bf8ba10f13f5fea26e45a96</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Risk Score Outcome" display_value="Risk Score Outcome" name="x_vuram_financia_0_fcc_kyc_tasks" sys_domain="global" view="b2c4c00c3b9c7654cb98111864e45a51">fac4c00c3b9c7654cb98111864e45ae0</sys_ui_section>
-            <sys_updated_by>harini.ks</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:21:25</sys_updated_on>
+            <sys_updated_on>2025-11-24 10:34:09</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

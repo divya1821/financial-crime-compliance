@@ -328,7 +328,7 @@
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=d77f2d803b736210cb98111864e45a9f"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="FCC KYC Session">7d20aaf83b67ea10f13f5fea26e45a13</action_type>
-        <action_type_parent display_value="FCC KYC Session">1212a1b83ba7ea10cb98111864e45a64</action_type_parent>
+        <action_type_parent display_value="">1212a1b83ba7ea10cb98111864e45a64</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>7d20aaf83b67ea10f13f5fea26e45a13</compiled_snapshot>
@@ -657,7 +657,7 @@
     <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7b053c8a3b6fa650f13f5fea26e45a2e^sys_idNOT INb3053c8a3b6fa650f13f5fea26e45a61"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="FCC KYC Session">7d20aaf83b67ea10f13f5fea26e45a13</action_type>
-        <action_type_parent display_value="FCC KYC Session">1212a1b83ba7ea10cb98111864e45a64</action_type_parent>
+        <action_type_parent display_value="">1212a1b83ba7ea10cb98111864e45a64</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>7d20aaf83b67ea10f13f5fea26e45a13</compiled_snapshot>

@@ -360,7 +360,7 @@ body, .kyc-container {
         <name>FCC KYC Individual Video KYC</name>
         <option_schema/>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <script><![CDATA[(function() {
     data.message = '';
     data.url = '';
@@ -369,32 +369,34 @@ body, .kyc-container {
     var table = 'x_vuram_financia_0_fcc_kyc_individual_details';
     var userEmail = gs.getUser().getEmail();
 
+	var glideRecordIndividual = new GlideRecordSecure(table);
+
     // Create record (NO status update here)
     if (input && input.action === 'createRecord') {
-        var grInd = new GlideRecordSecure(table);
-        grInd.addQuery('email', userEmail);
-        grInd.query();
+      
+        glideRecordIndividual.addQuery('email', userEmail);
+        glideRecordIndividual.query();
 
-        if (grInd.next()) {
+        if (glideRecordIndividual.next()) {
             // just return sys_id
-            data.sys_id = grInd.sys_id.toString();
+            data.sys_id = glideRecordIndividual.sys_id.toString();
         }
     }
 
     // Get QR record
     if (input && input.action === 'getRecord') {
-        var gr2 = new GlideRecordSecure(table);
-        if (gr2.get(input.sys_id)) {
-            data.url = gr2.getValue('video_kyc_link');
+        
+        if (glideRecordIndividual.get(input.sys_id)) {
+            data.url = glideRecordIndividual.getValue('video_kyc_link');
         }
     }
 
     // Update status when proceeding
     if (input && input.action === 'markStarted') {
-        var gr3 = new GlideRecordSecure(table);
-        if (gr3.get(input.sys_id)) {
-            gr3.video_kyc_status = "started";
-            gr3.update();
+      
+        if (glideRecordIndividual.get(input.sys_id)) {
+            glideRecordIndividual.video_kyc_status = "started";
+            glideRecordIndividual.update();
             data.message = 'Record updated as started';
         }
     }
@@ -405,14 +407,14 @@ body, .kyc-container {
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-01 11:59:22</sys_created_on>
         <sys_id>8521da9c3b372610cb98111864e45ad0</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>FCC KYC Individual Video KYC</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_8521da9c3b372610cb98111864e45ad0</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-11-21 06:45:59</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-12-04 09:53:00</sys_updated_on>
         <template><![CDATA[<header class="breadcrumb-header">
   <div class="breadcrumb">
     <a href="/fcc_kyc">Home</a> &gt; 

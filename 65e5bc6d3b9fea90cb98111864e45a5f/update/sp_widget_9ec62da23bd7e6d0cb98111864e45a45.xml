@@ -211,14 +211,11 @@
                 return c.formData.pronoun && c.formData.forenameFull && c.formData.dob && c.formData.addressLine && c.formData.postcode && c.formData.city && c.formData.nationality && c.formData.countryResidence;
             case 2:
                 return c.formData.mobile && c.formData.mobileContact && c.formData.email && c.formData.homeContact;
-            //case 3:
-             //   return c.formData.usCitizen && c.formData.taxId && c.formData.nonUkResident && c.formData.nonUkTaxId;
             case 4:
                 return c.formData.employmentStatus && c.formData.occupation && c.formData.sourceInitialDeposit && c.formData.sourceAnnualRevenue && c.formData.employer && c.formData.employmentIndustry && c.formData.purposeOfAccount && c.formData.annualTxnVolume;
             case 5:
                 return c.formData.cashDeposit && c.formData.chequeDeposit && c.formData.atmDeposit && c.formData.achWithdrawal && c.formData.achDeposit && c.formData.cashWithdrawal && c.formData.chequeWithdrawal && c.formData.atmWithdrawal;
-                // case 6:
-                //   return c.formData.declaration1 && c.formData.declaration2 && c.formData.declaration3;
+
             default:
                 return true;
         }
@@ -246,7 +243,7 @@
 
     c.canSubmit = function() {
         return true;
-			//c.formData.declaration1 && c.formData.declaration2 && c.formData.declaration3 && c.formData.declaration4;
+		
     };
 
     c.submitForm = function() {
@@ -261,15 +258,13 @@
         }).then(function(response) {
             if (response.data.status_of_submit) {
                 alert("]]>🎉<![CDATA[ Application submitted successfully! You will receive a confirmation email shortly with your application reference number.");
-                $location.url = "/fcc_kyc";
+                $location.url("/fcc_kyc");
             } else {
                 alert("Not Updated");
             }
 
         });
-        // Reset form or redirect
-        // c.currentStep = 1;
-        // c.formData = {};
+
     };
 	
 	c.toggleProductService = function(service) {
@@ -809,26 +804,32 @@
         <name>FCC KYC Individual Form</name>
         <option_schema/>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <script><![CDATA[(function($sp) {
     /* populate the 'data' object */
     /* e.g., data.table = $sp.getValue('table'); */
-    //console.log('Hi');
     data.type = $sp.getParameter('type');
+	
     var table = 'x_vuram_financia_0_fcc_kyc_individual_details';
-    //var sys_id = 'c62d25783b2faa10f13f5fea26e45afb';
     var userEmail = gs.getUser().getEmail();
-    //var userEmail = "jack.smith@example.com";
     data.email = userEmail;
     var enq = "email=" + userEmail;
 
+	  // GlideRecord instances for Individual and Case tables
     var grIndiviualLoad = new GlideRecordSecure(table);
+	  var glideRecordCase = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_cases");
+	  var glideRecordIndividual = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
+	
+	  // Load existing KYC details for current user
     grIndiviualLoad.addEncodedQuery(enq);
     grIndiviualLoad.query();
-    while (grIndiviualLoad.next()) {
-        //console.log("Query");
-        sys_id = grIndiviualLoad.getValue('sys_id');
-        data.formData = {
+	
+	
+    while (grIndiviualLoad.next()) {    
+			
+			      // Build UI-friendly data object with values from the record 
+            sys_id = grIndiviualLoad.getValue('sys_id');
+            data.formData = {
             pronoun: grIndiviualLoad.getValue('surname'),
             forenameFull: grIndiviualLoad.getValue('forename_in_full'),
             dob: grIndiviualLoad.getValue('dob'),
@@ -864,97 +865,69 @@
         };
     }
 
-    //var r = $sp.getRecord(table, sys_id, true);
-    //console.log("Record - " + JSON.stringify(r.getRecordClassName()));
-
-    /*console.log(JSON.stringify(data.formData));
-  var form = $sp.getForm(table, sys_id);
-	data.getForm = form;
-	console.log(JSON.stringify(form, null, 2));
-	console.log("Choice For Proof of Address" + JSON.stringify(form._fields.employment_status.choices));
-	
-	//Fetching ronoun List Choices
-	data.pronounList = form._fields.surname.choices;
-	data.pronounList = data.pronounList.filter(function(p) {
-    return p.value !== "";
-  });
-	//Fetching Proof Of Address List Choices
-	data.proofOfAddressList = form._fields.proof_of_address.choices;
-	data.proofOfAddressList = data.proofOfAddressList.filter(function(p) {
-    return p.value !== "";
-  });
-	
-	data.employmentStatuses = form._fields.employment_status.choices;
-	data.employmentStatuses = data.employmentStatuses.filter(function(p) {
-    return p.value !== "";
-  });*/
-
-
+	  // Handle form submission
     if (input && input.action == 'submit') {
         var record = JSON.parse(input.record);
 
         userEmail = gs.getUser().getEmail();
-        enq = "email=" + userEmail;
-      //  console.log("Inside - " + enq);
-        var grInd = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
-        grInd.addQuery(enq);
-        grInd.query();
+        enq = "email=" + userEmail;        
+        glideRecordIndividual.addQuery(enq);
+        glideRecordIndividual.query();
 
-        if (grInd.next()) {
-        //    console.log("Inside");
-            grInd.tax_identification_number = record.taxId;
-            grInd.surname = record.pronoun;
-            grInd.state_purpose_of_opening_account = record.purposeOfAccount;
-            grInd.source_of_initial_deposit = record.sourceInitialDeposit;
-            grInd.proof_of_identity = record.proof_of_identity;
-            grInd.proof_of_address = record.proof_of_address;
-            grInd.product_services = record.product_services;
-            grInd.postcode = record.postcode;
-            grInd.occupation = record.occupation;
-            grInd.non_uk_tax_identification_number = record.nonUkTaxId;
-            grInd.mobile_contact = record.mobileContact;
-            grInd.mobile = record.mobile;
-            grInd.home_contact = record.homeContact;
-            grInd.forename_in_full = record.forenameFull;
-            grInd.estimated_annual_transaction_volume = record.annualTxnVolume;
-            grInd.employment_status = record.employmentStatus;
-            grInd.employment_industry = record.employmentIndustry;
-            grInd.employer = record.employer;
-            grInd.email = record.email;
-            grInd.dob = record.dob;
-            grInd.describe_the_source_of_annual_revenue = record.sourceAnnualRevenue;
-            grInd.country_of_residence = record.countryResidence;
-            grInd.country_of_nationality = record.nationality;
-            grInd.city = record.city;
-            grInd.cheque_withdrawal = record.chequeWithdrawal;
-            grInd.cheque_deposit = record.chequeDeposit;
-            grInd.cash_withdrawal = record.cashWithdrawal;
-            grInd.cash_deposit = record.cashDeposit;
-            grInd.atm_withdrawal = record.atmWithdrawal;
-            grInd.atm_deposit = record.atmDeposit;
-            grInd.are_you_a_us_citizen = record.usCitizen;
-            grInd.are_you_a_resident_of_a_country_other_than_uk = record.nonUkResident;
-            grInd.address_line = record.addressLine;
-            grInd.ach_withdrawal = record.achWithdrawal;
-            grInd.ach_deposit = record.achDeposit;
-            grInd.video_kyc_status = record.videoKYCStatus;
-            grInd.product_services = record.product_services;
+			  // Update individual record if found
+        if (glideRecordIndividual.next()) {
+            glideRecordIndividual.tax_identification_number = record.taxId;
+            glideRecordIndividual.surname = record.pronoun;
+            glideRecordIndividual.state_purpose_of_opening_account = record.purposeOfAccount;
+            glideRecordIndividual.source_of_initial_deposit = record.sourceInitialDeposit;
+            glideRecordIndividual.proof_of_identity = record.proof_of_identity;
+            glideRecordIndividual.proof_of_address = record.proof_of_address;
+            glideRecordIndividual.product_services = record.product_services;
+            glideRecordIndividual.postcode = record.postcode;
+            glideRecordIndividual.occupation = record.occupation;
+            glideRecordIndividual.non_uk_tax_identification_number = record.nonUkTaxId;
+            glideRecordIndividual.mobile_contact = record.mobileContact;
+            glideRecordIndividual.mobile = record.mobile;
+            glideRecordIndividual.home_contact = record.homeContact;
+            glideRecordIndividual.forename_in_full = record.forenameFull;
+            glideRecordIndividual.estimated_annual_transaction_volume = record.annualTxnVolume;
+            glideRecordIndividual.employment_status = record.employmentStatus;
+            glideRecordIndividual.employment_industry = record.employmentIndustry;
+            glideRecordIndividual.employer = record.employer;
+            glideRecordIndividual.email = record.email;
+            glideRecordIndividual.dob = record.dob;
+            glideRecordIndividual.describe_the_source_of_annual_revenue = record.sourceAnnualRevenue;
+            glideRecordIndividual.country_of_residence = record.countryResidence;
+            glideRecordIndividual.country_of_nationality = record.nationality;
+            glideRecordIndividual.city = record.city;
+            glideRecordIndividual.cheque_withdrawal = record.chequeWithdrawal;
+            glideRecordIndividual.cheque_deposit = record.chequeDeposit;
+            glideRecordIndividual.cash_withdrawal = record.cashWithdrawal;
+            glideRecordIndividual.cash_deposit = record.cashDeposit;
+            glideRecordIndividual.atm_withdrawal = record.atmWithdrawal;
+            glideRecordIndividual.atm_deposit = record.atmDeposit;
+            glideRecordIndividual.are_you_a_us_citizen = record.usCitizen;
+            glideRecordIndividual.are_you_a_resident_of_a_country_other_than_uk = record.nonUkResident;
+            glideRecordIndividual.address_line = record.addressLine;
+            glideRecordIndividual.ach_withdrawal = record.achWithdrawal;
+            glideRecordIndividual.ach_deposit = record.achDeposit;
+            glideRecordIndividual.video_kyc_status = record.videoKYCStatus;
+            glideRecordIndividual.product_services = record.product_services;
 
-
-            if (grInd.update()) {
+            // Update record and then update related case
+            if (glideRecordIndividual.update()) {
                 data.status_of_submit = true;
-                data.individual_sys_id = grInd.sys_id;
-                var grCase = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_cases");
-                grCase.addQuery('individual', grInd.sys_id);
-                grCase.query();
+                data.individual_sys_id = glideRecordIndividual.sys_id; 
+                glideRecordCase.addQuery('individual', glideRecordIndividual.sys_id);
+                glideRecordCase.query();
 
-                if (grCase.next()) {
-                    grCase.state = 150;
-                    grCase.assigned_to = '';
-                    //	grCase.assigned_to='380f8c683be3e610f13f5fea26e45a3b';
-                    if (grCase.update()) {
+                if (glideRecordCase.next()) {
+                    glideRecordCase.state = 150;
+                    glideRecordCase.assigned_to = '';
+ 
+                    if (glideRecordCase.update()) {
                         data.case_updated = true;
-                        data.case_sys_id = grCase.sys_id;
+                        data.case_sys_id = glideRecordCase.sys_id;
                     } else {
                         data.case_updated = false;
                     }
@@ -963,13 +936,11 @@
             } else {
                 data.status_of_submit = false;
             }
-            gs.info('Updated record with sys_id: ' + grInd.sys_id);
+            gs.info('Updated record with sys_id: ' + glideRecordIndividual.sys_id);
         } else {
             gs.info("No Individual Found");
         }
     }
-
-
 
 })($sp);]]></script>
         <servicenow>false</servicenow>
@@ -977,14 +948,14 @@
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-14 12:07:56</sys_created_on>
         <sys_id>9ec62da23bd7e6d0cb98111864e45a45</sys_id>
-        <sys_mod_count>347</sys_mod_count>
+        <sys_mod_count>353</sys_mod_count>
         <sys_name>FCC KYC Individual Form</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_9ec62da23bd7e6d0cb98111864e45a45</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-11-21 06:47:39</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-12-05 07:47:44</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">

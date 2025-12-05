@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item">
+    <sys_ux_form_action_layout_item action="INSERT_OR_UPDATE">
+        <action display_value="Assign to Me">a206877e3b2576d0cb98111864e45ac3</action>
+        <active>true</active>
+        <animate_icon>false</animate_icon>
+        <color>secondary</color>
+        <description/>
+        <icon/>
+        <item_type>action</item_type>
+        <label>Assign to Me</label>
+        <layout_group/>
+        <name>Assign to Me</name>
+        <order>100</order>
+        <overflow>false</overflow>
+        <sys_class_name>sys_ux_form_action_layout_item</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-12-05 10:03:52</sys_created_on>
+        <sys_id>e606877e3b2576d0cb98111864e45ac6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assign to Me</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_form_action_layout_item_e606877e3b2576d0cb98111864e45ac6</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-05 10:03:52</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+    </sys_ux_form_action_layout_item>
+</record_update>

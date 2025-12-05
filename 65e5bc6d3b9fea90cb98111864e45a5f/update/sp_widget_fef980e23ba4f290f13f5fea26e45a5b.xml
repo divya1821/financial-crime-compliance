@@ -104,11 +104,11 @@
     },
 
     goPrevious: function() {
-      $location.url = "/fcc_kyc?id=fcc_kyc_individual_upload_document";
+      $location.url("/fcc_kyc?id=fcc_kyc_individual_upload_document");
     },
 		
 		 goSkip: function() {
-      $location.url = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+      $location.url("/fcc_kyc?id=fcc_kyc_update_customer_details");
     },
 
     goProceed: function() {
@@ -116,10 +116,10 @@
         c.server
           .get({ action: "markStarted", mobileAction: "markStarted", sys_id: c.data.mobile.sys_id })
           .then(function() {
-            $location.url = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+            $location.url("/fcc_kyc?id=fcc_kyc_update_customer_details");
           });
       } else {
-        $location.url = "/fcc_kyc?id=fcc_kyc_update_customer_details";
+        $location.url("/fcc_kyc?id=fcc_kyc_update_customer_details");
       }
     }
   };
@@ -586,113 +586,127 @@ video {
         <name>FCC KYC Muti VKYC</name>
         <option_schema/>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <script><![CDATA[(function() {
+  // Wrap everything in an IIFE to avoid polluting the global scope
   try {
-    data.mobile = {};
-    data.webcam = {};
-    var userEmail = gs.getUser().getEmail();
+    data.mobile = {}; // Object to store mobile-related responses
+    data.webcam = {}; // Object to store webcam-related responses
+
+    var userEmail = gs.getUser().getEmail(); // Fetch logged‑in user's email
     gs.info("KYC Widget Debug: Logged in user - " + userEmail);
+
+    var table = "x_vuram_financia_0_fcc_kyc_individual_details"; // Target table for KYC details
+    var glideRecordIndividual = new GlideRecordSecure(table); // Secure GlideRecord instance
 
     // --- Mobile Video KYC Section ---
     if (input && input.mobileAction) {
-      var table = "x_vuram_financia_0_fcc_kyc_individual_details";
+
       gs.info("KYC Widget Debug: Mobile action received - " + input.mobileAction);
 
+      // Create or fetch existing record based on user email
       if (input.mobileAction === "createRecord") {
-        var gr = new GlideRecordSecure(table);
-        gr.addQuery("email", userEmail);
-        gr.query();
-        if (gr.next()) {
-          data.mobile.sys_id = gr.sys_id.toString();
+        glideRecordIndividual.addQuery("email", userEmail);
+        glideRecordIndividual.query();
+
+        if (glideRecordIndividual.next()) {
+          data.mobile.sys_id = glideRecordIndividual.sys_id.toString(); // Return sys_id if exists
           gs.info("KYC Widget Debug: Found existing mobile record for " + userEmail);
         }
       }
 
+      // Get record details such as video KYC link
       if (input.mobileAction === "getRecord") {
-        var gr2 = new GlideRecordSecure(table);
-        if (gr2.get(input.sys_id)) {
-          data.mobile.url = gr2.getValue("video_kyc_link");
+        if (glideRecordIndividual.get(input.sys_id)) {
+          data.mobile.url = glideRecordIndividual.getValue("video_kyc_link");
           gs.info("KYC Widget Debug: Returning QR link for record " + input.sys_id);
         }
       }
 
+      // Mark the KYC as started from mobile device
       if (input.mobileAction === "markStarted") {
-        var gr3 = new GlideRecordSecure(table);
-        if (gr3.get(input.sys_id)) {
-          //gr3.video_kyc_status = "started";
-          gr3.video_kyc_device = "mobile";
-          gr3.update();
+        if (glideRecordIndividual.get(input.sys_id)) {
+          glideRecordIndividual.video_kyc_device = "mobile"; // Track device source
+          glideRecordIndividual.update();
           gs.info("KYC Widget Debug: Mobile KYC marked as started for " + userEmail);
           data.mobile.message = "Record updated as started";
         }
       }
     }
 
-		 var response = {};
-  try {
-   // var userEmail = gs.getUser().getEmail();
-    gs.info('KYC Widget Debug: User email - ' + userEmail);
+    var response = {}; // Prepare generic response object
 
-    // Function expression instead of declaration
-    var getAttachmentBase64 = function(attachmentSysId) {
-      if (!attachmentSysId) return '';
-      try {
-        var attachment = new GlideSysAttachment();
-        var bytes = attachment.getBytes(attachmentSysId);
-        if (!bytes) {
-          gs.info('KYC Widget Debug: No bytes found for attachment ' + attachmentSysId);
+    try {
+      gs.info('KYC Widget Debug: User email - ' + userEmail);
+
+      // Utility function: Convert an attachment to Base64 string
+      var getAttachmentBase64 = function(attachmentSysId) {
+        if (!attachmentSysId) return '';
+        try {
+          var attachment = new GlideSysAttachment();
+          var bytes = attachment.getBytes(attachmentSysId); // Retrieve raw bytes
+
+          if (!bytes) {
+            gs.info('KYC Widget Debug: No bytes found for attachment ' + attachmentSysId);
+            return '';
+          }
+
+          var base64String = GlideBase64.encode(bytes); // Encode bytes to Base64
+          gs.info('KYC Widget Debug: Encoded attachment ' + attachmentSysId + ' to Base64, length: ' + base64String.length);
+          return base64String;
+        } catch (err) {
+          gs.error('KYC Widget Debug: Error encoding attachment ' + attachmentSysId + ' - ' + err.message);
           return '';
         }
-        var base64String = GlideBase64.encode(bytes);
-        gs.info('KYC Widget Debug: Encoded attachment ' + attachmentSysId + ' to Base64, length: ' + base64String.length);
-        return base64String;
-      } catch (err) {
-        gs.error('KYC Widget Debug: Error encoding attachment ' + attachmentSysId + ' - ' + err.message);
-        return '';
-      }
-    };
+      };
 
-    if (input && input.photos) {
-      var gr1 = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
-      gr1.addQuery('email', userEmail);
-      gr1.query();
+      // Processing uploaded KYC photos (front, back, selfie)
+      if (input && input.photos) {
+        glideRecordIndividual.addQuery('email', userEmail);
+        glideRecordIndividual.query();
 
-      if (gr1.next()) {
-        gr1.setValue('id_front_page', input.photos.id_front_page);
-        gr1.setValue('id_back_page', input.photos.id_back_page);
-        gr1.setValue('video_recording', input.photos.selfie_picture);
-				gr1.setValue('video_kyc_device','web');
-        gr1.update();
-        gs.info('KYC Widget Info: Photos successfully inserted for user ' + userEmail);
-        data.status = 'success';
-        data.action = 'updated';
+        // Update existing record
+        if (glideRecordIndividual.next()) {
+          glideRecordIndividual.setValue('id_front_page', input.photos.id_front_page);
+          glideRecordIndividual.setValue('id_back_page', input.photos.id_back_page);
+          glideRecordIndividual.setValue('video_recording', input.photos.selfie_picture);
+          glideRecordIndividual.setValue('video_kyc_device','web'); // Mark from webcam/web
+          glideRecordIndividual.update();
+
+          gs.info('KYC Widget Info: Photos successfully inserted for user ' + userEmail);
+          data.status = 'success';
+          data.action = 'updated';
+
+        } else { // Create new record if not found
+          glideRecordIndividual.initialize();
+          gs.info('No existing record found for user ' + userEmail);
+
+          glideRecordIndividual.setValue('email', userEmail);
+          glideRecordIndividual.setValue('id_front_page', input.photos.id_front_page);
+          glideRecordIndividual.setValue('id_back_page', input.photos.id_back_page);
+          glideRecordIndividual.setValue('video_recording', input.photos.selfie_picture);
+          glideRecordIndividual.insert();
+
+          data.status = 'success';
+          data.action = 'inserted';
+        }
+
       } else {
-        gr1.initialize();
-				gs.info('no Email Found ' + userEmail);
-        gr1.setValue('email', userEmail);
-        gr1.setValue('id_front_page', input.photos.id_front_page);
-        gr1.setValue('id_back_page', input.photos.id_back_page);
-        gr1.setValue('video_recording', input.photos.selfie_picture);
-        gr1.insert();
-        data.status = 'success';
-        data.action = 'inserted';
+        gs.info('KYC Widget Debug: No photos found in input');
+        response.status = 'waiting';
+        response.action = 'none';
       }
-    } else {
-      gs.info('KYC Widget Debug: No photos found in input');
-      response.status = 'waiting';
+
+    } catch (e) {
+      gs.error('KYC Widget Error: ' + e.message);
+      response.status = 'error';
       response.action = 'none';
     }
-  } catch (e) {
-    gs.error('KYC Widget Error: ' + e.message);
-    response.status = 'error';
-    response.action = 'none';
-  }
 
-  data.status = response.status || 'waiting';
-  data.action = response.action || 'none';
-		
-		
+    // Final response data after operations
+    data.status = response.status || 'waiting';
+    data.action = response.action || 'none';
+
   } catch (e) {
     gs.error("KYC Widget Error: " + e.message);
     data.webcam.status = "error";
@@ -705,14 +719,14 @@ video {
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-10-15 08:41:23</sys_created_on>
         <sys_id>fef980e23ba4f290f13f5fea26e45a5b</sys_id>
-        <sys_mod_count>93</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_name>FCC KYC Muti VKYC</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_fef980e23ba4f290f13f5fea26e45a5b</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-11-21 06:43:37</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-12-05 07:31:49</sys_updated_on>
         <template><![CDATA[<!DOCTYPE html>
 <html lang="en">
   <head>

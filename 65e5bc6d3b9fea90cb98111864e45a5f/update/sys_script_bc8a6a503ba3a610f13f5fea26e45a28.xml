@@ -29,12 +29,19 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var gr_usr= new GlideRecord('sys_user');
+	var gr_usr= new GlideRecord('sys_user'); // Create Representative Accoount in User Table
 	gr_usr.initialize();
 	gr_usr.email=current.email_id;
-	gr_usr.name=current.legal_name;
+	gr_usr.name=current.authorized_representative;
 	gr_usr.user_name=current.email_id;
-	gr_usr.insert();
+	var sysIND = gr_usr.insert();
+	var gr_usr1 = new GlideRecord('x_vuram_financia_0_self_reg_user_profile_478024'); // External User Registartion transform map table for reset link.
+	gr_usr1.initialize();
+	gr_usr1.user = sysIND;
+	gr_usr1.email = current.email_id;
+	gr_usr1.portal = '1e9f2dad3b1b2e90cb98111864e45a08';
+	gr_usr1.user_registration_config = 'db2576673b913a10cb98111864e45af5';
+	gr_usr1.insert();
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -43,15 +50,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bc8a6a503ba3a610f13f5fea26e45a28</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>User Creation Entity</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_script_bc8a6a503ba3a610f13f5fea26e45a28</sys_update_name>
-        <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-10-14 05:47:49</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-12-05 06:56:49</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

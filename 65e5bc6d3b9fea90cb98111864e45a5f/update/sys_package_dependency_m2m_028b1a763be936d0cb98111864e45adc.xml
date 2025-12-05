@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Data Lookup and Record Matching Support" source="com.glide.data_lookup">b65338d23be21210cb98111864e45acf</dependency>
+        <min_version>1.0.6</min_version>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-12-05 06:58:09</sys_created_on>
+        <sys_id>028b1a763be936d0cb98111864e45adc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-05 06:58:09</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

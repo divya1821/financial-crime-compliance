@@ -151,83 +151,94 @@ video {
         <name>FCC KYC Web Video KYC</name>
         <option_schema/>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <script><![CDATA[(function() {
-  var response = {};
+  var response = {}; // Object to hold response status/action
   try {
-    var userEmail = gs.getUser().getEmail();
+    var userEmail = gs.getUser().getEmail(); // Retrieve logged-in user's email
     gs.info('KYC Widget Debug: User email - ' + userEmail);
 
-    // Function expression instead of declaration
+    // Function to convert attachment bytes to Base64 string
     var getAttachmentBase64 = function(attachmentSysId) {
-      if (!attachmentSysId) return '';
+      if (!attachmentSysId) return ''; // Exit if no Sys ID provided
       try {
-        var attachment = new GlideSysAttachment();
-        var bytes = attachment.getBytes(attachmentSysId);
+        var attachment = new GlideSysAttachment(); // Attachment handler
+        var bytes = attachment.getBytes(attachmentSysId); // Get file bytes
+
         if (!bytes) {
           gs.info('KYC Widget Debug: No bytes found for attachment ' + attachmentSysId);
-          return '';
+          return ''; // No file data
         }
-        var base64String = GlideBase64.encode(bytes);
+
+        var base64String = GlideBase64.encode(bytes); // Convert bytes to Base64
         gs.info('KYC Widget Debug: Encoded attachment ' + attachmentSysId + ' to Base64, length: ' + base64String.length);
         return base64String;
       } catch (err) {
         gs.error('KYC Widget Debug: Error encoding attachment ' + attachmentSysId + ' - ' + err.message);
-        return '';
+        return ''; // Return empty string on failure
       }
     };
 
+    // Process photos sent from widget
     if (input && input.photos) {
-      var gr = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
-      gr.addQuery('email', userEmail);
-      gr.query();
+      var glideRecordIndividual = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details'); // KYC table
+      glideRecordIndividual.addQuery('email', userEmail); // Match record with user email
+      glideRecordIndividual.query();
 
-      if (gr.next()) {
-        gr.setValue('id_front_page', input.photos.id_front_page);
-        gr.setValue('id_back_page', input.photos.id_back_page);
-        gr.setValue('video_recording', input.photos.selfie_picture);
-        gr.update();
+      // Update existing record
+      if (glideRecordIndividual.next()) {
+        glideRecordIndividual.setValue('id_front_page', input.photos.id_front_page); // Store front side
+        glideRecordIndividual.setValue('id_back_page', input.photos.id_back_page); // Store back side
+        glideRecordIndividual.setValue('video_recording', input.photos.selfie_picture); // Selfie capture
+        glideRecordIndividual.update(); // Save changes
+
         gs.info('KYC Widget Info: Photos successfully inserted for user ' + userEmail);
         data.status = 'success';
         data.action = 'updated';
-      } else {
-        gr.initialize();
-        gr.setValue('email', userEmail);
-        gr.setValue('id_front_page', input.photos.id_front_page);
-        gr.setValue('id_back_page', input.photos.id_back_page);
-        gr.setValue('video_recording', input.photos.selfie_picture);
-        gr.insert();
+
+      } else { // Create new record if none exists
+        glideRecordIndividual.initialize(); // Prepare new record
+        glideRecordIndividual.setValue('email', userEmail); // Set email
+        glideRecordIndividual.setValue('id_front_page', input.photos.id_front_page);
+        glideRecordIndividual.setValue('id_back_page', input.photos.id_back_page);
+        glideRecordIndividual.setValue('video_recording', input.photos.selfie_picture);
+        glideRecordIndividual.insert(); // Insert new record
+
         data.status = 'success';
         data.action = 'inserted';
       }
+
     } else {
+      // Handle scenario where photos are not provided
       gs.info('KYC Widget Debug: No photos found in input');
       response.status = 'waiting';
       response.action = 'none';
     }
+
   } catch (e) {
+    // Global error handling
     gs.error('KYC Widget Error: ' + e.message);
     response.status = 'error';
     response.action = 'none';
   }
 
+  // Final output values
   data.status = response.status || 'waiting';
   data.action = response.action || 'none';
-})();
-]]></script>
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-30 08:41:51</sys_created_on>
         <sys_id>703ab2e93b5cf694cb98111864e45a14</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>67</sys_mod_count>
         <sys_name>FCC KYC Web Video KYC</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_703ab2e93b5cf694cb98111864e45a14</sys_update_name>
-        <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-11-20 08:00:37</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-12-05 07:32:46</sys_updated_on>
         <template><![CDATA[<div class="kyc-widget">
   <h3 class="text-center">KYC Capture</h3>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function($scope, $window) {
+        <client_script><![CDATA[api.controller = function($scope, $window, $location) {
   var c = this;
   c.onlyHolder = true; // checkbox default checked
 
@@ -385,47 +385,41 @@ h3 {
         <name>FCC KYC Individual Document Upload</name>
         <option_schema/>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <script><![CDATA[(function($sp) {
-//if (input && input.recordSysId) {
-//  data.recordSysId = input.recordSysId;
-//} else {
-//  data.recordSysId = $sp.getParameter("sys_id") || "";
-//
 	
 	var email_ind= gs.getUser().getEmail();
-	var gr_rr= new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
-	gr_rr.addQuery('email',email_ind);
-	gr_rr.query();
-	if(gr_rr.next())
+	var glideIndividual= new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
+	glideIndividual.addQuery('email',email_ind);
+	glideIndividual.query();
+	if(glideIndividual.next())
 {
-	data.recordSysId= gr_rr.sys_id+"";
+	data.recordSysId= glideIndividual.sys_id+"";
 }
 
 
   // ---------------- Upload ----------------
   if (input && input.action === "upload") {
     try {
-      var gr = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_individual_details");
-      if (gr.get(input.recordSysId)) {
+      var glideRecordIndividual = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_individual_details");
+      if (glideRecordIndividual.get(input.recordSysId)) {
         var gsa = new GlideSysAttachment();
         var attachmentSysId = gsa.writeBase64(
-          gr,
+          glideRecordIndividual,
           input.fileName,   // filename
           input.fileType,   // MIME type
           input.fileContent // Base64 string
         );
 
-        // map to specific field if provided
         if (input.fieldName) {
-          gr.setValue(input.fieldName, attachmentSysId);
+          glideRecordIndividual.setValue(input.fieldName, attachmentSysId);
 					if(input.fieldName == "identity_attachment"){
-						  gr.setValue("proof_of_identity",input.dropDown);
+						  glideRecordIndividual.setValue("proof_of_identity",input.dropDown);
 						 }
 					else if(input.fieldName == "address_attachment"){
-						  gr.setValue("proof_of_address",input.dropDown);
+						  glideRecordIndividual.setValue("proof_of_address",input.dropDown);
 						 }
-          gr.update();
+          glideRecordIndividual.update();
         }
 				
         data.success = true;
@@ -443,27 +437,27 @@ h3 {
   // ---------------- Save Draft ----------------
   if (input && input.action === "saveDraft") {
     try {
-      var draftGr = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_individual_details");
-      if (draftGr.get(input.recordSysId)) {
+      var glideIndividualRecord = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_individual_details");
+      if (glideIndividualRecord.get(input.recordSysId)) {
         // Option 1: store everything as JSON in one field
-        if (draftGr.isValidField("u_draft_data")) {
-          draftGr.u_draft_data = input.draft;
+        if (glideIndividualRecord.isValidField("u_draft_data")) {
+          glideIndividualRecord.u_draft_data = input.draft;
         }
 
         // Option 2: map individual fields (if they exist in your table)
-        if (input.identityType && draftGr.isValidField("u_identity_type"))
-          draftGr.u_identity_type = input.identityType;
+        if (input.identityType && glideIndividualRecord.isValidField("u_identity_type"))
+          glideIndividualRecord.u_identity_type = input.identityType;
 
-        if (input.addressType && draftGr.isValidField("u_address_type"))
-          draftGr.u_address_type = input.addressType;
+        if (input.addressType && glideIndividualRecord.isValidField("u_address_type"))
+          glideIndividualRecord.u_address_type = input.addressType;
 
-        if (typeof input.onlyHolder !== "undefined" && draftGr.isValidField("u_only_holder"))
-          draftGr.u_only_holder = input.onlyHolder;
+        if (typeof input.onlyHolder !== "undefined" && glideIndividualRecord.isValidField("u_only_holder"))
+          glideIndividualRecord.u_only_holder = input.onlyHolder;
 
-        if (input.applicationMethod && draftGr.isValidField("u_application_method"))
-          draftGr.u_application_method = input.applicationMethod;
+        if (input.applicationMethod && glideIndividualRecord.isValidField("u_application_method"))
+          glideIndividualRecord.u_application_method = input.applicationMethod;
 
-        draftGr.update();
+        glideIndividualRecord.update();
         data.success = true;
       } else {
         data.success = false;
@@ -477,10 +471,8 @@ h3 {
 
   // ---------------- Map Attachment ----------------
   if (input && input.action === "mapAttachment") {
-    // currently just echoing back
     data.success = true;
     data.attachmentSysId = data.attachmentSysId || "";
-    // you can extend this if you want to remap attachment → field
   }
 })($sp);
 ]]></script>
@@ -489,14 +481,14 @@ h3 {
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-08-11 13:03:38</sys_created_on>
         <sys_id>6d86d2ed3bdf6214f13f5fea26e45acd</sys_id>
-        <sys_mod_count>237</sys_mod_count>
+        <sys_mod_count>243</sys_mod_count>
         <sys_name>FCC KYC Individual Document Upload</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_6d86d2ed3bdf6214f13f5fea26e45acd</sys_update_name>
-        <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-11-20 10:38:51</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-12-05 07:52:27</sys_updated_on>
         <template><![CDATA[
 
 <div class="section-title">Document Upload</div>

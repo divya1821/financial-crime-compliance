@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="c19537e73b117a10cb98111864e45aae" sys_domain="global" table="x_vuram_financia_0_user_reg_req_478024" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-11-25 11:11:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>199537e73b117a10cb98111864e45ace</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_user_reg_req_478024" name="x_vuram_financia_0_user_reg_req_478024" sys_domain="global" view="Default view">c19537e73b117a10cb98111864e45aae</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_user_reg_req_478024" sys_domain="global" view="Default view">9d9537e73b117a10cb98111864e45ac6</sys_ui_section>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-11-25 11:11:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-11-25 11:11:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d59537e73b117a10cb98111864e45ac6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_vuram_financia_0_user_reg_req_478024" name="x_vuram_financia_0_user_reg_req_478024" sys_domain="global" view="Default view">c19537e73b117a10cb98111864e45aae</sys_ui_form>
+            <sys_ui_section caption="Request details" display_value="Request details" name="x_vuram_financia_0_user_reg_req_478024" sys_domain="global" view="Default view">199537e73b117a10cb98111864e45ab2</sys_ui_section>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-11-25 11:11:20</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_vuram_financia_0_user_reg_req_478024</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>harini.ks</sys_created_by>
+            <sys_created_on>2025-11-25 11:11:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c19537e73b117a10cb98111864e45aae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vuram_financia_0_user_reg_req_478024</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_c19537e73b117a10cb98111864e45aae</sys_update_name>
+            <sys_updated_by>harini.ks</sys_updated_by>
+            <sys_updated_on>2025-11-25 11:11:19</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

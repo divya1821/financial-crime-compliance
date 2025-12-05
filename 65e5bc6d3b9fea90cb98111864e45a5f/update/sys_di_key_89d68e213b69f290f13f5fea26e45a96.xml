@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_di_key">
+    <sys_di_key action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_details/>
+        <description>A unique number used to identify an invoice. Usually appears in the form as "Invoice Number". 
+Examples: Invoice Number : IN-ADRTR-5665
+Invoice Number : ABCD- 45/6465627
+ Invoice No : IN-GH7653
+</description>
+        <display_name>Invoice Number</display_name>
+        <group_index>0</group_index>
+        <key_config/>
+        <key_group/>
+        <mandatory>true</mandatory>
+        <metadata/>
+        <name>invoicenumber</name>
+        <order>0</order>
+        <prediction_method>e3e501183d051210f877ad8c34c5c40d</prediction_method>
+        <stp_threshold/>
+        <synonym/>
+        <sys_class_name>sys_di_key</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 08:15:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>89d68e213b69f290f13f5fea26e45a96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Invoice Number</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_di_key_89d68e213b69f290f13f5fea26e45a96</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 08:15:17</sys_updated_on>
+        <target_field>sys_invoice_number</target_field>
+        <target_table>x_vuram_financia_0_fincrime_docintel</target_table>
+        <task_definition display_value="Fincrime demo docintel">ea7db16d3ba5f290f13f5fea26e45aa6</task_definition>
+        <total_used_positive_samples>0</total_used_positive_samples>
+        <type>Text</type>
+    </sys_di_key>
+</record_update>

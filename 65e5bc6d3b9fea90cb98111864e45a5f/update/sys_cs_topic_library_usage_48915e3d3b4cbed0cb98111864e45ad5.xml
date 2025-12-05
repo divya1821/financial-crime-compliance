@@ -2,20 +2,20 @@
     <sys_cs_topic_library_usage action="INSERT_OR_UPDATE">
         <calling_cs_topic_id display_value="Customer Onboarding Queries">08915e3d3b4cbed0cb98111864e45ace</calling_cs_topic_id>
         <library_cs_topic_id display_value="AI Output">fc4c14b2431cc21006650464dbb8f2a9</library_cs_topic_id>
-        <library_usage>{"type":"LibraryCall","library_topic_name":"AI Output","library_topic_id":"fc4c14b2431cc21006650464dbb8f2a9","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"definition","value":{"type":"String","mode":"script","value":"(function execute() {\n        var config = {\n            configuration: {\"description\":\"{{0}}\"}\n        };\n        return JSON.stringify(config);\n    })()"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"inputs","metadata":{"type":"String","list":true,"items":[{"type":"String","mode":"string","value":"Based on this user question {{vaInputs.user_asks_for_required_documents}}\ngive a proper response. The user will ask for onboarding queries like:\n1. What information/documents do I need to complete KYC Onboarding process?\n2.Which documents are acceptable for verification?\n3.Can I submit a photo of my documents instead of a scan?\n4.What if my document is expired or damaged?\n5.Can I submit multiple documents or just one?\nYou must answer the users' queries based on the common onboarding process carried out by the banking sector. specifically, here, the required documents for completion of KYC will be proof of identity and proof of address. design the response in a neat, bulleted way for the user"}],"use_items":true}}],"return-value-mappings":[],"header_card_fields":[],"id":"064f8b9694a3481ca8bd15eb59ad4fa2","name":"Bot response","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"AI Output","library_topic_id":"fc4c14b2431cc21006650464dbb8f2a9","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"definition","value":{"type":"String","mode":"script","value":"(function execute() {\n        var config = {\n            configuration: {\"description\":\"{{0}}\"}\n        };\n        return JSON.stringify(config);\n    })()"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"inputs","metadata":{"type":"String","list":true,"items":[{"type":"String","mode":"string","value":"Based on this user question {{vaInputs.user_asks_for_required_documents}}\ngive a proper response. The user will ask for onboarding queries like:\n1. What information/documents do I need to complete KYC Onboarding process?\n2.Which documents are acceptable for verification?\n3.Can I submit a photo of my documents instead of a scan?\n4.What if my document is expired or damaged?\n5.Can I submit multiple documents or just one?\nYou must answer the users' queries based on the common onboarding process carried out by the banking sector. specifically, here, the required documents for completion of KYC will be proof of identity and proof of address. design the response in a neat, bulleted way for the user"}],"use_items":true}}],"return-value-mappings":[],"header_card_fields":[],"input_parameters_mode":"dynamic","output_parameters_mode":"dynamic","id":"064f8b9694a3481ca8bd15eb59ad4fa2","name":"Bot response","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage>
         <node_id>064f8b9694a3481ca8bd15eb59ad4fa2</node_id>
         <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
         <sys_created_by>divya.suresh</sys_created_by>
         <sys_created_on>2025-09-18 14:06:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>48915e3d3b4cbed0cb98111864e45ad5</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_cs_topic_library_usage_48915e3d3b4cbed0cb98111864e45ad5</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-09-29 11:30:06</sys_updated_on>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-11-18 06:25:08</sys_updated_on>
     </sys_cs_topic_library_usage>
 </record_update>

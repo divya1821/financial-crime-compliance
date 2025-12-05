@@ -115,7 +115,7 @@ c.countrySearch = "";
 
 
   // Dropdown options
-  //c.customerTypes = ["Individual", "Corporate", "Partnership", "Trust", "Government"];
+ 
 	c.customerTypes = [
   "Private",
   "Public",
@@ -137,7 +137,7 @@ c.countrySearch = "";
   "Consumer Loan",
   "Cards"
 ];
-  //c.productServices = ["Banking", "Insurance", "Investment", "Loans", "Advisory"];
+  
   c.customerSubTypes = ["Private Limited", "Public Limited", "LLP", "Sole Proprietor", "Non-Profit"];
   c.listedCountries = ["USA", "UK", "India", "Germany", "Singapore", "Australia"];
 
@@ -162,7 +162,7 @@ c.updateUSD = function() {
   var rate = c.exchangeRates[c.formData.currencyType] || 1;  
   var localAmount = c.formData.amountInLocal || 0;  
   c.formData.annualRevenue = parseInt(localAmount * rate);
-	//alert(c.formData.amountInUSD);
+	
 };
 
 	
@@ -203,7 +203,7 @@ c.updateUSD = function() {
   cashWithdrawal: parseInt(c.data.cash_withdrawal) || 0,
   achDeposit: parseInt(c.data.ach_deposit) || 0,
   chequeDeposit: parseInt(c.data.cheque_deposit) || 0,
-  asOfDate: new Date("2025-09-13"), // ✅ fixed
+  asOfDate: new Date(), // ✅ fixed
 
   amountInLocal: parseInt(c.data.amount_in_local_currency) || 0,
   annualRevenue: parseInt(c.data.annual_revenue) || 0,
@@ -440,7 +440,7 @@ c.submitForm = function() {
   }).then(function(response) {
     if (response.data.status_of_submit) {
       spUtil.addInfoMessage("Application submitted successfully!");
-      $location.url = "/fcc_kyc";
+      $location.url("/fcc_kyc");
     } else {
       alert("Not Updated");
     }
@@ -448,6 +448,8 @@ c.submitForm = function() {
     console.error("Submit failed:", err);
   });
 };
+	
+	
 	c.onFileSelect = function(files) {
   if (files && files.length > 0) {
     c.listingProof = Array.from(files);
@@ -457,6 +459,19 @@ c.submitForm = function() {
 	c.triggerFileUpload = function(inputId) {
   document.getElementById(inputId).click();
 };
+	
+c.finalSubmit = function () {
+    c.server.update({
+        action: "submit",
+        individuals: c.data.individuals,
+        nonIndividuals: c.data.nonIndividuals,
+        controllers: c.data.controllers,
+        authorizedSigners: c.data.authorizedSigners
+    }).then(function(response) {
+        console.log("Submit completed.");
+    });
+};
+
 
   // Load saved data
   var savedData = localStorage.getItem('bankingFormData');
@@ -1236,22 +1251,25 @@ body, .kyc-container {
         <name>FCC KYC Entity Form</name>
         <option_schema/>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <script><![CDATA[(function($sp) {
 
     data.message = '';
     data.url = '';	
     data.sys_id = '';
+
+	var glideRecordEntity = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_entity_details");
+	var table = 'x_vuram_financia_0_fcc_kyc_entity_details';
+
     /* populate the 'data' object */
     /* e.g., data.table = $sp.getValue('table'); */
-    //console.log('Hi');
 	if (input && input.action === "upload") {
     try {
-      var gr = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_entity_details");
-      if (gr.get(input.recordSysId)) {
+      
+      if (glideRecordEntity.get(input.recordSysId)) {
         var gsaa= new GlideSysAttachment();
         var attachmentSysId = gsaa.writeBase64(
-          gr,
+          glideRecordEntity,
           input.fileName,   // filename
           input.fileType,   // MIME type
           input.fileContent // Base64 string
@@ -1259,9 +1277,8 @@ body, .kyc-container {
 
         // map to specific field if provided
         if (input.fieldName) {
-          gr.setValue(input.fieldName, attachmentSysId);
-					//gs.addErrorMessage(attachmentSysId+"-"+input.recordSysId);
-          gr.update();
+          glideRecordEntity.setValue(input.fieldName, attachmentSysId);
+          glideRecordEntity.update();
         }
 				
         data.success = true;
@@ -1276,35 +1293,31 @@ body, .kyc-container {
     }
   }
 	
-	var table = 'x_vuram_financia_0_fcc_kyc_entity_details';
     var userEmail = gs.getUser().getEmail();
 
     // Create record (NO status update here)
     if (input && input.action === 'createRecord') {
-        var grInd = new GlideRecordSecure(table);
-        grInd.addQuery('email_id', userEmail);
-        grInd.query();
+        glideRecordEntity.addQuery('email_id', userEmail);
+        glideRecordEntity.query();
 
-        if (grInd.next()) {
+        if (glideRecordEntity.next()) {
             // just return sys_id
-            data.sys_id = grInd.sys_id.toString();
+            data.sys_id = glideRecordEntity.sys_id.toString();
         }
     }
 
     // Get QR record
     if (input && input.action === 'getRecord') {
-        var gr2 = new GlideRecordSecure(table);
-        if (gr2.get(input.sys_id)) {
-            data.url = gr2.getValue('video_kyc_link');
+        if (glideRecordEntity.get(input.sys_id)) {
+            data.url = glideRecordEntity.getValue('video_kyc_link');
         }
     }
 
     // Update status when proceeding
     if (input && input.action === 'markStarted') {
-        var gr3 = new GlideRecordSecure(table);
-        if (gr3.get(input.sys_id)) {
-            gr3.video_kyc_status = "started";
-            gr3.update();
+        if (glideRecordEntity.get(input.sys_id)) {
+            glideRecordEntity.video_kyc_status = "started";
+            glideRecordEntity.update();
             data.message = 'Record updated as started';
         }
     }
@@ -1313,26 +1326,24 @@ body, .kyc-container {
 	
 	
     var user = gs.getUser();
-   // var userEmail = user.getEmail();
-    //var userEmail = "tyla.connor@gmail.com";
+
     if (input && input.action === 'upload_financial') {
         try {
-            var grfin = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
-            if (grfin.get(input.recordSysId)) {
+            if (glideRecordEntity.get(input.recordSysId)) {
                 var gsa = new GlideSysAttachment();
 
                 // Save attachment into sys_attachment table
                 var newId = gsa.writeBase64(
-                    grfin, // target record
+                    glideRecordEntity, // target record
                     "FINANCIAL_STATEMENT_" + input.fileName, // file name
                     input.fileType, // mime type
                     input.fileContent // base64 string
                 );
 
                 // (Optional) update reference field if your table has one
-                if (grfin.isValidField("upload_audited_financial_statement")) {
-                    grfin.upload_audited_financial_statement = newId;
-                    grfin.update();
+                if (glideRecordEntity.isValidField("upload_audited_financial_statement")) {
+                    glideRecordEntity.upload_audited_financial_statement = newId;
+                    glideRecordEntity.update();
                 }
 
                 data.success = true;
@@ -1348,107 +1359,106 @@ body, .kyc-container {
         return; // stop here so it won’t run submit logic
     }
     if (input && input.action == 'submit') {
+			
+			
         var x = 0;
         var record = JSON.parse(input.record);
         arr_vy = [].concat(record.nonIndividuals, record.individuals, record.controllers, record.authorizedSigners);
-        var grEnt = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_ownerships');
-        grEnt.addQuery('fcc_kyc_case.entity.email_id', userEmail);
-        grEnt.orderByDesc('number');
-        grEnt.setLimit(9);
-        grEnt.query();
-        while (grEnt.next()) {
+        var glideRecordOwnership = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_ownerships');
+        glideRecordOwnership.addQuery('fcc_kyc_case.entity.email_id', userEmail);
+        glideRecordOwnership.orderByDesc('number');
+        glideRecordOwnership.setLimit(9);
+        glideRecordOwnership.query();
+        while (glideRecordOwnership.next()) {
 
-            if (grEnt.type != 'entity') {
-                grEnt.first_name = arr_vy[x].first_name;
-                grEnt.middle_name = arr_vy[x].middle_name;
-                grEnt.last_name = arr_vy[x].last_name;
-                grEnt.address_line = arr_vy[x].address_line;
-                grEnt.postal_code = arr_vy[x].postal_code;
-                grEnt.city = arr_vy[x].city;
-                grEnt.dob = arr_vy[x].dob;
-                grEnt.country_of_residence = arr_vy[x].country_of_residence;
-                grEnt.country_of_nationality = arr_vy[x].country_of_nationality;
+            if (glideRecordOwnership.type != 'entity') {
+                glideRecordOwnership.first_name = arr_vy[x].first_name;
+                glideRecordOwnership.middle_name = arr_vy[x].middle_name;
+                glideRecordOwnership.last_name = arr_vy[x].last_name;
+                glideRecordOwnership.address_line = arr_vy[x].address_line;
+                glideRecordOwnership.postal_code = arr_vy[x].postal_code;
+                glideRecordOwnership.city = arr_vy[x].city;
+                glideRecordOwnership.dob = arr_vy[x].dob;
+                glideRecordOwnership.country_of_residence = arr_vy[x].country_of_residence;
+                glideRecordOwnership.country_of_nationality = arr_vy[x].country_of_nationality;
             } else {
-                grEnt.full_legal_name = arr_vy[x].full_legal_name.toString();
-                grEnt.address_line = arr_vy[x].address_line.toString();
-                grEnt.postal_code = arr_vy[x].postal_code.toString();
-                grEnt.city = arr_vy[x].city.toString();
-                grEnt.country_of_incorporation = arr_vy[x].country_of_incorporation.toString();
+                glideRecordOwnership.full_legal_name = arr_vy[x].full_legal_name.toString();
+                glideRecordOwnership.address_line = arr_vy[x].address_line.toString();
+                glideRecordOwnership.postal_code = arr_vy[x].postal_code.toString();
+                glideRecordOwnership.city = arr_vy[x].city.toString();
+                glideRecordOwnership.country_of_incorporation = arr_vy[x].country_of_incorporation.toString();
             }
             x++;
-            if (grEnt.update()) { // gs.addInfoMessage("Updated"+grEnt.number);
+            if (glideRecordOwnership.update()) { 
             } else
-                gs.addErrorMessage("Not updated" + grEnt.number);
+                gs.addErrorMessage("Not updated" + glideRecordOwnership.number);
 
 
         }
 
-        //userEmail = gs.getUser().getEmail();
+        
         enq = "email_id=" + userEmail;
-       // console.log("Inside - " + enq);
-        var grInd1 = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
-        grInd1.addQuery('email_id', userEmail);
-        grInd1.query();
+        glideRecordEntity.addQuery('email_id', userEmail);
+        glideRecordEntity.query();
 
-        if (grInd1.next()) {
-					  grInd1.listing_details = record.listingProof;
-            grInd1.legal_name = record.legalName;
-            grInd1.doing_business_as_name = record.doingBusinessAsName;
-            grInd1.sic = record.sic;
-					  grInd1.same_as_legal_address=record.sameAsLegal;
-            grInd1.sic_description = record.sicDescription;
-            grInd1.customer_type = record.customerType;
-            grInd1.product_services = record.productServices;
-            grInd1.registration_number = record.registrationNumber;
-            grInd1.customer_sub_type = record.customerSubType;
-            grInd1.country_of_domicile = record.domicileCountry;
-            grInd1.describe_legal_entity_type_free_text = record.legalEntityDescription;
-            grInd1.is_the_customer_traded_on_an_exchange = record.isTradedOnExchange;
-            grInd1.if_listed_which_country_it_is_listed = record.listedCountriesSelected.toString();
-            grInd1.primary_country_of_assets = record.primaryAssetsCountry;
-            grInd1.legal_street_address = record.legalStreetAddress;
-            grInd1.legal_postal_code = record.legalPostalCode;
-            grInd1.legal_city = record.legalCity;
-            grInd1.legal_country = record.legalCountry;
-            grInd1.physical_street_address = record.physicalStreet;
-            grInd1.physical_postal_code = record.physicalPostalCode;
-            grInd1.physical_city = record.physicalCity;
-            grInd1.physical_country = record.physicalCountry;
-            grInd1.local_currency = record.currencyType;
-            grInd1.total_assets.setDisplayValue(record.currencyType + ";" + record.totalAssets);
-            grInd1.amount_in_usd.setDisplayValue("USD;" + record.amountInUSD);
-            grInd1.describe_the_source_of_annual_revenue = record.annualRevenueSource;
-            grInd1.cheque_withdrawal = record.chequeWithdrawal
-            grInd1.atm_withdrawal = record.atmWithdrawal;
-            grInd1.ach_withdrawal = record.achWithdrawal;
-            grInd1.cash_withdrawal = record.cashWithdrawal;
-            grInd1.ach_deposit = record.achDeposit;
-            grInd1.cheque_deposit = record.chequeDeposit;
-            grInd1.cash_deposit = record.cashDeposit;
-            grInd1.as_of_date = record.asOfDate;
-            grInd1.amount_in_local_currency.setDisplayValue(record.currencyType + ";" + record.amountInLocal);
-            grInd1.annual_revenue.setDisplayValue("USD;" + record.annualRevenue);
-            grInd1.estimated_annual_transaction_volume = record.transactionVolume;
-            grInd1.describe_the_customer_significant_suppliers_free_text = record.significantSuppliers;
-            grInd1.countries_of_the_customer_s_significant_suppliers = record.listedCountriesSelectedd.toString();
-            grInd1.nature_of_business = record.natureOfBusiness;
-            grInd1.is_there_significant_private_ownership = record.privateOwnership;
+        if (glideRecordEntity.next()) {
+					  glideRecordEntity.listing_details = record.listingProof;
+            glideRecordEntity.legal_name = record.legalName;
+            glideRecordEntity.doing_business_as_name = record.doingBusinessAsName;
+            glideRecordEntity.sic = record.sic;
+					  glideRecordEntity.same_as_legal_address=record.sameAsLegal;
+            glideRecordEntity.sic_description = record.sicDescription;
+            glideRecordEntity.customer_type = record.customerType;
+            glideRecordEntity.product_services = record.productServices;
+            glideRecordEntity.registration_number = record.registrationNumber;
+            glideRecordEntity.customer_sub_type = record.customerSubType;
+            glideRecordEntity.country_of_domicile = record.domicileCountry;
+            glideRecordEntity.describe_legal_entity_type_free_text = record.legalEntityDescription;
+            glideRecordEntity.is_the_customer_traded_on_an_exchange = record.isTradedOnExchange;
+            glideRecordEntity.if_listed_which_country_it_is_listed = record.listedCountriesSelected.toString();
+            glideRecordEntity.primary_country_of_assets = record.primaryAssetsCountry;
+            glideRecordEntity.legal_street_address = record.legalStreetAddress;
+            glideRecordEntity.legal_postal_code = record.legalPostalCode;
+            glideRecordEntity.legal_city = record.legalCity;
+            glideRecordEntity.legal_country = record.legalCountry;
+            glideRecordEntity.physical_street_address = record.physicalStreet;
+            glideRecordEntity.physical_postal_code = record.physicalPostalCode;
+            glideRecordEntity.physical_city = record.physicalCity;
+            glideRecordEntity.physical_country = record.physicalCountry;
+            glideRecordEntity.local_currency = record.currencyType;
+            glideRecordEntity.total_assets.setDisplayValue(record.currencyType + ";" + record.totalAssets);
+            glideRecordEntity.amount_in_usd.setDisplayValue("USD;" + record.amountInUSD);
+            glideRecordEntity.describe_the_source_of_annual_revenue = record.annualRevenueSource;
+            glideRecordEntity.cheque_withdrawal = record.chequeWithdrawal
+            glideRecordEntity.atm_withdrawal = record.atmWithdrawal;
+            glideRecordEntity.ach_withdrawal = record.achWithdrawal;
+            glideRecordEntity.cash_withdrawal = record.cashWithdrawal;
+            glideRecordEntity.ach_deposit = record.achDeposit;
+            glideRecordEntity.cheque_deposit = record.chequeDeposit;
+            glideRecordEntity.cash_deposit = record.cashDeposit;
+            glideRecordEntity.as_of_date = record.asOfDate;
+            glideRecordEntity.amount_in_local_currency.setDisplayValue(record.currencyType + ";" + record.amountInLocal);
+            glideRecordEntity.annual_revenue.setDisplayValue("USD;" + record.annualRevenue);
+            glideRecordEntity.estimated_annual_transaction_volume = record.transactionVolume;
+            glideRecordEntity.describe_the_customer_significant_suppliers_free_text = record.significantSuppliers;
+            glideRecordEntity.countries_of_the_customer_s_significant_suppliers = record.listedCountriesSelectedd.toString();
+            glideRecordEntity.nature_of_business = record.natureOfBusiness;
+            glideRecordEntity.is_there_significant_private_ownership = record.privateOwnership;
 
 
-            if (grInd1.update()) {
+            if (glideRecordEntity.update()) {
                 data.status_of_submit = true;
-                data.individual_sys_id = grInd1.sys_id;
-                var grCase = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_cases");
-                grCase.addQuery('entity', grInd1.sys_id);
-                grCase.query();
+                data.individual_sys_id = glideRecordEntity.sys_id;
+                var glideRecordCase = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_cases");
+                glideRecordCase.addQuery('entity', glideRecordEntity.sys_id);
+                glideRecordCase.query();
 
-                if (grCase.next()) {
-                    grCase.state = 150;
-                    grCase.assigned_to = '';
-                    //	grCase.assigned_to='380f8c683be3e610f13f5fea26e45a3b';
-                    if (grCase.update()) {
+                if (glideRecordCase.next()) {
+                    glideRecordCase.state = 150;
+                    glideRecordCase.assigned_to = '';
+                    if (glideRecordCase.update()) {
                         data.case_updated = true;
-                        data.case_sys_id = grCase.sys_id;
+                        data.case_sys_id = glideRecordCase.sys_id;
                     } else {
                         data.case_updated = false;
                     }
@@ -1457,165 +1467,251 @@ body, .kyc-container {
             } else {
                 data.status_of_submit = false;
             }
-            gs.info('Updated record with sys_id: ' + grInd1.sys_id);
+            gs.info('Updated record with sys_id: ' + glideRecordEntity.sys_id);
         } else {
             gs.info("No Entity Found");
         }
+			
+
+    gs.info("==== OWNERSHIP SUBMIT TRIGGERED ====");
+
+    // --------------------------
+    // Parse double-encoded record
+    // --------------------------
+    var rec = {};
+    try {
+        rec = JSON.parse(input.record);
+        gs.info("Parsed Record Object: " + JSON.stringify(rec));
+    } catch (e) {
+        gs.error("FAILED TO PARSE input.record: " + e);
+        return;
+    }
+
+    // Helper: Insert ownership entry
+    function insertOwnership(type, obj) {
+
+        gs.info("Creating " + type + " record with data: " + JSON.stringify(obj));
+
+        var glideRecordEntity = new GlideRecordSecure("x_vuram_financia_0_fcc_kyc_ownerships");
+			
+			gs.info("Glide to ownership table completed");
+       glideRecordEntity.initialize();
+			
+			gs.info("Table initialized");
+
+        glideRecordEntity.type = type;
+
+        // Your table fields:
+        glideRecordEntity.first_name = obj.first_name || "";
+        glideRecordEntity.last_name = obj.last_name || "";
+        glideRecordEntity.address_line = obj.address_line || "";
+        glideRecordEntity.postal_code = obj.postal_code || "";
+        glideRecordEntity.city = obj.city || "";
+        glideRecordEntity.dob = obj.dob || "";
+        glideRecordEntity.country_of_residence = obj.country_of_residence || "";
+        glideRecordEntity.country_of_nationality = obj.country_of_nationality || "";
+
+        var sys_id = glideRecordEntity.insert();
+        gs.info("Inserted ownership record sys_id = " + sys_id);
+    }
+
+    // --------------------------
+    // INDIVIDUALS
+    // --------------------------
+    gs.info("Individuals received: " + JSON.stringify(rec.individuals));
+
+    if (rec.individuals && rec.individuals.length > 0) {
+        rec.individuals.forEach(function(ind, idx) {
+            gs.info("Processing Individual #" + idx);
+            insertOwnership("individual", ind);
+        });
+    } else {
+        gs.info("No Individuals found.");
+    }
+
+    // --------------------------
+    // NON-INDIVIDUALS (ENTITY)
+    // --------------------------
+    gs.info("Non-Individuals received: " + JSON.stringify(rec.nonIndividuals));
+
+    if (rec.nonIndividuals && rec.nonIndividuals.length > 0) {
+        rec.nonIndividuals.forEach(function(entity, idx) {
+            gs.info("Processing Non-Individual Entity #" + idx);
+            insertOwnership("entity", entity);
+        });
+    } else {
+        gs.info("No Non-Individuals found.");
+    }
+
+    // --------------------------
+    // CONTROLLERS
+    // --------------------------
+    gs.info("Controllers received: " + JSON.stringify(rec.controllers));
+
+    if (rec.controllers && rec.controllers.length > 0) {
+        rec.controllers.forEach(function(ctrl, idx) {
+            gs.info("Processing Controller #" + idx);
+            insertOwnership("controller", ctrl);
+        });
+    } else {
+        gs.info("No Controllers found.");
+    }
+
+    // --------------------------
+    // AUTHORIZED SIGNERS
+    // --------------------------
+    gs.info("Authorized Signers received: " + JSON.stringify(rec.authorizedSigners));
+
+    if (rec.authorizedSigners && rec.authorizedSigners.length > 0) {
+        rec.authorizedSigners.forEach(function(sign, idx) {
+            gs.info("Processing Authorized Signer #" + idx);
+            insertOwnership("authorized_signers", sign);
+        });
+    } else {
+        gs.info("No Authorized Signers found.");
+    }
+
+    gs.info("==== OWNERSHIP INSERT COMPLETED ====");
+
 
 
     }
 
-
-    var table = 'x_vuram_financia_0_fcc_kyc_entity_details';
-    //var userEmail = "tyla.connor@gmail.com";
-   // var userEmail = user.getEmail();
     var sysIds = [];
 
-    var grInd = new GlideRecordSecure(table);
-    grInd.addQuery('email_id', userEmail);
-    grInd.query();
+    glideRecordEntity.addQuery('email_id', userEmail);
+    glideRecordEntity.query();
 
-    if (grInd.next()) {
+    if (glideRecordEntity.next()) {
 
-       // console.log("HELLO");
-        // just return sys_id
-        data.sys_id = grInd.sys_id.toString();
-        data.legal_name = grInd.getValue('legal_name');
-        data.doing_business_as_name = grInd.doing_business_as_name.toString();
-        //data.doing_business_as_name = grInd.legal_name.toString();
-			  data.same_as_legal_address=grInd.same_as_legal_address;
-        data.sic = grInd.sic.toString();
-        data.customer_type = grInd.customer_type.toString();
-        data.product_services = grInd.product_services.toString();
-        data.registration_number = grInd.registration_number.toString();
-        data.country_of_domicile = grInd.country_of_domicile.toString();
-        data.customer_sub_type = grInd.customer_sub_type.toString();
-        data.sic_description = grInd.sic_description.toString();
-        data.describe_legal_entity_type_free_text = grInd.describe_legal_entity_type_free_text.toString();
-        data.is_the_customer_traded_on_an_exchange = grInd.is_the_customer_traded_on_an_exchange;
-        data.if_listed_which_country_it_is_listed = grInd.if_listed_which_country_it_is_listed;
-        data.primary_country_of_assets = grInd.primary_country_of_assets.toString();
-        data.legal_street_address = grInd.legal_street_address.toString();
-        data.legal_postal_code = grInd.legal_postal_code.toString();
-        data.legal_city = grInd.legal_city.toString();
-        data.legal_country = grInd.legal_country.toString();
-        data.physical_street_address = grInd.physical_street_address.toString();
-        data.physical_postal_code = grInd.physical_postal_code.toString();
-        data.physical_city = grInd.physical_city.toString();
-        data.physical_country = grInd.physical_country.toString();
-        data.total_assets = grInd.total_assets.getValue();
-        data.amount_in_usd = grInd.amount_in_usd.getValue();
-        data.describe_the_source_of_annual_revenue = grInd.describe_the_source_of_annual_revenue.toString();
-        data.local_currency = grInd.local_currency.getValue();
-        data.cheque_withdrawal = grInd.cheque_withdrawal.getValue();
-        data.atm_withdrawal = grInd.atm_withdrawal.getDisplayValue();
-        data.ach_withdrawal = grInd.ach_withdrawal.getDisplayValue();
-        data.cash_deposit = grInd.cash_deposit.getValue();
-        data.cash_withdrawal = grInd.cash_withdrawal.getDisplayValue();
-        data.ach_deposit = grInd.ach_deposit.getDisplayValue();
-        data.cheque_deposit = grInd.cheque_deposit.getDisplayValue();
-        data.as_of_date = grInd.as_of_date.toString();
-        data.amount_in_local_currency = grInd.amount_in_local_currency.getValue();
-        data.annual_revenue = grInd.annual_revenue.getValue();
-        data.estimated_annual_transaction_volume = grInd.estimated_annual_transaction_volume.getDisplayValue();
-        data.describe_the_customer_significant_suppliers_free_text = grInd.describe_the_customer_significant_suppliers_free_text.toString();
-        data.countries_of_the_customer_s_significant_suppliers = grInd.countries_of_the_customer_s_significant_suppliers.toString();
-        data.nature_of_business = grInd.nature_of_business.toString();
-        data.is_there_significant_private_ownership = grInd.is_there_significant_private_ownership;
-      //  console.log(data.as_of_date + "..." + typeof(data.as_of_date));
-        if (!gs.nil(grInd.controllers)) {
-            sysIds = sysIds.concat(grInd.controllers.split(','));
+        data.sys_id = glideRecordEntity.sys_id.toString();
+        data.legal_name = glideRecordEntity.getValue('legal_name');
+        data.doing_business_as_name = glideRecordEntity.doing_business_as_name.toString();
+        //data.doing_business_as_name = glideRecordEntity.legal_name.toString();
+			  data.same_as_legal_address=glideRecordEntity.same_as_legal_address;
+        data.sic = glideRecordEntity.sic.toString();
+        data.customer_type = glideRecordEntity.customer_type.toString();
+        data.product_services = glideRecordEntity.product_services.toString();
+        data.registration_number = glideRecordEntity.registration_number.toString();
+        data.country_of_domicile = glideRecordEntity.country_of_domicile.toString();
+        data.customer_sub_type = glideRecordEntity.customer_sub_type.toString();
+        data.sic_description = glideRecordEntity.sic_description.toString();
+        data.describe_legal_entity_type_free_text = glideRecordEntity.describe_legal_entity_type_free_text.toString();
+        data.is_the_customer_traded_on_an_exchange = glideRecordEntity.is_the_customer_traded_on_an_exchange;
+        data.if_listed_which_country_it_is_listed = glideRecordEntity.if_listed_which_country_it_is_listed;
+        data.primary_country_of_assets = glideRecordEntity.primary_country_of_assets.toString();
+        data.legal_street_address = glideRecordEntity.legal_street_address.toString();
+        data.legal_postal_code = glideRecordEntity.legal_postal_code.toString();
+        data.legal_city = glideRecordEntity.legal_city.toString();
+        data.legal_country = glideRecordEntity.legal_country.toString();
+        data.physical_street_address = glideRecordEntity.physical_street_address.toString();
+        data.physical_postal_code = glideRecordEntity.physical_postal_code.toString();
+        data.physical_city = glideRecordEntity.physical_city.toString();
+        data.physical_country = glideRecordEntity.physical_country.toString();
+        data.total_assets = glideRecordEntity.total_assets.getValue();
+        data.amount_in_usd = glideRecordEntity.amount_in_usd.getValue();
+        data.describe_the_source_of_annual_revenue = glideRecordEntity.describe_the_source_of_annual_revenue.toString();
+        data.local_currency = glideRecordEntity.local_currency.getValue();
+        data.cheque_withdrawal = glideRecordEntity.cheque_withdrawal.getValue();
+        data.atm_withdrawal = glideRecordEntity.atm_withdrawal.getDisplayValue();
+        data.ach_withdrawal = glideRecordEntity.ach_withdrawal.getDisplayValue();
+        data.cash_deposit = glideRecordEntity.cash_deposit.getValue();
+        data.cash_withdrawal = glideRecordEntity.cash_withdrawal.getDisplayValue();
+        data.ach_deposit = glideRecordEntity.ach_deposit.getDisplayValue();
+        data.cheque_deposit = glideRecordEntity.cheque_deposit.getDisplayValue();
+        data.as_of_date = glideRecordEntity.as_of_date.toString();
+        data.amount_in_local_currency = glideRecordEntity.amount_in_local_currency.getValue();
+        data.annual_revenue = glideRecordEntity.annual_revenue.getValue();
+        data.estimated_annual_transaction_volume = glideRecordEntity.estimated_annual_transaction_volume.getDisplayValue();
+        data.describe_the_customer_significant_suppliers_free_text = glideRecordEntity.describe_the_customer_significant_suppliers_free_text.toString();
+        data.countries_of_the_customer_s_significant_suppliers = glideRecordEntity.countries_of_the_customer_s_significant_suppliers.toString();
+        data.nature_of_business = glideRecordEntity.nature_of_business.toString();
+        data.is_there_significant_private_ownership = glideRecordEntity.is_there_significant_private_ownership;
+      
+        if (!gs.nil(glideRecordEntity.controllers)) {
+            sysIds = sysIds.concat(glideRecordEntity.controllers.split(','));
         }
-        if (!gs.nil(grInd.individual_10_ownership)) {
-            sysIds = sysIds.concat(grInd.individual_10_ownership.split(','));
+        if (!gs.nil(glideRecordEntity.individual_10_ownership)) {
+            sysIds = sysIds.concat(glideRecordEntity.individual_10_ownership.split(','));
         }
-        if (!gs.nil(grInd.non_individual_10_ownership)) {
-            sysIds = sysIds.concat(grInd.non_individual_10_ownership.split(','));
+        if (!gs.nil(glideRecordEntity.non_individual_10_ownership)) {
+            sysIds = sysIds.concat(glideRecordEntity.non_individual_10_ownership.split(','));
         }
-        if (!gs.nil(grInd.authorised_signers)) {
-            sysIds = sysIds.concat(grInd.authorised_signers.split(','));
+        if (!gs.nil(glideRecordEntity.authorised_signers)) {
+            sysIds = sysIds.concat(glideRecordEntity.authorised_signers.split(','));
         }
 
 
     }
-
-
-
 
     // Remove blanks & duplicates
     sysIds = sysIds.filter(function(id) {
         return id && id.trim();
     });
-   // console.log(sysIds + '');
+   
     data.individuals = [];
     data.controllers = [];
     data.authorizedSigners = [];
     data.nonIndividuals = [];
 
-    var gr_con = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_ownerships');
-    gr_con.addQuery('sys_id', 'IN', sysIds + '');
-    gr_con.query();
-    gr_con.orderByDesc('number');
-    while (gr_con.next()) {
+    var glideRecordCaseOwnership = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_ownerships');
+    glideRecordCaseOwnership.addQuery('sys_id', 'IN', sysIds + '');
+    glideRecordCaseOwnership.query();
+    glideRecordCaseOwnership.orderByDesc('number');
+    while (glideRecordCaseOwnership.next()) {
 
-        if (gr_con.type == 'individual') {
+        if (glideRecordCaseOwnership.type == 'individual') {
             data.individuals.push({
-                first_name: gr_con.first_name.toString(),
-                middle_name: gr_con.middle_name.toString(),
-                last_name: gr_con.last_name.toString(),
-                address_line: gr_con.address_line.toString(),
-                postal_code: gr_con.postal_code.toString(),
-                city: gr_con.city.toString(),
-                dob: gr_con.dob.toString(),
-                country_of_residence: gr_con.country_of_residence.toString(),
-                country_of_nationality: gr_con.country_of_nationality.toString()
+                first_name: glideRecordCaseOwnership.first_name.toString(),
+                middle_name: glideRecordCaseOwnership.middle_name.toString(),
+                last_name: glideRecordCaseOwnership.last_name.toString(),
+                address_line: glideRecordCaseOwnership.address_line.toString(),
+                postal_code: glideRecordCaseOwnership.postal_code.toString(),
+                city: glideRecordCaseOwnership.city.toString(),
+                dob: glideRecordCaseOwnership.dob.toString(),
+                country_of_residence: glideRecordCaseOwnership.country_of_residence.toString(),
+                country_of_nationality: glideRecordCaseOwnership.country_of_nationality.toString()
 
             });
-        } else if (gr_con.type == 'controller') {
+        } else if (glideRecordCaseOwnership.type == 'controller') {
             data.controllers.push({
-                first_name: gr_con.first_name.toString(),
-                middle_name: gr_con.middle_name.toString(),
-                last_name: gr_con.last_name.toString(),
-                address_line: gr_con.address_line.toString(),
-                postal_code: gr_con.postal_code.toString(),
-                city: gr_con.city.toString(),
-                dob: gr_con.dob.toString(),
-                country_of_residence: gr_con.country_of_residence.toString(),
-                country_of_nationality: gr_con.country_of_nationality.toString()
+                first_name: glideRecordCaseOwnership.first_name.toString(),
+                middle_name: glideRecordCaseOwnership.middle_name.toString(),
+                last_name: glideRecordCaseOwnership.last_name.toString(),
+                address_line: glideRecordCaseOwnership.address_line.toString(),
+                postal_code: glideRecordCaseOwnership.postal_code.toString(),
+                city: glideRecordCaseOwnership.city.toString(),
+                dob: glideRecordCaseOwnership.dob.toString(),
+                country_of_residence: glideRecordCaseOwnership.country_of_residence.toString(),
+                country_of_nationality: glideRecordCaseOwnership.country_of_nationality.toString()
 
             });
-        } else if (gr_con.type == 'authorized_signers') {
+        } else if (glideRecordCaseOwnership.type == 'authorized_signers') {
             data.authorizedSigners.push({
-                first_name: gr_con.first_name.toString(),
-                middle_name: gr_con.middle_name.toString(),
-                last_name: gr_con.last_name.toString(),
-                address_line: gr_con.address_line.toString(),
-                postal_code: gr_con.postal_code.toString(),
-                city: gr_con.city.toString(),
-                dob: gr_con.dob.toString(),
-                country_of_residence: gr_con.country_of_residence.toString(),
-                country_of_nationality: gr_con.country_of_nationality.toString()
+                first_name: glideRecordCaseOwnership.first_name.toString(),
+                middle_name: glideRecordCaseOwnership.middle_name.toString(),
+                last_name: glideRecordCaseOwnership.last_name.toString(),
+                address_line: glideRecordCaseOwnership.address_line.toString(),
+                postal_code: glideRecordCaseOwnership.postal_code.toString(),
+                city: glideRecordCaseOwnership.city.toString(),
+                dob: glideRecordCaseOwnership.dob.toString(),
+                country_of_residence: glideRecordCaseOwnership.country_of_residence.toString(),
+                country_of_nationality: glideRecordCaseOwnership.country_of_nationality.toString()
 
             });
-        } else if (gr_con.type == 'entity') {
+        } else if (glideRecordCaseOwnership.type == 'entity') {
             data.nonIndividuals.push({
-                full_legal_name: gr_con.full_legal_name.toString(),
-                address_line: gr_con.address_line.toString(),
-                postal_code: gr_con.postal_code.toString(),
-                city: gr_con.city.toString(),
-                country_of_incorporation: gr_con.country_of_incorporation.toString()
+                full_legal_name: glideRecordCaseOwnership.full_legal_name.toString(),
+                address_line: glideRecordCaseOwnership.address_line.toString(),
+                postal_code: glideRecordCaseOwnership.postal_code.toString(),
+                city: glideRecordCaseOwnership.city.toString(),
+                country_of_incorporation: glideRecordCaseOwnership.country_of_incorporation.toString()
             });
         }
 
     }
 
-
-
-
     var form = $sp.getForm(table);
-
-
-   // console.log('Case Form - ' + JSON.stringify(form, null, 2));
 
 })($sp);]]></script>
         <servicenow>false</servicenow>
@@ -1623,14 +1719,14 @@ body, .kyc-container {
         <sys_created_by>nauman.ansari</sys_created_by>
         <sys_created_on>2025-08-12 13:33:19</sys_created_on>
         <sys_id>6d27e7b13b9b2210f13f5fea26e45a72</sys_id>
-        <sys_mod_count>473</sys_mod_count>
+        <sys_mod_count>486</sys_mod_count>
         <sys_name>FCC KYC Entity Form</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_6d27e7b13b9b2210f13f5fea26e45a72</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-11-21 06:49:23</sys_updated_on>
+        <sys_updated_by>varunapriyan.k</sys_updated_by>
+        <sys_updated_on>2025-12-05 07:51:12</sys_updated_on>
         <template><![CDATA[ <div class="banking-form-widget" ng-controller="MultiStepFormCtrl as c">
         <!-- Step Tracker -->
         <div class="step-tracker">

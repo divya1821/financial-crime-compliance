@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_assignment">
     <sysrule_assignment action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <condition table="x_vuram_financia_0_fcc_kyc_cases">state=320^EQ<item display_value="Review" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="320"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
@@ -29,15 +29,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a546e9d3bdc3694cb98111864e45ae6</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Case Assigned to Checker</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sysrule_assignment_0a546e9d3bdc3694cb98111864e45ae6</sys_update_name>
-        <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-11-12 04:40:42</sys_updated_on>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-05 10:37:35</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
         <user display_value="Checker User 1">f91f4a393b6c3e50f13f5fea26e45a9d</user>
     </sysrule_assignment>

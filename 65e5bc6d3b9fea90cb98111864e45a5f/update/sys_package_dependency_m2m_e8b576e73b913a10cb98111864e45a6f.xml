@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="External User Self-Registration" source="com.snc.external_user_self_registration">26f676f63b8f5e10f13f5fea26e45aac</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-11-25 06:32:13</sys_created_on>
+        <sys_id>e8b576e73b913a10cb98111864e45a6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-25 06:32:13</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

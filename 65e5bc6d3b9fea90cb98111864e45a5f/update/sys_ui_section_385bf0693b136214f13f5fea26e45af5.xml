@@ -3,280 +3,378 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a21</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>8e9d8c753bd5be54cb98111864e45ad2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>case_type</element>
             <position>1</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a21</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ad3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>entity.relationship_manager</element>
             <position>2</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a22</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ad4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>3</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a22</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ad4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
             <position>4</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a23</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ad5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>onhold_reason</element>
             <position>5</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a23</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ad5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assigned_to</element>
             <position>6</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a24</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ad6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
             <position>7</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a24</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ad6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>individual</element>
             <position>8</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a25</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ad7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>relationship_manager</element>
             <position>9</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a25</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ad7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>entity.legal_name</element>
             <position>10</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a26</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ad8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>individual.forename_in_full</element>
             <position>11</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a26</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ad8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>kyc_expiry</element>
             <position>12</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a27</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ad9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>kyc_due_soon</element>
             <position>13</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a27</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ad9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>review_completion_date</element>
             <position>14</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a28</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ada</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>next_review_date</element>
             <position>15</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a28</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ada</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>next_chaser_due</element>
             <position>16</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a29</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45adb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>previous_user</element>
             <position>17</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a29</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45adb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>customer_name</element>
             <position>18</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>450c58893b303614cb98111864e45a2a</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45adc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>email_id</element>
             <position>19</position>
-            <sys_created_by>divya.suresh</sys_created_by>
-            <sys_created_on>2025-10-23 04:24:33</sys_created_on>
-            <sys_id>4d0c58893b303614cb98111864e45a2a</sys_id>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45adc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
-            <sys_updated_by>divya.suresh</sys_updated_by>
-            <sys_updated_on>2025-10-23 04:24:33</sys_updated_on>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>risk_level</element>
+            <position>20</position>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45add</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>risk_score</element>
+            <position>21</position>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45add</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>individual.proof_of_address</element>
+            <position>22</position>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ade</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>individual.proof_of_identity</element>
+            <position>23</position>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45ade</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>individual.number</element>
+            <position>24</position>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45adf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>individual.fcc_kyc_case.individual.proof_of_address</element>
+            <position>25</position>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>ca9d8c753bd5be54cb98111864e45adf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>individual.fcc_kyc_case.individual.proof_of_identity</element>
+            <position>26</position>
+            <sys_created_by>abhipsa.jally</sys_created_by>
+            <sys_created_on>2025-11-19 07:48:24</sys_created_on>
+            <sys_id>c29d8c753bd5be54cb98111864e45ae0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vuram_financia_0_fcc_kyc_cases" sys_domain="global" view="Default view">385bf0693b136214f13f5fea26e45af5</sys_ui_section>
+            <sys_updated_by>abhipsa.jally</sys_updated_by>
+            <sys_updated_on>2025-11-19 07:48:24</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

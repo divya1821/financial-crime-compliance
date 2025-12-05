@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>true</can_share>
+        <can_write>true</can_write>
+        <dashboard display_value="New Dashboard: Problem : 11/26/2025, 4:00:29 PM">c5d5fccc3b297e10f13f5fea26e45ad4</dashboard>
+        <group/>
+        <owner>true</owner>
+        <role/>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>harini.ks</sys_created_by>
+        <sys_created_on>2025-11-26 10:30:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c9d5fccc3b297e10f13f5fea26e45ad8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c5d5fccc3b297e10f13f5fea26e45ad4</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>par_dashboard_permission_c9d5fccc3b297e10f13f5fea26e45ad8</sys_update_name>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-26 10:30:30</sys_updated_on>
+        <user display_value="Harini Ks">8a4cb8c03b431210f13f5fea26e45a3f</user>
+    </par_dashboard_permission>
+</record_update>

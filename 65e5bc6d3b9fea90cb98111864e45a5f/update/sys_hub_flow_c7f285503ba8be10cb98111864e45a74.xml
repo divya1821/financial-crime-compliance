@@ -28,7 +28,7 @@
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>published</status>
+        <status>draft</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>harini.ks</sys_created_by>
@@ -36,19 +36,19 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c7f285503ba8be10cb98111864e45a74</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_name>Perpetual KYC for Individual</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_flow_c7f285503ba8be10cb98111864e45a74</sys_update_name>
-        <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-10-10 13:37:15</sys_updated_on>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-20 12:31:58</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record/>
+        <version_record display_value="Created 2025-11-20 04:31:48">97089a823b557a10f13f5fea26e45a6e</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=c7f285503ba8be10cb98111864e45a74"/>
     <sys_variable_value action="delete_multiple" query="document_key=c7f285503ba8be10cb98111864e45a74"/>
@@ -454,13 +454,13 @@
         <sys_created_by>harini.ks</sys_created_by>
         <sys_created_on>2025-10-08 13:52:40</sys_created_on>
         <sys_id>783e49943b2cbe10cb98111864e45aed</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
-        <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-10-10 13:37:12</sys_updated_on>
+        <sys_updated_by>harini.ks</sys_updated_by>
+        <sys_updated_on>2025-11-20 12:15:32</sys_updated_on>
         <ui_id>c3d33831-56d9-44db-b6a7-c1459a39637b</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+2UX2vbMBTFv0rxs2P8JzFO3kq3QmFtxhIKYxRzLV8nYrLkSXLSLOS778p20rImbJQ97i06V7r3nOsf2XuqtU1rzVJdG8NX0pt9e/I9Lp1Gv/eehBq9mceULLnlSuad4HsbEK0r3KxBrtBcKcZabahQctMI2D1eqrM1F6XGYVIDmvpZ1N5s/1vJ7hrMBRQoqM3Cai5X9JyXdKpCqKIpi1gSp0kchnE2joo0KaK4TAAhoXvHhzdH41efOsW/mMjNI90cJyldOltR6Hv4bFGWSKMrEAZ9rwZZglV6d1I0QjmX4kVYc2mpnecuPxv+k3rHk4m7WCFlZNgXT8d8WFwvs7XiDOeNM9grFgoxvGFKtLV86HO4lWMFrbDHlZPSGuqHjTPtXAyWqsVabb8cB95y2QUcikIxEKcTWFpD0Vo07sOgwJoa5TU0DS0nb7Ta8O4xeamDlaBDUAm1paGOogCYMx7QjiC4Jf1DJz+C5i7FPbWhx73NAgxneUcctbOaIhy6teQ/WmeoDzhEyftt0AXDNG/sNc3Z4OD64L/F9RWp+30csZQVYxylYRaOxizJRlmF01EGWTnBuJqmYRRsQB8Od4uH+fLj/efl17dEv7vPvyB/CpNqEoWT8+SP03Pkn2H+Mu7xH3B3H+gvaQ/D8D/ur3HnJu+xHbJ1w99N+5NDu59gem5KZNyQkaXT7o7/4a6wIwA4ey1tlf7uIrxoh18SkeAXDQYAAA==</values>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K5WfA8oHiYC3iq5SpbZMA1Wapiq6cRywZuzMdqAs4r/vOh+AVqqt2x73hs/1vfecEx9RE1XZsrJmqa6N4StJpl+ePcKlw/B3TSRsGJkSqmTOLVcybQCPbEFUrjBbg1wxc6UorbTBQs5NKWD/9FadrrnINes2laBxnmWaTOufSjzH9sKHIpjQgEZhEoW+H45HQZZEWRDmETCIcKCAjAm3qad4dd8g3pvc7b50uLGay1V3vu+mLHpQ6dyxCnyPsBfLZM6QTwHCMI9sQOZgld4fEc0gn0txAtZcWhxH3OUXw7/jwjCO3cWCoUTK2uLxmHa+tXBxAxaQSkVtpburdK04ZaY1J2cFVMLOzrH2wrx0UtsWC5nou5WoNvKxdYQcB/SfCZHKIAlWOqWOeqejWKzV7lPP8pbLxpWuKBQFcTyBRe+yyjo+NWGCbXBQuoGyREfTUqstb5qRy2a4EngYFkLtcKl7eUOgjvgQjYXhLeI3DfwEmjsVDzgGm1uaGRhO0+aV4ji0iZGDR8zezAQYcxKJ7qbfKkexldyJS1t/XAvVvLTXuHnLOh0H7/WjP3vvdR0GNKHZiA0Sf+wPRjQaD8YFmwzGMM5jFhaTxA+GW9CHw93icb788PBx+fl1Lv54zvvyM4G4iAM/vpyfUXIpPxeS887QhL8Ijftiv5kZ3/f/h+avQ8NN2j71Tluz/B9m5tkFpN159Jpyg9SWDrvr/09cYY+Pi9NzaKf0VyfqhB1+AEY2y6GZBgAA</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=c7f285503ba8be10cb98111864e45a74^sys_idNOT IN26175dd43b607e10f13f5fea26e45a57,2e175dd43b607e10f13f5fea26e45a56"/>

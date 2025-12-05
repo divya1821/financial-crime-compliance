@@ -54,7 +54,6 @@
         <onclick/>
         <order>1</order>
         <script><![CDATA[var inputsPayload = {};
-// fcc_kyc_case is a input of type: glide_record
 inputsPayload['fcc_kyc_case'] = {
   tableName: 'x_vuram_financia_0_fcc_kyc_cases',
   sysId: current.getValue('sys_id'),
@@ -76,7 +75,6 @@ var request = {
 try {
 	var response = sn_one_extend.OneExtendUtil.execute(request) || {}; 
 	var skillResponse = ((response["capabilities"] || {})[capabilityId] || {})["response"]; 
-	//gs.addInfoMessage(JSON.stringify(skillResponse));
 } catch(e) {
 	gs.error(e);
 	gs.addErrorMessage('Something went wrong while executing skill.');
@@ -92,7 +90,7 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>921bcd9b3b3be290f13f5fea26e45a2d</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Summarize</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -100,7 +98,7 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_action_921bcd9b3b3be290f13f5fea26e45a2d</sys_update_name>
         <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-07 11:10:22</sys_updated_on>
+        <sys_updated_on>2025-12-05 08:50:24</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

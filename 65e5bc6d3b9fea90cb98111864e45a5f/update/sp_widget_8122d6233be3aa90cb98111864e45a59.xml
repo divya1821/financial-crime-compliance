@@ -221,7 +221,7 @@
         <name>FCC KYC Landing Page</name>
         <option_schema/>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <script><![CDATA[(function() {
   var userEmail = gs.getUser().getEmail();
   gs.info("User Email: " + userEmail, "x_vuram_financia_0");
@@ -229,24 +229,24 @@
   // -------------------
   // INDIVIDUAL LOOKUP
   // -------------------
-  var grInd = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
-  grInd.addQuery('email', userEmail);
-  grInd.query();
+  var glideRecordIndividual = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_individual_details');
+  glideRecordIndividual.addQuery('email', userEmail);
+  glideRecordIndividual.query();
 
-  if (grInd.next()) {
-    var indSysId = grInd.getUniqueValue();
-    var forename = grInd.getValue('forename_in_full');
+  if (glideRecordIndividual.next()) {
+    var indSysId = glideRecordIndividual.getUniqueValue();
+    var forename = glideRecordIndividual.getValue('forename_in_full');
     gs.info("Individual record found. Sys ID: " + indSysId + " | Forename: " + forename, "x_vuram_financia_0");
     data.individual = true;
 
     // Lookup case by individual reference
-    var grCase = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_cases');
-    grCase.addQuery('individual', indSysId);
-    grCase.orderByDesc('sys_created_on'); // get latest case if multiple
-    grCase.query();
+    var glideRecordCase = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_cases');
+    glideRecordCase.addQuery('individual', indSysId);
+    glideRecordCase.orderByDesc('sys_created_on'); // get latest case if multiple
+    glideRecordCase.query();
 
-    if (grCase.next()) {
-      var custType = grCase.getValue('customer_type');
+    if (glideRecordCase.next()) {
+      var custType = glideRecordCase.getValue('customer_type');
       gs.info("Case record found. Forename: " + forename + " | Customer Type: " + custType, "x_vuram_financia_0");
 
       if (custType == "customer" || custType == "individual") {
@@ -269,24 +269,24 @@
   // -------------------
   // ENTITY LOOKUP
   // -------------------
-  var grEnt = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
-  grEnt.addQuery('email_id', userEmail);
-  grEnt.query();
+  var glideRecordEntity = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
+  glideRecordEntity.addQuery('email_id', userEmail);
+  glideRecordEntity.query();
 
-  if (grEnt.next()) {
-    var entSysId = grEnt.getUniqueValue();
-    var legalName = grEnt.getValue('legal_name');
+  if (glideRecordEntity.next()) {
+    var entSysId = glideRecordEntity.getUniqueValue();
+    var legalName = glideRecordEntity.getValue('legal_name');
     gs.info("Entity record found. Sys ID: " + entSysId + " | Legal Name: " + legalName, "x_vuram_financia_0");
     data.entity = true;
 
     // Lookup case by entity reference
-    var grCaseEnt = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_cases');
-    grCaseEnt.addQuery('entity', entSysId); // Correct reference for entity
-    grCaseEnt.orderByDesc('sys_created_on'); // latest case
-    grCaseEnt.query();
+    var glideRecordCaseEntity = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_cases');
+    glideRecordCaseEntity.addQuery('entity', entSysId); // Correct reference for entity
+    glideRecordCaseEntity.orderByDesc('sys_created_on'); // latest case
+    glideRecordCaseEntity.query();
 
-    if (grCaseEnt.next()) {
-      var custTypeEnt = grCaseEnt.getValue('customer_type');
+    if (glideRecordCaseEntity.next()) {
+      var custTypeEnt = glideRecordCaseEntity.getValue('customer_type');
       gs.info("Case record found for entity. Legal Name: " + legalName + " | Customer Type: " + custTypeEnt, "x_vuram_financia_0");
 
       if (custTypeEnt == "entity") {
@@ -316,14 +316,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-08-30 04:08:26</sys_created_on>
         <sys_id>8122d6233be3aa90cb98111864e45a59</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>FCC KYC Landing Page</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_widget_8122d6233be3aa90cb98111864e45a59</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-21 10:12:40</sys_updated_on>
+        <sys_updated_on>2025-12-04 09:59:29</sys_updated_on>
         <template><![CDATA[<div class="container">
 
   <!-- Customer Widget HTML -->

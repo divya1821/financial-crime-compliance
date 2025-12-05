@@ -347,8 +347,8 @@
     </sys_hub_trigger_instance_v2>
     <sys_hub_action_instance_v2 action="delete_multiple" query="flow=5d9e6ac63b2cfe50f13f5fea26e45aca^sys_idNOT IN60c93a0a3bacfe50f13f5fea26e45aa5"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="VKYC Upload Image Front Document">ea38b2063bacfe50f13f5fea26e45a74</action_type>
-        <action_type_parent display_value="VKYC Upload Image Front Document">a88f668a3b2cfe50f13f5fea26e45ad2</action_type_parent>
+        <action_type display_value="VKYC Upload Front Page Image">ea38b2063bacfe50f13f5fea26e45a74</action_type>
+        <action_type_parent display_value="VKYC Upload Front Page Image">a88f668a3b2cfe50f13f5fea26e45ad2</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot/>

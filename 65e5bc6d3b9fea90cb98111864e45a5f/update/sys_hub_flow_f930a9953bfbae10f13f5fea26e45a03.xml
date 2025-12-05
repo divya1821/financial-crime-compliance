@@ -399,8 +399,8 @@
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=8230a9953bfbae10f13f5fea26e45a73"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="VKYC Session Decision">c46be5183b7fe210cb98111864e45a3c</action_type>
-        <action_type_parent display_value="VKYC Session Decision">8185f8103b73e210cb98111864e45a2f</action_type_parent>
+        <action_type display_value="VKYC Session Decision - Entity">c46be5183b7fe210cb98111864e45a3c</action_type>
+        <action_type_parent display_value="VKYC Session Decision - Entity">8185f8103b73e210cb98111864e45a2f</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>c46be5183b7fe210cb98111864e45a3c</compiled_snapshot>
@@ -423,8 +423,8 @@
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=8230a9953bfbae10f13f5fea26e45a76"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="VKYC Attempts Media">05b6ba383b33aa10cb98111864e45ab7</action_type>
-        <action_type_parent display_value="VKYC Attempts Media">59e93fe83b732a10cb98111864e45a21</action_type_parent>
+        <action_type display_value="VKYC Attempts Media - Entity">05b6ba383b33aa10cb98111864e45ab7</action_type>
+        <action_type_parent display_value="VKYC Attempts Media - Entity">59e93fe83b732a10cb98111864e45a21</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>05b6ba383b33aa10cb98111864e45ab7</compiled_snapshot>
@@ -776,8 +776,8 @@
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=10e1291d3bfbae10f13f5fea26e45a38"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="VKYC Session Decision">c46be5183b7fe210cb98111864e45a3c</action_type>
-        <action_type_parent display_value="VKYC Session Decision">8185f8103b73e210cb98111864e45a2f</action_type_parent>
+        <action_type display_value="VKYC Session Decision - Entity">c46be5183b7fe210cb98111864e45a3c</action_type>
+        <action_type_parent display_value="VKYC Session Decision - Entity">8185f8103b73e210cb98111864e45a2f</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>c46be5183b7fe210cb98111864e45a3c</compiled_snapshot>
@@ -800,8 +800,8 @@
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=10e1291d3bfbae10f13f5fea26e45a3b"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="VKYC Attempts Media">05b6ba383b33aa10cb98111864e45ab7</action_type>
-        <action_type_parent display_value="VKYC Attempts Media">59e93fe83b732a10cb98111864e45a21</action_type_parent>
+        <action_type display_value="VKYC Attempts Media - Entity">05b6ba383b33aa10cb98111864e45ab7</action_type>
+        <action_type_parent display_value="VKYC Attempts Media - Entity">59e93fe83b732a10cb98111864e45a21</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>05b6ba383b33aa10cb98111864e45ab7</compiled_snapshot>
@@ -958,7 +958,7 @@
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"19e1a91d3bfbae10f13f5fea26e45a2a","name":"plan","plan_signature":null}}</plan>
         <plan_id>f930a9953bfbae10f13f5fea26e45a03</plan_id>
-        <snapshot>6b20359a3bf43e10cb98111864e45ad1</snapshot>
+        <snapshot>2ffc88f33b957a10f13f5fea26e45a48</snapshot>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-04 11:05:33</sys_created_on>
         <sys_domain>global</sys_domain>

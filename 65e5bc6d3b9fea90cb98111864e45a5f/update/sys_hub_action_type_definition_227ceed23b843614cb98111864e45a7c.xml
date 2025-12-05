@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>227ceed23b843614cb98111864e45a7c</sys_id>
-        <sys_mod_count>67</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>FCC KYC Application Form Skill</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_227ceed23b843614cb98111864e45a7c</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:13</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:41</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -52,10 +52,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:25:09</sys_created_on>
         <sys_id>076de2963b843614cb98111864e45a84</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:45:22</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2025-12-05 06:13:39</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">3e6de2963b843614cb98111864e45a72</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -91,10 +91,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:39:27</sys_created_on>
         <sys_id>2cb0b6de3b843614cb98111864e45adc</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:10</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:39</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2cb0b6de3b843614cb98111864e45adc"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -119,41 +119,41 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:39:28</sys_created_on>
         <sys_id>68b0b6de3b843614cb98111864e45afa</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:10</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:39</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
    &#13;
         var applicationForm = JSON.parse(inputs.input);&#13;
         outputs.test = applicationForm.first_applicant.employer;&#13;
 &#13;
-        var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
+        var glideRecordIndividual = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
 &#13;
-        if (gr.get(inputs.sysId)) {&#13;
-            gr.are_you_a_us_citizen = applicationForm.first_applicant.are_you_a_us_citizen;&#13;
-            gr.us_tax_identification_number = applicationForm.first_applicant.us_tax_identification_number;&#13;
-            gr.are_you_a_resident_of_a_country_other_than_uk = applicationForm.first_applicant.are_you_a_resident_of_a_country_other_than_uk_for_tax_purpose;&#13;
-            gr.non_uk_tax_identification_number = applicationForm.first_applicant.non_uk_tax_identification_number;&#13;
-            gr.employment_status = applicationForm.first_applicant.employment_status;&#13;
-            gr.employment_industry = applicationForm.first_applicant.employment_industry;&#13;
-            gr.occupation = applicationForm.first_applicant.occupation;&#13;
-            gr.source_of_initial_deposit = applicationForm.first_applicant.source_of_deposit;&#13;
-            gr.state_purpose_of_opening_account = applicationForm.first_applicant.what_are_you_saving_for;&#13;
-            gr.annual_income_before_tax = applicationForm.first_applicant.annual_income_before_tax;&#13;
-            gr.years_at_address = applicationForm.first_applicant.years_at_address;&#13;
-            gr.employer = applicationForm.first_applicant.employer;&#13;
-            gr.ach_withdrawal = applicationForm.first_applicant.ach_withdrawal;&#13;
-            gr.ach_deposit = applicationForm.first_applicant.ach_deposit;&#13;
-            gr.atm_deposit = applicationForm.first_applicant.atm_deposit;&#13;
-            gr.atm_withdrawal = applicationForm.first_applicant.atm_withdrawal;&#13;
-            gr.cheque_deposit = applicationForm.first_applicant.cheque_deposit;&#13;
-            gr.cheque_withdrawal = applicationForm.first_applicant.cheque_withdrawal;&#13;
-            gr.cash_deposit = applicationForm.first_applicant.cash_deposit;&#13;
-            gr.cash_withdrawal = applicationForm.first_applicant.cash_withdrawal;&#13;
-            //gr.mobile = applicationForm.first_applicant.mobile_number;&#13;
-            //gr.mobile_contact = applicationForm.first_applicant.mobile_number;&#13;
-            //gr.home_contact = applicationForm.first_applicant.mobile_number;&#13;
-            gr.update();&#13;
+        if (glideRecordIndividual.get(inputs.sysId)) {&#13;
+            glideRecordIndividual.are_you_a_us_citizen = applicationForm.first_applicant.are_you_a_us_citizen;&#13;
+            glideRecordIndividual.us_tax_identification_number = applicationForm.first_applicant.us_tax_identification_number;&#13;
+            glideRecordIndividual.are_you_a_resident_of_a_country_other_than_uk = applicationForm.first_applicant.are_you_a_resident_of_a_country_other_than_uk_for_tax_purpose;&#13;
+            glideRecordIndividual.non_uk_tax_identification_number = applicationForm.first_applicant.non_uk_tax_identification_number;&#13;
+            glideRecordIndividual.employment_status = applicationForm.first_applicant.employment_status;&#13;
+            glideRecordIndividual.employment_industry = applicationForm.first_applicant.employment_industry;&#13;
+            glideRecordIndividual.occupation = applicationForm.first_applicant.occupation;&#13;
+            glideRecordIndividual.source_of_initial_deposit = applicationForm.first_applicant.source_of_deposit;&#13;
+            glideRecordIndividual.state_purpose_of_opening_account = applicationForm.first_applicant.what_are_you_saving_for;&#13;
+            glideRecordIndividual.annual_income_before_tax = applicationForm.first_applicant.annual_income_before_tax;&#13;
+            glideRecordIndividual.years_at_address = applicationForm.first_applicant.years_at_address;&#13;
+            glideRecordIndividual.employer = applicationForm.first_applicant.employer;&#13;
+            glideRecordIndividual.ach_withdrawal = applicationForm.first_applicant.ach_withdrawal;&#13;
+            glideRecordIndividual.ach_deposit = applicationForm.first_applicant.ach_deposit;&#13;
+            glideRecordIndividual.atm_deposit = applicationForm.first_applicant.atm_deposit;&#13;
+            glideRecordIndividual.atm_withdrawal = applicationForm.first_applicant.atm_withdrawal;&#13;
+            glideRecordIndividual.cheque_deposit = applicationForm.first_applicant.cheque_deposit;&#13;
+            glideRecordIndividual.cheque_withdrawal = applicationForm.first_applicant.cheque_withdrawal;&#13;
+            glideRecordIndividual.cash_deposit = applicationForm.first_applicant.cash_deposit;&#13;
+            glideRecordIndividual.cash_withdrawal = applicationForm.first_applicant.cash_withdrawal;&#13;
+            //glideRecordIndividual.mobile = applicationForm.first_applicant.mobile_number;&#13;
+            //glideRecordIndividual.mobile_contact = applicationForm.first_applicant.mobile_number;&#13;
+            //glideRecordIndividual.home_contact = applicationForm.first_applicant.mobile_number;&#13;
+            glideRecordIndividual.update();&#13;
         } else {&#13;
             gs.error("No record found with sys_id: " + inputs.sysId);&#13;
         }&#13;
@@ -1141,14 +1141,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:25:09</sys_created_on>
         <sys_id>c76de2963b843614cb98111864e45a78</sys_id>
-        <sys_mod_count>41</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:11</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1273,17 +1273,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="FCC KYC Application Form Skill">227ceed23b843614cb98111864e45a7c</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"340eeed63b843614cb98111864e45a52","name":"plan","plan_signature":null}}</plan>
-        <snapshot>8c5d12643b01ba90f13f5fea26e45aaf</snapshot>
+        <snapshot>3e51123a3bad36d0f13f5fea26e45adb</snapshot>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:27:44</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>340eeed63b843614cb98111864e45a52</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:14</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:42</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1334,10 +1334,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:27:43</sys_created_on>
         <sys_id>640eeed63b843614cb98111864e45a21</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:45:24</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2025-12-05 06:13:41</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">a40eeed63b843614cb98111864e45a05</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1691,10 +1691,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:39:30</sys_created_on>
         <sys_id>c5b0f6de3b843614cb98111864e45a80</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:12</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:41</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c5b0f6de3b843614cb98111864e45a80"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1705,41 +1705,41 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:39:30</sys_created_on>
         <sys_id>81b0f6de3b843614cb98111864e45a92</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:12</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:41</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
    &#13;
         var applicationForm = JSON.parse(inputs.input);&#13;
         outputs.test = applicationForm.first_applicant.employer;&#13;
 &#13;
-        var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
+        var glideRecordIndividual = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
 &#13;
-        if (gr.get(inputs.sysId)) {&#13;
-            gr.are_you_a_us_citizen = applicationForm.first_applicant.are_you_a_us_citizen;&#13;
-            gr.us_tax_identification_number = applicationForm.first_applicant.us_tax_identification_number;&#13;
-            gr.are_you_a_resident_of_a_country_other_than_uk = applicationForm.first_applicant.are_you_a_resident_of_a_country_other_than_uk_for_tax_purpose;&#13;
-            gr.non_uk_tax_identification_number = applicationForm.first_applicant.non_uk_tax_identification_number;&#13;
-            gr.employment_status = applicationForm.first_applicant.employment_status;&#13;
-            gr.employment_industry = applicationForm.first_applicant.employment_industry;&#13;
-            gr.occupation = applicationForm.first_applicant.occupation;&#13;
-            gr.source_of_initial_deposit = applicationForm.first_applicant.source_of_deposit;&#13;
-            gr.state_purpose_of_opening_account = applicationForm.first_applicant.what_are_you_saving_for;&#13;
-            gr.annual_income_before_tax = applicationForm.first_applicant.annual_income_before_tax;&#13;
-            gr.years_at_address = applicationForm.first_applicant.years_at_address;&#13;
-            gr.employer = applicationForm.first_applicant.employer;&#13;
-            gr.ach_withdrawal = applicationForm.first_applicant.ach_withdrawal;&#13;
-            gr.ach_deposit = applicationForm.first_applicant.ach_deposit;&#13;
-            gr.atm_deposit = applicationForm.first_applicant.atm_deposit;&#13;
-            gr.atm_withdrawal = applicationForm.first_applicant.atm_withdrawal;&#13;
-            gr.cheque_deposit = applicationForm.first_applicant.cheque_deposit;&#13;
-            gr.cheque_withdrawal = applicationForm.first_applicant.cheque_withdrawal;&#13;
-            gr.cash_deposit = applicationForm.first_applicant.cash_deposit;&#13;
-            gr.cash_withdrawal = applicationForm.first_applicant.cash_withdrawal;&#13;
-            //gr.mobile = applicationForm.first_applicant.mobile_number;&#13;
-            //gr.mobile_contact = applicationForm.first_applicant.mobile_number;&#13;
-            //gr.home_contact = applicationForm.first_applicant.mobile_number;&#13;
-            gr.update();&#13;
+        if (glideRecordIndividual.get(inputs.sysId)) {&#13;
+            glideRecordIndividual.are_you_a_us_citizen = applicationForm.first_applicant.are_you_a_us_citizen;&#13;
+            glideRecordIndividual.us_tax_identification_number = applicationForm.first_applicant.us_tax_identification_number;&#13;
+            glideRecordIndividual.are_you_a_resident_of_a_country_other_than_uk = applicationForm.first_applicant.are_you_a_resident_of_a_country_other_than_uk_for_tax_purpose;&#13;
+            glideRecordIndividual.non_uk_tax_identification_number = applicationForm.first_applicant.non_uk_tax_identification_number;&#13;
+            glideRecordIndividual.employment_status = applicationForm.first_applicant.employment_status;&#13;
+            glideRecordIndividual.employment_industry = applicationForm.first_applicant.employment_industry;&#13;
+            glideRecordIndividual.occupation = applicationForm.first_applicant.occupation;&#13;
+            glideRecordIndividual.source_of_initial_deposit = applicationForm.first_applicant.source_of_deposit;&#13;
+            glideRecordIndividual.state_purpose_of_opening_account = applicationForm.first_applicant.what_are_you_saving_for;&#13;
+            glideRecordIndividual.annual_income_before_tax = applicationForm.first_applicant.annual_income_before_tax;&#13;
+            glideRecordIndividual.years_at_address = applicationForm.first_applicant.years_at_address;&#13;
+            glideRecordIndividual.employer = applicationForm.first_applicant.employer;&#13;
+            glideRecordIndividual.ach_withdrawal = applicationForm.first_applicant.ach_withdrawal;&#13;
+            glideRecordIndividual.ach_deposit = applicationForm.first_applicant.ach_deposit;&#13;
+            glideRecordIndividual.atm_deposit = applicationForm.first_applicant.atm_deposit;&#13;
+            glideRecordIndividual.atm_withdrawal = applicationForm.first_applicant.atm_withdrawal;&#13;
+            glideRecordIndividual.cheque_deposit = applicationForm.first_applicant.cheque_deposit;&#13;
+            glideRecordIndividual.cheque_withdrawal = applicationForm.first_applicant.cheque_withdrawal;&#13;
+            glideRecordIndividual.cash_deposit = applicationForm.first_applicant.cash_deposit;&#13;
+            glideRecordIndividual.cash_withdrawal = applicationForm.first_applicant.cash_withdrawal;&#13;
+            //glideRecordIndividual.mobile = applicationForm.first_applicant.mobile_number;&#13;
+            //glideRecordIndividual.mobile_contact = applicationForm.first_applicant.mobile_number;&#13;
+            //glideRecordIndividual.home_contact = applicationForm.first_applicant.mobile_number;&#13;
+            glideRecordIndividual.update();&#13;
         } else {&#13;
             gs.error("No record found with sys_id: " + inputs.sysId);&#13;
         }&#13;
@@ -2423,14 +2423,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-20 05:27:43</sys_created_on>
         <sys_id>a40eeed63b843614cb98111864e45a0a</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:13</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:13:41</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

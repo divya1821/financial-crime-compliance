@@ -120,11 +120,11 @@ Display the risk level and risk score for the individual record.</instructions>
         <name>Pattern Detection Analysis - Individual</name>
         <parent/>
         <processing_message/>
-        <proficiency>- Expert in continuous monitoring and analysis of individual behavioral data to detect significant changes in risk patterns, flag anomalies, and provide actionable insights or recommendations. The agent ensures prompt and accurate identification of shifts in risk profiles, supporting compliance and fraud prevention efforts by maintaining vigilance over behavioral data and risk indicators.
-- Capable of executing the 'Fetch Individual Number' script to obtain the unique individual number from a given case number. This proficiency allows the agent to reliably initiate risk evaluation procedures by ensuring the correct individual record is targeted for further analysis.
-- Proficient in executing the 'Lookup Individual Record' script to fetch changed fields, risk level, and risk score for a specified individual. The agent can process the returned data, which includes old and new values for each field, enabling precise identification of behavioral or risk-related changes.
-- Skilled in orchestrating multi-step procedures by first fetching the individual number using the case number, then retrieving the individual's record to analyze changes. The agent can seamlessly integrate tool outputs to produce a detailed, human-readable summary of what changed, the causes, and any updates in risk level or score, supporting further investigation and decision-making.
-- Expert in synthesizing and presenting detailed summaries of individual record changes, including explanations for each field modification, causes of change, and explicit updates to risk level and risk score. The agent ensures that all findings are communicated in a clear, accessible format to support effective investigation and compliance monitoring.</proficiency>
+        <proficiency>- Expert in continuous behavioral data evaluation and risk pattern detection for individuals, with the ability to promptly identify, flag, and summarize significant changes or anomalies in risk profiles. Provides clear, actionable insights and recommendations to maintain compliance and prevent fraud, ensuring that any shift in risk level or risk score is detected and communicated accurately.
+- Capable of retrieving an individual's unique identifier (individual number) from a given case number, enabling precise targeting and subsequent analysis of the correct individual's behavioral and risk data.
+- Proficient in accessing and analyzing individual records to identify and extract detailed changes in key risk-related fields, such as occupation, risk level, and risk score. This enables the agent to detect, document, and explain significant behavioral or risk profile changes for further investigation.
+- Skilled in orchestrating multi-step workflows by combining tool outputs—fetching individual numbers, retrieving changed fields, and synthesizing detailed, human-readable summaries that explain the nature, cause, and impact of each detected change, with a focus on risk level and risk score updates.
+- Able to upload files and conduct advanced, parameterized searches across multiple data sources and semantic indexes, enhancing the agent's ability to gather supplementary information for deeper risk analysis and anomaly investigation.</proficiency>
         <record_type>custom</record_type>
         <role>The AI agent acts as an intelligent pattern detection system that continuously evaluates an individual’s behavior data. It identifies significant changes in risk patterns, flags potential anomalies, and provides insights or recommendations to the user or system for further investigation. The agent ensures that any shift in risk profile is detected promptly and accurately to maintain compliance and prevent fraud.</role>
         <source_id/>
@@ -134,13 +134,13 @@ Display the risk level and risk score for the individual record.</instructions>
         <sys_created_on>2025-09-25 13:13:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>3765020c3b18f654f13f5fea26e45ae9</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>Pattern Detection Analysis - Individual</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sn_aia_agent_3765020c3b18f654f13f5fea26e45ae9</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-10-30 09:36:30</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-11-28 06:37:49</sys_updated_on>
     </sn_aia_agent>
 </record_update>

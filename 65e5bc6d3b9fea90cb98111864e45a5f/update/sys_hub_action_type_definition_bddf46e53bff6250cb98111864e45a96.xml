@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bddf46e53bff6250cb98111864e45a96</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Create Session - Individual</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_bddf46e53bff6250cb98111864e45a96</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:55</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:35</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -53,10 +53,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:04:51</sys_created_on>
         <sys_id>4bdf86e53bff6250cb98111864e45afd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-05 09:05:19</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDeadf86e525ff6250f08680bc665f2188":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDeadf86e525ff6250f08680bc665f2188.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"8d9c6add-6261-4be3-bc0a-3426fb8e14d2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDeadf86e525ff6250f08680bc665f2188\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2025-12-05 06:22:32</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDeadf86e525ff6250f08680bc665f2188":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDeadf86e525ff6250f08680bc665f2188.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"8d9c6add-6261-4be3-bc0a-3426fb8e14d2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDeadf86e525ff6250f08680bc665f2188\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">6edf86e53bff6250cb98111864e45a89</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -178,10 +178,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:04:48</sys_created_on>
         <sys_id>5edf86e53bff6250cb98111864e45a45</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:51</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:31</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5edf86e53bff6250cb98111864e45a45"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -206,19 +206,19 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:04:49</sys_created_on>
         <sys_id>eadf86e53bff6250cb98111864e45a84</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:51</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:31</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var session_details = JSON.parse(inputs.parameter);&#13;
     outputs.output_details = session_details;&#13;
     outputs.session_id=session_details.verification.id;&#13;
     outputs.url = session_details.verification.url;&#13;
-    var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
-    if (gr.get(inputs.sys_parm)) { &#13;
-        gr.video_kyc_link = session_details.verification.url;  &#13;
-        gr.session_id = session_details.verification.id;&#13;
-        gr.update();&#13;
+    var glideRecordIndividual = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
+    if (glideRecordIndividual.get(inputs.sys_parm)) { &#13;
+        glideRecordIndividual.video_kyc_link = session_details.verification.url;  &#13;
+        glideRecordIndividual.session_id = session_details.verification.id;&#13;
+        glideRecordIndividual.update();&#13;
     } else {&#13;
         gs.error('No record found with sys_id: ' + inputs.sys_parm);&#13;
     }&#13;
@@ -1323,14 +1323,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-11 11:17:12</sys_created_on>
         <sys_id>1cb7e9273b3ba690cb98111864e45a6b</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:51</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1357,7 +1357,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>aedf86e53bff6250cb98111864e45a88</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1365,7 +1365,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:51</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:31</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -1607,14 +1607,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:04:50</sys_created_on>
         <sys_id>7adf86e53bff6250cb98111864e45a92</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:51</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1982,17 +1982,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Create Session - Individual">bddf46e53bff6250cb98111864e45a96</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"dc0012293bff6250cb98111864e45a06","name":"plan","plan_signature":null}}</plan>
-        <snapshot>baf84f3e3b283e90cb98111864e45a9b</snapshot>
+        <snapshot>5963d6323bed36d0f13f5fea26e45a2f</snapshot>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:05:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dc0012293bff6250cb98111864e45a06</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:56</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:37</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2072,10 +2072,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:05:26</sys_created_on>
         <sys_id>e3ffcee53bff6250cb98111864e45a35</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-09-05 09:05:26</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2025-12-05 06:22:35</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">97ff8ee53bff6250cb98111864e45ac1</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=d6ff8ee53bff6250cb98111864e45a1c"/>
@@ -2169,10 +2169,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:05:23</sys_created_on>
         <sys_id>32ff8ee53bff6250cb98111864e45a7e</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:54</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:35</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=32ff8ee53bff6250cb98111864e45a7e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2197,19 +2197,19 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:05:25</sys_created_on>
         <sys_id>c3ff8ee53bff6250cb98111864e45abd</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:54</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:35</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var session_details = JSON.parse(inputs.parameter);&#13;
     outputs.output_details = session_details;&#13;
     outputs.session_id=session_details.verification.id;&#13;
     outputs.url = session_details.verification.url;&#13;
-    var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
-    if (gr.get(inputs.sys_parm)) { &#13;
-        gr.video_kyc_link = session_details.verification.url;  &#13;
-        gr.session_id = session_details.verification.id;&#13;
-        gr.update();&#13;
+    var glideRecordIndividual = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
+    if (glideRecordIndividual.get(inputs.sys_parm)) { &#13;
+        glideRecordIndividual.video_kyc_link = session_details.verification.url;  &#13;
+        glideRecordIndividual.session_id = session_details.verification.id;&#13;
+        glideRecordIndividual.update();&#13;
     } else {&#13;
         gs.error('No record found with sys_id: ' + inputs.sys_parm);&#13;
     }&#13;
@@ -3375,14 +3375,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-05 09:05:25</sys_created_on>
         <sys_id>9fff8ee53bff6250cb98111864e45ae2</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:54</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3549,14 +3549,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-11 11:17:29</sys_created_on>
         <sys_id>d0c721673b3ba690cb98111864e45ae3</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-10-16 17:13:55</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:22:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3923,6 +3923,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>bddf46e53bff6250cb98111864e45a96</sys_id>
         <latest_snapshot>d6ff8ee53bff6250cb98111864e45a1c</latest_snapshot>
-        <compiler_build>glide-yokohama-12-18-2024__patch7-hotfix2-09-18-2025_09-21-2025_1435.zip</compiler_build>
+        <compiler_build>glide-zurich-07-01-2025__patch1-hotfix2-10-11-2025_10-11-2025_2320.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

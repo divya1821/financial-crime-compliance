@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>Assign to Me</name>
+        <specificity>20</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-12-05 10:03:52</sys_created_on>
+        <sys_id>a206877e3b2576d0cb98111864e45ac3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assign to Me</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_ux_form_action_a206877e3b2576d0cb98111864e45ac3</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-05 10:03:52</sys_updated_on>
+        <table>x_vuram_financia_0_fcc_kyc_cases</table>
+        <ui_action display_value="Assign to Me">1300ba723b2176d0cb98111864e45abc</ui_action>
+    </sys_ux_form_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=a206877e3b2576d0cb98111864e45ac3"/>
+</record_update>

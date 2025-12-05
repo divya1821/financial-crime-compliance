@@ -7,7 +7,7 @@
         <continuous_time_required>false</continuous_time_required>
         <dedicated_time_required>false</dedicated_time_required>
         <display_option>card_and_tab</display_option>
-        <enable_auto_assign>true</enable_auto_assign>
+        <enable_auto_assign>false</enable_auto_assign>
         <enable_shift_based_assignment>false</enable_shift_based_assignment>
         <enable_skills>false</enable_skills>
         <enforce_mandatory_skills>false</enforce_mandatory_skills>
@@ -20,14 +20,14 @@
         <sys_created_by>srinithi.v</sys_created_by>
         <sys_created_on>2025-09-18 05:55:09</sys_created_on>
         <sys_id>e7502cb13bc47ed0cb98111864e45aa8</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Fincrime Assignment Rule</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>awa_assignment_rule_e7502cb13bc47ed0cb98111864e45aa8</sys_update_name>
-        <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-10-01 12:25:00</sys_updated_on>
+        <sys_updated_by>rita.tripathy@snc</sys_updated_by>
+        <sys_updated_on>2025-11-30 19:36:34</sys_updated_on>
         <time_required/>
         <timeout>1970-01-01 00:00:00</timeout>
     </awa_assignment_rule>

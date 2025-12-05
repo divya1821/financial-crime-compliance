@@ -36,19 +36,19 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a92ad6c3be8fe10f13f5fea26e45a7e</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Perpetual KYC for Entity</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_flow_0a92ad6c3be8fe10f13f5fea26e45a7e</sys_update_name>
-        <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-10-10 13:51:27</sys_updated_on>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-11-19 11:19:24</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record/>
+        <version_record display_value="Created 2025-11-19 03:19:24">45edf4b53bd1fe54cb98111864e45a44</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=0a92ad6c3be8fe10f13f5fea26e45a7e"/>
     <sys_variable_value action="delete_multiple" query="document_key=0a92ad6c3be8fe10f13f5fea26e45a7e"/>

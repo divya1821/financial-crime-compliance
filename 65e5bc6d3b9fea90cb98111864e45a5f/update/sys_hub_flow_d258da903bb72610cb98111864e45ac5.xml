@@ -328,7 +328,7 @@
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=0db31e253b33a250cb98111864e45aef"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="VKYC Media Image - Individual">042f0e253bff6250cb98111864e45ad7</action_type>
-        <action_type_parent display_value="VKYC Media Image - Individual">70114e213b7f6250cb98111864e45a24</action_type_parent>
+        <action_type_parent display_value="">70114e213b7f6250cb98111864e45a24</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>042f0e253bff6250cb98111864e45ad7</compiled_snapshot>
@@ -423,8 +423,8 @@
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=c9b31e253b33a250cb98111864e45aee"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="VKYC PEP &amp; Sanctions">c263e5673bf7a690cb98111864e45aac</action_type>
-        <action_type_parent display_value="VKYC PEP &amp; Sanctions">5508a02f3b3f6690f13f5fea26e45ad5</action_type_parent>
+        <action_type display_value="VKYC PEP &amp; Sanctions - Individual">c263e5673bf7a690cb98111864e45aac</action_type>
+        <action_type_parent display_value="VKYC PEP &amp; Sanctions - Individual">5508a02f3b3f6690f13f5fea26e45ad5</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>c263e5673bf7a690cb98111864e45aac</compiled_snapshot>
@@ -752,8 +752,8 @@
     </sys_hub_trigger_instance_v2>
     <sys_hub_action_instance_v2 action="delete_multiple" query="flow=c7a83e1c3bfb2610cb98111864e45a93^sys_idNOT IN033f1edb3b0cfe14f13f5fea26e45aa6,09cf108d3b77ea10f13f5fea26e45a73,6bb312653b33a250cb98111864e45aa8,a7b312653b33a250cb98111864e45aa6,e7b312653b33a250cb98111864e45aa7,ebb312653b33a250cb98111864e45aa4"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="VKYC PEP &amp; Sanctions">c263e5673bf7a690cb98111864e45aac</action_type>
-        <action_type_parent display_value="VKYC PEP &amp; Sanctions">5508a02f3b3f6690f13f5fea26e45ad5</action_type_parent>
+        <action_type display_value="VKYC PEP &amp; Sanctions - Individual">c263e5673bf7a690cb98111864e45aac</action_type>
+        <action_type_parent display_value="VKYC PEP &amp; Sanctions - Individual">5508a02f3b3f6690f13f5fea26e45ad5</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>c263e5673bf7a690cb98111864e45aac</compiled_snapshot>
@@ -801,7 +801,7 @@
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=09cf108d3b77ea10f13f5fea26e45a73"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="VKYC Media Image - Individual">042f0e253bff6250cb98111864e45ad7</action_type>
-        <action_type_parent display_value="VKYC Media Image - Individual">70114e213b7f6250cb98111864e45a24</action_type_parent>
+        <action_type_parent display_value="">70114e213b7f6250cb98111864e45a24</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>042f0e253bff6250cb98111864e45ad7</compiled_snapshot>

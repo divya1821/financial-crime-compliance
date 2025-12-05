@@ -12,7 +12,8 @@
         <script><![CDATA[var UKCompanyHouseConnector = Class.create();
 UKCompanyHouseConnector.prototype = {
     initialize: function() {},
-    updateEntity: function(current_rec) {
+    updateEntity: function(current_rec) // Update the entity records in entity based on the information from UK company house 200 Response
+    {
         var company_detail_payload = (this._getCompanyDetails(current_rec.registration_number));
         var company_details = JSON.parse(company_detail_payload.responsebody);
         if (company_detail_payload.httpresponse == '200') {
@@ -26,7 +27,7 @@ UKCompanyHouseConnector.prototype = {
                 var significant_non_sysids = this._createNonIndividual(significant_details.responsepayload, current_rec);
             }
             var gr_entity = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_entity_details');
-            if(gr_entity.get(current_rec.sys_id));
+            if (gr_entity.get(current_rec.sys_id));
             gr_entity.source = gs.getProperty('x_vuram_financia_0.fincrime_customer_info_integration');
             gr_entity.legal_name = this._get(company_details, 'company_name', '');
             gr_entity.doing_business_as_name = this._get(company_details, 'company_name', '');
@@ -42,7 +43,7 @@ UKCompanyHouseConnector.prototype = {
             gr_entity.controllers = control_sysids + "";
             gr_entity.update();
             var gr_enCase = new GlideRecordSecure('x_vuram_financia_0_fcc_kyc_cases');
-            if(gr_enCase.get(gr_entity.fcc_kyc_case.sys_id+''));
+            if (gr_enCase.get(gr_entity.fcc_kyc_case.sys_id + ''));
             gr_enCase.customer_name = gr_entity.legal_name;
             gr_enCase.update();
         }
@@ -51,7 +52,6 @@ UKCompanyHouseConnector.prototype = {
     },
     _createController: function(officer_obj, current_rec) { //Function to create controllers of a company
         var officer_sysid = [];
-        //var off_obb = officer_obj;
         var off_obb = JSON.parse(officer_obj);
         for (var x = 0; x < off_obb.items.length; x++) {
             if (!(off_obb.items[x].resigned_on)) {
@@ -103,7 +103,6 @@ UKCompanyHouseConnector.prototype = {
     },
     _createNonIndividual: function(individual_obj, current_rec) { //function to create non-individual
         var individual_sysid = [];
-        // var off_obb = individual_obj;
         var off_obb = JSON.parse(individual_obj);
         for (var x = 0; x < off_obb.items.length; x++) {
             if (off_obb.items[x].kind == "corporate-entity-person-with-significant-control") {
@@ -124,12 +123,7 @@ UKCompanyHouseConnector.prototype = {
         return individual_sysid + "";
 
     },
-    testFunc: function(test_obj) {
-        return this._createNonIndividual(test_obj) + "," + this._createIndividual(test_obj);
-
-
-    },
-    validateUkHouse: function(gr_entity, company_detail) {
+    validateUkHouse: function(gr_entity, company_detail) { // validate enitity information in servicenow matches with UK company house.
         var company_details = JSON.parse(company_detail);
         var entity_labels = [];
         if (gr_entity.legal_name != this._get(company_details, 'company_name', '')) {
@@ -187,7 +181,7 @@ UKCompanyHouseConnector.prototype = {
         }
         return (cur === undefined || cur === null) ? def : cur;
     },
-    _parseNameNoTitle: function(fullName) {
+    _parseNameNoTitle: function(fullName) { // Split the name into surnamr forename and middle name.
         var out = {
             surname: '',
             forename: '',
@@ -233,13 +227,13 @@ UKCompanyHouseConnector.prototype = {
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-28 17:11:06</sys_created_on>
         <sys_id>1c427acf3be3a290f13f5fea26e45a48</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>UKCompanyHouseConnector</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_script_include_1c427acf3be3a290f13f5fea26e45a48</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-11-21 07:25:19</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-12-05 07:27:11</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b3366a453bc8b6d0cb98111864e45ae0</sys_id>
-        <sys_mod_count>111</sys_mod_count>
+        <sys_mod_count>115</sys_mod_count>
         <sys_name>FCC KYC Proof of Address Skill</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b3366a453bc8b6d0cb98111864e45ae0</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:47:59</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:26</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -67,10 +67,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:46:02</sys_created_on>
         <sys_id>fb47a6493bc8b6d0cb98111864e45a42</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:45:48</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">af4766493bc8b6d0cb98111864e45afe</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=b3366a453bc8b6d0cb98111864e45ae0"/>
@@ -128,10 +128,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:49:30</sys_created_on>
         <sys_id>18930b4d3b00f6d0cb98111864e45a7a</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:47:57</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=18930b4d3b00f6d0cb98111864e45a7a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -142,39 +142,39 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:49:31</sys_created_on>
         <sys_id>1c930b4d3b00f6d0cb98111864e45a98</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:47:57</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
    var useraddress = JSON.parse(inputs.input);   &#13;
    &#13;
-    var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
-    if (gr.get(inputs.sysId)) { &#13;
-        gr.address_line = useraddress.address;&#13;
+    var glideRecordIndividual = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
+    if (glideRecordIndividual.get(inputs.sysId)) { &#13;
+        glideRecordIndividual.address_line = useraddress.address;&#13;
         &#13;
-        gr.city = useraddress.city;&#13;
-        gr.postcode = useraddress.post_code;&#13;
-        gr.country_of_nationality = useraddress.country_of_nationality;  &#13;
-        gr.country_of_residence = useraddress.country_of_residence;&#13;
-        gr.poa_doc_name = useraddress.document_name;&#13;
-        gr.poa_identity_doc_type = useraddress.document_type;&#13;
-        gr.poa_doc_id_no = useraddress.document_number;&#13;
-        gr.mobile_contact= useraddress.mobile_number;&#13;
-        gr.home_contact = useraddress.mobile_number;&#13;
-        gr.mobile = useraddress.mobile_number;&#13;
+        glideRecordIndividual.city = useraddress.city;&#13;
+        glideRecordIndividual.postcode = useraddress.post_code;&#13;
+        glideRecordIndividual.country_of_nationality = useraddress.country_of_nationality;  &#13;
+        glideRecordIndividual.country_of_residence = useraddress.country_of_residence;&#13;
+        glideRecordIndividual.poa_doc_name = useraddress.document_name;&#13;
+        glideRecordIndividual.poa_identity_doc_type = useraddress.document_type;&#13;
+        glideRecordIndividual.poa_doc_id_no = useraddress.document_number;&#13;
+        glideRecordIndividual.mobile_contact= useraddress.mobile_number;&#13;
+        glideRecordIndividual.home_contact = useraddress.mobile_number;&#13;
+        glideRecordIndividual.mobile = useraddress.mobile_number;&#13;
 &#13;
-        var gd = new GlideDate();&#13;
-        gd.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
-        gr.poa_doc_issued_date = gd;&#13;
+        var glideDate = new GlideDate();&#13;
+        glideDate.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
+        glideRecordIndividual.poa_doc_issued_date = glideDate;&#13;
 &#13;
-        var gd = new GlideDate();&#13;
-        gd.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
-        gr.poa_doc_expiry_date = gd;&#13;
+        var glideDate = new GlideDate();&#13;
+        glideDate.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
+        glideRecordIndividual.poa_doc_expiry_date = glideDate;&#13;
 &#13;
-        gr.poa_doc_issued_by = useraddress.document_issued_by;&#13;
-        gr.poa_doc_place_of_issuance = useraddress.document_place_of_issuance;&#13;
-        gr.update();&#13;
+        glideRecordIndividual.poa_doc_issued_by = useraddress.document_issued_by;&#13;
+        glideRecordIndividual.poa_doc_place_of_issuance = useraddress.document_place_of_issuance;&#13;
+        glideRecordIndividual.update();&#13;
     } else {&#13;
         gs.error('No record found with sys_id: ' + inputs.sysId);&#13;
     }&#13;
@@ -1381,14 +1381,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:46:02</sys_created_on>
         <sys_id>fb47a6493bc8b6d0cb98111864e45a04</sys_id>
-        <sys_mod_count>77</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:47:57</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1536,17 +1536,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="FCC KYC Proof of Address Skill">b3366a453bc8b6d0cb98111864e45ae0</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"bb9962013b0cb6d0cb98111864e45afb","name":"plan","plan_signature":null}}</plan>
-        <snapshot>704d1e243b01ba90f13f5fea26e45a46</snapshot>
+        <snapshot>e8119eb63bad36d0f13f5fea26e45a71</snapshot>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:56:09</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bb9962013b0cb6d0cb98111864e45afb</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:48:00</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:27</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1598,10 +1598,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:56:07</sys_created_on>
         <sys_id>a39962013b0cb6d0cb98111864e45aa4</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:45:51</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2025-12-05 06:12:26</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">139962013b0cb6d0cb98111864e45a94</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2122,10 +2122,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:52:08</sys_created_on>
         <sys_id>762487cd3b00f6d0cb98111864e45ae4</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:47:59</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:25</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=762487cd3b00f6d0cb98111864e45ae4"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2136,39 +2136,39 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:52:08</sys_created_on>
         <sys_id>8b2487cd3b00f6d0cb98111864e45af5</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:47:59</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:25</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
    var useraddress = JSON.parse(inputs.input);   &#13;
    &#13;
-    var gr = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
-    if (gr.get(inputs.sysId)) { &#13;
-        gr.address_line = useraddress.address;&#13;
+    var glideRecordIndividual = new GlideRecord('x_vuram_financia_0_fcc_kyc_individual_details');&#13;
+    if (glideRecordIndividual.get(inputs.sysId)) { &#13;
+        glideRecordIndividual.address_line = useraddress.address;&#13;
         &#13;
-        gr.city = useraddress.city;&#13;
-        gr.postcode = useraddress.post_code;&#13;
-        gr.country_of_nationality = useraddress.country_of_nationality;  &#13;
-        gr.country_of_residence = useraddress.country_of_residence;&#13;
-        gr.poa_doc_name = useraddress.document_name;&#13;
-        gr.poa_identity_doc_type = useraddress.document_type;&#13;
-        gr.poa_doc_id_no = useraddress.document_number;&#13;
-        gr.mobile_contact= useraddress.mobile_number;&#13;
-        gr.home_contact = useraddress.mobile_number;&#13;
-        gr.mobile = useraddress.mobile_number;&#13;
+        glideRecordIndividual.city = useraddress.city;&#13;
+        glideRecordIndividual.postcode = useraddress.post_code;&#13;
+        glideRecordIndividual.country_of_nationality = useraddress.country_of_nationality;  &#13;
+        glideRecordIndividual.country_of_residence = useraddress.country_of_residence;&#13;
+        glideRecordIndividual.poa_doc_name = useraddress.document_name;&#13;
+        glideRecordIndividual.poa_identity_doc_type = useraddress.document_type;&#13;
+        glideRecordIndividual.poa_doc_id_no = useraddress.document_number;&#13;
+        glideRecordIndividual.mobile_contact= useraddress.mobile_number;&#13;
+        glideRecordIndividual.home_contact = useraddress.mobile_number;&#13;
+        glideRecordIndividual.mobile = useraddress.mobile_number;&#13;
 &#13;
-        var gd = new GlideDate();&#13;
-        gd.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
-        gr.poa_doc_issued_date = gd;&#13;
+        var glideDate = new GlideDate();&#13;
+        glideDate.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
+        glideRecordIndividual.poa_doc_issued_date = glideDate;&#13;
 &#13;
-        var gd = new GlideDate();&#13;
-        gd.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
-        gr.poa_doc_expiry_date = gd;&#13;
+        var glideDate = new GlideDate();&#13;
+        glideDate.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
+        glideRecordIndividual.poa_doc_expiry_date = glideDate;&#13;
 &#13;
-        gr.poa_doc_issued_by = useraddress.document_issued_by;&#13;
-        gr.poa_doc_place_of_issuance = useraddress.document_place_of_issuance;&#13;
-        gr.update();&#13;
+        glideRecordIndividual.poa_doc_issued_by = useraddress.document_issued_by;&#13;
+        glideRecordIndividual.poa_doc_place_of_issuance = useraddress.document_place_of_issuance;&#13;
+        glideRecordIndividual.update();&#13;
     } else {&#13;
         gs.error('No record found with sys_id: ' + inputs.sysId);&#13;
     }&#13;
@@ -2926,14 +2926,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:56:07</sys_created_on>
         <sys_id>d39962013b0cb6d0cb98111864e45a99</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-03 10:47:59</sys_updated_on>
+        <sys_updated_on>2025-12-05 06:12:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
