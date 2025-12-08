@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>public</access>
+        <access>package_private</access>
         <active>true</active>
         <api_name>x_vuram_financia_0.UKCompanyHouseConnector</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description/>
+        <description>Utilized for UK Company House connector functionalities</description>
         <mobile_callable>false</mobile_callable>
         <name>UKCompanyHouseConnector</name>
         <sandbox_callable>false</sandbox_callable>
@@ -78,7 +78,7 @@ UKCompanyHouseConnector.prototype = {
     },
     _createIndividual: function(individual_obj, current_rec) { // function to create individual  
         var individual_sysid = [];
-        //var off_obb = individual_obj;
+       
         var off_obb = JSON.parse(individual_obj);
         for (var x = 0; x < off_obb.items.length; x++) {
             if (off_obb.items[x].kind == "individual-person-with-significant-control") {
@@ -227,13 +227,13 @@ UKCompanyHouseConnector.prototype = {
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-28 17:11:06</sys_created_on>
         <sys_id>1c427acf3be3a290f13f5fea26e45a48</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>UKCompanyHouseConnector</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_script_include_1c427acf3be3a290f13f5fea26e45a48</sys_update_name>
         <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-12-05 07:27:11</sys_updated_on>
+        <sys_updated_on>2025-12-05 12:16:32</sys_updated_on>
     </sys_script_include>
 </record_update>

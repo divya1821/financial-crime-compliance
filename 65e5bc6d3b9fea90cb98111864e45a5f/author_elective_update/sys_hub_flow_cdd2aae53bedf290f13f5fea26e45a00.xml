@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=88000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>e0b9ab9feb702110f2549bf12a5228e6</copied_from>
+        <copied_from_name>Task Processing Flow Template</copied_from_name>
+        <description>DocDataExtractor Flow Template for processing a task</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>docintel_task_processing_flow__demo_fincrime_docintel__process_doc_extraction</internal_name>
+        <label_cache>[{"name":"6e1fa36a-f09d-4993-afc2-b4d3ade21307.task_id","label":"1 - DocIntel - Create a Document Task➛Task ID","reference_display":"Task ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a7335496-1038-4dd2-8efb-a38349d0513f"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master_snapshot>e223ee293bedf290f13f5fea26e45ab0</master_snapshot>
+        <master_snapshot_digest/>
+        <name>DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>b223ee293bedf290f13f5fea26e45aec</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cdd2aae53bedf290f13f5fea26e45a00</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_hub_flow_cdd2aae53bedf290f13f5fea26e45a00</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:06</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record display_value="Created 2025-12-01 02:18:58">45236e293bedf290f13f5fea26e45a66</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_variable_value action="DELETE" query="document_key=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_flow_record_trigger action="DELETE">
+        <active>true</active>
+        <condition table="x_vuram_financia_0_demo_fincrime_doc_intel">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b223ee293bedf290f13f5fea26e45aec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:06</sys_updated_on>
+        <table>x_vuram_financia_0_demo_fincrime_doc_intel</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="DELETE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>cdd2aae53bedf290f13f5fea26e45a00</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:06</sys_created_on>
+        <sys_id>7a23ee293bedf290f13f5fea26e45aec</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:06</sys_updated_on>
+        <trigger display_value="">b223ee293bedf290f13f5fea26e45aec</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN7a23ee293bedf290f13f5fea26e45aec"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN8dd2aae53bedf290f13f5fea26e45a01"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>cdd2aae53bedf290f13f5fea26e45a00</id>
+        <name>DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction</name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:36</sys_created_on>
+        <sys_id>8dd2aae53bedf290f13f5fea26e45a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:17:36</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=8dd2aae53bedf290f13f5fea26e45a01"/>
+    <sys_hub_flow_input action="DELETE" query="model=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN89d2aae53bedf290f13f5fea26e45a08,c9d2aae53bedf290f13f5fea26e45a0d"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">cdd2aae53bedf290f13f5fea26e45a00</model>
+        <model_id>cdd2aae53bedf290f13f5fea26e45a00</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:36</sys_created_on>
+        <sys_id>89d2aae53bedf290f13f5fea26e45a08</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=89d2aae53bedf290f13f5fea26e45a08"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">cdd2aae53bedf290f13f5fea26e45a00</model>
+        <model_id>cdd2aae53bedf290f13f5fea26e45a00</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:37</sys_created_on>
+        <sys_id>c9d2aae53bedf290f13f5fea26e45a0d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=c9d2aae53bedf290f13f5fea26e45a0d"/>
+    <sys_hub_flow_output action="DELETE" query="model=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN8dd2aae53bedf290f13f5fea26e45a94"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">cdd2aae53bedf290f13f5fea26e45a00</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:37</sys_created_on>
+        <sys_id>8dd2aae53bedf290f13f5fea26e45a94</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:04</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VY2W7jNhT9FUFPLeACWrwpb1MngxpIM63jaR+ClKBE0hYqUa5EKXEH+fdeaousxfGSdOzkxYBImrzn3HMX8u6bKkJ3saDhlEcCc4ferqMpUS9UzRyRIRuY1LY1Q9c1Zgz6ls10Aw8MY9zX1J7qYZt6sHSObY/Ct8sFDTn25usVhWEhhxHHvpzzMSdYBOFavRBhTHsqCwN/Tv2VhwUsZtiLYDAICQ3VC72npn/L94C/J9iL5fcjSuIQ+4i5HIx1MdIQoX4gv53Q9SkigYOkHR78ibgRbL/+I//vFP5AKBcws8KwCRXyrG+qs3Q9ElKuXtzd91QBxqMNZMpNBsGVtDjMwZZBNcfUTcPQNKBCt4emrRvExFRro6UGRbSw84ybPgrKCSUlJQ3iQorJF+6tyxVLwAsbpiQ/Ru6/sPtYk+sYBVQOzebKT5TTkg07y8B16JeVcAOejWR2ZpOBF/v8JrNfEkoZjj1REAojcQT70ZU0WRqRW8Rul8HDrDjws8tTdPmkFzjYK7+wAP3ZsaCRdAVzPXAKyriJgjhMrZ9dTb7MLtGfn+aTX65maHZ1O59NJ/OrS/UpxYX+ieWOmYW5LSiD81Sq4LNLPelAHvs2WNNTIxDMSnxyhJsUAnzqvUY4TAJO3JTPRkg4xVRUtbUijoq3Cy63xYmmlfJyKqcW0fLX1e/NMMgGd42ASdXiNAKGQ4wJxR0RYLMOJlrMFC2kVJFti4V8ZJdg6GvadwqHPNMdGg1+QKh3WVVJpk1IcKtYSLYeMBcREgHChKAKj3Ip2PRSeGTYnt4wFsKYw1Go9GQzIlLCS+av3QiA3kEmKFhNjYF5dp1vOYu5EoDL4Udx4hBIFUoRPmzq40XuC/ZbIfGUzFx/CQ4R8lG0jtAyttEGo2hkjS192CXtkbPBYBpksPWdqt4/SS9Tjzqiolb2Nap+/epGkcsXFXpLjKmzGhBLdKB6pWAwgxqdF9b7YxJbU0JJTRq1BLdNIDunvUKWacrTdcZsygxtJJnSNRPEro20AWbE1DTH2Cr4ThiiFgFvkvr2S3xRGnveDpFW90FhvNS1t4+Mk80YyPcxpGby/Do5QdNqdcLcq1CUus2GL3eX7yu3W5gkMq+TXevFm5cK5gUPkJ8OKBM2dv5ehEHMST2Ryj0VlyvPK5QfcuZ/PK80Wi0ZLAjpdrybK84H5dHF4llERQBjvm6WiWzwsIJgMt22aJ9qUAdMKAH2wLJsBxuMjYYjauidsm418ywKwQthlLTFYVfmbZVo0qbsPcrB9zfwqKKQa7S1JGRz7z35PywpRwAyRJ5M740asPBcQou541JE46jk+Q5XSxN75Ijr3GyJnY0tZ6CPRs4IsiVkCNanNtb7xgBbo6E5HryEfZuxooWP/+XeLIuDNKQje3zNpk7rSek0ZR5RIWTN27/R4XCJSP+DM/Mq1V86VEnTVxAqNwH/afq8TrmlUGXTZ5cz6gWqHc8uoKUClXeF2g7EstHhAdKfYXwDqbzCdPj8o70W1CIs2aSy5bXgEEIPfEmg/fHAYmZ7WWDW9lzRjfHkW8gdc1PSmeXaWrVdYz9pTSFl61Zv/g5QQ01j+dbmC23rxyXlqFa5COTO55NDjP0QbUfaRR7Te0hrKQpYtSRdBgpMKHCI4jIlt5YSxV4rYknBGR7cpuBARZ5+ZrWoWoqbyMtQe9e4s9tnowOBYSW/DJwRsNdpLmpxtPWdqYWvw3oHSkZ4MDA7rpRW/dGpzdAXcJx8F7F3qknaMtfWqrnfvvU9W+tmxfObStmxTXjHqN/syazFihOt8Pf/AQBNW4mEJQAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN01d2aae53bedf290f13f5fea26e45a78,81d2aae53bedf290f13f5fea26e45a7a"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="DocIntel - Create a Document Task">dc85af9beb702110f2549bf12a5228d6</action_type>
+        <action_type_parent display_value="DocIntel - Create a Document Task">bea253dbeb302110f2549bf12a522840</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>dc85af9beb702110f2549bf12a5228d6</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">cdd2aae53bedf290f13f5fea26e45a00</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:37</sys_created_on>
+        <sys_id>01d2aae53bedf290f13f5fea26e45a78</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:04</sys_updated_on>
+        <ui_id>6e1fa36a-f09d-4993-afc2-b4d3ade21307</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=01d2aae53bedf290f13f5fea26e45a78"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="DocIntel - Process a Document Task">1ca82b5feb702110f2549bf12a522896</action_type>
+        <action_type_parent display_value="DocIntel - Process a Document Task">5fe85713eb702110f2549bf12a522824</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>1ca82b5feb702110f2549bf12a522896</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">cdd2aae53bedf290f13f5fea26e45a00</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:37</sys_created_on>
+        <sys_id>81d2aae53bedf290f13f5fea26e45a7a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:04</sys_updated_on>
+        <ui_id>62bbfafa-512d-49be-b197-e341f1b0c8cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/5VTwW7bMAz9lULn2LBlJ01yGxAUCLCtwJr10hUGLVGJMFl2ZTmtF+TfR9leEKzdYUeTj4/vPcpPJwbC69pubevBCnzo261ka7aYo+B8kWCZpzxNE8Xn+apUKYc550s+ZzOmA04sUQDyf+BQEM5ChYT00P4saGbGjmC6UDmdFpgqyBYQqWQlo3y1yiJQgkdlLjOQyNMsuY2nwfOZRqVuGwP948RAFXHQRjq0bP30PGMNONrm0bH16a+W7xssDJRoaPAbKqSOwP/w8Wd2R3putpuPnIUdVHBX7LWTQU06Y/jm0UqkbQpMizNWgZXga9eztXcdFRyCvLemvyAO2vrRZgVvrf5F5BmfXfGvWdu3hdRF0MCuOsWUFCE2tegqtP5mN2LEodYC75tw9pHcQ2nec4nadJX9OnoM2aOCzvir7LuW9mATXAWdk2j1cKhfLwHfaTsEMDVNLcBcvsB7p8vOYxvu1end+/zG4ucP7oYGg62igqbRdl80rj7qYRdJr+K9oY9YmfqVNLZ6b+PxpceUOcR3VN8M5UdwOvj/QjQ0HDZ+t/qlw+E/mAuRL5eJipJbBVEuchUtcyEjlKCUyld5KSQ7D8EXL12wNj4HCktbPewT0ECpjfb9jy5JMilrUQQNBT0IR5pqN4Q7xViMRyHKVjjd+E8k+ohTYufn3+V4UqGxAwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=81d2aae53bedf290f13f5fea26e45a7a"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_hub_flow_variable action="DELETE" query="model=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:37</sys_created_on>
+        <sys_id>01d2aae53bedf290f13f5fea26e45a10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:17:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:17:37</sys_created_on>
+        <sys_id>0dd2aae53bedf290f13f5fea26e45a0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:17:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=31170232000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>e0b9ab9feb702110f2549bf12a5228e6</copied_from>
+        <copied_from_name/>
+        <description>DocDataExtractor Flow Template for processing a task</description>
+        <flow_priority/>
+        <internal_name>docintel_task_processing_flow__demo_fincrime_docintel__process_doc_extraction</internal_name>
+        <label_cache>[{"name":"6e1fa36a-f09d-4993-afc2-b4d3ade21307.task_id","label":"1 - DocIntel - Create a Document Task➛Task ID","reference_display":"Task ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a7335496-1038-4dd2-8efb-a38349d0513f"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">cdd2aae53bedf290f13f5fea26e45a00</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e223ee293bedf290f13f5fea26e45ab0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:05</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_variable_value action="DELETE" query="document_key=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT INea23ee293bedf290f13f5fea26e45ab0"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>e223ee293bedf290f13f5fea26e45ab0</id>
+        <name>DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction</name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:05</sys_created_on>
+        <sys_id>ea23ee293bedf290f13f5fea26e45ab0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:05</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=ea23ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_flow_input action="DELETE" query="model=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT IN2623ee293bedf290f13f5fea26e45aca,ea23ee293bedf290f13f5fea26e45ab1"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">e223ee293bedf290f13f5fea26e45ab0</model>
+        <model_id>e223ee293bedf290f13f5fea26e45ab0</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:05</sys_created_on>
+        <sys_id>2623ee293bedf290f13f5fea26e45aca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=2623ee293bedf290f13f5fea26e45aca"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">e223ee293bedf290f13f5fea26e45ab0</model>
+        <model_id>e223ee293bedf290f13f5fea26e45ab0</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:05</sys_created_on>
+        <sys_id>ea23ee293bedf290f13f5fea26e45ab1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=ea23ee293bedf290f13f5fea26e45ab1"/>
+    <sys_hub_flow_output action="DELETE" query="model=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT IN7623ee293bedf290f13f5fea26e45ada"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">e223ee293bedf290f13f5fea26e45ab0</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:06</sys_created_on>
+        <sys_id>7623ee293bedf290f13f5fea26e45ada</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:06</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VY2W7jNhT9FUFPLeACWrwpb1MngxpIM63jaR+ClKBE0hYqUa5EKXEH+fdeaousxfGSdOzkxYBImrzn3HMX8u6bKkJ3saDhlEcCc4ferqMpUS9UzRyRIRuY1LY1Q9c1Zgz6ls10Aw8MY9zX1J7qYZt6sHSObY/Ct8sFDTn25usVhWEhhxHHvpzzMSdYBOFavRBhTHsqCwN/Tv2VhwUsZtiLYDAICQ3VC72npn/L94C/J9iL5fcjSuIQ+4i5HIx1MdIQoX4gv53Q9SkigYOkHR78ibgRbL/+I//vFP5AKBcws8KwCRXyrG+qs3Q9ElKuXtzd91QBxqMNZMpNBsGVtDjMwZZBNcfUTcPQNKBCt4emrRvExFRro6UGRbSw84ybPgrKCSUlJQ3iQorJF+6tyxVLwAsbpiQ/Ru6/sPtYk+sYBVQOzebKT5TTkg07y8B16JeVcAOejWR2ZpOBF/v8JrNfEkoZjj1REAojcQT70ZU0WRqRW8Rul8HDrDjws8tTdPmkFzjYK7+wAP3ZsaCRdAVzPXAKyriJgjhMrZ9dTb7MLtGfn+aTX65maHZ1O59NJ/OrS/UpxYX+ieWOmYW5LSiD81Sq4LNLPelAHvs2WNNTIxDMSnxyhJsUAnzqvUY4TAJO3JTPRkg4xVRUtbUijoq3Cy63xYmmlfJyKqcW0fLX1e/NMMgGd42ASdXiNAKGQ4wJxR0RYLMOJlrMFC2kVJFti4V8ZJdg6GvadwqHPNMdGg1+QKh3WVVJpk1IcKtYSLYeMBcREgHChKAKj3Ip2PRSeGTYnt4wFsKYw1Go9GQzIlLCS+av3QiA3kEmKFhNjYF5dp1vOYu5EoDL4Udx4hBIFUoRPmzq40XuC/ZbIfGUzFx/CQ4R8lG0jtAyttEGo2hkjS192CXtkbPBYBpksPWdqt4/SS9Tjzqiolb2Nap+/epGkcsXFXpLjKmzGhBLdKB6pWAwgxqdF9b7YxJbU0JJTRq1BLdNIDunvUKWacrTdcZsygxtJJnSNRPEro20AWbE1DTH2Cr4ThiiFgFvkvr2S3xRGnveDpFW90FhvNS1t4+Mk80YyPcxpGby/Do5QdNqdcLcq1CUus2GL3eX7yu3W5gkMq+TXevFm5cK5gUPkJ8OKBM2dv5ehEHMST2Ryj0VlyvPK5QfcuZ/PK80Wi0ZLAjpdrybK84H5dHF4llERQBjvm6WiWzwsIJgMt22aJ9qUAdMKAH2wLJsBxuMjYYjauidsm418ywKwQthlLTFYVfmbZVo0qbsPcrB9zfwqKKQa7S1JGRz7z35PywpRwAyRJ5M740asPBcQou541JE46jk+Q5XSxN75Ijr3GyJnY0tZ6CPRs4IsiVkCNanNtb7xgBbo6E5HryEfZuxooWP/+XeLIuDNKQje3zNpk7rSek0ZR5RIWTN27/R4XCJSP+DM/Mq1V86VEnTVxAqNwH/afq8TrmlUGXTZ5cz6gWqHc8uoKUClXeF2g7EstHhAdKfYXwDqbzCdPj8o70W1CIs2aSy5bXgEEIPfEmg/fHAYmZ7WWDW9lzRjfHkW8gdc1PSmeXaWrVdYz9pTSFl61Zv/g5QQ01j+dbmC23rxyXlqFa5COTO55NDjP0QbUfaRR7Te0hrKQpYtSRdBgpMKHCI4jIlt5YSxV4rYknBGR7cpuBARZ5+ZrWoWoqbyMtQe9e4s9tnowOBYSW/DJwRsNdpLmpxtPWdqYWvw3oHSkZ4MDA7rpRW/dGpzdAXcJx8F7F3qknaMtfWqrnfvvU9W+tmxfObStmxTXjHqN/syazFihOt8Pf/AQBNW4mEJQAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT IN3a23ee293bedf290f13f5fea26e45ad8,b223ee293bedf290f13f5fea26e45ad7"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="DocIntel - Process a Document Task">1ca82b5feb702110f2549bf12a522896</action_type>
+        <action_type_parent display_value="DocIntel - Process a Document Task">5fe85713eb702110f2549bf12a522824</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>1ca82b5feb702110f2549bf12a522896</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">e223ee293bedf290f13f5fea26e45ab0</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:06</sys_created_on>
+        <sys_id>3a23ee293bedf290f13f5fea26e45ad8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:06</sys_updated_on>
+        <ui_id>62bbfafa-512d-49be-b197-e341f1b0c8cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41TXW+bMBT9K5WfIQJC0iRvU6NIkbZVWrq+dBW62NeJNWOobdKyKP9914CyaO2kPXJ8ru/5ME8nBtyr2myN82A47jq3FWzF5jPkWTZPsMzTLE0Tmc3yZSnTDGZZtshmLGIq8PgCOWD2Dx5y4hmokJge3M+CZiJ2BN0G5HSaYyphOodYJksR58vlNAbJs7jMxRQEZuk0uZ2Mg+czjQrlGg3d43gDIfygtLBo2OrpOWINWNrm0bLV6a+j/5WroURN1Adae7Ndf2TAd00ALEqk6zmO0Odx8tsVXlsRxKQRwzePRiCpkKAdRqwCI8DXtmMrb1sCLIK4N7q7MA7K+MFlBW9O/aKl0yy62rtirnOFUEXQxq5OijEoYqxr3lZo/M3DwJFr8LCjjdy39hJirTi6ISiBElrt766xgXDfhKcyjHgo9XsBvNZtZb4OgbHLXVd9tY7EYROiCOZGp3J3qF8vuW2U6VMbD3XNQV9RESw/bBTq0OhotOhLihh4b1XZ+iD8xFr18L6qAfyoLNQYkioqaBpl9kVj66PqlZCxarLX9DGRun4lB07tzWT4dyZUI0w2hK97+BGsCul8oWtoOGz8btRLi/2fNeM8XywSGSe3EuKc5zJe5FzEKEBKmS/zkgt2jkKwdxqc+xMmmShe2hDF8BYpXGVUr4BDA6XSync/2iSZClHzIqgq6NVZUlnbvowx9mIoMSzhVjX+E9k44pjw+fk30s9jHBUEAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=3a23ee293bedf290f13f5fea26e45ad8"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="DocIntel - Create a Document Task">dc85af9beb702110f2549bf12a5228d6</action_type>
+        <action_type_parent display_value="DocIntel - Create a Document Task">bea253dbeb302110f2549bf12a522840</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>dc85af9beb702110f2549bf12a5228d6</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction">e223ee293bedf290f13f5fea26e45ab0</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:05</sys_created_on>
+        <sys_id>b223ee293bedf290f13f5fea26e45ad7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:05</sys_updated_on>
+        <ui_id>6e1fa36a-f09d-4993-afc2-b4d3ade21307</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1abXObOBD+Kxomn3qG8mqD+ykTN3O96TU3ddsvJcMIIcVcMfgEpHE9+e+3EhiwcRwndXMvzUwTj1er1bOr3UdapZ9XCiZFnKVv0rzAKaHTZf4mUsYKsUbRkDkWDUPdNAydmY7thcwwsWOaru0pAyUWepHrOph5IQ1HO/QiAnopnlOhGeeLBC8D+XWgXOOkFOI/eEZonqNJRtDrm4JXcECh1v90nx6ZxUnEaaqMP18OlAXmYL+gXBmvtoYOxZvgkCagOqkAoHcV4N1uFMuFkOYFj9Or+vvb2sB0Lcx4JAAZA4XeFDSNKCBhOMnpQJnjNMJFxpfKuOAlCDjF0UWaLBuNWZwWYEwRujd5/A2Wc3VdF5qMgnOEVqPN16CGWInZBBcYkJSkKHmtSmZZDMGswhJRhsukOOvKKoWLhQyxnFLgMFnPzpJynr6rwqE0BtYbBZIyBxB0ITwV2GtH2HSWfX2/RnkepzIo9WCSEZw033ABoQvLQuBZKWX8YSvKlaQXZ5rQOawYzPFiAZJgwbPrWK4CoOfaVQJfNJZkXwFdHl+lWpVEGuwA1s5BPpHiT5jHwt3fwQxMFst9TOO/Siorg9Gh44YjrEJ1hKqtk5HqhcRQQ2LatudEdGjryu1AyZf5WYLzvA0U7FDwVyncrMJWByioYiymEB4vilMAdU3rWNwOvrdCPX1fxlOjTe0C518gMixO47q21kXqwUQ8HBpWSCNmejozLOYwis0htR3suf1yndB5hmCPwaM5RVFGIIthsx5argeAX5frB0CPJl30d7pVF21bQJt1+74jr0vXPFbpWuZm4UKWQL0GfYy7yvljTtEZzunxy/pOGE9Q7GxKMSez85gmUZ9g76CC7t5tskF3956EEIYRdlzHJKozoiPVtnSqhnqEVRdbjDBIXM917iUEghc4jJO4WPqlrlsRVEwgUAS0OusyfjBlrIUiXtsbCqJdJHP7w2lm2NZjnpUc0lqm3vZtYLU6gyoqaBQYWqtwe9snmD2aR6WYYYdiphI5+iCW27oW7HKqppme7G3DWB07NdFY+4mmlhx2SfgZrwgbwd4kho1wPwkzhDrRKXFs1TBcrNrYttXQs5lqug7Dphd5I50c5apQnT9t2fezsVf4m1OUly/89MWLUyLv2MK/l6fSYSQcRmUOMULFjCIWSVpCWfgnJYWGptIAmpd5gTiF/EkRRrKaNSQsXoi0Rmk5D+EjzlHGWE4LFC7RLwaKU/Sa84yjXyHDE7HElFZhlmCucZzIPctkluWozlpULgDYggNUMcdXNF9BmEGJr+GJ6fQGzxcJHQMajvJZxgvYMoIqel0rapBEV1eUa6TkkHOFJhXFnku/YNVXwlbtWWNFCF/6aS3ettWG/ZVyDGo19vYs1OuxEKcE6CSAyS2z9hn0wUx5AI4tpnwvgaA3k70QH9JD2Ufkx+cm6h9rooa64YUujVSMmaPaoWHDdcmEdsojxCK6SRyX/UhmbNPvmRifjhgbW9BtxNFxyNEje0mp8wAF9YDJTOZ2HOXdS6evXFOeAwhfGfuKoem+MvCVnEIGJ/E3LOCdZ3yOCzn+2/TinVSAcoA43lzIHYchsCOWOpFa5xOjvliOamSGM7RHnkktx7NsI8LSxsnZxVmWJNXuyhbIF+xxu21+SmZ0jqtF2iKjfHzIOmLS7oX8uu595XInGO2EiY+AYUKLvLI0jQUuqOtzIZTOrnzfV8qFms9iVqiksaEm9JomYnAsfonSEp+38E94+EBHtBNxMhyEpcu9zfLiZyB+1WQbyAToD8tDrBGfNmkD51jeKDWHTqMoabcZl+envAQ0CpsJGEgNvZnQ8mMzwXJ1hi1MVQNDU2nTiKquE7qqERI2GkaugUOrM7+h8xY753ip1VvcIMsCGccNbAek0aZn+4K07Vo1Qy66OW0L2V1HT6P/+AOoWUNcDeCwSO7aN3FT6KdEFdx2J2Vc8624Nl42elsa8g7TDDqdXLoJEppeFbNmcOjA9WTL9I4M8TyTEBcyZGh7hmozAuco0S01GoXQYYxc2zRGTcXt6qKfqe+Z+p6p75n6fgLqO6zZXSmy7GVRQfza1mndKHUTa201WPe9O5Oh0WrT4Ckarn7/2aLo9oFtufYuya0DG93bIcXZGN6YecimiSZu76vF/jdvmC3+1sRTnLyN0y+7HjrKuP7bbt0Sd3O6fn9otmlrTPYcnYeOzQ1vm437SaV9+Nix/B3JVj+COEd7BJG1drRXkO988aglk96GH/cp5DHPCpeHd5v3ZUavDf2/ZcF/5S3sLkLv3BEOLeR/7yHQPPttpdd3HAWPpfXHHCLH+38Ul38DPgF3fOskAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=b223ee293bedf290f13f5fea26e45ad7"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_flow_variable action="DELETE" query="model=e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:05</sys_created_on>
+        <sys_id>2223ee293bedf290f13f5fea26e45acf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:05</sys_created_on>
+        <sys_id>ea23ee293bedf290f13f5fea26e45ac7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_e223ee293bedf290f13f5fea26e45ab0"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>cdd2aae53bedf290f13f5fea26e45a00</sys_id>
+        <latest_snapshot>e223ee293bedf290f13f5fea26e45ab0</latest_snapshot>
+        <compiler_build>glide-Mon_Feb_13_11_50_57_IST_2023.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN3623ee293bedf290f13f5fea26e45aed"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>cdd2aae53bedf290f13f5fea26e45a00</plan_id>
+        <snapshot>e223ee293bedf290f13f5fea26e45ab0</snapshot>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3623ee293bedf290f13f5fea26e45aed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:06</sys_updated_on>
+        <trigger display_value="">b223ee293bedf290f13f5fea26e45aec</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=cdd2aae53bedf290f13f5fea26e45a00"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</application>
+        <file_path/>
+        <instance_id>9726289e2b2ad6541c84f9f66e91bfcb</instance_id>
+        <instance_name>ven07632</instance_name>
+        <name>sys_hub_flow_cdd2aae53bedf290f13f5fea26e45a00</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=88000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;28100&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from&gt;e0b9ab9feb702110f2549bf12a5228e6&lt;/copied_from&gt;&lt;copied_from_name&gt;Task Processing Flow Template&lt;/copied_from_name&gt;&lt;description&gt;DocDataExtractor Flow Template for processing a task&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;docintel_task_processing_flow__demo_fincrime_docintel__process_doc_extraction&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"6e1fa36a-f09d-4993-afc2-b4d3ade21307.task_id","label":"1 - DocIntel - Create a Document Task➛Task ID","reference_display":"Task ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a7335496-1038-4dd2-8efb-a38349d0513f"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id&gt;b223ee293bedf290f13f5fea26e45aec&lt;/remote_trigger_id&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:36&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_cdd2aae53bedf290f13f5fea26e45a00&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:06&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record display_value="Created 2025-12-01 02:18:58"&gt;45236e293bedf290f13f5fea26e45a66&lt;/version_record&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_flow_record_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition table="x_vuram_financia_0_demo_fincrime_doc_intel"&gt;^EQ&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;name/&gt;&lt;on_delete&gt;false&lt;/on_delete&gt;&lt;on_insert&gt;true&lt;/on_insert&gt;&lt;on_update&gt;false&lt;/on_update&gt;&lt;published_version/&gt;&lt;run_flow_in&gt;background&lt;/run_flow_in&gt;&lt;run_on_extended&gt;false&lt;/run_on_extended&gt;&lt;run_when_setting&gt;both&lt;/run_when_setting&gt;&lt;run_when_user_list/&gt;&lt;run_when_user_setting&gt;any&lt;/run_when_user_setting&gt;&lt;sys_class_name&gt;sys_flow_record_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b223ee293bedf290f13f5fea26e45aec&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:06&lt;/sys_updated_on&gt;&lt;table&gt;x_vuram_financia_0_demo_fincrime_doc_intel&lt;/table&gt;&lt;trigger_definition/&gt;&lt;/sys_flow_record_trigger&gt;&lt;sys_trigger_runner_mapping action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;data&gt;{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}&lt;/data&gt;&lt;identifier&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/identifier&gt;&lt;runner&gt;FDTriggerRunner&lt;/runner&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:06&lt;/sys_created_on&gt;&lt;sys_id&gt;7a23ee293bedf290f13f5fea26e45aec&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:06&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;b223ee293bedf290f13f5fea26e45aec&lt;/trigger&gt;&lt;/sys_trigger_runner_mapping&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN7a23ee293bedf290f13f5fea26e45aec"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN8dd2aae53bedf290f13f5fea26e45a01"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/id&gt;&lt;name&gt;DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction&lt;/name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:36&lt;/sys_created_on&gt;&lt;sys_id&gt;8dd2aae53bedf290f13f5fea26e45a01&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:17:36&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=8dd2aae53bedf290f13f5fea26e45a01"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN89d2aae53bedf290f13f5fea26e45a08,c9d2aae53bedf290f13f5fea26e45a0d"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/model&gt;&lt;model_id&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:36&lt;/sys_created_on&gt;&lt;sys_id&gt;89d2aae53bedf290f13f5fea26e45a08&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:04&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=89d2aae53bedf290f13f5fea26e45a08"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/model&gt;&lt;model_id&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:37&lt;/sys_created_on&gt;&lt;sys_id&gt;c9d2aae53bedf290f13f5fea26e45a0d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:04&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c9d2aae53bedf290f13f5fea26e45a0d"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN8dd2aae53bedf290f13f5fea26e45a94"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Created&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:37&lt;/sys_created_on&gt;&lt;sys_id&gt;8dd2aae53bedf290f13f5fea26e45a94&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:04&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created"&gt;798916a0c31322002841b63b12d3ae7c&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/+VY2W7jNhT9FUFPLeACWrwpb1MngxpIM63jaR+ClKBE0hYqUa5EKXEH+fdeaousxfGSdOzkxYBImrzn3HMX8u6bKkJ3saDhlEcCc4ferqMpUS9UzRyRIRuY1LY1Q9c1Zgz6ls10Aw8MY9zX1J7qYZt6sHSObY/Ct8sFDTn25usVhWEhhxHHvpzzMSdYBOFavRBhTHsqCwN/Tv2VhwUsZtiLYDAICQ3VC72npn/L94C/J9iL5fcjSuIQ+4i5HIx1MdIQoX4gv53Q9SkigYOkHR78ibgRbL/+I//vFP5AKBcws8KwCRXyrG+qs3Q9ElKuXtzd91QBxqMNZMpNBsGVtDjMwZZBNcfUTcPQNKBCt4emrRvExFRro6UGRbSw84ybPgrKCSUlJQ3iQorJF+6tyxVLwAsbpiQ/Ru6/sPtYk+sYBVQOzebKT5TTkg07y8B16JeVcAOejWR2ZpOBF/v8JrNfEkoZjj1REAojcQT70ZU0WRqRW8Rul8HDrDjws8tTdPmkFzjYK7+wAP3ZsaCRdAVzPXAKyriJgjhMrZ9dTb7MLtGfn+aTX65maHZ1O59NJ/OrS/UpxYX+ieWOmYW5LSiD81Sq4LNLPelAHvs2WNNTIxDMSnxyhJsUAnzqvUY4TAJO3JTPRkg4xVRUtbUijoq3Cy63xYmmlfJyKqcW0fLX1e/NMMgGd42ASdXiNAKGQ4wJxR0RYLMOJlrMFC2kVJFti4V8ZJdg6GvadwqHPNMdGg1+QKh3WVVJpk1IcKtYSLYeMBcREgHChKAKj3Ip2PRSeGTYnt4wFsKYw1Go9GQzIlLCS+av3QiA3kEmKFhNjYF5dp1vOYu5EoDL4Udx4hBIFUoRPmzq40XuC/ZbIfGUzFx/CQ4R8lG0jtAyttEGo2hkjS192CXtkbPBYBpksPWdqt4/SS9Tjzqiolb2Nap+/epGkcsXFXpLjKmzGhBLdKB6pWAwgxqdF9b7YxJbU0JJTRq1BLdNIDunvUKWacrTdcZsygxtJJnSNRPEro20AWbE1DTH2Cr4ThiiFgFvkvr2S3xRGnveDpFW90FhvNS1t4+Mk80YyPcxpGby/Do5QdNqdcLcq1CUus2GL3eX7yu3W5gkMq+TXevFm5cK5gUPkJ8OKBM2dv5ehEHMST2Ryj0VlyvPK5QfcuZ/PK80Wi0ZLAjpdrybK84H5dHF4llERQBjvm6WiWzwsIJgMt22aJ9qUAdMKAH2wLJsBxuMjYYjauidsm418ywKwQthlLTFYVfmbZVo0qbsPcrB9zfwqKKQa7S1JGRz7z35PywpRwAyRJ5M740asPBcQou541JE46jk+Q5XSxN75Ijr3GyJnY0tZ6CPRs4IsiVkCNanNtb7xgBbo6E5HryEfZuxooWP/+XeLIuDNKQje3zNpk7rSek0ZR5RIWTN27/R4XCJSP+DM/Mq1V86VEnTVxAqNwH/afq8TrmlUGXTZ5cz6gWqHc8uoKUClXeF2g7EstHhAdKfYXwDqbzCdPj8o70W1CIs2aSy5bXgEEIPfEmg/fHAYmZ7WWDW9lzRjfHkW8gdc1PSmeXaWrVdYz9pTSFl61Zv/g5QQ01j+dbmC23rxyXlqFa5COTO55NDjP0QbUfaRR7Te0hrKQpYtSRdBgpMKHCI4jIlt5YSxV4rYknBGR7cpuBARZ5+ZrWoWoqbyMtQe9e4s9tnowOBYSW/DJwRsNdpLmpxtPWdqYWvw3oHSkZ4MDA7rpRW/dGpzdAXcJx8F7F3qknaMtfWqrnfvvU9W+tmxfObStmxTXjHqN/syazFihOt8Pf/AQBNW4mEJQAA&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN01d2aae53bedf290f13f5fea26e45a78,81d2aae53bedf290f13f5fea26e45a7a"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="DocIntel - Create a Document Task"&gt;dc85af9beb702110f2549bf12a5228d6&lt;/action_type&gt;&lt;action_type_parent display_value="DocIntel - Create a Document Task"&gt;bea253dbeb302110f2549bf12a522840&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;dc85af9beb702110f2549bf12a5228d6&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:37&lt;/sys_created_on&gt;&lt;sys_id&gt;01d2aae53bedf290f13f5fea26e45a78&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:04&lt;/sys_updated_on&gt;&lt;ui_id&gt;6e1fa36a-f09d-4993-afc2-b4d3ade21307&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;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&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=01d2aae53bedf290f13f5fea26e45a78"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="DocIntel - Process a Document Task"&gt;1ca82b5feb702110f2549bf12a522896&lt;/action_type&gt;&lt;action_type_parent display_value="DocIntel - Process a Document Task"&gt;5fe85713eb702110f2549bf12a522824&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;1ca82b5feb702110f2549bf12a522896&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:37&lt;/sys_created_on&gt;&lt;sys_id&gt;81d2aae53bedf290f13f5fea26e45a7a&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:04&lt;/sys_updated_on&gt;&lt;ui_id&gt;62bbfafa-512d-49be-b197-e341f1b0c8cb&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/5VTwW7bMAz9lULn2LBlJ01yGxAUCLCtwJr10hUGLVGJMFl2ZTmtF+TfR9leEKzdYUeTj4/vPcpPJwbC69pubevBCnzo261ka7aYo+B8kWCZpzxNE8Xn+apUKYc550s+ZzOmA04sUQDyf+BQEM5ChYT00P4saGbGjmC6UDmdFpgqyBYQqWQlo3y1yiJQgkdlLjOQyNMsuY2nwfOZRqVuGwP948RAFXHQRjq0bP30PGMNONrm0bH16a+W7xssDJRoaPAbKqSOwP/w8Wd2R3putpuPnIUdVHBX7LWTQU06Y/jm0UqkbQpMizNWgZXga9eztXcdFRyCvLemvyAO2vrRZgVvrf5F5BmfXfGvWdu3hdRF0MCuOsWUFCE2tegqtP5mN2LEodYC75tw9pHcQ2nec4nadJX9OnoM2aOCzvir7LuW9mATXAWdk2j1cKhfLwHfaTsEMDVNLcBcvsB7p8vOYxvu1end+/zG4ucP7oYGg62igqbRdl80rj7qYRdJr+K9oY9YmfqVNLZ6b+PxpceUOcR3VN8M5UdwOvj/QjQ0HDZ+t/qlw+E/mAuRL5eJipJbBVEuchUtcyEjlKCUyld5KSQ7D8EXL12wNj4HCktbPewT0ECpjfb9jy5JMilrUQQNBT0IR5pqN4Q7xViMRyHKVjjd+E8k+ohTYufn3+V4UqGxAwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=81d2aae53bedf290f13f5fea26e45a7a"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:37&lt;/sys_created_on&gt;&lt;sys_id&gt;01d2aae53bedf290f13f5fea26e45a10&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:17:37&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:17:37&lt;/sys_created_on&gt;&lt;sys_id&gt;0dd2aae53bedf290f13f5fea26e45a0c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:17:37&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=31170232000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;28100&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from&gt;e0b9ab9feb702110f2549bf12a5228e6&lt;/copied_from&gt;&lt;copied_from_name/&gt;&lt;description&gt;DocDataExtractor Flow Template for processing a task&lt;/description&gt;&lt;flow_priority/&gt;&lt;internal_name&gt;docintel_task_processing_flow__demo_fincrime_docintel__process_doc_extraction&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"6e1fa36a-f09d-4993-afc2-b4d3ade21307.task_id","label":"1 - DocIntel - Create a Document Task➛Task ID","reference_display":"Task ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a7335496-1038-4dd2-8efb-a38349d0513f"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:05&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:05&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT INea23ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/id&gt;&lt;name&gt;DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction&lt;/name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:05&lt;/sys_created_on&gt;&lt;sys_id&gt;ea23ee293bedf290f13f5fea26e45ab0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:05&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ea23ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT IN2623ee293bedf290f13f5fea26e45aca,ea23ee293bedf290f13f5fea26e45ab1"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/model&gt;&lt;model_id&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:05&lt;/sys_created_on&gt;&lt;sys_id&gt;2623ee293bedf290f13f5fea26e45aca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:05&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2623ee293bedf290f13f5fea26e45aca"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/model&gt;&lt;model_id&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:05&lt;/sys_created_on&gt;&lt;sys_id&gt;ea23ee293bedf290f13f5fea26e45ab1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:05&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ea23ee293bedf290f13f5fea26e45ab1"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT IN7623ee293bedf290f13f5fea26e45ada"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Created&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:06&lt;/sys_created_on&gt;&lt;sys_id&gt;7623ee293bedf290f13f5fea26e45ada&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:06&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created"&gt;798916a0c31322002841b63b12d3ae7c&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/+VY2W7jNhT9FUFPLeACWrwpb1MngxpIM63jaR+ClKBE0hYqUa5EKXEH+fdeaousxfGSdOzkxYBImrzn3HMX8u6bKkJ3saDhlEcCc4ferqMpUS9UzRyRIRuY1LY1Q9c1Zgz6ls10Aw8MY9zX1J7qYZt6sHSObY/Ct8sFDTn25usVhWEhhxHHvpzzMSdYBOFavRBhTHsqCwN/Tv2VhwUsZtiLYDAICQ3VC72npn/L94C/J9iL5fcjSuIQ+4i5HIx1MdIQoX4gv53Q9SkigYOkHR78ibgRbL/+I//vFP5AKBcws8KwCRXyrG+qs3Q9ElKuXtzd91QBxqMNZMpNBsGVtDjMwZZBNcfUTcPQNKBCt4emrRvExFRro6UGRbSw84ybPgrKCSUlJQ3iQorJF+6tyxVLwAsbpiQ/Ru6/sPtYk+sYBVQOzebKT5TTkg07y8B16JeVcAOejWR2ZpOBF/v8JrNfEkoZjj1REAojcQT70ZU0WRqRW8Rul8HDrDjws8tTdPmkFzjYK7+wAP3ZsaCRdAVzPXAKyriJgjhMrZ9dTb7MLtGfn+aTX65maHZ1O59NJ/OrS/UpxYX+ieWOmYW5LSiD81Sq4LNLPelAHvs2WNNTIxDMSnxyhJsUAnzqvUY4TAJO3JTPRkg4xVRUtbUijoq3Cy63xYmmlfJyKqcW0fLX1e/NMMgGd42ASdXiNAKGQ4wJxR0RYLMOJlrMFC2kVJFti4V8ZJdg6GvadwqHPNMdGg1+QKh3WVVJpk1IcKtYSLYeMBcREgHChKAKj3Ip2PRSeGTYnt4wFsKYw1Go9GQzIlLCS+av3QiA3kEmKFhNjYF5dp1vOYu5EoDL4Udx4hBIFUoRPmzq40XuC/ZbIfGUzFx/CQ4R8lG0jtAyttEGo2hkjS192CXtkbPBYBpksPWdqt4/SS9Tjzqiolb2Nap+/epGkcsXFXpLjKmzGhBLdKB6pWAwgxqdF9b7YxJbU0JJTRq1BLdNIDunvUKWacrTdcZsygxtJJnSNRPEro20AWbE1DTH2Cr4ThiiFgFvkvr2S3xRGnveDpFW90FhvNS1t4+Mk80YyPcxpGby/Do5QdNqdcLcq1CUus2GL3eX7yu3W5gkMq+TXevFm5cK5gUPkJ8OKBM2dv5ehEHMST2Ryj0VlyvPK5QfcuZ/PK80Wi0ZLAjpdrybK84H5dHF4llERQBjvm6WiWzwsIJgMt22aJ9qUAdMKAH2wLJsBxuMjYYjauidsm418ywKwQthlLTFYVfmbZVo0qbsPcrB9zfwqKKQa7S1JGRz7z35PywpRwAyRJ5M740asPBcQou541JE46jk+Q5XSxN75Ijr3GyJnY0tZ6CPRs4IsiVkCNanNtb7xgBbo6E5HryEfZuxooWP/+XeLIuDNKQje3zNpk7rSek0ZR5RIWTN27/R4XCJSP+DM/Mq1V86VEnTVxAqNwH/afq8TrmlUGXTZ5cz6gWqHc8uoKUClXeF2g7EstHhAdKfYXwDqbzCdPj8o70W1CIs2aSy5bXgEEIPfEmg/fHAYmZ7WWDW9lzRjfHkW8gdc1PSmeXaWrVdYz9pTSFl61Zv/g5QQ01j+dbmC23rxyXlqFa5COTO55NDjP0QbUfaRR7Te0hrKQpYtSRdBgpMKHCI4jIlt5YSxV4rYknBGR7cpuBARZ5+ZrWoWoqbyMtQe9e4s9tnowOBYSW/DJwRsNdpLmpxtPWdqYWvw3oHSkZ4MDA7rpRW/dGpzdAXcJx8F7F3qknaMtfWqrnfvvU9W+tmxfObStmxTXjHqN/syazFihOt8Pf/AQBNW4mEJQAA&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=e223ee293bedf290f13f5fea26e45ab0^sys_idNOT IN3a23ee293bedf290f13f5fea26e45ad8,b223ee293bedf290f13f5fea26e45ad7"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="DocIntel - Process a Document Task"&gt;1ca82b5feb702110f2549bf12a522896&lt;/action_type&gt;&lt;action_type_parent display_value="DocIntel - Process a Document Task"&gt;5fe85713eb702110f2549bf12a522824&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;1ca82b5feb702110f2549bf12a522896&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:06&lt;/sys_created_on&gt;&lt;sys_id&gt;3a23ee293bedf290f13f5fea26e45ad8&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:06&lt;/sys_updated_on&gt;&lt;ui_id&gt;62bbfafa-512d-49be-b197-e341f1b0c8cb&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/41TXW+bMBT9K5WfIQJC0iRvU6NIkbZVWrq+dBW62NeJNWOobdKyKP9914CyaO2kPXJ8ru/5ME8nBtyr2myN82A47jq3FWzF5jPkWTZPsMzTLE0Tmc3yZSnTDGZZtshmLGIq8PgCOWD2Dx5y4hmokJge3M+CZiJ2BN0G5HSaYyphOodYJksR58vlNAbJs7jMxRQEZuk0uZ2Mg+czjQrlGg3d43gDIfygtLBo2OrpOWINWNrm0bLV6a+j/5WroURN1Adae7Ndf2TAd00ALEqk6zmO0Odx8tsVXlsRxKQRwzePRiCpkKAdRqwCI8DXtmMrb1sCLIK4N7q7MA7K+MFlBW9O/aKl0yy62rtirnOFUEXQxq5OijEoYqxr3lZo/M3DwJFr8LCjjdy39hJirTi6ISiBElrt766xgXDfhKcyjHgo9XsBvNZtZb4OgbHLXVd9tY7EYROiCOZGp3J3qF8vuW2U6VMbD3XNQV9RESw/bBTq0OhotOhLihh4b1XZ+iD8xFr18L6qAfyoLNQYkioqaBpl9kVj66PqlZCxarLX9DGRun4lB07tzWT4dyZUI0w2hK97+BGsCul8oWtoOGz8btRLi/2fNeM8XywSGSe3EuKc5zJe5FzEKEBKmS/zkgt2jkKwdxqc+xMmmShe2hDF8BYpXGVUr4BDA6XSync/2iSZClHzIqgq6NVZUlnbvowx9mIoMSzhVjX+E9k44pjw+fk30s9jHBUEAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=3a23ee293bedf290f13f5fea26e45ad8"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="DocIntel - Create a Document Task"&gt;dc85af9beb702110f2549bf12a5228d6&lt;/action_type&gt;&lt;action_type_parent display_value="DocIntel - Create a Document Task"&gt;bea253dbeb302110f2549bf12a522840&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;dc85af9beb702110f2549bf12a5228d6&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction"&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:05&lt;/sys_created_on&gt;&lt;sys_id&gt;b223ee293bedf290f13f5fea26e45ad7&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:05&lt;/sys_updated_on&gt;&lt;ui_id&gt;6e1fa36a-f09d-4993-afc2-b4d3ade21307&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;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&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=b223ee293bedf290f13f5fea26e45ad7"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:05&lt;/sys_created_on&gt;&lt;sys_id&gt;2223ee293bedf290f13f5fea26e45acf&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:05&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:05&lt;/sys_created_on&gt;&lt;sys_id&gt;ea23ee293bedf290f13f5fea26e45ac7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Financial Crime Compliance"&gt;65e5bc6d3b9fea90cb98111864e45a5f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:05&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e223ee293bedf290f13f5fea26e45ab0"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/sys_id&gt;&lt;latest_snapshot&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-Mon_Feb_13_11_50_57_IST_2023.zip&lt;/compiler_build&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=cdd2aae53bedf290f13f5fea26e45a00^sys_idNOT IN3623ee293bedf290f13f5fea26e45aed"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.OncePerRecord&lt;/binding_strategy&gt;&lt;plan/&gt;&lt;plan_id&gt;cdd2aae53bedf290f13f5fea26e45a00&lt;/plan_id&gt;&lt;snapshot&gt;e223ee293bedf290f13f5fea26e45ab0&lt;/snapshot&gt;&lt;sys_created_by&gt;abhipsa.jally&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-01 10:19:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;3623ee293bedf290f13f5fea26e45aed&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;abhipsa.jally&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-01 10:19:06&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;b223ee293bedf290f13f5fea26e45aec&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=cdd2aae53bedf290f13f5fea26e45a00"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-802939804</payload_hash>
+        <record_name>DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction</record_name>
+        <reverted_from/>
+        <source>192b69893b1df694f13f5fea26e45aca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 10:19:06</sys_created_on>
+        <sys_id>f62322693bedf290f13f5fea26e45a13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ad96c54050000001</sys_recorded_at>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 10:19:06</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>3a232269aeedf2905eb6bd38f6e93d12</update_guid>
+        <update_guid_history>3a232269aeedf2905eb6bd38f6e93d12:-802939804,2a23ee2984edf290bf001be94081966f:-2060840217,95d2aae5c5edf29069d2378af68757ad:-2072759158,81d2aae580edf29063a81695e593ea06:-180661852</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-08 10:27:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>5ea6c32de18e47a89ddbbd6e0db70ce4</sys_id>
+        <sys_metadata>cdd2aae53bedf290f13f5fea26e45a00</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DocIntel Task Processing Flow - Demo Fincrime docintel - Process Doc Extraction</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_scope_delete display_value="">7482b775a6624e87a4e8290d190a1ef9</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_cdd2aae53bedf290f13f5fea26e45a00</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_cdd2aae53bedf290f13f5fea26e45a00">f62322693bedf290f13f5fea26e45a13</sys_update_version>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-08 10:27:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

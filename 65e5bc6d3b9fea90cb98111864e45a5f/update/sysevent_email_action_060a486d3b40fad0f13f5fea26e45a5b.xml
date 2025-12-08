@@ -13,7 +13,7 @@
         <content_type>text/html</content_type>
         <default_digest>false</default_digest>
         <default_interval/>
-        <description/>
+        <description>This notification is triggered when a perpetual KYC case is created due to expired customer documents. It alerts the assigned user with details of the case so they can review and take the necessary action.</description>
         <digest_from/>
         <digest_html/>
         <digest_reply_to/>
@@ -69,7 +69,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>060a486d3b40fad0f13f5fea26e45a5b</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Update the expired documents</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -77,7 +77,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sysevent_email_action_060a486d3b40fad0f13f5fea26e45a5b</sys_update_name>
         <sys_updated_by>abhipsa.jally</sys_updated_by>
-        <sys_updated_on>2025-09-19 09:23:39</sys_updated_on>
+        <sys_updated_on>2025-12-08 06:25:31</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

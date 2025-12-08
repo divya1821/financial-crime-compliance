@@ -8,10 +8,10 @@
         <derived>true</derived>
         <field/>
         <label>Now Assist in Virtual Agent - 10e7eb61d3b953e94f13f5fea26e45a01 Default Spell Check Dictionary</label>
-        <last_derived>2025-12-04 21:27:03</last_derived>
+        <last_derived>2025-12-08 00:27:04</last_derived>
         <locale>en</locale>
         <name>x_vuram_financia_0_now_assist_in_virtual_agent_10e7eb61d3b953e94f13f5fea26e45a01_default_spell_check_dictionary</name>
-        <publish_id>cfb2a405-b1e4-441d-bf49-42d487570b68</publish_id>
+        <publish_id>f3d38f8b-e416-4e15-93f8-d98ef814d149</publish_id>
         <punctuation_sensitive>false</punctuation_sensitive>
         <state>PUBLISHED</state>
         <sys_class_name>ais_dictionary</sys_class_name>

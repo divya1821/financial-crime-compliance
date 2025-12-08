@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="dl_definition">
+    <dl_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <matcher_table>x_vuram_financia_0_fcc_kyc_assignment_lookup</matcher_table>
+        <name>FCC KYC case assignment lookup</name>
+        <run_on_form_change>true</run_on_form_change>
+        <run_on_insert>true</run_on_insert>
+        <run_on_update>true</run_on_update>
+        <source_table>x_vuram_financia_0_fcc_kyc_cases</source_table>
+        <sys_class_name>dl_definition</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-12-05 14:58:24</sys_created_on>
+        <sys_id>714900cb3b29b6d0f13f5fea26e45a0a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FCC KYC case assignment lookup</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>dl_definition_714900cb3b29b6d0f13f5fea26e45a0a</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-05 15:35:11</sys_updated_on>
+    </dl_definition>
+</record_update>

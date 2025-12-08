@@ -6,7 +6,7 @@
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
-        <comments/>
+        <comments>This action triggers a sequence of follow-up emails to the designated recipient — one every 5 days — for a total of three reminders.</comments>
         <condition>current.state=='250'&amp;&amp;current.chaser_count=='0'&amp;&amp;current.case_type=='periodic_kyc_case'</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
@@ -65,15 +65,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1e5ec0593b3f6e10cb98111864e45a1d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Follow Up Mail</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_action_1e5ec0593b3f6e10cb98111864e45a1d</sys_update_name>
-        <sys_updated_by>srinithi.v</sys_updated_by>
-        <sys_updated_on>2025-09-08 12:41:35</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-12-08 07:23:28</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

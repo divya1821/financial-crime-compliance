@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_vuram_financia_0_fcc_kyc_assignment_lookup" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_vuram_financia_0_fcc_kyc_assignment_lookup</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-12-05 14:08:10</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+            <sys_update_name>sys_choice_x_vuram_financia_0_fcc_kyc_assignment_lookup_state</sys_update_name>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-12-05 14:08:10</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Work in Progress</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_assignment_lookup</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-12-05 14:08:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-12-05 14:09:28</sys_updated_on>
+            <value>150</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Review</label>
+            <language>en</language>
+            <name>x_vuram_financia_0_fcc_kyc_assignment_lookup</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>srinithi.v</sys_created_by>
+            <sys_created_on>2025-12-05 14:09:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>srinithi.v</sys_updated_by>
+            <sys_updated_on>2025-12-05 14:09:33</sys_updated_on>
+            <value>320</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

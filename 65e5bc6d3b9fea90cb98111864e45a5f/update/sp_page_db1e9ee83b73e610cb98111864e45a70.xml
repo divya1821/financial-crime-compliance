@@ -9,21 +9,21 @@
         <internal>false</internal>
         <omit_watcher>false</omit_watcher>
         <public>false</public>
-        <roles>snc_internal</roles>
+        <roles>x_vuram_financia_0.user</roles>
         <seo_script/>
         <short_description/>
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-02 07:33:29</sys_created_on>
         <sys_id>db1e9ee83b73e610cb98111864e45a70</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>fcc_kyc_update_customer_details</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sp_page_db1e9ee83b73e610cb98111864e45a70</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-11-20 04:57:55</sys_updated_on>
+        <sys_updated_on>2025-12-05 11:48:04</sys_updated_on>
         <title>FCC KYC Update Customer Details</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>

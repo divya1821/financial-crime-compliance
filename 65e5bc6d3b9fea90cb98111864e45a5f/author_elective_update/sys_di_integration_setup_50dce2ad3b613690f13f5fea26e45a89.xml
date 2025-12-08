@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_di_integration_setup">
+    <sys_di_integration_setup action="DELETE">
+        <condition/>
+        <create_flow>true</create_flow>
+        <flow display_value="DocIntel Extract Values Flow - Demo Docintel FCC - Extracrt the values">a4dc2aad3b613690f13f5fea26e45a2a</flow>
+        <flow_conditions>statusCHANGESTODone^source_table=x_vuram_financia_0_demo_docintel_fincrime^task_definition=b4cae6653b613690f13f5fea26e45abd</flow_conditions>
+        <mluc_id/>
+        <name>Extracrt the values</name>
+        <sys_class_name>sys_di_integration_setup</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 11:01:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>50dce2ad3b613690f13f5fea26e45a89</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Extracrt the values</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_di_integration_setup_50dce2ad3b613690f13f5fea26e45a89</sys_update_name>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 11:01:19</sys_updated_on>
+        <target_table>x_vuram_financia_0_demo_docintel_fincrime</target_table>
+        <task_definition display_value="Demo Docintel FCC">b4cae6653b613690f13f5fea26e45abd</task_definition>
+        <trigger>x_vuram_financia_0_demo_docintel_fincrime</trigger>
+        <type>extract_values</type>
+    </sys_di_integration_setup>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</application>
+        <file_path/>
+        <instance_id>9726289e2b2ad6541c84f9f66e91bfcb</instance_id>
+        <instance_name>ven07632</instance_name>
+        <name>sys_di_integration_setup_50dce2ad3b613690f13f5fea26e45a89</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_di_integration_setup"><sys_di_integration_setup action="INSERT_OR_UPDATE"><condition/><create_flow>true</create_flow><flow display_value="DocIntel Extract Values Flow - Demo Docintel FCC - Extracrt the values">a4dc2aad3b613690f13f5fea26e45a2a</flow><flow_conditions>statusCHANGESTODone^source_table=x_vuram_financia_0_demo_docintel_fincrime^task_definition=b4cae6653b613690f13f5fea26e45abd</flow_conditions><mluc_id/><name>Extracrt the values</name><sys_class_name>sys_di_integration_setup</sys_class_name><sys_created_by>abhipsa.jally</sys_created_by><sys_created_on>2025-12-01 11:01:16</sys_created_on><sys_domain>global</sys_domain><sys_id>50dce2ad3b613690f13f5fea26e45a89</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Extracrt the values</sys_name><sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package><sys_policy/><sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope><sys_update_name>sys_di_integration_setup_50dce2ad3b613690f13f5fea26e45a89</sys_update_name><sys_updated_by>abhipsa.jally</sys_updated_by><sys_updated_on>2025-12-01 11:01:19</sys_updated_on><target_table>x_vuram_financia_0_demo_docintel_fincrime</target_table><task_definition display_value="Demo Docintel FCC">b4cae6653b613690f13f5fea26e45abd</task_definition><trigger>x_vuram_financia_0_demo_docintel_fincrime</trigger><type>extract_values</type></sys_di_integration_setup></record_update>]]></payload>
+        <payload_hash>383410884</payload_hash>
+        <record_name>Extracrt the values</record_name>
+        <reverted_from/>
+        <source>192b69893b1df694f13f5fea26e45aca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-01 11:01:19</sys_created_on>
+        <sys_id>51dc6aad3b613690f13f5fea26e45a9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ad992f9d30000001</sys_recorded_at>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-01 11:01:19</sys_updated_on>
+        <type>Integration Setup</type>
+        <update_guid>95dc6aadb5613690cf63d6b6a064649c</update_guid>
+        <update_guid_history>95dc6aadb5613690cf63d6b6a064649c:383410884</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>abhipsa.jally</sys_created_by>
+        <sys_created_on>2025-12-08 09:54:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_di_integration_setup">sys_di_integration_setup</sys_db_object>
+        <sys_id>d771f7fc8e95424c9a1c0eb2eada38a4</sys_id>
+        <sys_metadata>50dce2ad3b613690f13f5fea26e45a89</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Extracrt the values</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_scope_delete display_value="">7482b775a6624e87a4e8290d190a1ef9</sys_scope_delete>
+        <sys_update_name>sys_di_integration_setup_50dce2ad3b613690f13f5fea26e45a89</sys_update_name>
+        <sys_update_version display_value="sys_di_integration_setup_50dce2ad3b613690f13f5fea26e45a89">51dc6aad3b613690f13f5fea26e45a9d</sys_update_version>
+        <sys_updated_by>abhipsa.jally</sys_updated_by>
+        <sys_updated_on>2025-12-08 09:54:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
