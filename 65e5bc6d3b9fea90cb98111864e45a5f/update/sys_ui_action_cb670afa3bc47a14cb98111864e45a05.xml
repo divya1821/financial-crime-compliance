@@ -16,7 +16,7 @@
     g_form.setReadOnly('kyc_case.entity.risk_level', false);
 
 }]]></client_script_v2>
-        <comments/>
+        <comments>Override the Risk level and provide the supporting document for the same</comments>
         <condition>gs.hasRole("x_vuram_financia_0.fcc_kyc_maker")&amp;&amp; (current.type == "risk_evaluation") &amp;&amp; (current.state == 5) &amp;&amp; (current.kyc_case.state =="150")</condition>
         <form_action>false</form_action>
         <form_button>false</form_button>
@@ -63,15 +63,15 @@ if (typeof window == 'undefined') {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cb670afa3bc47a14cb98111864e45a05</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Override Risk Level</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ui_action_cb670afa3bc47a14cb98111864e45a05</sys_update_name>
-        <sys_updated_by>harini.ks</sys_updated_by>
-        <sys_updated_on>2025-11-28 11:36:03</sys_updated_on>
+        <sys_updated_by>abhilash.nair</sys_updated_by>
+        <sys_updated_on>2025-12-08 13:46:53</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_tasks</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -19,7 +19,7 @@
         <sys_updated_by>abhipsa.jally</sys_updated_by>
         <sys_updated_on>2025-08-19 15:11:05</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
-        <ui_action display_value="Send Back to Maker">ee5044583ba72610f13f5fea26e45a12</ui_action>
+        <ui_action/>
     </sys_ux_form_action>
     <sys_translated_text action="delete_multiple" query="documentkey=c6a0c4d43ba72610f13f5fea26e45ac4"/>
 </record_update>

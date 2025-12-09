@@ -19,7 +19,7 @@
         <sys_updated_by>abhilash.nair</sys_updated_by>
         <sys_updated_on>2025-08-18 15:17:53</sys_updated_on>
         <table>x_vuram_financia_0_fcc_kyc_cases</table>
-        <ui_action display_value="Return ">427772333b536210cb98111864e45ac6</ui_action>
+        <ui_action/>
     </sys_ux_form_action>
     <sys_translated_text action="delete_multiple" query="documentkey=a398f6333b536210cb98111864e45a30"/>
 </record_update>
