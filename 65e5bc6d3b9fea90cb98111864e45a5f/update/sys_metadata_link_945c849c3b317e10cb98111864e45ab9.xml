@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>19b76eb23bad36d0cb98111864e45a31</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_group_type">
+    <sys_user_group_type action="INSERT_OR_UPDATE">
+        <description>Use this group type for checker(FCC)</description>
+        <name>Checker</name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-12-05 07:51:36</sys_created_on>
+        <sys_id>19b76eb23bad36d0cb98111864e45a31</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-09 12:21:13</sys_updated_on>
+    </sys_user_group_type>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>divya.suresh</sys_created_by>
+        <sys_created_on>2025-12-09 12:23:19</sys_created_on>
+        <sys_id>945c849c3b317e10cb98111864e45ab9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Checker</sys_name>
+        <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
+        <sys_update_name>sys_metadata_link_945c849c3b317e10cb98111864e45ab9</sys_update_name>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-09 12:23:19</sys_updated_on>
+        <tablename>sys_user_group_type</tablename>
+    </sys_metadata_link>
+</record_update>
