@@ -14,21 +14,21 @@
 function evaluateProperty({api, helpers}) {
   //api.context.session.user.roles.includes("x_vuram_financia_0.fcc_kyc_relationship_manager");
 	//return !(api.context.session.user.roles.includes("x_vuram_financia_0.fcc_kyc_relationship_manager")&&(api.data.look_up_a_single_record_1.result.state.value)=='300'&&api.data.look_up_a_single_record_1.result.case_type.value!='perpetual_kyc_case');
-  return !(api.context.session.user.roles.includes("x_vuram_financia_0.fcc_kyc_relationship_manager")&&(api.data.look_up_a_single_record_1.result.state.value)=='300');
+  return !(api.context.session.user.roles.includes("x_vuram_financia_0.fcc_kyc_relationship_manager")&&(api.data.look_up_a_single_record_1.result.state.value)=='300'&&(api.data.look_up_a_single_record_1.result.assigned_to.value)!=null);
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-20 14:37:33</sys_created_on>
         <sys_id>1c9eb0643b2fe610f13f5fea26e45a74</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>button_3/isHidden</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_client_script_1c9eb0643b2fe610f13f5fea26e45a74</sys_update_name>
         <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-10-10 11:33:27</sys_updated_on>
+        <sys_updated_on>2025-12-10 06:22:43</sys_updated_on>
         <target>macroponent</target>
         <type>transform</type>
     </sys_ux_client_script>

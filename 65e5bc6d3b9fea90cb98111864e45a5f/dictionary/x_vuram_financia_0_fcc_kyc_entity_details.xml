@@ -83,7 +83,7 @@
         <element label="Individual (&gt;10% ownership)" max_length="1024" name="individual_10_ownership" reference="x_vuram_financia_0_fcc_kyc_ownerships" type="glide_list"/>
         <element label="Is there significant private ownership" max_length="40" name="is_there_significant_private_ownership" type="boolean"/>
         <element label="Is the customer Traded on an exchange" max_length="40" name="is_the_customer_traded_on_an_exchange" type="boolean"/>
-        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="KYC Expiry" max_length="40" name="kyc_expiry" type="glide_date" use_dynamic_default="true"/>
+        <element label="KYC Expiry" max_length="40" name="kyc_expiry" type="glide_date"/>
         <element label="City" max_length="40" name="legal_city" type="string"/>
         <element label="Country" max_length="40" name="legal_country" type="string"/>
         <element label="Legal Name" max_length="100" name="legal_name" type="string"/>

@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b3366a453bc8b6d0cb98111864e45ae0</sys_id>
-        <sys_mod_count>115</sys_mod_count>
+        <sys_mod_count>131</sys_mod_count>
         <sys_name>FCC KYC Proof of Address Skill</sys_name>
         <sys_overrides/>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b3366a453bc8b6d0cb98111864e45ae0</sys_update_name>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:26</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:46</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -67,10 +67,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:46:02</sys_created_on>
         <sys_id>fb47a6493bc8b6d0cb98111864e45a42</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
-        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2025-12-10 08:53:44</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
         <variable display_value="Action Status">af4766493bc8b6d0cb98111864e45afe</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=b3366a453bc8b6d0cb98111864e45ae0"/>
@@ -128,10 +128,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:49:30</sys_created_on>
         <sys_id>18930b4d3b00f6d0cb98111864e45a7a</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:43</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=18930b4d3b00f6d0cb98111864e45a7a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -142,9 +142,9 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:49:31</sys_created_on>
         <sys_id>1c930b4d3b00f6d0cb98111864e45a98</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:43</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
    var useraddress = JSON.parse(inputs.input);   &#13;
@@ -164,13 +164,13 @@
         glideRecordIndividual.home_contact = useraddress.mobile_number;&#13;
         glideRecordIndividual.mobile = useraddress.mobile_number;&#13;
 &#13;
-        var glideDate = new GlideDate();&#13;
-        glideDate.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
-        glideRecordIndividual.poa_doc_issued_date = glideDate;&#13;
+        // var glideDateIssue = new GlideDate();&#13;
+        // glideDateIssue.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
+        // glideRecordIndividual.poa_doc_issued_date = glideDateIssue;&#13;
 &#13;
-        var glideDate = new GlideDate();&#13;
-        glideDate.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
-        glideRecordIndividual.poa_doc_expiry_date = glideDate;&#13;
+        // var glideDateExpiry = new GlideDate();&#13;
+        // glideDateExpiry.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
+        // glideRecordIndividual.poa_doc_expiry_date = glideDateExpiry;&#13;
 &#13;
         glideRecordIndividual.poa_doc_issued_by = useraddress.document_issued_by;&#13;
         glideRecordIndividual.poa_doc_place_of_issuance = useraddress.document_place_of_issuance;&#13;
@@ -1381,14 +1381,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:46:02</sys_created_on>
         <sys_id>fb47a6493bc8b6d0cb98111864e45a04</sys_id>
-        <sys_mod_count>79</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:23</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1536,17 +1536,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="FCC KYC Proof of Address Skill">b3366a453bc8b6d0cb98111864e45ae0</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"bb9962013b0cb6d0cb98111864e45afb","name":"plan","plan_signature":null}}</plan>
-        <snapshot>e8119eb63bad36d0f13f5fea26e45a71</snapshot>
+        <snapshot>4d00f0603b317250cb98111864e45afa</snapshot>
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:56:09</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bb9962013b0cb6d0cb98111864e45afb</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:27</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:47</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1598,10 +1598,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:56:07</sys_created_on>
         <sys_id>a39962013b0cb6d0cb98111864e45aa4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:26</sys_updated_on>
-        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2025-12-10 08:53:46</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
         <variable display_value="Action Status">139962013b0cb6d0cb98111864e45a94</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2122,10 +2122,10 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:52:08</sys_created_on>
         <sys_id>762487cd3b00f6d0cb98111864e45ae4</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:25</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:46</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=762487cd3b00f6d0cb98111864e45ae4"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2136,9 +2136,9 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 09:52:08</sys_created_on>
         <sys_id>8b2487cd3b00f6d0cb98111864e45af5</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:25</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:46</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
    var useraddress = JSON.parse(inputs.input);   &#13;
@@ -2158,13 +2158,13 @@
         glideRecordIndividual.home_contact = useraddress.mobile_number;&#13;
         glideRecordIndividual.mobile = useraddress.mobile_number;&#13;
 &#13;
-        var glideDate = new GlideDate();&#13;
-        glideDate.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
-        glideRecordIndividual.poa_doc_issued_date = glideDate;&#13;
+        // var glideDateIssue = new GlideDate();&#13;
+        // glideDateIssue.setValue(useraddress.issue_date);  // Works in scoped apps&#13;
+        // glideRecordIndividual.poa_doc_issued_date = glideDateIssue;&#13;
 &#13;
-        var glideDate = new GlideDate();&#13;
-        glideDate.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
-        glideRecordIndividual.poa_doc_expiry_date = glideDate;&#13;
+        // var glideDateExpiry = new GlideDate();&#13;
+        // glideDateExpiry.setValue(useraddress.document_expiry_date);  // Works in scoped apps&#13;
+        // glideRecordIndividual.poa_doc_expiry_date = glideDateExpiry;&#13;
 &#13;
         glideRecordIndividual.poa_doc_issued_by = useraddress.document_issued_by;&#13;
         glideRecordIndividual.poa_doc_place_of_issuance = useraddress.document_place_of_issuance;&#13;
@@ -2926,14 +2926,14 @@
         <sys_created_by>varunapriyan.k</sys_created_by>
         <sys_created_on>2025-09-16 07:56:07</sys_created_on>
         <sys_id>d39962013b0cb6d0cb98111864e45a99</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>varunapriyan.k</sys_updated_by>
-        <sys_updated_on>2025-12-05 06:12:25</sys_updated_on>
+        <sys_updated_on>2025-12-10 09:37:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3080,6 +3080,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>b3366a453bc8b6d0cb98111864e45ae0</sys_id>
         <latest_snapshot>cb9962013b0cb6d0cb98111864e45a53</latest_snapshot>
-        <compiler_build>glide-zurich-07-01-2025__patch1-hotfix2-10-11-2025_10-11-2025_2320.zip</compiler_build>
+        <compiler_build>glide-zurich-07-01-2025__patch1-hotfix1b-10-27-2025_11-10-2025_2118.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

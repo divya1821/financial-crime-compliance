@@ -59,7 +59,7 @@
         <element label="Identity Attachment" max_length="40" name="identity_attachment" type="file_attachment"/>
         <element label="ID Back Page" max_length="600000" name="id_back_page" type="string"/>
         <element label="ID Front Page" max_length="600000" name="id_front_page" type="string"/>
-        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="KYC Expiry" max_length="40" name="kyc_expiry" type="glide_date" use_dynamic_default="true"/>
+        <element label="KYC Expiry" max_length="40" name="kyc_expiry" type="glide_date"/>
         <element label="Mobile" max_length="40" name="mobile" type="string"/>
         <element label="Mobile Contact" max_length="40" name="mobile_contact" type="string"/>
         <element label="Non UK tax identification number" max_length="40" name="non_uk_tax_identification_number" type="string"/>

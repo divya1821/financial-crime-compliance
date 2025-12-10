@@ -12774,6 +12774,18 @@
         "name": "workNotes5",
         "shape": "",
         "valueType": "string"
+    },
+    {
+        "description": null,
+        "fieldType": "string",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "label": "newClientStateParam1",
+        "name": "assigned_to",
+        "shape": "",
+        "valueType": "string"
     }
 ]</state_properties>
         <style_config>{}</style_config>
@@ -12781,14 +12793,14 @@
         <sys_created_by>abhilash.nair</sys_created_by>
         <sys_created_on>2025-08-13 09:01:28</sys_created_on>
         <sys_id>5d8277463b97e2d0cb98111864e45a4e</sys_id>
-        <sys_mod_count>247</sys_mod_count>
+        <sys_mod_count>248</sys_mod_count>
         <sys_name>Default Case</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>sys_ux_macroponent_5d8277463b97e2d0cb98111864e45a4e</sys_update_name>
-        <sys_updated_by>abhilash.nair</sys_updated_by>
-        <sys_updated_on>2025-11-13 07:46:25</sys_updated_on>
+        <sys_updated_by>divya.suresh</sys_updated_by>
+        <sys_updated_on>2025-12-09 18:31:37</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5d8277463b97e2d0cb98111864e45a4e"/>
 </record_update>

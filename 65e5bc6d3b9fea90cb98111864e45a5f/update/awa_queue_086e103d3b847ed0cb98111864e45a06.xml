@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="awa_queue">
     <awa_queue action="INSERT_OR_UPDATE">
         <active>true</active>
-        <average_wait_time>1970-01-01 02:40:29</average_wait_time>
+        <average_wait_time>1970-01-01 04:35:50</average_wait_time>
         <ccc_source_id/>
         <condition table="x_vuram_financia_0_fcc_kyc_cases">state=150^assigned_toISEMPTY^EQ<item display_value="Work In Progress" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="150"/>
             <item endquery="false" field="assigned_to" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
@@ -29,14 +29,14 @@
         <sys_created_by>srinithi.v</sys_created_by>
         <sys_created_on>2025-09-18 05:46:05</sys_created_on>
         <sys_id>086e103d3b847ed0cb98111864e45a06</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Fincrime Queue</sys_name>
         <sys_package display_value="Financial Crime Compliance" source="x_vuram_financia_0">65e5bc6d3b9fea90cb98111864e45a5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Financial Crime Compliance">65e5bc6d3b9fea90cb98111864e45a5f</sys_scope>
         <sys_update_name>awa_queue_086e103d3b847ed0cb98111864e45a06</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2025-11-20 14:08:45</sys_updated_on>
+        <sys_updated_on>2025-12-10 00:40:15</sys_updated_on>
         <target_wait_time/>
         <use_condition>true</use_condition>
     </awa_queue>
