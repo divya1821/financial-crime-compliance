@@ -24,17 +24,17 @@
         <scoped_administration>false</scoped_administration>
         <short_description/>
         <source>x_vuram_financia_0</source>
-        <store_correlation_id>REPOAPP0002366978</store_correlation_id>
-        <store_url/>
+        <store_correlation_id>REPOAPP0002367004</store_correlation_id>
+        <store_url>https://tpp.servicenow.com/sn_appstore_s</store_url>
         <subscription_entitlement/>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>divya.suresh</sys_created_by>
         <sys_created_on>2025-08-11 06:00:24</sys_created_on>
         <sys_id>65e5bc6d3b9fea90cb98111864e45a5f</sys_id>
-        <sys_mod_count>44</sys_mod_count>
-        <sys_updated_by>divya.suresh</sys_updated_by>
-        <sys_updated_on>2025-12-10 12:47:09</sys_updated_on>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_updated_by>raj.selvam</sys_updated_by>
+        <sys_updated_on>2025-12-10 12:59:07</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
